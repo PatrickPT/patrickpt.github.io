@@ -1,0 +1,52 @@
+baseURL: "https://patrickpt.github.io/"
+title: Pat's Log
+paginate: 5
+theme: PaperMod
+
+publishDir: docs
+
+
+params:
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+  # home-info mode
+  homeInfoParams:
+    Title: "Welcome to Pat's Log"
+    Content: Hi, this is Patrick. I’m documenting my learning notes in this blog. Other than writing a ML blog, I’m leading a Data Science Team at Vodafone on the side.
+  
+  ShowShareButtons: false
+  ShowReadingTime: true
+
+
+  socialIcons:
+    - name: linkedin
+      url: "https://www.linkedin.com/in/patrickschnass/"
+    - name: medium
+      url: "https://medium.com/@patrickschnass"
+    - name: github
+      url: "https://github.com/PatrickPT"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+menu:
+  main:
+    - identifier: Posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: Archive
+      name: Archive
+      url: /archives/
+      weight: 20
+    - identifier: Search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
