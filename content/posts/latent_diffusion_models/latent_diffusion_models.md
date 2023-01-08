@@ -16,7 +16,7 @@ Latent Diffusion Models like the ones above had some significant media attention
 
 *Dall-E 2 created picture by author - "A cat surfing a wave in comic style during sunset"*
 
-While those models already made a name for themselves by winning [art competitions](https://news.artnet.com/art-world/colorado-artists-mad-ai-art-competition-2168495), are adopted by companies into their related data products(Canva.com, Shutterstock.com) and start-ups creating those products raising billions in [venture capital] (https://www.bloomberg.com/news/articles/2022-10-17/digital-media-firm-stability-ai-raises-funds-at-1-billion-value) you may ask yourself:
+While those models already made a name for themselves by winning [art competitions](https://news.artnet.com/art-world/colorado-artists-mad-ai-art-competition-2168495), are adopted by companies into their related data products(Canva.com, Shutterstock.com) and start-ups creating those products raising billions in [venture capital](https://www.bloomberg.com/news/articles/2022-10-17/digital-media-firm-stability-ai-raises-funds-at-1-billion-value) you may ask yourself:
 <ul>
 <li>What is all the fuzz about? </li>
 <li>What is behind the hype? What are Latent Diffusion Models? </li>
@@ -34,7 +34,7 @@ I will give an overview and mathematical intuition on the most prominent diffusi
 #What are Latent Diffusion Models?
 You may ask "What is the intuition behind latent diffusion models?"
 Let's break it down with a short example to make it clear:
-You are a painter hired by Vatican with the task to repaint the fresco at the ceiling of [sixtinian chapel] (https://de.wikipedia.org/wiki/Sixtinische_Kapelle#/media/Datei:CAPPELLA_SISTINA_Ceiling.jpg).
+You are a painter hired by Vatican with the task to repaint the fresco at the ceiling of [sixtinian chapel](https://de.wikipedia.org/wiki/Sixtinische_Kapelle#/media/Datei:CAPPELLA_SISTINA_Ceiling.jpg).
 
 The requirement is to recreate the fresco with pictures of cats.
 Most likely you will be overwhelmed with that task and immediately think of structuring your work into smaller chunks. You want to start with one dedicated part of the whole fresco, for example the creation of Adam. You will put some effort in it, first paint the background of that chunk of the painting. Then you may outline the structures you want to paint, then you start with one object like the arm of Adam,  and then focus on the hand. Finally you are happy with the scene, decide to finish it and tackle the next part. Still later you may change things after you decided that it fits better with the overall fresco.
@@ -49,14 +49,17 @@ Unfortunately nothing is cost-neutral. Like it will cost a painter like Micheala
 Focussing on the process of Denoising diffusion probabilistic models and to wrap it up: Latent Diffusion Models are a type of generative model that can be used to reconstruct an input signal from a noisy version of that signal. These models are based on the concept of diffusion, which refers to the way in which a signal spreads out and becomes more diffuse over time.
 
 [![types_gans](/posts/latent_diffusion_models/images/types_gans.png)](/posts/latent_diffusion_models/images/types_gans.png)
-*Overview of the different types of generative models https://lilianweng.github.io/posts/2021-07-11-diffusion-models/How does the Diffusion process work?*
+*Overview of the different types of generative [models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/HowdoestheDiffusionprocesswork?)*
 
 At a high level, they work by first representing the input signal as a set of latent variables, which are then transformed through a series of probabilistic transformations to produce the output signal. The transformation process is designed to smooth out the noise in the input signal and reconstruct a cleaner version of the signal.
 
-Think of going forward and backward. Diffusion models take an input image x0​ and gradually add Gaussian noise to it through a series of T steps. This is the so-called forward process. (You may immediately think of the forward pass of neural networks, but it is unrelated). This is necessary to generate the targets for our neural network (the image after applying T noise steps). Afterwards, a neural network is trained to recover the original data by reversing the noising process. 
+Think of going forward and backward. Diffusion models take an input image $x0$​ and gradually add Gaussian noise to it through a series of $T$ steps. This is the so-called forward process. (You may immediately think of the forward pass of neural networks, but it is unrelated). This is necessary to generate the targets for our neural network (the image after applying $T$ noise steps). Afterwards, a neural network is trained to recover the original data by reversing the noising process. 
 The ability of the model to reverse the process, makes it possible to generate new data. This is the so-called reverse diffusion process (the sampling process of a generative model).
-Forward diffusion
+
+# Forward diffusion
 
 Diffusion models are somewhat latent variable models. Latent means in this case a hidden continuous feature space. 
 They are formulated using a Markov chain of TT steps. A Markov chain means in this case that each step only depends on the previous one. But there is no constraint to using a specific type of neural network, unlike flow-based models.
-Given a data-point from the real data distribution(x0 ~ ), one can define a forward diffusion process by adding noise. Specifically, at each step of the Markov chain we add Gaussian noise with variance \beta_{t}βt​ to \textbf{x}_{t-1}xt−1​, producing a new latent variable \textbf{x}_{t}xt​ with distribution q(\textbf{x}_t |\textbf{x}_{t-1})q(xt​∣xt−1​). This diffusion process can be formulated as follows:
+Given a data-point from the real data distribution(x0 ~ ), one can define a forward diffusion process by adding noise. Specifically, at each step of the Markov chain we add Gaussian noise with variance $\beta_{t} βt​$ to $\textbf{x}_{t-1}xt−1$​, producing a new latent variable \textbf{x}_{t}xt​ with distribution q(\textbf{x}_t |\textbf{x}_{t-1})q(xt​∣xt−1​). This diffusion process can be formulated as follows:
+
+The basic idea behind diffusion models is rather simple. They take the input image $$x^2 \\mathbf{x}\_0x0​ and gradually add Gaussian noise to it through a series of TTT steps. We will call this the forward process. Notably, this is unrelated to the forward pass of a neural network. If you'd like, this part is necessary to generate the targets for our neural network (the image after applying t<Tt<Tt<T noise steps).

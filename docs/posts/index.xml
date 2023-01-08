@@ -16,5 +16,17 @@
 What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a conversation or understand your needs?</description>
     </item>
     
+    <item>
+      <title>Why and how do you create your own AI blog?</title>
+      <link>https://patrickpt.github.io/posts/2023_01_01_why_a_blog/why_a_blog/</link>
+      <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/2023_01_01_why_a_blog/why_a_blog/</guid>
+      <description>Welcome to my blog.
+Why not Medium? It is 2023 and there are plenty of easy ways to create content about ML, Data Science and AI on the internet. In fact with the accessability of platforms like Medium it is easy.
+Isn&amp;rsquo;t it actually dumb to create your own blog instead of using these possibilities?
+Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings acceptable for others as well.</description>
+    </item>
+    
   </channel>
 </rss>
