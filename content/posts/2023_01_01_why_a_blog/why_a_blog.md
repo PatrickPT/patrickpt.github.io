@@ -1,6 +1,6 @@
 ---
 title: "Why and how do you create your own AI blog?"
-date: 2023-01-01T09:00:00+01:00
+date: 2023-01-06T09:00:00+01:00
 draft: False
 ShowToc: true
 tags: [Medium,Blog,Github,Hugo]
