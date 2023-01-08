@@ -11,8 +11,8 @@ params:
   disableThemeToggle: false
   # home-info mode
   homeInfoParams:
-    Title: "Welcome to Pat's Log"
-    Content: Hi, this is Patrick. I’m documenting my learning notes, best practices and how-tos in this blog. Other than writing an AI blog, I’m leading a Data Science Team at Vodafone on the side.
+    Title: "Welcome"
+    Content: Hi, i am Patrick. I’m documenting my learning notes, best practices and how-to's on this blog.
   
   ShowShareButtons: false
   ShowReadingTime: true
@@ -25,7 +25,7 @@ params:
       url: "https://medium.com/@patrickschnass"
     - name: github
       url: "https://github.com/PatrickPT"
-      
+
   ShowShareButtons: true
 outputs:
     home:
@@ -42,15 +42,15 @@ menu:
     - identifier: Archive
       name: Archive
       url: /archives/
-      weight: 20
+      weight: 30
     - identifier: Search
       name: Search
       url: /search/
-      weight: 30
+      weight: 40
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 20
+      weight: 50
     - identifier: About
       name: About
       url: /about/
