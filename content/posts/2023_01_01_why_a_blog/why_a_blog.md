@@ -10,25 +10,27 @@ Welcome to my blog.
 
 # Why not Medium?
 
-It is 2023 and there are plenty of easy ways to create content about ML, Data Science and AI on the internet. In fact with the accessability of platforms like [Medium](https://medium.com) it is easy.
+It is 2023 and there are plenty of easy ways to create content about ML, Data Science and AI on the internet. In fact with the accessability of platforms like [Medium](https://medium.com) it is super easy.
 
  *Isn't it actually dumb to create your own blog instead of using these possibilities?*
 
-Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings acceptable for others as well.
+Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings acceptable for others i speak to regurarly.
 
 *Well, couldn't you have done this also on Medium?*
 
-I did, but as moving further i saw some pitfalls with Medium:
+I tried, but starting to create content i saw some pitfalls with Medium:
 
 - The writing interface is straightforward and easy to use but it is actually too simple and gives almost no flexibility.
-- Medium attract a lot of good writers but also a lot of people just producing content with less quality. If you don't optimize your articles you won't attract any readers. So for my purpose there is no difference in using a provate blog and therefore no advantage in using medium.
-- Medium does not support Math Formulas! I could not believe it but there was no decent possibility to include math formulas. a no go in my eyes 
+- Medium attracts a lot of good writers but also a lot of people just producing content with low quality. If you don't optimize your articles you won't attract any readers. So for my purpose there is no difference whether i use a private blog or Medium.
+- Medium does not support Math Formulas! I could not believe it but there was no decent possibility to include math formulas with Latex or somehow else. An absolute No Go in my eyes 
 
 
-*Ok i get it, Medium is not for you but a blog is a lot of maintenance and effort. Are there any other possibilities.*
+*Ok i get it, Medium is not for you but a blog is a lot of maintenance and effort. How do you find time for this?*
 
-- Luckily it is actually quite easy to create your own static site with Github Pages and hugo.
-- Also it is a good chance to learn somehting new and make yourself familiar with some web design
+- Luckily it is actually quite easy to create your own static site with Github Pages and Hugo.
+- Also it is a good chance to learn somehting new and make yourself familiar with web design again.
+
+*Ok, i am curious. How did you do it?*
 
 # How did you create your blog?
 
