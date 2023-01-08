@@ -12,7 +12,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Welcome to Pat's Log"
-    Content: Hi, this is Patrick. I’m documenting my learning notes in this blog. Other than writing a ML blog, I’m leading a Data Science Team at Vodafone on the side.
+    Content: Hi, this is Patrick. I’m documenting my learning notes, best practices and how-tos in this blog. Other than writing an AI blog, I’m leading a Data Science Team at Vodafone on the side.
   
   ShowShareButtons: false
   ShowReadingTime: true
@@ -25,7 +25,8 @@ params:
       url: "https://medium.com/@patrickschnass"
     - name: github
       url: "https://github.com/PatrickPT"
-
+      
+  ShowShareButtons: true
 outputs:
     home:
         - HTML
@@ -49,4 +50,8 @@ menu:
     - identifier: tags
       name: Tags
       url: /tags/
+      weight: 20
+    - identifier: About
+      name: About
+      url: /about/
       weight: 20
