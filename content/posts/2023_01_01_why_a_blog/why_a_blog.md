@@ -140,15 +140,15 @@ With this short introduction you should be able to set up your own blog really f
 
 # References
 
-[1] Github Pages (h)ttps://pages.github.com)
+[1] Github Pages (https://pages.github.com)
 
-[2] Hugo (h)ttps://gohugo.io)
+[2] Hugo (https://gohugo.io)
 
-[3] PaperMod (h)ttps://github.com/adityatelange/hugo-PaperMod)
+[3] PaperMod (https://github.com/adityatelange/hugo-PaperMod)
 
-[4] Markdownguide (h)ttps://www.markdownguide.org/basic-syntax/)
+[4] Markdownguide (https://www.markdownguide.org/basic-syntax/)
 
-[5] Image clickable (h)ttps://discourse.gohugo.io/t/how-can-i-make-images-clickable-so-i-can-zoom-them-to-full-screen/34279)
+[5] Image clickable (https://discourse.gohugo.io/t/how-can-i-make-images-clickable-so-i-can-zoom-them-to-full-screen/34279)
 
 # Further Links
 
