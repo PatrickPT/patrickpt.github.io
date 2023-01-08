@@ -12,7 +12,7 @@ Welcome to my blog.
 
 It is 2023 and there are plenty of easy ways to create content about ML, Data Science and AI on the internet. In fact with the accessability of platforms like [Medium](https://medium.com) it is easy.
 
-*Isn't it actually dumb to create your own blog instead of using these possibilities?*
+ *Isn't it actually dumb to create your own blog instead of using these possibilities?*
 
 Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings acceptable for others as well.
 
@@ -55,11 +55,12 @@ As written, i use [Github Pages](https://pages.github.com) and the open-source s
     
 
     I decided to use [PaperMod theme](https://github.com/adityatelange/hugo-PaperMod) and it recommends to use .yml Config instead of .toml - and i am fine with that because i like yaml files.
+
 3. **Install your favorite Hugo Theme**
    
    The project is created but if you try to run it, it will just be an empty page. A style is needed to make it fully functional.
 
-    You could create one from scratch but Hugo has a bunch of themes already prepared and ready to use! You can go to https://themes.gohugo.io/ and choose a theme you like. i like [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
+    You could create one from scratch but Hugo has a bunch of themes already prepared and ready to use! You can go to https://themes.gohugo.io/ and choose a theme you like. I like [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
 
     
         git init
@@ -76,7 +77,7 @@ As written, i use [Github Pages](https://pages.github.com) and the open-source s
 
 4. **Create Content**
     
-    Important is your `content` folder. The folder tree in this folder will reflect your site folder tree.
+    Important is your **content** folder. The folder tree in this folder will reflect your site folder tree.
     Either you create folders and markdown files in those folders manually or you use 
 
     
@@ -137,6 +138,8 @@ As written, i use [Github Pages](https://pages.github.com) and the open-source s
 
 With this short introduction you should be able to set up your own blog really fast and in worst case troubleshoot your way through.
 **Enjoy!**
+
+I am happy with my new blog and will further play around with it. If you like my content connect via [LinkedIN](https://www.linkedin.com/in/patrickschnass/).
 
 # References
 
