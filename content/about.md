@@ -3,9 +3,7 @@ title: "About"
 draft: False
 ---
 
-![me](images/me.jpg)
-
-Welcomy to my blog. I am Patrick. I’m documenting my learning notes, best practices and how-tos in this blog.
+Welcomy to my blog. I am Patrick. I’m documenting my learning notes, best practices and how-tos on this blog.
 
 I'm living in Germany, am a proud father of two and love to dig into ML, discuss politics and do sports.
 
