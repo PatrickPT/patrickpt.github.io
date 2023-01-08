@@ -53,13 +53,13 @@ Focussing on the process of Denoising diffusion probabilistic models and to wrap
 
 At a high level, they work by first representing the input signal as a set of latent variables, which are then transformed through a series of probabilistic transformations to produce the output signal. The transformation process is designed to smooth out the noise in the input signal and reconstruct a cleaner version of the signal.
 
-Think of going forward and backward. Diffusion models take an input image $x0$​ and gradually add Gaussian noise to it through a series of $T$ steps. This is the so-called forward process. (You may immediately think of the forward pass of neural networks, but it is unrelated). This is necessary to generate the targets for our neural network (the image after applying $T$ noise steps). Afterwards, a neural network is trained to recover the original data by reversing the noising process. 
+Think of going forward and backward. Diffusion models take an input image $x0$​ and gradually add Gaussian noise to it through a series of $T$ steps. This is the so-called forward process. (You may immediately think of the forward pass of neural networks, but it is unrelated). This is necessary to generate the targets for our neural network (the image after applying $t < T$ noise steps). Afterwards, a neural network is trained to recover the original data by reversing the noising process. 
 The ability of the model to reverse the process, makes it possible to generate new data. This is the so-called reverse diffusion process (the sampling process of a generative model).
 
 # Forward diffusion
 
 Diffusion models are somewhat latent variable models. Latent means in this case a hidden continuous feature space. 
-They are formulated using a Markov chain of TT steps. A Markov chain means in this case that each step only depends on the previous one. But there is no constraint to using a specific type of neural network, unlike flow-based models.
+They are formulated using a Markov chain of $TT$ steps. A Markov chain means in this case that each step only depends on the previous one. But there is no constraint to using a specific type of neural network, unlike flow-based models.
 Given a data-point from the real data distribution(x0 ~ ), one can define a forward diffusion process by adding noise. Specifically, at each step of the Markov chain we add Gaussian noise with variance $\beta_{t} βt​$ to $\textbf{x}_{t-1}xt−1$​, producing a new latent variable \textbf{x}_{t}xt​ with distribution q(\textbf{x}_t |\textbf{x}_{t-1})q(xt​∣xt−1​). This diffusion process can be formulated as follows:
 
 The basic idea behind diffusion models is rather simple. They take the input image $$x^2 \\mathbf{x}\_0x0​ and gradually add Gaussian noise to it through a series of TTT steps. We will call this the forward process. Notably, this is unrelated to the forward pass of a neural network. If you'd like, this part is necessary to generate the targets for our neural network (the image after applying t<Tt<Tt<T noise steps).

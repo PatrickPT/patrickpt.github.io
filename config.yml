@@ -15,7 +15,21 @@ params:
     Title: "Welcome"
     Content: Hi, i am Patrick. I’m documenting my learning notes, best practices and how-to's on this blog.
   
-  ShowShareButtons: false
+  # profileMode:
+  #       enabled: true
+  #       #title: "<Title>" # optional default will be site title
+  #       #subtitle: "Hi, i am Patrick. I’m documenting my learning notes, best practices and how-to's on this blog."
+  #       imageUrl: "me.jpg" # optional
+  #       #imageTitle: "<title of image as alt>" # optional
+  #       imageWidth: 180 # custom size
+  #       imageHeight: 180 # custom size
+  #       buttons:
+  #         - name: Posts
+  #           url: "/posts"
+  #         - name: Tags
+  #           url: "/tags"
+
+  ShowShareButtons: True
   ShowReadingTime: true
 
   assets:
@@ -32,8 +46,7 @@ params:
       url: "https://medium.com/@patrickschnass"
     - name: github
       url: "https://github.com/PatrickPT"
-
-  ShowShareButtons: true
+  
 outputs:
     home:
         - HTML
