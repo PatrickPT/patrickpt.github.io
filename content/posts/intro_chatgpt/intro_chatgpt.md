@@ -35,7 +35,7 @@ Overall, ChatGPT is a major step forward for AI and natural language processing,
 
 # How does the collection of data and reward model in ChatGPT work?
 
-![ChatGPT](/posts/intro_chatgpt/images/ChatGPT.png)
+[![ChatGPT](/posts/intro_chatgpt/images/ChatGPT.png)](/posts/intro_chatgpt/images/ChatGPT.png)
 
 The collection of data and reward model in ChatGPT are two key components of the model’s training process. In order to generate human-like text and engage in natural conversations, ChatGPT must be trained on large amounts of data and be able to learn from the feedback it receives.
 

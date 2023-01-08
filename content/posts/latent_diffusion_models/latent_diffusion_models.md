@@ -11,7 +11,7 @@ If you recently introduced yourself to strangers and told them about your job in
 
 Latent Diffusion Models like the ones above had some significant media attention. While no one outside AI community bats an eye if Deepmind creates an algorithm, that beats the (almost ancient) and important Strassen-Algorithm by some percent in computation complexity(which is a tremendous progress), nearly everyone is excited to create made up pictures of cats doing crazy stuff through a simple interface.
 
-![cat](/posts/latent_diffusion_models/images/cat.png)
+[![cat](/posts/latent_diffusion_models/images/cat.png)](/posts/latent_diffusion_models/images/cat.png)
 
 
 *Dall-E 2 created picture by author - "A cat surfing a wave in comic style during sunset"*
@@ -48,7 +48,7 @@ Unfortunately nothing is cost-neutral. Like it will cost a painter like Micheala
 
 Focussing on the process of Denoising diffusion probabilistic models and to wrap it up: Latent Diffusion Models are a type of generative model that can be used to reconstruct an input signal from a noisy version of that signal. These models are based on the concept of diffusion, which refers to the way in which a signal spreads out and becomes more diffuse over time.
 
-![types_gans](/posts/latent_diffusion_models/images/types_gans.png)
+[![types_gans](/posts/latent_diffusion_models/images/types_gans.png)](/posts/latent_diffusion_models/images/types_gans.png)
 *Overview of the different types of generative models https://lilianweng.github.io/posts/2021-07-11-diffusion-models/How does the Diffusion process work?*
 
 At a high level, they work by first representing the input signal as a set of latent variables, which are then transformed through a series of probabilistic transformations to produce the output signal. The transformation process is designed to smooth out the noise in the input signal and reconstruct a cleaner version of the signal.
