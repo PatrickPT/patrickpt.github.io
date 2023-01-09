@@ -8,10 +8,10 @@
     <lastBuildDate>Sat, 07 Jan 2023 00:55:07 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>An introduction to ChatGPT written by ChatGPT</title>
-      <link>https://patrickpt.github.io/posts/intro_chatgpt/intro_chatgpt/</link>
+      <link>https://patrickpt.github.io/posts/2023_01_07_intro_chatgpt/2023_01_07_intro_chatgpt/</link>
       <pubDate>Sat, 07 Jan 2023 00:55:07 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/intro_chatgpt/intro_chatgpt/</guid>
+      <guid>https://patrickpt.github.io/posts/2023_01_07_intro_chatgpt/2023_01_07_intro_chatgpt/</guid>
       <description>ChatGPT: Optimizing Language Models for Dialogue What to do if you have 15Min time to spare? Feed ChatGPT with prompts to write an introductory article about ChatGPT. And I promise, this is the only part which is not based on a Large Language Model. Everything else was written by ChatGPT. For better readability I replaced the prompts with simple headers.
 What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a conversation or understand your needs?</description>
     </item>
