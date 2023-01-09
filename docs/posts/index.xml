@@ -7,16 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Jun 2022 15:06:45 -0500</lastBuildDate><atom:link href="https://patrickpt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introduction to Transformers</title>
-      <link>https://patrickpt.github.io/posts/2023_01_09_introduction_to_transformers/2023_01_09_introduction_to_transformers/</link>
-      <pubDate>Mon, 09 Jan 2023 11:50:57 +0000</pubDate>
-      
-      <guid>https://patrickpt.github.io/posts/2023_01_09_introduction_to_transformers/2023_01_09_introduction_to_transformers/</guid>
-      <description>What are Transformers Transformer is a type of neural network architecture that was introduced in the paper &amp;ldquo;Attention is All You Need&amp;rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification.
-One of the key innovations of the Transformer architecture is the use of attention mechanisms. In a traditional neural network, each input is processed independently, without any information about the relationships between the inputs.</description>
-    </item>
-    
-    <item>
       <title>An introduction to ChatGPT written by ChatGPT</title>
       <link>https://patrickpt.github.io/posts/intro_chatgpt/intro_chatgpt/</link>
       <pubDate>Sat, 07 Jan 2023 00:55:07 +0100</pubDate>

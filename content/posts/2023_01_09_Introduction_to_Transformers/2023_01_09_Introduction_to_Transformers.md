@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Transformers"
 date: 2023-01-09T11:50:57Z
-draft: False
+draft: True
 ShowToc: true
 tags: [Transformers]
 ---
@@ -18,9 +18,11 @@ Another key advantage of the Transformer architecture is its ability to process 
 
 # What is the base for Transformers?
 
-At a high level, the Transformer model is based on the idea of self-attention, which allows the model to weight the input elements based on their relevance to the output. Mathematically, self-attention can be computed using the following formula:
 
-$$ Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V $$
+At a high level, the Transformer model is based on the idea of self-attention, which allows the model to weight the input elements based on their relevance to the output. Mathematically, self-attention can be computed using the following formula
+
+
+$$Attention(Q, K, V) = \softmax(\frac{QK^T}{\sqrt{d_k}})V$$
 
 Here, $Q$, $K$, and $V$ are matrices of query, key, and value vectors, respectively. $d_k$ is the dimensionality of the key vectors. The dot product of $Q$ and $K^T$ is divided by the square root of $d_k$ to ensure that the dot products do not become too large and blow up the softmax function. The output of the self-attention layer is a weighted sum of the value vectors, with the weights determined by the dot products of the query and key vectors.
 
