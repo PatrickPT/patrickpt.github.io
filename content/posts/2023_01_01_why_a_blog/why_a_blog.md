@@ -1,6 +1,6 @@
 ---
 title: "Why and how do you create your own AI blog?"
-date: 2023-01-06T09:00:00+01:00
+date: 2023-01-01T09:00:00+01:00
 draft: False
 ShowToc: true
 tags: [Medium,Blog,Github,Hugo]
@@ -14,7 +14,7 @@ It is 2023 and there are plenty of easy ways to create content about ML, Data Sc
 
  *Isn't it actually dumb to create your own blog instead of using these possibilities?*
 
-Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings acceptable for others i speak to regurarly.
+Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings accessable for others.
 
 *Well, couldn't you have done this also on Medium?*
 
