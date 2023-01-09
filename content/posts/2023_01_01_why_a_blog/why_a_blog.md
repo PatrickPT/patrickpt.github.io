@@ -162,3 +162,5 @@ I am happy with my new blog and will further play around with it. If you like my
 [7] Markdown with VS Code (https://code.visualstudio.com/docs/languages/markdown)
 
 [8] Trouble with Image paths (https://github.com/adityatelange/hugo-PaperMod/discussions/690)
+
+[9] Work in Codespaces (https://shotor.com/blog/build-a-hugo-static-site-in-your-browser-using-github-codespaces/)
