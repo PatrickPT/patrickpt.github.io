@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Pat&#39;s Log</title>
+    <title>Notes on AI</title>
     <link>https://patrickpt.github.io/</link>
-    <description>Recent content on Pat&#39;s Log</description>
+    <description>Recent content on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 07 Jan 2023 00:55:07 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -19,13 +19,13 @@ What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a c
     <item>
       <title>Why and how do you create your own AI blog?</title>
       <link>https://patrickpt.github.io/posts/2023_01_01_why_a_blog/why_a_blog/</link>
-      <pubDate>Fri, 06 Jan 2023 09:00:00 +0100</pubDate>
+      <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
       
       <guid>https://patrickpt.github.io/posts/2023_01_01_why_a_blog/why_a_blog/</guid>
       <description>Welcome to my blog.
 Why not Medium? It is 2023 and there are plenty of easy ways to create content about ML, Data Science and AI on the internet. In fact with the accessability of platforms like Medium it is super easy.
 Isn&amp;rsquo;t it actually dumb to create your own blog instead of using these possibilities?
-Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings acceptable for others i speak to regurarly.</description>
+Maybe, but my purpose is not to attract as many readers as possible but to learn something and make my learnings accessable for others.</description>
     </item>
     
     <item>
