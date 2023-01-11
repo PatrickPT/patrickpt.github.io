@@ -1,6 +1,6 @@
 ---
 title: "Latent Diffusion Models: What is all the fuzz about?"
-date: 2023-01-16T14:50:18+01:00
+date: 2023-01-10T14:50:18+01:00
 draft: true
 showToc: true
 TocOpen: true
