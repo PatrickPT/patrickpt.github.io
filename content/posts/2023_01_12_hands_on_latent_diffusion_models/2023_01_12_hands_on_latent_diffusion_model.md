@@ -97,12 +97,19 @@ If you are interested in understanding how to create a Notebook with diffusors p
 
 # References
 [Latent Diffusion Models: What is all the fuzz about?](content/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models)
+
 [Hugging Face](https://huggingface.co/)
+
 [Blogpost of Jay Alammar](https://jalammar.github.io/illustrated-stable-diffusion/)
+
 [Dall-E](https://openai.com/dall-e-2/)
+
 [Examples with prompt search](https://krea.ai//)
+
 [Atlas on examples with topics](https://atlas.nomic.ai/map/809ef16a-5b2d-4291-b772-a913f4c8ee61/9ed7d171-650b-4526-85bf-3592ee51ea31)
+
 [How to write stable-diffusion prompts](https://www.howtogeek.com/833169/how-to-write-an-awesome-stable-diffusion-prompt/)
+
 [Prompt Tuning](https://gustavosta-magicprompt-stable-diffusion.hf.space)
 
 # Further Links

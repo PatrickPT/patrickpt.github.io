@@ -6,8 +6,7 @@ ShowToc: true
 tags: [ChatGPT,LLM]
 ---
 
-[ChatGPT: Optimizing Language Models for Dialogue
-](https://openai.com/blog/chatgpt/)
+[ChatGPT: Optimizing Language Models for Dialogue](https://openai.com/blog/chatgpt/)
 
 What to do if you have 15Min time to spare? Feed ChatGPT with prompts to write an introductory article about ChatGPT. And I promise, this is the only part which is not based on a Large Language Model. Everything else was written by ChatGPT. For better readability I replaced the prompts with simple headers.
 

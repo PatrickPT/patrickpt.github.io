@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Jun 2022 15:06:45 -0500</lastBuildDate><atom:link href="https://patrickpt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>A summary on ChatGPT</title>
+      <link>https://patrickpt.github.io/posts/2023_01_12_summary_chatgpt/2023_01_12_summary_chatgpt/</link>
+      <pubDate>Thu, 12 Jan 2023 22:34:01 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/2023_01_12_summary_chatgpt/2023_01_12_summary_chatgpt/</guid>
+      <description>This summary is based on another post: An introduction to ChatGPT written by ChatGPT
+While testing out ChatGPT for some weeks now, i found that texts created by it are often repetitive and monotonous in this post i tried to condense the meaningful information from the other post.
+2022 was the year of generative AI. Generative AI refers to machine learning algorithms that can create new meaning from text, images, code, and other forms of content.</description>
+    </item>
+    
+    <item>
       <title>Introduction to Transformers</title>
       <link>https://patrickpt.github.io/posts/2023_01_09_introduction_to_transformers/2023_01_09_introduction_to_transformers/</link>
       <pubDate>Mon, 09 Jan 2023 11:50:57 +0000</pubDate>
@@ -22,7 +33,8 @@ One of the key innovations of the Transformer architecture is the use of attenti
       <pubDate>Sat, 07 Jan 2023 00:55:07 +0100</pubDate>
       
       <guid>https://patrickpt.github.io/posts/2023_01_07_intro_chatgpt/2023_01_07_intro_chatgpt/</guid>
-      <description>ChatGPT: Optimizing Language Models for Dialogue What to do if you have 15Min time to spare? Feed ChatGPT with prompts to write an introductory article about ChatGPT. And I promise, this is the only part which is not based on a Large Language Model. Everything else was written by ChatGPT. For better readability I replaced the prompts with simple headers.
+      <description>ChatGPT: Optimizing Language Models for Dialogue
+What to do if you have 15Min time to spare? Feed ChatGPT with prompts to write an introductory article about ChatGPT. And I promise, this is the only part which is not based on a Large Language Model. Everything else was written by ChatGPT. For better readability I replaced the prompts with simple headers.
 What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a conversation or understand your needs?</description>
     </item>
     
