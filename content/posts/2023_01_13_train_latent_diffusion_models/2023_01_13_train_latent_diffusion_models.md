@@ -1,7 +1,9 @@
 ---
-title: "2023_01_13_train_latent_diffusion_models"
+title: "Train latent diffusion Models"
 date: 2023-01-12T10:23:29+01:00
+showToc: true
 draft: true
+math: true
 ---
 
 

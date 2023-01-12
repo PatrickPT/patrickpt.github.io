@@ -1,9 +1,9 @@
 ---
-title: "Introduction to Transformers"
+title: "An introduction to Transformers"
 date: 2023-01-09T11:50:57Z
 draft: False
 ShowToc: true
-tags: [Transformers]
+tags: [Transformers,introduction]
 math: true
 ---
 
