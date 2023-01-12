@@ -21,7 +21,7 @@ There are mutiple sites and blog posts which explain Latent Diffusion Models inc
 To keep it a bit lightweight i can recommend one which explains everything with diagrams(Because i like diagrams for learning).
 [Blogpost of Jay Alammar](https://jalammar.github.io/illustrated-stable-diffusion/)
 
-### I don't understand anyting
+### I don't understand anything
 
 You don't have any idea what this is all about?
 
