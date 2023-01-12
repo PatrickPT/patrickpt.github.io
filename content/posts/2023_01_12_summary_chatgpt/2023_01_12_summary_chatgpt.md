@@ -8,7 +8,7 @@ tags: [ChatGPT,LLM,summary]
 
 *This summary is based on another post: [An introduction to ChatGPT written by ChatGPT](content/posts/2023_01_07_intro_chatgpt/2023_01_07_intro_chatgpt.md)*
 
-*While testing out ChatGPT for some weeks now, i found that texts created by it are often repetitive and monotonous in this post i tried to condense the meaningful information from the other post.*
+*While testing out ChatGPT for some weeks now, i found that texts created by it are often repetitive and monotonous. In this post i tried to condense the meaningful information from the other post.*
 
 2022 was the year of generative AI. Generative AI refers to machine learning algorithms that can create new meaning from text, images, code, and other forms of content. Leading generative AI tools are: DeepMind’s Alpha Code (GoogleLab), OpenAI's ChatGPT, GPT-3.5, DALL-E, MidJourney, Jasper, and Stable Diffusion, which are large language models and image generators.
 
@@ -21,7 +21,7 @@ ChatGPT technology is built upon OpenAI’s GPT3 AI platform which houses some o
 
 # How does ChatGPT work?
 
-[![ChatGPT](/content/posts/2023_01_07_intro_chatgpt/images/ChatGPT.png)](/content/posts/2023_01_07_intro_chatgpt/images/ChatGPT.png)
+[![ChatGPT](/posts/2023_01_07_intro_chatgpt/images/ChatGPT.png)](/posts/2023_01_07_intro_chatgpt/images/ChatGPT.png)
 
 The collection of data and reward model in ChatGPT are two key components of the model’s training process. In order to generate human-like text and engage in natural conversations, ChatGPT must be trained on large amounts of data and be able to learn from the feedback it receives.
 To collect data for ChatGPT, the model is exposed to a wide range of conversational data, including transcripts of real-life conversations, dialogue from books and movies, and other sources of conversational text. This data is used to train the model and help it understand the structure and patterns of natural language.
