@@ -91,10 +91,26 @@ If you are interested in understanding how to create a Notebook with diffusors p
 # Stable Diffusion
 *...using Hugging Face's `diffusers`*
 
-*The following section focusses on **inference** and is based on [*stable diffusion*](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/stable_diffusion.ipynb) and [*diffusers*](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb)
+*The following section focusses on **inference** and is based on [*Quickstart with diffusers*](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/stable_diffusion.ipynb) and [*Intro on diffusers*](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb)
 
 *If you want to get a more hands-on guide on **training** diffusion models, please have a look at*
  [*Training with Diffusers*](https://colab.research.google.com/gist/anton-l/f3a8206dae4125b93f05b1f5f703191d/diffusers_training_example.ipynb)
+
+## Recap on Diffusion Models
+
+Diffusion models are machine learning systems that are trained to *denoise* random gaussian noise step by step, to get to a sample of interest, such as an *image*. 
+
+The underlying model, often a neural network, is trained to predict a way to slightly denoise the image in each step. After certain number of steps, a sample is obtained.
+
+[![stable_diffusion](posts/2023_01_12_hands_on_latent_diffusion_models/images/diffusion-process.jpg)](posts/2023_01_12_hands_on_latent_diffusion_models/images/diffusion-process.jpg)
+
+The diffusion process consists in taking random noise of the size of the desired output and pass it through the model several times. The process ends after a given number of steps, and the output image should represent a sample according to the training data distribution of the model, for instance an image of a cat.
+
+During training we show many samples of a given distribution, such as images of cat. After training, the model will be able to process random noise to generate similar cat images.
+
+Without going in too much detail, the model is usually not trained to directly predict a slightly less noisy image, but rather to predict the "noise residual" which is the difference between a less noisy image and the input image (for a diffusion model called "DDPM").
+
+To do the denoising process, a specific noise scheduling algorithm is thus necessary and "wrap" the model to define how many diffusion steps are needed for inference as well as how to *compute* a less noisy image from the model's output.
 
 ## Summary on diffusers
 Stable Diffusion is based on a particular type of diffusion model called **Latent Diffusion**, proposed in [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752).
@@ -115,7 +131,7 @@ The core API of `diffusers` is divided into three components:
 2. **Models**: popular architectures for training new diffusion models, *e.g.* [UNet](https://arxiv.org/abs/1505.04597).
 3. **Schedulers**: various techniques for generating images from noise during *inference* as well as to generate noisy images for *training*.
 
-## Create your own
+## Create a Pipeline
 
 ### Install diffusers
 
@@ -164,6 +180,69 @@ pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
 
 ```
+The pipe shows now all components contained in your desired process.
+
+```
+pipe
+```
+
+```
+StableDiffusionPipeline {
+  "_class_name": "StableDiffusionPipeline",
+  "_diffusers_version": "0.11.0",
+  "feature_extractor": [
+    "transformers",
+    "CLIPImageProcessor"
+  ],
+  "requires_safety_checker": false,
+  "safety_checker": [
+    null,
+    null
+  ],
+  "scheduler": [
+    "diffusers",
+    "DDIMScheduler"
+  ],
+  "text_encoder": [
+    "transformers",
+    "CLIPTextModel"
+  ],
+  "tokenizer": [
+    "transformers",
+    "CLIPTokenizer"
+  ],
+  "unet": [
+    "diffusers",
+    "UNet2DConditionModel"
+  ],
+  "vae": [
+    "diffusers",
+    "AutoencoderKL"
+  ]
+}
+```
+
+### Model
+
+Instances of the model class are neural networks that take a noisy `sample` as well as a `timestep` as inputs to predict a less noisy output `sample`.
+
+Here a simple `UNet2DConditionModel` which was released with the [DDPM Paper](https://arxiv.org/abs/2006.11239) is used.
+
+```
+pipe.unet
+```
+
+Similarly to what we've seen for the pipeline class, we can load the model configuration and weights with one line, using the `from_pretrained()` method. It caches the model weights locally.
+
+### Scheduler
+
+Schedulers define the noise schedule which is used to add noise to the model during training, and also define the algorithm to *compute* the slightly less noisy sample given the model output (here `noisy_residual`). 
+
+It is important to stress here that while *models* have trainable weights, *schedulers* are usually *parameter-free* (in the sense they have no trainable weights) and simply define the algorithm to compute the slightly less noisy sample.
+
+```
+pipe.scheduler
+```
 
 ### Generate Image
 
@@ -180,6 +259,7 @@ image.save(f"astronaut_rides_horse.png")
 Et voila
 
 [![cat_rainbow_stable_diffusion](/posts/2023_01_12_hands_on_latent_diffusion_models/images/cat_sitting_rainbow.png)](/posts/2023_01_12_hands_on_latent_diffusion_models/images/cat_sitting_rainbow.png)
+
 
 
 
