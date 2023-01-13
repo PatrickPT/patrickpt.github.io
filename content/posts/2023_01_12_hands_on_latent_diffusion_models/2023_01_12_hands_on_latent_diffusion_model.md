@@ -1,6 +1,6 @@
 ---
 title: "Hands on with Latent Diffusion Models"
-date: 2023-01-11T08:28:09Z
+date: 2023-01-13T16:28:09Z
 draft: False
 showToc: true
 TocOpen: true
@@ -8,7 +8,7 @@ TocOpen: true
 
 **Prerequitises**
 
-To test the models here you need to have an account with HuggingFace [https://huggingface.co/](https://huggingface.co/) - for loading the checkpoint or using the endpoints.
+To test the models here you need to have an account with [HuggingFace](https://huggingface.co/) - for loading the checkpoint or using the endpoints.
 Hugging Face is a community and data science platform that provides:
 - Tools that enable users to build, train and deploy ML models based on open source (OS) code and technologies.
 - A place where a broad community of data scientists, researchers, and ML engineers can come together and share ideas, get support and contribute to open source projects.
