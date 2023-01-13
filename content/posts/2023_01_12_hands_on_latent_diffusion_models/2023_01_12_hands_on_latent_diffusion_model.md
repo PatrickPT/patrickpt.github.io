@@ -1,6 +1,6 @@
 ---
 title: "Hands on with Latent Diffusion Models"
-date: 2023-01-13T16:28:09Z
+date: 2023-01-13T09:28:09Z
 draft: False
 showToc: true
 TocOpen: true

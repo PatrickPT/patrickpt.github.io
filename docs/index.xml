@@ -5,7 +5,18 @@
     <link>https://patrickpt.github.io/</link>
     <description>Recent content on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Jan 2023 22:34:01 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 09:28:09 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hands on with Latent Diffusion Models</title>
+      <link>https://patrickpt.github.io/posts/2023_01_12_hands_on_latent_diffusion_models/2023_01_12_hands_on_latent_diffusion_model/</link>
+      <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/2023_01_12_hands_on_latent_diffusion_models/2023_01_12_hands_on_latent_diffusion_model/</guid>
+      <description>Prerequitises
+To test the models here you need to have an account with HuggingFace - for loading the checkpoint or using the endpoints. Hugging Face is a community and data science platform that provides:
+Tools that enable users to build, train and deploy ML models based on open source (OS) code and technologies. A place where a broad community of data scientists, researchers, and ML engineers can come together and share ideas, get support and contribute to open source projects.</description>
+    </item>
+    
     <item>
       <title>A short summary on ChatGPT</title>
       <link>https://patrickpt.github.io/posts/2023_01_12_summary_chatgpt/2023_01_12_summary_chatgpt/</link>
