@@ -96,13 +96,13 @@ If you are interested in understanding how to create a Notebook with diffusors p
 *If you want to get a more hands-on guide on **training** diffusion models, please have a look at*
  [*Training with Diffusers*](https://colab.research.google.com/gist/anton-l/f3a8206dae4125b93f05b1f5f703191d/diffusers_training_example.ipynb)
 
-## Recap on Diffusion Models
+## Summary on Diffusion Models
 
 Diffusion models are machine learning systems that are trained to *denoise* random gaussian noise step by step, to get to a sample of interest, such as an *image*. 
 
 The underlying model, often a neural network, is trained to predict a way to slightly denoise the image in each step. After certain number of steps, a sample is obtained.
 
-[![stable_diffusion](posts/2023_01_12_hands_on_latent_diffusion_models/images/diffusion-process.jpg)](posts/2023_01_12_hands_on_latent_diffusion_models/images/diffusion-process.jpg)
+[![stable_diffusion](/posts/2023_01_12_hands_on_latent_diffusion_models/images/diffusion-process.jpg)](/posts/2023_01_12_hands_on_latent_diffusion_models/images/diffusion-process.jpg)
 
 The diffusion process consists in taking random noise of the size of the desired output and pass it through the model several times. The process ends after a given number of steps, and the output image should represent a sample according to the training data distribution of the model, for instance an image of a cat.
 
@@ -131,7 +131,7 @@ The core API of `diffusers` is divided into three components:
 2. **Models**: popular architectures for training new diffusion models, *e.g.* [UNet](https://arxiv.org/abs/1505.04597).
 3. **Schedulers**: various techniques for generating images from noise during *inference* as well as to generate noisy images for *training*.
 
-## Create a Pipeline
+## How-to create an Image
 
 ### Install diffusers
 
@@ -151,7 +151,7 @@ from huggingface_hub import notebook_login
 notebook_login()
 ```
 
-### Create Pipeline
+### Pipeline
 
 `StableDiffusionPipeline` is an end-to-end inference pipeline that you can use to generate images from text with just a few lines of code.
 
@@ -254,13 +254,11 @@ The pipeline returns as output a dictionary with a generated `sample` of interes
 prompt = "oil painting of a cat sitting on a rainbow grass florest, sunset, cliffside ocean scene, diffuse lighting, fantasy, intricate, elegant, highly detailed, lifelike, photorealistic, digital painting, artstation, illustration, concept art, smooth, sharp focus, art by John Collier and Albert Aublet and Krenz Cushart and Artem Demura and Alphonse Mucha"
 image = pipe(prompt).images[0]  # image here is in [PIL format](https://pillow.readthedocs.io/en/stable/)
 
-image.save(f"astronaut_rides_horse.png")
+image.save(f"rainbow_cat.png")
 ```
 Et voila
 
 [![cat_rainbow_stable_diffusion](/posts/2023_01_12_hands_on_latent_diffusion_models/images/cat_sitting_rainbow.png)](/posts/2023_01_12_hands_on_latent_diffusion_models/images/cat_sitting_rainbow.png)
-
-
 
 
 # References
