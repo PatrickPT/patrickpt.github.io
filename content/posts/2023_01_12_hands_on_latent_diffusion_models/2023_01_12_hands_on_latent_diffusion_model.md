@@ -63,7 +63,7 @@ No worries, you are not the first one to create a prompt and there are already a
 
 There are already a few websites giving you access to endpoints for free.
 I recommend to use one where you still have access to the codebase of the model and some evaluation.
-The creators of stable-diffusion, an open source latent diffusion model host their model on Huggingface and give access to an endpoint (here called spaces) to test it out:
+StabilityAI, the creators of stable-diffusion, an open source latent diffusion model host their model on Huggingface and give access to an endpoint (here called spaces) to test it out:
 
 [Stable Diffusion 2.1 Demo by Stability AI](https://stabilityai-stable-diffusion.hf.space/)
 
