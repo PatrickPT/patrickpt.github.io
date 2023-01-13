@@ -19,6 +19,7 @@ Hugging Face is a community and data science platform that provides:
 There are mutiple sites and blog posts which explain Latent Diffusion Models including my own [Latent Diffusion Models: What is all the fuzz about?](content/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models)
 
 To keep it a bit lightweight i can recommend one which explains everything with diagrams(Because i like diagrams for learning).
+
 [Blogpost of Jay Alammar](https://jalammar.github.io/illustrated-stable-diffusion/)
 
 ### I don't understand anything
@@ -56,7 +57,9 @@ Of course AI can help you with this:
 *No* 
 
 No worries, you are not the first one to create a prompt and there are already a lot of examples out there:
+
 [Examples with prompt search](https://krea.ai//)
+
 [Atlas on examples with topics](https://atlas.nomic.ai/map/809ef16a-5b2d-4291-b772-a913f4c8ee61/9ed7d171-650b-4526-85bf-3592ee51ea31)
 
 ## Use an Endpoint with Stable Diffusion
