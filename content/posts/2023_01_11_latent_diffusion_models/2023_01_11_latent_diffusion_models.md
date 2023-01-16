@@ -132,12 +132,6 @@ $$ \| \mathbf{\epsilon} - \mathbf{\epsilon}_\theta(\mathbf{x}_t, t) \|^2 = \| \m
 
 Here, \\(\mathbf{x}_0\\) is the initial (real, uncorrupted) image, and we see the direct noise level \\(t\\) sample given by the fixed forward process. \\(\mathbf{\epsilon}\\) is the pure noise sampled at time step \\(t\\), and \\(\mathbf{\epsilon}_\theta (\mathbf{x}_t, t)\\) is our neural network. The neural network is optimized using a simple mean squared error (MSE) between the true and the predicted Gaussian noise.
 
-The training algorithm now looks as follows:
-
-<p align="center">
-    <img src="assets/78_annotated-diffusion/training.png" width="400" />
-</p>
-
 In other words:
 * we take a random sample \\(\mathbf{x}_0\\) from the real unknown and possibily complex data distribution \\(q(\mathbf{x}_0)\\)
 * we sample a noise level \\(t\\) uniformally between \\(1\\) and \\(T\\) (i.e., a random time step)
@@ -154,7 +148,11 @@ What is typically used here is very similar to that of an [Autoencoder](https://
 
 In terms of architecture, the DDPM authors went for a **U-Net**, introduced by ([Ronneberger et al., 2015](https://arxiv.org/abs/1505.04597)) (which, at the time, achieved state-of-the-art results for medical image segmentation). This network, like any autoencoder, consists of a bottleneck in the middle that makes sure the network learns only the most important information. Importantly, it introduced residual connections between the encoder and decoder, greatly improving gradient flow (inspired by ResNet in [He et al., 2015](https://arxiv.org/abs/1512.03385)).
 
-[![unet](content/posts/2023_01_12_hands_on_latent_diffusion_models/images/unet-model.png)](content/posts/2023_01_12_hands_on_latent_diffusion_models/images/unet-model.png)
+[![unet](/posts/2023_01_12_hands_on_latent_diffusion_models/images/unet-model.png)](/posts/2023_01_12_hands_on_latent_diffusion_models/images/unet-model.png)
 
 
 As can be seen, a U-Net model first downsamples the input (i.e. makes the input smaller in terms of spatial resolution), after which upsampling is performed.
+
+# And now?
+
+[![unet](/posts/2023_01_12_hands_on_latent_diffusion_models/images/stable_diffusion.png)](/posts/2023_01_12_hands_on_latent_diffusion_models/images/stable_diffusion.png)
