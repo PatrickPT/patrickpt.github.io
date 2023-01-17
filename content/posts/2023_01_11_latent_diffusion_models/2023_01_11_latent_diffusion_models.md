@@ -35,10 +35,6 @@ A brand-new category of cutting-edge generative models called diffusion models g
 They have already received a great deal of attention as a result of OpenAI, Nvidia, and Google's success in training massive models.
 We'll take a deeper look into **Denoising Diffusion Probabilistic Models** (also known as DDPMs, diffusion models, score-based generative models or simply [autoencoders](https://benanne.github.io/2022/01/31/diffusion.html)) as researchers have been able to achieve remarkable results with them for (un)conditional image/audio/video generation. Popular examples (at the time of writing) include [GLIDE](https://arxiv.org/abs/2112.10741) and [DALL-E 2](https://openai.com/dall-e-2/) by OpenAI, [Latent Diffusion](https://github.com/CompVis/latent-diffusion) by the University of Heidelberg and [ImageGen](https://imagen.research.google/) by Google Brain.
 
-The idea of diffusion for generative modeling was introduced in ([Sohl-Dickstein et al., 2015](https://arxiv.org/abs/1503.03585)). However, it took until ([Song et al., 2019](https://arxiv.org/abs/1907.05600)) (at Stanford University), and then ([Ho et al., 2020](https://arxiv.org/abs/2006.11239)) (at Google Brain) who independently improved the approach.
-DDPM originally was introduced in a paper by ([Ho et al., 2020](https://arxiv.org/abs/2006.11239)), and further anaylzed in Phil Wang's [implementation](https://github.com/lucidrains/denoising-diffusion-pytorch) - which itself is based on the [original TensorFlow implementation](https://github.com/hojonathanho/diffusion). 
-
-There are [several perspectives](https://twitter.com/sedielem/status/1530894256168222722?s=20&t=mfv4afx1GcNQU5fZklpACw) on diffusion models. Here, the discrete-time (latent variable model) perspective is analyzed.
 
 # Intuition on Latent Diffusion Models
 
@@ -46,24 +42,24 @@ You may ask "What is the intuition behind latent diffusion models?"
 Let's break it down with a short example to make it clear:
 You are a painter hired by Vatican with the task to repaint the fresco at the ceiling of [sixtinian chapel](https://de.wikipedia.org/wiki/Sixtinische_Kapelle#/media/Datei:CAPPELLA_SISTINA_Ceiling.jpg).
 
-The requirement is to recreate the fresco with pictures of cats.
-Most likely you will be overwhelmed with that task and immediately think of structuring your work into smaller chunks. You want to start with one dedicated part of the whole fresco, for example the creation of Adam. You will put some effort in it, first paint the background of that chunk of the painting. Then you may outline the structures you want to paint, then you start with one object like the arm of Adam,  and then focus on the hand. Finally you are happy with the scene, decide to finish it and tackle the next part. Still later you may change things after you decided that it fits better with the overall fresco.
+The requirement is to recreate the fresco with pictures of cats. The requirement is based on the old fresco and the vatican wants to have the same scenes as currently there but witch cats.
+So you start remembering the fresco and start bringing up a base coat and the old fresco soon becomes a big grey noise.
 
-(#TODO Picture creation of Adam with Cats)
+Most likely you will be overwhelmed with creating a big fresco and immediately think of structuring your work into smaller chunks.
+Then you may outline the structures you want to paint based on your memory on the old picture and your vision on the new one.
 
-Finally you are building a masterpiece out of masterpieces lasting centuries until someone thinks dogs are nicer than cats(so never).
-The same idea comes with Diffusion: Decompose the image to smaller chunks and create gradually the best sample possible in many small steps. Breaking up the image sampling allows the models to correct itself over those small steps iteratively and produce a good sample.
+ Maybe you start with one object like the arm of Adam, from [the creation of Adam](https://en.wikipedia.org/wiki/The_Creation_of_Adam) and then focus on the hand. Gradually you add more details and finally are happy with the scene, decide to finish it and tackle the next part. Still later you may change things after you decided that it fits better with the overall fresco.
+
+Finally you are building a masterpiece lasting centuries until someone thinks dogs are nicer than cats(so never).
+
+The same idea comes with Diffusion: Gradually add noise and create the best representation of the input vision in many small steps. Breaking up the image sampling allows the models to correct itself over those small steps iteratively and produces a good sample.
 
 Unfortunately nothing is cost-neutral. Like it will cost a painter like Michealangelo almost 4 years to finish the fresco in Sixtinian chapel, the iterative process makes the Models slow at sampling(At least compared to GANs).
 
-# What are Latent Diffusion Models?
+# What are Diffusion Models?
 
-Focussing on the process of Denoising diffusion probabilistic models and to wrap it up: Latent Diffusion Models are a type of generative model that can be used to reconstruct an input signal from a noisy version of that signal. These models are based on the concept of diffusion, which refers to the way in which a signal spreads out and becomes more diffuse over time. 
-
-If you compare it to other generative models such as Normalizing Flows, GANs or VAEs: They all convert noise from some simple distribution to a data sample. This is also the case with Latent Diffusion Models where **a neural network learns to gradually denoise data** starting from pure noise.
-
-[![types_gans](/posts/2023_01_11_latent_diffusion_models/images/types_gans.png)](/posts/2023_01_11_latent_diffusion_models/images/types_gans.png)
-*Overview of the different types of generative [models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/HowdoestheDiffusionprocesswork?)*
+The idea of diffusion for generative modeling was introduced in ([Sohl-Dickstein et al., 2015](https://arxiv.org/abs/1503.03585)). However, it took until ([Song et al., 2019](https://arxiv.org/abs/1907.05600)) (at Stanford University), and then ([Ho et al., 2020](https://arxiv.org/abs/2006.11239)) (at Google Brain) who independently improved the approach.
+DDPM  which we are focussing on originally was introduced in a paper by ([Ho et al., 2020](https://arxiv.org/abs/2006.11239)).
 
 At a high level, they work by first representing the input signal as a set of latent variables, which are then transformed through a series of probabilistic transformations to produce the output signal. The transformation process is designed to smooth out the noise in the input signal and reconstruct a cleaner version of the signal.
 
@@ -73,19 +69,61 @@ In a bit more detail for images, the set-up consists of 2 processes:
 * a fixed (or predefined) forward diffusion process \\(q\\) of our choosing, that gradually adds Gaussian noise to an image, until you end up with pure noise
 * a learned reverse denoising diffusion process \\(p_\theta\\), where a neural network is trained to gradually denoise an image starting from pure noise, until you end up with an actual image.
 
+Diffusion Models are basically generative models:
+[![types_gans](/posts/2023_01_11_latent_diffusion_models/images/types_gans.png)](/posts/2023_01_11_latent_diffusion_models/images/types_gans.png)
+*Overview of the different types of generative [models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/HowdoestheDiffusionprocesswork?)*
+
+## GAN vs Diffusion
+
+**GAN**
+- One shot generation. Fast.
+- Harder to control in one pass.
+- Adversarial min-max objective. Can collapse.
+
+**Diffusion**
+- Multi-iteration generation. Slow.
+- Easier to control during generation.
+- Simple objective, no adversary in training. 
+
 
 # I want to see the math
 
-Both the forward and reverse process indexed by \\(t\\) happen for some number of finite time steps \\(T\\) . You start with \\(t=0\\) where you sample a real image \\(\mathbf{x}_0\\) from your data distribution (let's say an image of a cat from ImageNet), and the forward process samples some noise from a Gaussian distribution at each time step \\(t\\), which is added to the image of the previous time step. Given a sufficiently large \\(T\\) and a well behaved schedule for adding noise at each time step, you end up with what is called an [isotropic Gaussian distribution](https://math.stackexchange.com/questions/1991961/gaussian-distribution-is-isotropic) at \\(t=T\\) via a gradual process.  Isotropic means the probability density is equal (iso) in every direction (tropic). In gaussians this can be achieved with a \\(\sigma^2 I\\) covariance matrix
+Both the forward and reverse process indexed by \\(t\\) happen for some number of finite time steps \\(T\\). 
 
-## In more mathematical form
+## Forward diffusion
 
-A tractable loss function top optimize the neural net is needed.
-
-Let \\(q(\mathbf{x}_0)\\) be the real data distribution, say of "real images". We can sample from this distribution to get an image, \\(\mathbf{x}_0 \sim q(\mathbf{x}_0)\\). We define the forward diffusion process \\(q(\mathbf{x}_t | \mathbf{x}_{t-1})\\) which adds Gaussian noise at each time step \\(t\\), according to a known variance schedule \\(0 < \beta_1 < \beta_2 < ... < \beta_T < 1\\) as
+With a data point from a real data distribution \\(\mathbf{x}_0 \sim q(\mathbf{x})\\) be the real data distribution, say of "real images". We can sample from this distribution to get an image, \\(\mathbf{x}_0 \sim q(\mathbf{x}_0)\\). We define the forward diffusion process \\(q(\mathbf{x}_t | \mathbf{x}_{t-1})\\) which adds Gaussian noise at each time step \\(t\\), according to a known variance schedule \\(0 < \beta_1 < \beta_2 < ... < \beta_T < 1\\) as
 $$
 q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I}). 
 $$
+
+Given a sufficiently large \\(T\\) and a well behaved schedule for adding noise at each time step, you end up with what is called an [isotropic Gaussian distribution](https://math.stackexchange.com/questions/1991961/gaussian-distribution-is-isotropic) at \\(t=T\\) via a gradual process.  Isotropic means the probability density is equal (iso) in every direction (tropic). In gaussians this can be achieved with a \\(\sigma^2 I\\) covariance matrix
+
+One property of the diffusion process is, that you can sample \\(x_t\\) at any time step \\(t\\).
+With \\(\alpha_t = 1 - \beta_t\\)
+
+$$
+\begin{aligned}
+\mathbf{x}_t 
+&= \sqrt{\alpha_t}\mathbf{x}_{t-1} + \sqrt{1 - \alpha_t}\boldsymbol{\epsilon}_{t-1} & \text{ ;where } \boldsymbol{\epsilon}_{t-1}, \boldsymbol{\epsilon}_{t-2}, \dots \sim \mathcal{N}(\mathbf{0}, \mathbf{I}) \\
+&= \sqrt{\alpha_t \alpha_{t-1}} \mathbf{x}_{t-2} + \sqrt{1 - \alpha_t \alpha_{t-1}} \bar{\boldsymbol{\epsilon}}_{t-2} & \text{ ;where } \bar{\boldsymbol{\epsilon}}_{t-2} \text{ merges two Gaussians (*).} \\
+&= \dots \\
+&= \sqrt{\bar{\alpha}_t}\mathbf{x}_0 + \sqrt{1 - \bar{\alpha}_t}\boldsymbol{\epsilon} \\
+q(\mathbf{x}_t \vert \mathbf{x}_0) &= \mathcal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1 - \bar{\alpha}_t)\mathbf{I})
+\end{aligned}
+$$
+
+## Reverese diffusion
+
+If we can reverse the above process and sample from \\(q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)\\), we will be able to recreate the true sample from a Gaussian noise input, \\(\mathbf{x}_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I})\\). If \\(\beta_t\\) is small enough, \\(q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)\\) will also be Gaussian. Unfortunately, we cannot easily estimate \\(q(\mathbf{x}_{t-1} \vert \mathbf{x}_t)\\) because it needs to use the entire dataset and therefore we need to learn a model \\(p_0\\) to approximate these conditional probabilities in order to run the reverse diffusion process.
+
+It can be parametrized as
+
+$$ p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \mu_\theta(\mathbf{x}_{t},t), \Sigma_\theta (\mathbf{x}_{t},t))$$
+
+## Loss Function
+The setup is very similar to 
+A tractable loss function top optimize the neural net is needed.
 
 Recall that a normal distribution (also called Gaussian distribution) is defined by 2 parameters: a mean \\(\mu\\) and a variance \\(\sigma^2 \geq 0\\). Basically, each new (slightly noisier) image at time step \\(t\\) is drawn from a **conditional Gaussian distribution** with \\(\mathbf{\mu}_t = \sqrt{1 - \beta_t} \mathbf{x}_{t-1}\\) and \\(\sigma^2_t = \beta_t\\), which we can do by sampling \\(\mathbf{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})\\) and then setting \\(\mathbf{x}_t = \sqrt{1 - \beta_t} \mathbf{x}_{t-1} +  \sqrt{\beta_t} \mathbf{\epsilon}\\). 
 
@@ -153,6 +191,29 @@ In terms of architecture, the DDPM authors went for a **U-Net**, introduced by (
 
 As can be seen, a U-Net model first downsamples the input (i.e. makes the input smaller in terms of spatial resolution), after which upsampling is performed.
 
-# And now?
+# But why all the buzz now?
+
+Simply because of speed. It's computationally very expensive to scale these U-nets into high-resolution images. And here comes the **latent** to latent diffusion models. 
+
+[Rombach et al.](https://arxiv.org/abs/2112.10752) proposed to use an encoder network to encode the input, which typically is high dimensional into a latent representation. The intuition behind is to lower the computational demands/costs of training diffusion models by processing the input in a lower dimensional space. Afterward, a standard diffusion model (U-Net) is applied to generate new data, which are upsampled by a decoder network.
+
+The perceptual compression process relies on an autoencoder model. An encoder \\(\mathbf{x} \in \mathbb{R}^{H \times W \times 3}\\) is used to compress the input image 
+ to a smaller 2D latent vector 
+ , where the downsampling rate 
+. Then an decoder 
+ reconstructs the images from the latent vector, 
+. The paper explored two types of regularization in autoencoder training to avoid arbitrarily high-variance in the latent spaces.
+
+KL-reg: A small KL penalty towards a standard normal distribution over the learned latent, similar to VAE.
+VQ-reg: Uses a vector quantization layer within the decoder, like VQVAE but the quantization layer is absorbed by the decoder.
+
+[![unet](/posts/2023_01_11_latent_diffusion_models/images/rombach-stable-diffusion.png)](/posts/2023_01_11_latent_diffusion_models/images/rombach-stable-diffusion.png)
+
 
 [![unet](/posts/2023_01_12_hands_on_latent_diffusion_models/images/stable_diffusion.png)](/posts/2023_01_12_hands_on_latent_diffusion_models/images/stable_diffusion.png)
+
+# In a nutshell
+
+Focussing on the process of Denoising diffusion probabilistic models and to wrap it up: Latent Diffusion Models are a type of generative model that can be used to reconstruct an input signal from a noisy version of that signal. These models are based on the concept of diffusion, which refers to the way in which a signal spreads out and becomes more diffuse over time. 
+
+If you compare it to other generative models such as Normalizing Flows, GANs or VAEs: They all convert noise from some simple distribution to a data sample. This is also the case with Latent Diffusion Models where **a neural network learns to gradually denoise data** starting from pure noise.

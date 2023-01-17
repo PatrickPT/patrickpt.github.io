@@ -263,6 +263,7 @@ Et voila
 
 [![cat_rainbow_stable_diffusion](/posts/2023_01_12_hands_on_latent_diffusion_models/images/cat_sitting_rainbow.png)](/posts/2023_01_12_hands_on_latent_diffusion_models/images/cat_sitting_rainbow.png)
 
+A good video on the topic combining intuition, code and a hands-on can be found on the [Youtube Channel by Edan Meyer](https://www.youtube.com/watch?v=ltLNYA3lWAQ)
 
 # References
 [Latent Diffusion Models: What is all the fuzz about?](content/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models)
