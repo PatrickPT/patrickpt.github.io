@@ -73,18 +73,6 @@ Diffusion Models are basically generative models:
 [![types_gans](/posts/2023_01_11_latent_diffusion_models/images/types_gans.png)](/posts/2023_01_11_latent_diffusion_models/images/types_gans.png)
 *Overview of the different types of generative [models](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/HowdoestheDiffusionprocesswork?)*
 
-## GAN vs Diffusion
-
-**GAN**
-- One shot generation. Fast.
-- Harder to control in one pass.
-- Adversarial min-max objective. Can collapse.
-
-**Diffusion**
-- Multi-iteration generation. Slow.
-- Easier to control during generation.
-- Simple objective, no adversary in training. 
-
 
 # I want to see the math
 
@@ -96,8 +84,15 @@ With a data point from a real data distribution \\(x_0 \sim q(x)\\) be the real 
 
 \\(q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{1 - \beta_t} x_{t-1}, \beta_t \mathbf{I})\\).
 
+with
+\\(\sqrt{1 - \beta_t} x_{t-1}\\) as Decay towards origin and
+
+\\(\beta_t \mathbf{I}\\) the addition of small noise.
 
 Given a sufficiently large \\(T\\) and a well behaved schedule for adding noise at each time step, you end up with what is called an [isotropic Gaussian distribution](https://math.stackexchange.com/questions/1991961/gaussian-distribution-is-isotropic) at \\(t=T\\) via a gradual process.  Isotropic means the probability density is equal (iso) in every direction (tropic). In gaussians this can be achieved with a \\(\sigma^2 I\\) covariance matrix
+
+[![DDPM](/posts/2023_01_11_latent_diffusion_models/images/DDPM.png)](/posts/2023_01_11_latent_diffusion_models/images/DDPM.png)
+*The Markov chain of forward (reverse) diffusion process of generating a sample by slowly adding (removing) noise. (Image source: Ho et al. 2020) and [Lilian Weng](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)*
 
 One property of the diffusion process is, that you can sample \\(x_t\\) at any time step \\(t\\).
 With \\(\alpha_{t} = 1 - \beta_t\\)
@@ -114,17 +109,108 @@ $$
 
 \\(q(x_t \vert x_0) = \mathcal{N}(x_t; \sqrt{\bar{\alpha}_t} x_0, (1 - \bar{\alpha}_t)\mathbf{I})\\)
 
+As \\(\beta_t\\) is a hyperparameter, \\(\alpha_t\\) can be precomputed over all timesteps. So the sampling of noise and creation of \\(x_t\\) is done in one step only and can be sampled at any timestep.  
+
 ## Reverese diffusion
 
-If we can reverse the above process and sample from \\(q(x_{t-1} \vert x_t)\\), we will be able to recreate the true sample from a Gaussian noise input, \\(x_T \sim \mathcal{N}(0, \mathbf{I})\\). If \\(\beta_t\\) is small enough, \\(q(x_{t-1} \vert x_t)\\) will also be Gaussian. Unfortunately, we cannot easily estimate \\(q(x_{t-1} \vert x_t)\\) because it needs to use the entire dataset and therefore we need to learn a model \\(p_0\\) to approximate these conditional probabilities in order to run the reverse diffusion process.
+In practical terms, we don't know \\(q(x_{t-1} \vert x_t)\\)It's intractable since statistical estimates of it require computations involving the entire dataset and therefore we need to learn a model \\(p_0\\) to approximate these conditional probabilities in order to run the reverse diffusion process.
 
-It can be parametrized as
+Since \\(q(x_{t-1} \vert x_t)\\) will also be Gaussian, for small enough \\(\beta_t\\), we can choose \\(p_0\\) to be Gaussian and just parameterize the mean and variance:
 
-$$ p_\theta (x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_{t},t), \Sigma_\theta (x_{t},t))$$
+$$
+\begin{aligned}
+\quad
+p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_t, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_t, t))
+\end{aligned}
+$$
 
+with
+\\(\mu_\theta(x_{t},t), \Sigma_\theta (x_{t},t)\\) as the to be learned functions of drift and covariance of the Gaussians(which are learned by the Neural Net).
+
+To apply the complete reverse formula would be parametrized as
+$$
+\begin{aligned}
+p_\theta(\mathbf{x}_{0:T}) = p(\mathbf{x}_T) \prod^T_{t=1} p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t)
+\end{aligned}
+$$
+
+As the target image is already defined the Neural Nets are basically learning a supervised learning problem.
+
+[![diffusion](/posts/2023_01_11_latent_diffusion_models/images/diffusion-example.png)](/posts/2023_01_11_latent_diffusion_models/images/diffusion-example.png)
+*An example of training a diffusion model for modeling a 2D swiss roll data. (Image source: Sohl-Dickstein et al., 2015)*
+
+The neural network shall represent a (conditional) probability distribution of the backward process. If we assume this reverse process is Gaussian as well, then recall that any Gaussian distribution is defined by 2 parameters:
+* a mean parametrized by \\(\mu_\theta\\);
+* a variance parametrized by \\(\Sigma_\theta\\);
+
+so we can parametrize the process as 
+$$ 
+p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \mu_\theta(\mathbf{x}_{t},t), \Sigma_\theta (\mathbf{x}_{t},t))
+$$
+
+where the mean and variance are also conditioned on the noise level \\(t\\).
+
+Hence, our neural network needs to learn/represent the mean and variance. However, the DDPM authors decided to **keep the variance fixed, and let the neural network only learn (represent) the mean \\(\mu_\theta\\) of this conditional probability distribution**.
+
+But how would such a a model be trained?
 ## Loss Function
-The setup is very similar to 
-A tractable loss function top optimize the neural net is needed.
+
+To derive an objective function to learn the mean of the backward process, the authors observe that the combination of \\(q\\) and \\(p_\theta\\) can be seen as a variational auto-encoder (VAE) [(Kingma et al., 2013)](https://arxiv.org/abs/1312.6114). Thus, a Diffusion Model can be trained by finding the reverse Markov transitions that maximize the likelihood of the training data. In practice, training equivalently consists of minimizing the variational upper bound on the negative log likelihood \\(- \log p_\theta(\mathbf{x}_0)\\).
+
+After a series of calculations, which we won't analyze here(See [Lilian Weng](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) for reference), we can write the evidence lower bound (ELBO) as follows:
+
+$$
+\begin{aligned}
+- \log p_\theta(\mathbf{x}_0) 
+&\leq - \log p_\theta(\mathbf{x}_0) + D_\text{KL}(q(\mathbf{x}_{1:T}\vert\mathbf{x}_0) \| p_\theta(\mathbf{x}_{1:T}\vert\mathbf{x}_0) )
+\end{aligned}
+$$
+
+Intuition on the optimization:
+For a function \\(f(x)\\), which can't be computed(like e.g. the above negative log-likelihood) and have also a function \\(g(x)\\), which we can compute and fullfills the condition \\(g(x) <= f(x)\\). If we then maximize \\(g(x)\\) we can be certain that \\(f(x)\\) will also increase.
+
+In our case this will be ensured by the Kullback-Leibler (KL) Divergences. The KL Divergence is an asymmetric statistical distance measure of how much one probability distribution \\(P\\) differs from a reference distribution \\(Q\\). We are interested in formulating the Loss function in terms of KL divergences because the transition distributions in our Markov chain are Gaussians, and the KL divergence between Gaussians has a closed form. 
+For a closer look please look [here](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/)
+
+If we rewrite the above Loss function and apply the bayesian rule the upper term can be summarized to a joint probability and will be trainsformed to the Variational Lower Bound:
+
+$$
+\begin{aligned}
+&= -\log p_\theta(\mathbf{x}_0) + \mathbb{E}_{\mathbf{x}_{1:T}\sim q(\mathbf{x}_{1:T} \vert \mathbf{x}_0)} \Big[ \log\frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T}) / p_\theta(\mathbf{x}_0)} \Big] \\
+&= -\log p_\theta(\mathbf{x}_0) + \mathbb{E}_q \Big[ \log\frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} + \log p_\theta(\mathbf{x}_0) \Big] \\
+&= \mathbb{E}_q \Big[ \log \frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} \Big] \\
+\text{Let }L_\text{VLB} 
+&= \mathbb{E}_{q(\mathbf{x}_{0:T})} \Big[ \log \frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} \Big] \geq - \mathbb{E}_{q(\mathbf{x}_0)} \log p_\theta(\mathbf{x}_0)
+\end{aligned}
+$$
+
+To convert each term in the equation to be analytically computable, the objective can be further rewritten to be a combination of several KL-divergence and entropy terms (See the detailed step-by-step process in Appendix B in Sohl-Dickstein et al., 2015) [Complete calculation can be found here](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) together with a really nice explanation [here](https://www.youtube.com/watch?v=HoKDTa5jHvg&t=905s):
+
+$$
+\begin{aligned}
+L_\text{VLB} 
+&= \mathbb{E}_{q(\mathbf{x}_{0:T})} \Big[ \log\frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} \Big] \\
+&= \dots \\\
+&= \mathbb{E}_q [\underbrace{D_\text{KL}(q(\mathbf{x}_T \vert \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_T))}_{L_T} + \sum_{t=2}^T \underbrace{D_\text{KL}(q(\mathbf{x}_{t-1} \vert \mathbf{x}_t, \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_{t-1} \vert\mathbf{x}_t))}_{L_{t-1}} \underbrace{- \log p_\theta(\mathbf{x}_0 \vert \mathbf{x}_1)}_{L_0} ]
+\end{aligned}
+$$
+
+To be more precise the complete could be rewritten in KL Divergences.
+
+$$
+\begin{aligned}
+L_\text{VLB} &= L_T + L_{T-1} + \dots + L_0 \\
+\text{where } L_T &= D_\text{KL}(q(\mathbf{x}_T \vert \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_T)) \\
+L_t &= D_\text{KL}(q(\mathbf{x}_t \vert \mathbf{x}_{t+1}, \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_t \vert\mathbf{x}_{t+1})) \text{ for }1 \leq t \leq T-1 \\
+L_0 &= - \log p_\theta(\mathbf{x}_0 \vert \mathbf{x}_1)
+\end{aligned}
+$$
+
+Every KL term in \\(L_\text{VLB}\\) except for \\(L_0\\) compares two Gaussian distributions and therefore they can be computed in closed form. \\(L_T\\) is constant and can be ignored during training because \\(q\\) has no learnable parameters and \\(x_T\\) is a Gaussian noise. \\(L_t\\) formulates the difference between the desired denoising steps and the approximated ones.
+
+It is evident that through the ELBO, maximizing the likelihood boils down to learning the denoising steps \\(L_t\\).
+
+
 
 Recall that a normal distribution (also called Gaussian distribution) is defined by 2 parameters: a mean \\(\mu\\) and a variance \\(\sigma^2 \geq 0\\). Basically, each new (slightly noisier) image at time step \\(t\\) is drawn from a **conditional Gaussian distribution** with \\(\mathbf{\mu}_t = \sqrt{1 - \beta_t} \mathbf{x}_{t-1}\\) and \\(\sigma^2_t = \beta_t\\), which we can do by sampling \\(\mathbf{\epsilon} \sim \mathcal{N}(0, \mathbf{I})\\) and then setting \\(\mathbf{x}_t = \sqrt{1 - \beta_t} \mathbf{x}_{t-1} +  \sqrt{\beta_t} \mathbf{\epsilon}\\). 
 
@@ -136,12 +222,13 @@ Now, if we knew the conditional distribution \\(p(\mathbf{x}_{t-1} | \mathbf{x}_
 
 However, we don't know \\(p(\mathbf{x}_{t-1} | \mathbf{x}_t)\\). It's intractable since it requires knowing the distribution of all possible images in order to calculate this conditional probability. Hence, we're going to leverage a neural network to **approximate (learn) this conditional probability distribution**, let's call it \\(p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t)\\), with \\(\theta\\) being the parameters of the neural network, updated by gradient descent. 
 
-Ok, so we need a neural network to represent a (conditional) probability distribution of the backward process. If we assume this reverse process is Gaussian as well, then recall that any Gaussian distribution is defined by 2 parameters:
-* a mean parametrized by \\(\mu_\theta\\);
-* a variance parametrized by \\(\Sigma_\theta\\);
+
 
 so we can parametrize the process as 
-$$ p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \mu_\theta(\mathbf{x}_{t},t), \Sigma_\theta (\mathbf{x}_{t},t))$$
+$$ 
+p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \mu_\theta(\mathbf{x}_{t},t), \Sigma_\theta (\mathbf{x}_{t},t))
+$$
+
 where the mean and variance are also conditioned on the noise level \\(t\\).
 
 Hence, our neural network needs to learn/represent the mean and variance. However, the DDPM authors decided to **keep the variance fixed, and let the neural network only learn (represent) the mean \\(\mu_\theta\\) of this conditional probability distribution**. From the paper:
@@ -157,7 +244,9 @@ To derive an objective function to learn the mean of the backward process, the a
 
 A direct consequence of the constructed forward process \\(q\\), as shown by Sohl-Dickstein et al., is that we can sample \\(\mathbf{x}_t\\) at any arbitrary noise level conditioned on \\(\mathbf{x}_0\\) (since sums of Gaussians is also Gaussian). This is very convenient:  we don't need to apply \\(q\\) repeatedly in order to sample \\(\mathbf{x}_t\\). 
 We have that 
-$$q(\mathbf{x}_t | \mathbf{x}_0) = \cal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1- \bar{\alpha}_t) \mathbf{I})$$
+$$
+q(\mathbf{x}_t | \mathbf{x}_0) = \cal{N}(\mathbf{x}_t; \sqrt{\bar{\alpha}_t} \mathbf{x}_0, (1- \bar{\alpha}_t) \mathbf{I})
+$$
 
 with \\(\alpha_{t} := 1 - \beta_t\\) and \\(\bar{\alpha}_t := \Pi_{s=1}^{t} \alpha_s\\). Let's refer to this equation as the "nice property". This means we can sample Gaussian noise and scale it appropriatly and add it to \\(\mathbf{x}_0\\) to get \\(\mathbf{x}_t\\) directly. Note that the \\(\bar{\alpha}_t\\) are functions of the known \\(\beta_t\\) variance schedule and thus are also known and can be precomputed. This then allows us, during training, to **optimize random terms of the loss function \\(L\\)** (or in other words, to randomly sample \\(t\\) during training and optimize \\(L_t\\)).
 
@@ -218,3 +307,10 @@ VQ-reg: Uses a vector quantization layer within the decoder, like VQVAE but the 
 Focussing on the process of Denoising diffusion probabilistic models and to wrap it up: Latent Diffusion Models are a type of generative model that can be used to reconstruct an input signal from a noisy version of that signal. These models are based on the concept of diffusion, which refers to the way in which a signal spreads out and becomes more diffuse over time. 
 
 If you compare it to other generative models such as Normalizing Flows, GANs or VAEs: They all convert noise from some simple distribution to a data sample. This is also the case with Latent Diffusion Models where **a neural network learns to gradually denoise data** starting from pure noise.
+
+# References
+
+[Jascha Sohl Dickstein on Youtube](https://www.youtube.com/watch?v=XCUlnHP1TNM)
+
+[Assembly AI on Diffusion](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/)
+
