@@ -111,7 +111,7 @@ $$
 
 As \\(\beta_t\\) is a hyperparameter, \\(\alpha_t\\) can be precomputed over all timesteps. So the sampling of noise and creation of \\(x_t\\) is done in one step only and can be sampled at any timestep.  
 
-## Reverese diffusion
+## Reverse diffusion
 
 In practical terms, we don't know \\(q(x_{t-1} \vert x_t)\\)It's intractable since statistical estimates of it require computations involving the entire dataset and therefore we need to learn a model \\(p_0\\) to approximate these conditional probabilities in order to run the reverse diffusion process.
 
@@ -119,18 +119,18 @@ Since \\(q(x_{t-1} \vert x_t)\\) will also be Gaussian, for small enough \\(\bet
 
 $$
 \begin{aligned}
-\quad
-p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \boldsymbol{\mu}_\theta(\mathbf{x}_t, t), \boldsymbol{\Sigma}_\theta(\mathbf{x}_t, t))
+\quad p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t) = \mathcal{N} (\mathbf{x}\_{t-1}; {\mu}\_\theta(\mathbf{x}\_t, t), {\Sigma}\_\theta(\mathbf{x}\_t, t))
 \end{aligned}
 $$
 
 with
-\\(\mu_\theta(x_{t},t), \Sigma_\theta (x_{t},t)\\) as the to be learned functions of drift and covariance of the Gaussians(which are learned by the Neural Net).
+\\(\mu_\theta(x\_{t},t), \Sigma\_\theta (x\_{t},t)\\) as the to be learned functions of drift and covariance of the Gaussians(which are learned by the Neural Net).
 
 To apply the complete reverse formula would be parametrized as
+
 $$
 \begin{aligned}
-p_\theta(\mathbf{x}_{0:T}) = p(\mathbf{x}_T) \prod^T_{t=1} p_\theta(\mathbf{x}_{t-1} \vert \mathbf{x}_t)
+p\_\theta(\mathbf{x}\_{0:T}) = p(\mathbf{x}\_T) \prod^T\_{t=1} p\_\theta(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t)
 \end{aligned}
 $$
 
@@ -145,7 +145,7 @@ The neural network shall represent a (conditional) probability distribution of t
 
 so we can parametrize the process as 
 $$ 
-p_\theta (\mathbf{x}_{t-1} | \mathbf{x}_t) = \mathcal{N}(\mathbf{x}_{t-1}; \mu_\theta(\mathbf{x}_{t},t), \Sigma_\theta (\mathbf{x}_{t},t))
+p_\theta (\mathbf{x}\_{t-1} | \mathbf{x}\_t) = \mathcal{N}(\mathbf{x}\_{t-1}; \mu\_\theta(\mathbf{x}\_{t},t), \Sigma\_\theta (\mathbf{x}\_{t},t))
 $$
 
 where the mean and variance are also conditioned on the noise level \\(t\\).
@@ -161,10 +161,11 @@ After a series of calculations, which we won't analyze here(See [Lilian Weng](ht
 
 $$
 \begin{aligned}
-- \log p_\theta(\mathbf{x}_0) 
-&\leq - \log p_\theta(\mathbf{x}_0) + D_\text{KL}(q(\mathbf{x}_{1:T}\vert\mathbf{x}_0) \| p_\theta(\mathbf{x}_{1:T}\vert\mathbf{x}_0) )
+\- \log p\_\theta(\mathbf{x}\_0) 
+&\leq - \log p\_\theta(\mathbf{x}\_0)+ D\_\text{KL}(q(\mathbf{x}\_{1:T}\vert\mathbf{x}\_0) \vert p\_\theta(\mathbf{x}\_{1\:T}\vert\mathbf{x}\_0) )
 \end{aligned}
 $$
+
 
 Intuition on the optimization:
 For a function \\(f(x)\\), which can't be computed(like e.g. the above negative log-likelihood) and have also a function \\(g(x)\\), which we can compute and fullfills the condition \\(g(x) <= f(x)\\). If we then maximize \\(g(x)\\) we can be certain that \\(f(x)\\) will also increase.
@@ -176,11 +177,11 @@ If we rewrite the above Loss function and apply the bayesian rule the upper term
 
 $$
 \begin{aligned}
-&= -\log p_\theta(\mathbf{x}_0) + \mathbb{E}_{\mathbf{x}_{1:T}\sim q(\mathbf{x}_{1:T} \vert \mathbf{x}_0)} \Big[ \log\frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T}) / p_\theta(\mathbf{x}_0)} \Big] \\
-&= -\log p_\theta(\mathbf{x}_0) + \mathbb{E}_q \Big[ \log\frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} + \log p_\theta(\mathbf{x}_0) \Big] \\
-&= \mathbb{E}_q \Big[ \log \frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} \Big] \\
-\text{Let }L_\text{VLB} 
-&= \mathbb{E}_{q(\mathbf{x}_{0:T})} \Big[ \log \frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} \Big] \geq - \mathbb{E}_{q(\mathbf{x}_0)} \log p_\theta(\mathbf{x}_0)
+&= \-\log p\_\theta(\mathbf{x}\_0) + \mathbb{E}\_{\mathbf{x}\_{1:T}\sim q(\mathbf{x}\_{1\:T} \vert \mathbf{x}\_0)} \Big[ \log\frac{q(\mathbf{x}\_{1\:T}\vert\mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{0\:T}) / p\_\theta(\mathbf{x}\_0)} \Big] \\\
+&= \-\log p\_\theta(\mathbf{x}\_0) + \mathbb{E}\_q \Big[ \log\frac{q(\mathbf{x}\_{1\:T}\vert\mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{0\:T})} + \log p\_\theta(\mathbf{x}\_0) \Big] \\\
+&= \mathbb{E}\_q \Big[ \log \frac{q(\mathbf{x}\_{1\:T}\vert\mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{0\:T})} \Big] \\\
+\text{Let }L\_\text{VLB} 
+&= \mathbb{E}\_{q(\mathbf{x}\_{0\:T})} \Big[ \log \frac{q(\mathbf{x}\_{1\:T}\vert\mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{0\:T})} \Big] \geq \- \mathbb{E}\_{q(\mathbf{x}\_0)} \log p\_\theta(\mathbf{x}\_0)
 \end{aligned}
 $$
 
@@ -188,10 +189,10 @@ To convert each term in the equation to be analytically computable, the objectiv
 
 $$
 \begin{aligned}
-L_\text{VLB} 
-&= \mathbb{E}_{q(\mathbf{x}_{0:T})} \Big[ \log\frac{q(\mathbf{x}_{1:T}\vert\mathbf{x}_0)}{p_\theta(\mathbf{x}_{0:T})} \Big] \\
+L\_\text{VLB} 
+&= \mathbb{E}\_{q(\mathbf{x}\_{0\:T})} \Big[ \log\frac{q(\mathbf{x}\_{1\:T}\vert\mathbf{x}\_0)}{p\_\theta(\mathbf{x}\_{0\:T})} \Big] \\\
 &= \dots \\\
-&= \mathbb{E}_q [\underbrace{D_\text{KL}(q(\mathbf{x}_T \vert \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_T))}_{L_T} + \sum_{t=2}^T \underbrace{D_\text{KL}(q(\mathbf{x}_{t-1} \vert \mathbf{x}_t, \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_{t-1} \vert\mathbf{x}_t))}_{L_{t-1}} \underbrace{- \log p_\theta(\mathbf{x}_0 \vert \mathbf{x}_1)}_{L_0} ]
+&= \mathbb{E}\_q [\underbrace{D\_\text{KL}(q(\mathbf{x}\_T \vert \mathbf{x}\_0) \parallel p\_\theta(\mathbf{x}\_T))}\_{L\_T} + \sum\_{t=2}^T \underbrace{D\_\text{KL}(q(\mathbf{x}\_{t-1} \vert \mathbf{x}\_t, \mathbf{x}\_0) \parallel p\_\theta(\mathbf{x}\_{t-1} \vert\mathbf{x}\_t))}\_{L\_{t-1}} \underbrace{- \log p\_\theta(\mathbf{x}\_0 \vert \mathbf{x}\_1)}\_{L\_0} ]
 \end{aligned}
 $$
 
@@ -199,10 +200,10 @@ To be more precise the complete could be rewritten in KL Divergences.
 
 $$
 \begin{aligned}
-L_\text{VLB} &= L_T + L_{T-1} + \dots + L_0 \\
-\text{where } L_T &= D_\text{KL}(q(\mathbf{x}_T \vert \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_T)) \\
-L_t &= D_\text{KL}(q(\mathbf{x}_t \vert \mathbf{x}_{t+1}, \mathbf{x}_0) \parallel p_\theta(\mathbf{x}_t \vert\mathbf{x}_{t+1})) \text{ for }1 \leq t \leq T-1 \\
-L_0 &= - \log p_\theta(\mathbf{x}_0 \vert \mathbf{x}_1)
+L\_\text{VLB} &= L\_T + L\_{T-1} + \dots + L\_0 \\\
+\text{where } L\_T &= D\_\text{KL}(q(\mathbf{x}\_T \vert \mathbf{x}\_0) \parallel p\_\theta(\mathbf{x}\_T)) \\\
+L\_t &= D\_\text{KL}(q(\mathbf{x}\_t \vert \mathbf{x}\_{t+1}, \mathbf{x}\_0) \parallel p\_\theta(\mathbf{x}\_t \vert\mathbf{x}\_{t+1})) \text{ for }1 \leq t \leq T-1 \\\
+L\_0 &= - \log p\_\theta(\mathbf{x}\_0 \vert \mathbf{x}\_1)
 \end{aligned}
 $$
 
@@ -210,9 +211,7 @@ Every KL term in \\(L_\text{VLB}\\) except for \\(L_0\\) compares two Gaussian d
 
 It is evident that through the ELBO, maximizing the likelihood boils down to learning the denoising steps \\(L_t\\).
 
-
-
-Recall that a normal distribution (also called Gaussian distribution) is defined by 2 parameters: a mean \\(\mu\\) and a variance \\(\sigma^2 \geq 0\\). Basically, each new (slightly noisier) image at time step \\(t\\) is drawn from a **conditional Gaussian distribution** with \\(\mathbf{\mu}_t = \sqrt{1 - \beta_t} \mathbf{x}_{t-1}\\) and \\(\sigma^2_t = \beta_t\\), which we can do by sampling \\(\mathbf{\epsilon} \sim \mathcal{N}(0, \mathbf{I})\\) and then setting \\(\mathbf{x}_t = \sqrt{1 - \beta_t} \mathbf{x}_{t-1} +  \sqrt{\beta_t} \mathbf{\epsilon}\\). 
+Recall that a normal distribution (also called Gaussian distribution) is defined by 2 parameters: a mean \\(\mu\\) and a variance \\(\sigma^2 \geq 0\\). Basically, each new (slightly noisier) image at time step \\(t\\) is drawn from a **conditional Gaussian distribution** with \\(\mathbf{\mu}\_t = \sqrt{1 - \beta\_t} \mathbf{x}\_{t-1}\\) and \\(\sigma^2_t = \beta_t\\), which we can do by sampling \\(\mathbf{\epsilon} \sim \mathcal{N}(0, \mathbf{I})\\) and then setting \\(\mathbf{x}\_t = \sqrt{1 - \beta\_t} \mathbf{x}\_{t-1} +  \sqrt{\beta\_t} \mathbf{\epsilon}\\). 
 
 Note that the \\(\beta_t\\) aren't constant at each time step \\(t\\) (hence the subscript) --- in fact one defines a so-called **"variance schedule"**, which can be linear, quadratic, cosine, etc. as we will see further (a bit like a learning rate schedule). 
 
