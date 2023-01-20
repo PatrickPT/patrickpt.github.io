@@ -5,7 +5,19 @@
     <link>https://patrickpt.github.io/</link>
     <description>Recent content on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 Jan 2023 09:28:09 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jan 2023 14:50:18 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latent Diffusion Models: What is all the fuzz about?</title>
+      <link>https://patrickpt.github.io/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models/</link>
+      <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models/</guid>
+      <description>TL;DR The following learning notes try to give some intuition on how Stable Diffusion works, some mathematical intuition on Diffusion Models and an introduction to Latent Diffusion Models.
+The following sources were extensively used during creation of this learning notes. Passages may be reutilized to create a reasonable overview of the topic. Credit goes to the authors of the following papers and posts.
+Illustrations by Jay Alammar
+Sohl-Dickstein et al., 2015</description>
+    </item>
+    
     <item>
       <title>Hands on with Latent Diffusion Models</title>
       <link>https://patrickpt.github.io/posts/2023_01_12_hands_on_latent_diffusion_models/2023_01_12_hands_on_latent_diffusion_model/</link>
