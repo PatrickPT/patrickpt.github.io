@@ -76,6 +76,16 @@ if (!doNotTrack) {
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+</script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XKDTNB9VR0"></script>
 <script>
@@ -237,7 +247,7 @@ Sohl-Dickstein et al., 2015"/>
     <h1 class="post-title">
       Latent Diffusion Models: What is all the fuzz about?
     </h1>
-    <div class="post-meta"><span title='2023-01-20 14:50:18 +0100 +0100'>January 20, 2023</span>&nbsp;·&nbsp;17 min
+    <div class="post-meta"><span title='2023-01-20 14:50:18 +0100 CET'>January 20, 2023</span>&nbsp;·&nbsp;17 min
 
 </div>
   </header> <div class="toc">

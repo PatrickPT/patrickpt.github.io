@@ -167,3 +167,5 @@ I am happy with my new blog and will further play around with it. If you like my
 [9] Work in Codespaces (https://shotor.com/blog/build-a-hugo-static-site-in-your-browser-using-github-codespaces/)
 
 [10] Katex for PaperMod (https://adityatelange.github.io/hugo-PaperMod/posts/math-typesetting/)
+
+[11] Google Analytics with Hugo (https://gohugo.io/templates/internal/#use-the-google-analytics-template)
