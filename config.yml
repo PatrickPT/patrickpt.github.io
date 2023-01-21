@@ -3,6 +3,9 @@ title: Notes on AI
 paginate: 5
 theme: PaperMod
 
+googleAnalytics: G-XKDTNB9VR0
+
+
 publishDir: docs
 
 canonifyURLs: False
