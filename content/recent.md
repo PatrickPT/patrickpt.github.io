@@ -7,7 +7,7 @@ This is a list of links to stuff i found interesting recently. It will be update
 
 It could be a link to a paper, a nice repo or a news article. **This selection is highly subjective, reflects my interests** and depends on my reading habit, time, people i follow and recommender algorithms from the platforms i visit. It is not complete and is not scientific.
 
-**I am not responsible for the linked content**
+**I am not responsible for the linked content and it does not contain my opinion**
 
 [18.01.23 - 24 embarassing hours for AI](https://garymarcus.substack.com/p/24-seriously-embarrassing-hours-for?sd=pf) [Blog]
 
