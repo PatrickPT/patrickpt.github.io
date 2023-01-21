@@ -4,6 +4,8 @@ date: 2023-01-13T09:28:09Z
 draft: False
 showToc: true
 TocOpen: true
+tags: [DallE,stable-diffusion,latent-diffusion-models,NoCode,HuggingFace,HandsOn]
+url: /posts/hands-on-latent-diffusion-models/
 ---
 
 **Prerequitises**
@@ -16,7 +18,7 @@ Hugging Face is a community and data science platform that provides:
 
 # Recap on Latent Diffusion Models
 
-There are mutiple sites and blog posts which explain Latent Diffusion Models including my own [Latent Diffusion Models: What is all the fuzz about?](content/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models)
+There are mutiple sites and blog posts which explain Latent Diffusion Models including my own [Latent Diffusion Models: What is all the fuzz about?](/posts/latent-diffusion-models)
 
 To keep it a bit lightweight i can recommend one which explains everything with diagrams(Because i like diagrams for learning).
 

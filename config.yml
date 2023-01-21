@@ -59,18 +59,22 @@ menu:
       name: Posts
       url: /posts/
       weight: 10
+    - identifier: Recent
+      name: Recent
+      url: /recent/
+      weight: 30
     - identifier: Archive
       name: Archive
       url: /archives/
-      weight: 30
+      weight: 40
     - identifier: Search
       name: Search
       url: /search/
-      weight: 40
+      weight: 50
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 50
+      weight: 60
     - identifier: About
       name: About
       url: /about/

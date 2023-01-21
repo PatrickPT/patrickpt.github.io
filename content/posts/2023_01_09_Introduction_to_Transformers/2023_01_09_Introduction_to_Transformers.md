@@ -1,10 +1,11 @@
 ---
 title: "An introduction to Transformers"
 date: 2023-01-09T11:50:57Z
-draft: False
+draft: True
 ShowToc: true
 tags: [Transformers,introduction]
 math: true
+url: /posts/intro-transformers/
 ---
 
 # What are Transformers

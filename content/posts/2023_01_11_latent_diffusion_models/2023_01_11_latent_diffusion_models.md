@@ -5,6 +5,8 @@ draft: false
 showToc: true
 TocOpen: true
 math: true
+tags: [Math,stable-diffusion,latent-diffusion-models,Notes]
+url: /posts/latent-diffusion-models/
 
 ---
 
@@ -45,7 +47,7 @@ Let me briefly introduce you to Diffusion Models and Latent Diffusion Models and
 
 If you are interested in a Hands-On you can find that in my other post:
 
-[Hands on Latent Diffusion Models](content/posts/2023_01_12_hands_on_latent_diffusion_models/2023_01_12_hands_on_latent_diffusion_model)
+[Hands on Latent Diffusion Models](/posts/hands-on-latent-diffusion-models)
 
 If you want an awesome visual introduction with diagrams i strongly advise to visit the [blog by Jay Alammar](https://jalammar.github.io/illustrated-stable-diffusion/).
 

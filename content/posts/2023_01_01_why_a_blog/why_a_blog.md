@@ -4,6 +4,7 @@ date: 2023-01-01T09:00:00+01:00
 draft: False
 ShowToc: true
 tags: [Medium,Blog,Github,Hugo]
+url: /posts/how-to-blog/
 ---
 
 Welcome to my blog.

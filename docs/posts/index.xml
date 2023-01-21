@@ -8,10 +8,10 @@
     <lastBuildDate>Tue, 21 Jun 2022 15:06:45 -0500</lastBuildDate><atom:link href="https://patrickpt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Latent Diffusion Models: What is all the fuzz about?</title>
-      <link>https://patrickpt.github.io/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models/</link>
+      <link>https://patrickpt.github.io/posts/latent-diffusion-models/</link>
       <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/2023_01_11_latent_diffusion_models/2023_01_11_latent_diffusion_models/</guid>
+      <guid>https://patrickpt.github.io/posts/latent-diffusion-models/</guid>
       <description>TL;DR The following learning notes try to give some intuition on how Stable Diffusion works, some mathematical intuition on Diffusion Models and an introduction to Latent Diffusion Models.
 The following sources were extensively used during creation of this learning notes. Passages may be reutilized to create a reasonable overview of the topic. Credit goes to the authors of the following papers and posts.
 Illustrations by Jay Alammar
@@ -20,10 +20,10 @@ Sohl-Dickstein et al., 2015</description>
     
     <item>
       <title>Hands on with Latent Diffusion Models</title>
-      <link>https://patrickpt.github.io/posts/2023_01_12_hands_on_latent_diffusion_models/2023_01_12_hands_on_latent_diffusion_model/</link>
+      <link>https://patrickpt.github.io/posts/hands-on-latent-diffusion-models/</link>
       <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/2023_01_12_hands_on_latent_diffusion_models/2023_01_12_hands_on_latent_diffusion_model/</guid>
+      <guid>https://patrickpt.github.io/posts/hands-on-latent-diffusion-models/</guid>
       <description>Prerequitises
 To test the models here you need to have an account with HuggingFace - for loading the checkpoint or using the endpoints. Hugging Face is a community and data science platform that provides:
 Tools that enable users to build, train and deploy ML models based on open source (OS) code and technologies. A place where a broad community of data scientists, researchers, and ML engineers can come together and share ideas, get support and contribute to open source projects.</description>
@@ -31,31 +31,21 @@ Tools that enable users to build, train and deploy ML models based on open sourc
     
     <item>
       <title>A short summary on ChatGPT</title>
-      <link>https://patrickpt.github.io/posts/2023_01_12_summary_chatgpt/2023_01_12_summary_chatgpt/</link>
+      <link>https://patrickpt.github.io/posts/summary-chatgpt/</link>
       <pubDate>Thu, 12 Jan 2023 22:34:01 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/2023_01_12_summary_chatgpt/2023_01_12_summary_chatgpt/</guid>
+      <guid>https://patrickpt.github.io/posts/summary-chatgpt/</guid>
       <description>This summary is based on another post: An introduction to ChatGPT written by ChatGPT
 While testing out ChatGPT for some weeks now, i found that texts created by it are often repetitive and monotonous. In this post i tried to condense the meaningful information from the other post.
 2022 was the year of generative AI. Generative AI refers to machine learning algorithms that can create new meaning from text, images, code, and other forms of content.</description>
     </item>
     
     <item>
-      <title>An introduction to Transformers</title>
-      <link>https://patrickpt.github.io/posts/2023_01_09_introduction_to_transformers/2023_01_09_introduction_to_transformers/</link>
-      <pubDate>Mon, 09 Jan 2023 11:50:57 +0000</pubDate>
-      
-      <guid>https://patrickpt.github.io/posts/2023_01_09_introduction_to_transformers/2023_01_09_introduction_to_transformers/</guid>
-      <description>What are Transformers Transformer is a type of neural network architecture that was introduced in the paper &amp;ldquo;Attention is All You Need&amp;rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification.
-One of the key innovations of the Transformer architecture is the use of attention mechanisms. In a traditional neural network, each input is processed independently, without any information about the relationships between the inputs.</description>
-    </item>
-    
-    <item>
       <title>An introduction to ChatGPT written by ChatGPT</title>
-      <link>https://patrickpt.github.io/posts/2023_01_07_intro_chatgpt/2023_01_07_intro_chatgpt/</link>
+      <link>https://patrickpt.github.io/posts/chatgpt-on-chatgpt/</link>
       <pubDate>Sat, 07 Jan 2023 00:55:07 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/2023_01_07_intro_chatgpt/2023_01_07_intro_chatgpt/</guid>
+      <guid>https://patrickpt.github.io/posts/chatgpt-on-chatgpt/</guid>
       <description>ChatGPT: Optimizing Language Models for Dialogue
 What to do if you have 15Min time to spare? Feed ChatGPT with prompts to write an introductory article about ChatGPT. And I promise, this is the only part which is not based on a Large Language Model. Everything else was written by ChatGPT. For better readability I replaced the prompts with simple headers.
 What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a conversation or understand your needs?</description>
@@ -63,10 +53,10 @@ What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a c
     
     <item>
       <title>Why and how do you create your own AI blog?</title>
-      <link>https://patrickpt.github.io/posts/2023_01_01_why_a_blog/why_a_blog/</link>
+      <link>https://patrickpt.github.io/posts/how-to-blog/</link>
       <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/2023_01_01_why_a_blog/why_a_blog/</guid>
+      <guid>https://patrickpt.github.io/posts/how-to-blog/</guid>
       <description>Welcome to my blog.
 Why not Medium? It is 2023 and there are plenty of easy ways to create content about ML, Data Science and AI on the internet. In fact with the accessability of platforms like Medium it is super easy.
 Isn&amp;rsquo;t it actually dumb to create your own blog instead of using these possibilities?

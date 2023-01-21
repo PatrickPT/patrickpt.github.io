@@ -4,6 +4,7 @@ date: 2023-01-07T00:55:07+01:00
 draft: False
 ShowToc: true
 tags: [ChatGPT,LLM]
+url: /posts/chatgpt-on-chatgpt/
 ---
 
 [ChatGPT: Optimizing Language Models for Dialogue](https://openai.com/blog/chatgpt/)

@@ -4,9 +4,10 @@ date: 2023-01-12T22:34:01+01:00
 draft: false
 ShowToc: true
 tags: [ChatGPT,LLM,summary]
+url: /posts/summary-chatgpt/
 ---
 
-*This summary is based on another post: [An introduction to ChatGPT written by ChatGPT](content/posts/2023_01_07_intro_chatgpt/2023_01_07_intro_chatgpt.md)*
+*This summary is based on another post: [An introduction to ChatGPT written by ChatGPT](/posts/chatgpt-on-chatgpt)*
 
 *While testing out ChatGPT for some weeks now, i found that texts created by it are often repetitive and monotonous. In this post i tried to condense the meaningful information from the other post.*
 

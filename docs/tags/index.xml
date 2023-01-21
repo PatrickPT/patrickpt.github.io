@@ -5,7 +5,79 @@
     <link>https://patrickpt.github.io/tags/</link>
     <description>Recent content in Tags on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Jan 2023 22:34:01 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jan 2023 14:50:18 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>latent-diffusion-models</title>
+      <link>https://patrickpt.github.io/tags/latent-diffusion-models/</link>
+      <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/latent-diffusion-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>https://patrickpt.github.io/tags/math/</link>
+      <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>https://patrickpt.github.io/tags/notes/</link>
+      <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stable-diffusion</title>
+      <link>https://patrickpt.github.io/tags/stable-diffusion/</link>
+      <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/stable-diffusion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DallE</title>
+      <link>https://patrickpt.github.io/tags/dalle/</link>
+      <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/dalle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HandsOn</title>
+      <link>https://patrickpt.github.io/tags/handson/</link>
+      <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/handson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HuggingFace</title>
+      <link>https://patrickpt.github.io/tags/huggingface/</link>
+      <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/huggingface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NoCode</title>
+      <link>https://patrickpt.github.io/tags/nocode/</link>
+      <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/nocode/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ChatGPT</title>
       <link>https://patrickpt.github.io/tags/chatgpt/</link>
@@ -30,24 +102,6 @@
       <pubDate>Thu, 12 Jan 2023 22:34:01 +0100</pubDate>
       
       <guid>https://patrickpt.github.io/tags/summary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>introduction</title>
-      <link>https://patrickpt.github.io/tags/introduction/</link>
-      <pubDate>Mon, 09 Jan 2023 11:50:57 +0000</pubDate>
-      
-      <guid>https://patrickpt.github.io/tags/introduction/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Transformers</title>
-      <link>https://patrickpt.github.io/tags/transformers/</link>
-      <pubDate>Mon, 09 Jan 2023 11:50:57 +0000</pubDate>
-      
-      <guid>https://patrickpt.github.io/tags/transformers/</guid>
       <description></description>
     </item>
     
