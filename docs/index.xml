@@ -64,6 +64,20 @@ Maybe, but my purpose is not to attract as many readers as possible but to learn
     </item>
     
     <item>
+      <title></title>
+      <link>https://patrickpt.github.io/gdpr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/gdpr/</guid>
+      <description>Due to german law i need to include a privacy policy and an imprint even for a personal blog without any commercial interest.
+Well, here you go:
+Datenschutzerklärung
+Stand: 21. Januar 2023
+Inhaltsübersicht
+Verantwortlicher Übersicht der Verarbeitungen Maßgebliche Rechtsgrundlagen Sicherheitsmaßnahmen Übermittlung von personenbezogenen Daten Datenverarbeitung in Drittländern Löschung von Daten Einsatz von Cookies Bereitstellung des Onlineangebotes und Webhosting Blogs und Publikationsmedien Kontakt- und Anfragenverwaltung Webanalyse, Monitoring und Optimierung Präsenzen in sozialen Netzwerken (Social Media) Plugins und eingebettete Funktionen sowie Inhalte Änderung und Aktualisierung der Datenschutzerklärung Rechte der betroffenen Personen Verantwortlicher</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://patrickpt.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -76,6 +90,15 @@ My blog contains my personal opinions and as i am human also errors so i am happ
 Also i am happy to connect on LinkedIN.</description>
     </item>
     
+    
+    <item>
+      <title>Contact Me</title>
+      <link>https://patrickpt.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/contact/</guid>
+      <description> </description>
+    </item>
     
     <item>
       <title>Recent stuff i found interesting</title>

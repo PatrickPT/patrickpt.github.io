@@ -82,3 +82,7 @@ menu:
       name: About
       url: /about/
       weight: 20
+    #- identifier: Contact
+    #  name: Contact
+    #  url: /contact/
+    #  weight: 70

@@ -1,6 +1,9 @@
 ---
 title: "Recent stuff i found interesting"
 draft: False
+url: /recent/
+ShowReadingTime: false
+
 ---
 
 This is a list of links to stuff i found interesting recently. It will be updated regulary(whatever that means).
