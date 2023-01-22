@@ -16,6 +16,8 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 [22.01.23 - ChatGPT used Sweatshop in Kenya](https://time.com/6247678/openai-chatgpt-kenya-workers/) [Article]
 
+[20.01.23 - Pytorch vs Tensorflow in 2023](https://thenextweb.com/news/why-tensorflow-for-python-is-dying-a-slow-death) [Blog]
+
 [18.01.23 - Why you should use Google JAX](https://www.assemblyai.com/blog/why-you-should-or-shouldnt-be-using-jax-in-2023/) [Blog]
 
 [18.01.23 - 24 embarassing hours for AI](https://garymarcus.substack.com/p/24-seriously-embarrassing-hours-for?sd=pf) [Blog]
