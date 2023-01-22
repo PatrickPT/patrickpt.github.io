@@ -6,11 +6,13 @@ ShowReadingTime: false
 
 ---
 
-This is a list of links to stuff i found interesting recently. It will be updated regulary(whatever that means).
+This is a selected list of stuff i read and found interesting recently. It will be updated regulary(whatever that means).
 
-It could be a link to a paper, a nice repo or a news article. This selection is highly subjective, reflects my interests and depends on my reading habit, time, people i follow and recommender algorithms from the platforms i visit. It is not complete and is not scientific.
+It could be a link to a paper, a repo or a blog post. The selection is highly subjective, reflects my interests and depends on my reading habit, time, people i follow and recommender algorithms from the platforms i visit. 
 
-*I am not responsible for the linked content and it does not reflect my opinions:*
+*I am not responsible for the linked content and it does not reflect my opinion:*
+
+[22.01.23 - Why you should use Google JAX](https://www.assemblyai.com/blog/why-you-should-or-shouldnt-be-using-jax-in-2023/) [Blog]
 
 [18.01.23 - 24 embarassing hours for AI](https://garymarcus.substack.com/p/24-seriously-embarrassing-hours-for?sd=pf) [Blog]
 

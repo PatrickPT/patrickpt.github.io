@@ -142,6 +142,8 @@ As written, i use [Github Pages](https://pages.github.com) and the open-source s
 With this short introduction you should be able to set up your own blog really fast and in worst case troubleshoot your way through.
 **Enjoy!**
 
+PS: In Germany you have to add an imprint and a privacy policy to your website if it is not for friends and family only. As the definition is vague it seems that any public site private or commercial needs it. If you decide to make your website public please consider to add imprint and privacy policy. You will find a lot of generators on the internet which can provide the neccesary texts.
+
 I am happy with my new blog and will further play around with it. If you like my content connect via [LinkedIN](https://www.linkedin.com/in/patrickschnass/).
 
 # References
