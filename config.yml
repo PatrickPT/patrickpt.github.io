@@ -49,6 +49,8 @@ params:
       url: "https://medium.com/@patrickschnass"
     - name: github
       url: "https://github.com/PatrickPT"
+    - name: rss
+      url: "/index.xml"
   
 outputs:
     home:
@@ -86,3 +88,9 @@ menu:
     #  name: Contact
     #  url: /contact/
     #  weight: 70
+
+outputs:
+  home:
+      - HTML
+      - RSS
+      - JSON
