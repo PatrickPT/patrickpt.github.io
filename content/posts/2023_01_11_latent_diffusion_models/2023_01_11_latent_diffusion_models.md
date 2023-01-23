@@ -376,20 +376,18 @@ $$
 # And what is the result?
 
 ![](/posts/2023_01_11_latent_diffusion_models/images/cat_math.jpeg)
+*Stable Diffusion "a cat looking at the ocean at sunset"*
 
 ![](/posts/2023_01_11_latent_diffusion_models/images/cat_math2.jpeg)
+*Stable Diffusion "a cat looking at the ocean at sunset"*
+
 
 # Ressources
 
 [The Annotated Diffusion Model](https://huggingface.co/blog/annotated-diffusion)
 
-[How does Stable Diffusion work? – Latent Diffusion Models EXPLAINED](https://www.youtube.com/watch?v=J87hffSMB60) [Video]
-
-[Stable Diffusion - What, Why, How?](https://www.youtube.com/watch?v=ltLNYA3lWAQ) [Video]
-
-[Stable Diffusion videos from fast.ai](https://www.youtube.com/watch?v=_7rMfsA24Ls&ab_channel=JeremyHoward) [Video]
-
 [Illustrations by Jay Alammar](https://jalammar.github.io/illustrated-stable-diffusion/)
+
 [Sohl-Dickstein et al., 2015](https://arxiv.org/abs/1503.03585)
 
 [Rombach & Blattmann, et al. 2022](https://arxiv.org/abs/2112.10752)
@@ -405,3 +403,7 @@ $$
 [Assembly AI on Diffusion](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/)
 
 [J. Rafid Siddiqui on Latent Diffusion](https://towardsdatascience.com/what-are-stable-diffusion-models-and-why-are-they-a-step-forward-for-image-generation-aa1182801d46)
+
+[How does Stable Diffusion work? – Latent Diffusion Models EXPLAINED](https://www.youtube.com/watch?v=J87hffSMB60)
+
+[Stable Diffusion videos from fast.ai](https://www.youtube.com/watch?v=_7rMfsA24Ls&ab_channel=JeremyHoward)
