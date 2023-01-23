@@ -16,7 +16,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Welcome"
-    Content: Hi, i'm Patrick, a Data Scientist. I am documenting my learning notes on AI on this blog.
+    Content: Hi, i'm Patrick, a Data Scientist. This blog contains my learning notes on AI.
   
   # profileMode:
   #       enabled: true
