@@ -43,12 +43,14 @@ params:
     #safari_pinned_tab:  "/favicon/safari-pinned-tab.svg"
 
   socialIcons:
+    - name: github
+      url: "https://github.com/PatrickPT"
     - name: linkedin
       url: "https://www.linkedin.com/in/patrickschnass/"
     - name: medium
       url: "https://medium.com/@patrickschnass"
-    - name: github
-      url: "https://github.com/PatrickPT"
+    - name: instagram
+      url: "https://www.instagram.com/patrickpt20/"
     - name: rss
       url: "/index.xml"
   
