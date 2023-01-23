@@ -33,8 +33,8 @@ If you recently introduced yourself to strangers and told them about your job in
 
 Latent Diffusion Models like the ones above had some significant media attention. While no one outside AI community bats an eye if Deepmind creates an algorithm, that beats the (almost ancient) and important Strassen-Algorithm by some percent in computation complexity(which is a tremendous progress), nearly everyone is excited to create made up pictures of cats doing crazy stuff through a simple interface.
 
-[![cat](/posts/2023_01_11_latent_diffusion_models/images/cat.png)](/posts/2023_01_11_latent_diffusion_models/images/cat.png)
-*Dall-E 2 created picture by author - "A cat surfing a wave in comic style during sunset"*
+[![cat-surfing](/posts/2023_01_11_latent_diffusion_models/images/cat_surfing.jpeg)](/posts/2023_01_11_latent_diffusion_models/images/cat_surfing.jpeg)
+*Stable Diffusion "cat surfing waves at sunset, comic style"*
 
 While those models already made a name for themselves by winning [art competitions](https://news.artnet.com/art-world/colorado-artists-mad-ai-art-competition-2168495), are adopted by companies into their related data products(Canva.com, Shutterstock.com) and start-ups creating those products raising billions in [venture capital](https://www.bloomberg.com/news/articles/2022-10-17/digital-media-firm-stability-ai-raises-funds-at-1-billion-value) you may ask yourself:
 

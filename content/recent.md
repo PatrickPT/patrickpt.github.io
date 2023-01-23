@@ -12,6 +12,7 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my opinion*
 
+* [23.01.23 - Google Research, 2022 & Beyond: Language, Vision and Generative Models](https://ai.googleblog.com/2023/01/google-research-2022-beyond-language.html) [Blog]
 * [22.01.23 - Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook/blob/main/README.md) [Repo]
 * [22.01.23 - ChatGPT used Sweatshop in Kenya](https://time.com/6247678/openai-chatgpt-kenya-workers/) [Article]
 * [21.01.23 - Andrej Karpathy builds a GPT from Scratch](https://www.youtube.com/watch?v=kCc8FmEb1nY) [Video]
