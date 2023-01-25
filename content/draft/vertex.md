@@ -1,16 +1,13 @@
 ---
-title: "Road to GCP Professional Machine Learning Engineer Exam"
+title: "PUBLIC DRAFT/Road to GCP Professional Machine Learning Engineer Exam"
 date: 2023-01-25T21:01:23+01:00
 draft: false
 showToc: true
-TocOpen: true
+TocOpen: false
 math: true
 tags: [GCP,MLOPS,ML Engineer]
 url: /draft/vertex/
 ---
-
-**THIS IS A DRAFT**
-
 
 # Ressources
 
@@ -60,30 +57,30 @@ Read the documentation (don’t focus on the code, but more on when to use which
 **TODO: Do i really wanna do this?**
 
 ## Section 1: Framing ML problems
-### 1.1 Translating business challenges into ML use cases. Considerations include:
+### 1.1 Translating business challenges into ML use cases.
 - Choosing the best solution (ML vs. non-ML, custom vs. pre-packaged [e.g., AutoML, Vision API]) based on the business requirements 
 - Defining how the model output should be used to solve the business problem
 - Deciding how incorrect results should be handled
 - Identifying data sources (available vs. ideal)
 
-### 1.2 Defining ML problems. Considerations include:
+### 1.2 Defining ML problems.
 - Problem type (e.g., classification, regression, clustering)
 - Outcome of model predictions
 - Input (features) and predicted output format
 
-### 1.3 Defining business success criteria. Considerations include:
+### 1.3 Defining business success criteria.
 - Alignment of ML success metrics to the business problem
 - Key results
 - Determining when a model is deemed unsuccessful
 
-### 1.4 Identifying risks to feasibility of ML solutions. Considerations include: 
+### 1.4 Identifying risks to feasibility of ML solutions. 
 - Assessing and communicating business impact
 - Assessing ML solution readiness
 - Assessing data readiness and potential limitations
 - Aligning with Google’s Responsible AI practices (e.g., different biases)
 
 ## Section 2: Architecting ML solutions
-### 2.1 Designing reliable, scalable, and highly available ML solutions. Considerations include:
+### 2.1 Designing reliable, scalable, and highly available ML solutions.
 - Choosing appropriate ML services for the use case (e.g., Cloud Build, Kubeflow)
 - Component types (e.g., data collection, data management)
 - Exploration/analysis
@@ -94,7 +91,7 @@ Read the documentation (don’t focus on the code, but more on when to use which
 - Monitoring
 - Serving
 
-### 2.2 Choosing appropriate Google Cloud hardware components. Considerations include:
+### 2.2 Choosing appropriate Google Cloud hardware components.
 - Evaluation of compute and accelerator options (e.g., CPU, GPU, TPU, edge devices) 
 
 ### 2.3 Designing architecture that complies with security concerns across sectors/industries. 
@@ -103,20 +100,20 @@ Considerations include:
 - Privacy implications of data usage and/or collection (e.g., handling sensitive data such as Personally Identifiable Information [PII] and Protected Health Information [PHI])
 
 ## Section 3: Designing data preparation and processing systems
-### 3.1 Exploring data (EDA). Considerations include:
+### 3.1 Exploring data (EDA).
 - Visualization
 - Statistical fundamentals at scale
 - Evaluation of data quality and feasibility
 - Establishing data constraints (e.g., TFDV)
 
-### 3.2 Building data pipelines. Considerations include:
+### 3.2 Building data pipelines.
 - Organizing and optimizing training datasets
 - Data validation
 - Handling missing data
 - Handling outliers
 - Data leakage
 
-### 3.3 Creating input features (feature engineering). Considerations include:
+### 3.3 Creating input features (feature engineering).
 - Ensuring consistent data pre-processing between training and serving
 - Encoding structured data types
 - Feature selection
@@ -125,7 +122,7 @@ Considerations include:
 - Transformations (TensorFlow Transform)
 
 ## Section 4: Developing ML models
-#### 4.1 Building models. Considerations include:
+#### 4.1 Building models.
 - Choice of framework and model
 - Modeling techniques given interpretability requirements
 - Transfer learning
@@ -133,36 +130,36 @@ Considerations include:
 - Semi-supervised learning
 - Model generalization and strategies to handle overfitting and underfitting
 
-### 4.2 Training models. Considerations include:
+### 4.2 Training models.
 - Ingestion of various file types into training (e.g., CSV, JSON, IMG, parquet or databases, Hadoop/Spark)
 - Training a model as a job in different environments
 - Hyperparameter tuning
 - Tracking metrics during training
 - Retraining/redeployment evaluation
 
-### 4.3 Testing models. Considerations include:
+### 4.3 Testing models.
 - Unit tests for model training and serving
 - Model performance against baselines, simpler models, and across the time dimension
 - Model explainability on Vertex AI
 
-### 4.4 Scaling model training and serving. Considerations include:
+### 4.4 Scaling model training and serving.
 - Distributed training
 - Scaling prediction service (e.g., Vertex AI Prediction, containerized serving)
 
 ## Section 5: Automating and orchestrating ML pipelines
-### 5.1 Designing and implementing training pipelines. Considerations include:
+### 5.1 Designing and implementing training pipelines.
 - Identification of components, parameters, triggers, and compute needs (e.g., Cloud Build, Cloud Run)
 - Orchestration framework (e.g., Kubeflow Pipelines/Vertex AI Pipelines, Cloud Composer/Apache Airflow)
 - Hybrid or multicloud strategies
 - System design with TFX components/Kubeflow DSL 
 
-### 5.2 Implementing serving pipelines. Considerations include:
+### 5.2 Implementing serving pipelines.
 - Serving (online, batch, caching)
 - Google Cloud serving options
 - Testing for target performance
 - Configuring trigger and pipeline schedules
 
-### 5.3 Tracking and auditing metadata. Considerations include:
+### 5.3 Tracking and auditing metadata.
 - Organizing and tracking experiments and pipeline runs
 - Hooking into model and dataset versioning
 - Model/dataset lineage
