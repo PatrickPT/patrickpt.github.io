@@ -5,14 +5,17 @@ theme: PaperMod
 
 googleAnalytics: G-XKDTNB9VR0
 
-
 publishDir: docs
 
 canonifyURLs: False
 
 params:
+  env: production
   defaultTheme: auto # dark, light
   disableThemeToggle: false
+  ShowShareButtons: True
+  ShowReadingTime: true
+  
   # home-info mode
   homeInfoParams:
     Title: "Welcome"
@@ -31,9 +34,6 @@ params:
   #           url: "/posts"
   #         - name: Tags
   #           url: "/tags"
-
-  ShowShareButtons: True
-  ShowReadingTime: true
 
   assets:
     favicon: "/favicon/favicon.ico"
@@ -91,8 +91,3 @@ menu:
     #  url: /contact/
     #  weight: 70
 
-outputs:
-  home:
-      - HTML
-      - RSS
-      - JSON

@@ -5,7 +5,34 @@
     <link>https://patrickpt.github.io/tags/</link>
     <description>Recent content in Tags on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 20 Jan 2023 14:50:18 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jan 2023 21:01:23 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GCP</title>
+      <link>https://patrickpt.github.io/tags/gcp/</link>
+      <pubDate>Wed, 25 Jan 2023 21:01:23 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML Engineer</title>
+      <link>https://patrickpt.github.io/tags/ml-engineer/</link>
+      <pubDate>Wed, 25 Jan 2023 21:01:23 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/ml-engineer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MLOPS</title>
+      <link>https://patrickpt.github.io/tags/mlops/</link>
+      <pubDate>Wed, 25 Jan 2023 21:01:23 +0100</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/mlops/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>latent-diffusion-models</title>
       <link>https://patrickpt.github.io/tags/latent-diffusion-models/</link>
