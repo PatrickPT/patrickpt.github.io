@@ -1,11 +1,12 @@
 ---
-title: "How to be more productive when presenting projects with MARP"
+title: "How to be more productive when presenting projects"
 date: 2023-01-31T09:06:20+01:00
 draft: false
 math: true
+url: /posts/marp/
 ---
 
-I show a lot of ideas around my code and often i tend to recreate stuff from my documentation. It is often a tidious work, recreating things in Powerpoint. It bores me and somehow it never looks like i want it to look.
+I show a lot of ideas around my code and often i tend to recreate stuff from my documentation. It is often a tedious work, recreating things in Powerpoint. It bores me and somehow it never looks like i want it to look.
 
 Since i started with this website and looked into different ways to represent knowledge to other i started using MARP and ... i love it! It makes me more productive, efficient and faster.
 
