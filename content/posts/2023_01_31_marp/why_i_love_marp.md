@@ -1,16 +1,19 @@
 ---
-title: "How to be more productive when presenting projects"
+title: "Why MARP is the fastest way to present your code and your ideas"
 date: 2023-01-31T09:06:20+01:00
 draft: false
 math: true
 url: /posts/marp/
+tages: [MARP,presentation]
 ---
 
 I show a lot of ideas around my code and often i tend to recreate stuff from my documentation. It is often a tedious work, recreating things in Powerpoint. It bores me and somehow it never looks like i want it to look.
 
 Since i started with this website and looked into different ways to represent knowledge to other i started using MARP and ... i love it! It makes me more productive, efficient and faster.
 
-[Hello MARP](https://marp.app)
+![MARP](/posts/2023_01_31_marp/images/og-image.png)
+
+*[Hello MARP](https://marp.app)*
 
 # What is MARP
 
@@ -111,11 +114,26 @@ becomes
 
 $x^2$
 
+[Math Typesetting](https://github.com/marp-team/marp-core#math-typesetting)
+
 ## Pictures
+
+Again simple markdown syntax
 
 ```
 ![Caption](link/to/image.jpg)
 ```
+
+Also easy to resize images
+```
+![width:200px](link/to/image.jpg)
+```
+Or set the picture into the background
+```
+![bg fit](link/to/image.jpg)
+```
+Or plenty of other tweaks: [Image Syntax](https://marpit.marp.app/image-syntax)
+
 
 ## CSS
 
@@ -124,4 +142,40 @@ Layouts are fully customizable with CSS stylesheets
 <style>
 </style>
 ```
+[CSS Stylesheets](https://marpit.marp.app/theme-css)
+
+## Presenter Notes
+
+Include Notes which are shown in presentation mode with
+```
+<!-- This is a note for my presentation-->
+```
+
+# Automated slide decks
+
+Writing markdowns with code is easy and with MARP you can even automatically create slide decks containing results or reports. So you never need to copy paste or send bad looking texts or Excels to anyone.
+
+For this you can use [MARP CLI](https://github.com/marp-team/marp-cli)
+
+*All conversions require a browser installation but there is also docker-container available or wi*
+
+With a local installtion it would look like the following to convert to pdf.
+```
+marp --pdf slide-deck.md
+marp slide-deck.md -o converted.pdf
+```
+Simple as that.
+
+**Try it out!**
+
+# References
+
+[Marp](https://github.com/marp-team/marp)
+
+[Marp-Team Repo](https://github.com/marp-team)
+
+[Marpit Docs](https://marpit.marp.app)
+
+[Tables in MARP](https://stackoverflow.com/questions/63847837/insert-tables-in-marp)
+
 
