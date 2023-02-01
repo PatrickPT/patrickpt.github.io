@@ -7,9 +7,14 @@ url: /posts/marp/
 tages: [MARP,presentation]
 ---
 
-I show a lot of ideas around my code and often i tend to recreate stuff from my documentation. It is often a tedious work, recreating things in Powerpoint. It bores me and somehow it never looks like i want it to look.
+Storytelling and presentation are the keys to a succesful adoption of your ideas.
+While storytelling is often verbal, a presentation is what stays and often is the thing that decideds whether your stakeholders pay attention or not so much. So it has to be aesthetic, clear and simple.
 
-Since i started with this website and looked into different ways to represent knowledge to other i started using MARP and ... i love it! It makes me more productive, efficient and faster.
+I show a lot of ideas and often i tend to recreate stuff from my code documentation enriched with diagrams. It is often a tedious work, recreating things in Powerpoint. It bores me and somehow it never looks like i want it to look.
+
+Since i started with this blog and looked into different ways to represent knowledge to others i started using MARP and ... **i love it!** 
+
+It simply makes me more productive, efficient and faster.
 
 ![MARP](/posts/2023_01_31_marp/images/og-image.png)
 
@@ -157,7 +162,7 @@ Writing markdowns with code is easy and with MARP you can even automatically cre
 
 For this you can use [MARP CLI](https://github.com/marp-team/marp-cli)
 
-*All conversions require a browser installation but there is also docker-container available or wi*
+*All conversions require a browser installation but there is also docker-container available.*
 
 With a local installtion it would look like the following to convert to pdf.
 ```
@@ -177,5 +182,3 @@ Simple as that.
 [Marpit Docs](https://marpit.marp.app)
 
 [Tables in MARP](https://stackoverflow.com/questions/63847837/insert-tables-in-marp)
-
-
