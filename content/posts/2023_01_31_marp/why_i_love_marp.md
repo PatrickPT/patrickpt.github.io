@@ -3,6 +3,8 @@ title: "Creating slides with MARP"
 date: 2023-01-31T09:06:20+01:00
 draft: false
 math: true
+showToc: true
+TocOpen: true
 url: /posts/marp/
 tages: [MARP,presentation]
 ---
