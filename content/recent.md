@@ -12,6 +12,8 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my opinion*
 
+* [02.02.23 - Constitutional AI](https://arxiv.org/pdf/2212.08073.pdf) [Paper]
+* [02.02.23 - What happens when LLMs run out of human written text](https://www.theatlantic.com/technology/archive/2023/01/artificial-intelligence-ai-chatgpt-dall-e-2-learning/672754/) [Article]
 * [26.01.23 - Plant undetectable Backdoors in ML Models](https://arxiv.org/abs/2204.06974) [Paper]
 * [23.01.23 - Google Research, 2022 & Beyond: Language, Vision and Generative Models](https://ai.googleblog.com/2023/01/google-research-2022-beyond-language.html) [Blog]
 * [22.01.23 - Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook/blob/main/README.md) [Repo]
