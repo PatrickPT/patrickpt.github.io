@@ -12,6 +12,7 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my opinion*
 
+* [07.02.23 - Google Research, 2022 & beyond: ML & computer systems](https://ai.googleblog.com/2023/02/google-research-2022-beyond-ml-computer.html) [Blog]
 * [07.02.23 - Stable Attribution - find biggest attribution to your diffusion image from model training](https://www.stableattribution.com) [Website]
 * [05.02.23 - Transformer Model Catalog](https://amatriain.net/blog/transformer-models-an-introduction-and-catalog-2d1e9039f376/) [Blog]
 * [02.02.23 - Constitutional AI](https://arxiv.org/pdf/2212.08073.pdf) [Paper]
