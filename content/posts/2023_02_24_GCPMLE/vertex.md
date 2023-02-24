@@ -9,9 +9,9 @@ tags: [GCP,MLOPS,ML Engineer]
 url: /posts/GCPMLE/
 ---
 
-# TL;DR
-Today i passed the Google Professional Machine Learning Engineer Exam in a onsite test center in Duesseldorf. I prepared for it 4 weeks with different ressources. I have 5 years experience on ML and ~ 1 year experience with ML on GCP.
-Following article should summarize all sources which were helpful in preparation of the certification exam.
+Today i passed the Google Professional Machine Learning Engineer Exam in a onsite test center in Duesseldorf. I prepared for it 4 weeks with different ressources. I have multiple years experience on Data Science and ML and about one year experience with ML on GCP.
+Following article should summarize all sources which were helpful for me in preparation of the certification exam.
+If you are interested in how the exam is actually happening there are plenty of other articles on medium or at other places. I just try to condense it to the minimum here.
 
 # Ressources
 

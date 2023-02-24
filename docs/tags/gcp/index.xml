@@ -5,19 +5,14 @@
     <link>https://patrickpt.github.io/tags/gcp/</link>
     <description>Recent content in GCP on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 Jan 2023 21:01:23 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Feb 2023 21:01:23 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PUBLIC DRAFT/Road to GCP Professional Machine Learning Engineer Exam</title>
-      <link>https://patrickpt.github.io/draft/vertex/</link>
-      <pubDate>Wed, 25 Jan 2023 21:01:23 +0100</pubDate>
+      <title>Road to GCP Professional Machine Learning Engineer</title>
+      <link>https://patrickpt.github.io/posts/GCPMLE/</link>
+      <pubDate>Fri, 24 Feb 2023 21:01:23 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/draft/vertex/</guid>
-      <description>Ressources Official Google Documentation
-Google Exam Curriculum
-Google Cloudskillboost
-Google ML Crash Course
-Google Example Questions
-Other ressources Helpful Published Title/Link Author 10 2022/11 Journey to PMLE(O&amp;rsquo;Reilly Paywall) Dr. Logan Song 7 2022/12 Awesome GCP Certifications Repo Satish Vijai 9 2022/12 Passing the Google cloud professional machine learning engineer exam Hil Liao 5 2022/12 How to clear GCP PMLE Exam? Shadab Hussain 3 2022/03 How I passed the Google Cloud PMLEexam (Vertex AI) Joshua Tan 2 2022/01 How to prepare for the GCP PMLEexam Gabriel Cassimiro 10 2022/01 A cromprehensive Study Guide Jeffrey Luppes 6 2021/03 Study guide to ace Google Cloud Certification on PMLE Rahul Pandey 2 2021/01 Learning Notes Sehgal Namit Notes Key takeaways A significant amount of knowledge covered in the exam also came from Google’s machine learning crash course.</description>
+      <guid>https://patrickpt.github.io/posts/GCPMLE/</guid>
+      <description>Today i passed the Google Professional Machine Learning Engineer Exam in a onsite test center in Duesseldorf. I prepared for it 4 weeks with different ressources. I have multiple years experience on Data Science and ML and about one year experience with ML on GCP. Following article should summarize all sources which were helpful for me in preparation of the certification exam. If you are interested in how the exam is actually happening there are plenty of other articles on medium or at other places.</description>
     </item>
     
   </channel>
