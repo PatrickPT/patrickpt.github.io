@@ -12,6 +12,14 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my opinion*
 
+
+
+* [20.03.23 - Stanford created a LLM for 600$](https://futurism.com/the-byte/stanford-gpt-clone-alpaca) [Article]
+* [17.03.23 - How Vodafone Uses TensorFlow Data Validation](https://blog.tensorflow.org/2023/03/how-vodafone-uses-tensorflow-data-validation-in-their-data-contracts-to-elevate-data-governance-at-scale.html) [Blogpost]
+* [16.03.23- MLOps Zoomcamp - Free Training](https://github.com/DataTalksClub/mlops-zoomcamp) [Repo]
+* [16.03.23- Data Engineering Zoomcamp - Free Training](https://github.com/DataTalksClub/data-engineering-zoomcamp) [Repo]
+* [15.03.23 - Plot Neural Net in Latex](https://github.com/HarisIqbal88/PlotNeuralNet) [Repo]
+* [10.03.23 - LLM's explained for nontechnical people](https://bootcamp.uxdesign.cc/how-chatgpt-really-works-explained-for-non-technical-people-71efb078a5c9) [Blogpost]
 * [27.02.23 - Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=tldrai) [Repo]
 * [07.02.23 - Google Research, 2022 & beyond: ML & computer systems](https://ai.googleblog.com/2023/02/google-research-2022-beyond-ml-computer.html) [Blog]
 * [07.02.23 - Stable Attribution - find biggest attribution to your diffusion image from model training](https://www.stableattribution.com) [Website]
