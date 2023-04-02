@@ -98,7 +98,7 @@ PyBoy is giving an [inspiration](https://github.com/Baekalfen/PyBoy/wiki/Scripts
 
 **Environment** The environment is in this case the world itself: The Floor, Pipes, Blocks the Background and of course the enemies. To capture the evironment means to capture the complete observation space in every single frame.
 
-[! Super Mario Land](images/Super_Mario_Land.webp)
+[! Super Mario Land](images/Super_Mario_Land.jpeg)
 
 **Action** The actions chosen could be all actions from the actual Window Event: ```List[WindowEvent]``` but for the game it would make absolutely no sense to test the Start Buttone or Select Button. Therefore we focus on LEFT,RIGHT and A.
 
