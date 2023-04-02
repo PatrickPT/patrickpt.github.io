@@ -9,7 +9,7 @@ tags: [LLM,Hands On]
 ---
 
 
-# TLDR;
+# TL;DR
 A short Hands On with (Large) Language Models: What are the ideas behind Language Models and how can you train your own with nanoGPT?
 
 # What are Language Models

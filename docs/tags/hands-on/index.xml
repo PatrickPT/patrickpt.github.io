@@ -12,7 +12,7 @@
       <pubDate>Sun, 02 Apr 2023 13:42:28 +0200</pubDate>
       
       <guid>https://patrickpt.github.io/posts/language_models/</guid>
-      <description>TLDR; A short Hands On with (Large) Language Models: What are the ideas behind Language Models and how can you train your own with nanoGPT?
+      <description>TL;DR A short Hands On with (Large) Language Models: What are the ideas behind Language Models and how can you train your own with nanoGPT?
 What are Language Models Large Language Models are rapidly transforming natural language processing tasks and have led to a huge hype around Artificial Intelligence and associated tasks. Especially with the introduction of GPT3.5(ChatGPT) in 2022 many people are interested in the capabilities of ML. But what is the foundation for the products that could impact our future world significantly?</description>
     </item>
     

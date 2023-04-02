@@ -12,7 +12,7 @@
       <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
       
       <guid>https://patrickpt.github.io/posts/super_mario/</guid>
-      <description>TLDR; Learn how to train a Reinforcement Learning Agent to play GameBoy games in a Python written Emulator. With PyBoy, Q-Learning and Super Mario.
+      <description>TL;DR Learn how to train a Reinforcement Learning Agent to play GameBoy games in a Python written Emulator. With PyBoy, Q-Learning and Super Mario.
 Train your own RL Agent to play Super Mario Recently i stumbled upon my old GameBoy an immediately started it and tried to start where i left off 20 years ago. Unfortunately my hand eye coordination is not what it used to be so i died a few fast deaths.</description>
     </item>
     
