@@ -334,7 +334,7 @@ the action in a state. We try to approximate this function.</p>
 <h2 id="its-a-me-mario">It&rsquo;s a me Mario<a hidden class="anchor" aria-hidden="true" href="#its-a-me-mario">#</a></h2>
 <p>PyBoy is giving an <a href="https://github.com/Baekalfen/PyBoy/wiki/Scripts,-AI-and-Bots">inspiration</a> on how to set up the Agent for Super Mario.</p>
 <p><strong>Environment</strong> The environment is in this case the world itself: The Floor, Pipes, Blocks the Background and of course the enemies. To capture the evironment means to capture the complete observation space in every single frame.</p>
-<p><a href="images/Super_Mario_Land.webp">! Super Mario Land</a></p>
+<p><a href="images/Super_Mario_Land.jpeg">! Super Mario Land</a></p>
 <p><strong>Action</strong> The actions chosen could be all actions from the actual Window Event: <code>List[WindowEvent]</code> but for the game it would make absolutely no sense to test the Start Buttone or Select Button. Therefore we focus on LEFT,RIGHT and A.</p>
 <pre><code>baseActions = [WindowEvent.PRESS_ARROW_RIGHT,
                         WindowEvent.PRESS_BUTTON_A, WindowEvent.PRESS_ARROW_LEFT]

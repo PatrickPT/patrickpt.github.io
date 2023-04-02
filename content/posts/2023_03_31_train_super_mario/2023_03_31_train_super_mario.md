@@ -1,7 +1,7 @@
 ---
 title: "Train your own RL Agent to play Super Mario"
 date: 2023-03-31T11:58:22+02:00
-draft: False
+draft: false^
 showToc: true
 TocOpen: true
 url: /posts/super_mario/
