@@ -1,5 +1,5 @@
 ---
-title: "Train your own RL Agent to play Super Mario"
+title: "How to train a Reinforment Learning Agent to play Super Mario"
 date: 2023-03-31T11:58:22+02:00
 draft: false^
 showToc: true
@@ -13,7 +13,9 @@ tags: [Fun,Q-Learning,Reinforcement Learning]
 # TLDR;
 Learn how to train a Reinforcement Learning Agent to play GameBoy games in a Python written Emulator. With PyBoy, Q-Learning and Super Mario.
 
-# Train your own Agent to play Super Mario
+# Train your own RL Agent to play Super Mario
+
+![Super Mario Land](/posts/2023_03_31_train_super_mario/images/Super_Mario_Land.jpeg)
 
 Recently i stumbled upon my old GameBoy an immediately started it and tried to start where i left off 20 years ago.
 Unfortunately my hand eye coordination is not what it used to be so i died a few fast deaths.
@@ -97,8 +99,6 @@ the action in a state. We try to approximate this function.
 PyBoy is giving an [inspiration](https://github.com/Baekalfen/PyBoy/wiki/Scripts,-AI-and-Bots) on how to set up the Agent for Super Mario.
 
 **Environment** The environment is in this case the world itself: The Floor, Pipes, Blocks the Background and of course the enemies. To capture the evironment means to capture the complete observation space in every single frame.
-
-[! Super Mario Land](images/Super_Mario_Land.jpeg)
 
 **Action** The actions chosen could be all actions from the actual Window Event: ```List[WindowEvent]``` but for the game it would make absolutely no sense to test the Start Buttone or Select Button. Therefore we focus on LEFT,RIGHT and A.
 
