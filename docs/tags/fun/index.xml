@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 31 Mar 2023 11:58:22 +0200</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2023_03_31_train_super_mario</title>
+      <title>Train your own RL Agent to play Super Mario</title>
       <link>https://patrickpt.github.io/posts/super_mario/</link>
       <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
       

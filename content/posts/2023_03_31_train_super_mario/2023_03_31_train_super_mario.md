@@ -1,5 +1,5 @@
 ---
-title: "2023_03_31_train_super_mario"
+title: "Train your own RL Agent to play Super Mario"
 date: 2023-03-31T11:58:22+02:00
 draft: False
 showToc: true
