@@ -1,14 +1,12 @@
 ---
 title: "How to train a Reinforment Learning Agent to play Super Mario"
 date: 2023-03-31T11:58:22+02:00
-draft: false^
+draft: false
 showToc: true
 TocOpen: true
 url: /posts/super_mario/
 tags: [Fun,Q-Learning,Reinforcement Learning]
 ---
-
-*WORK IN PROGRESS*
 
 # TLDR;
 Learn how to train a Reinforcement Learning Agent to play GameBoy games in a Python written Emulator. With PyBoy, Q-Learning and Super Mario.
@@ -119,6 +117,8 @@ PyBoy is giving an [inspiration](https://github.com/Baekalfen/PyBoy/wiki/Scripts
 # Let the games begin
 
 I built my own simplified agent which is still work in progress and will be added later. For reference i highly suggest to use the the RL agent built [here](https://github.com/lixado/PyBoy-RL)
+
+*WORK IN PROGRESS*
 
 # Ressources
 

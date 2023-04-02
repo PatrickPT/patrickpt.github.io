@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hands On on Notes on AI</title>
+    <link>https://patrickpt.github.io/tags/hands-on/</link>
+    <description>Recent content in Hands On on Notes on AI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Apr 2023 13:42:28 +0200</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/hands-on/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hands on with (Large) Language Models</title>
+      <link>https://patrickpt.github.io/posts/language_models/</link>
+      <pubDate>Sun, 02 Apr 2023 13:42:28 +0200</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/language_models/</guid>
+      <description>TLDR; A short Hands On with (Large) Language Models: What are the ideas behind Language Models and how can you train your own with nanoGPT?
+What are Language Models Large Language Models are rapidly transforming natural language processing tasks and have led to a huge hype around Artificial Intelligence and associated tasks. Especially with the introduction of GPT3.5(ChatGPT) in 2022 many people are interested in the capabilities of ML. But what is the foundation for the products that could impact our future world significantly?</description>
+    </item>
+    
+  </channel>
+</rss>
