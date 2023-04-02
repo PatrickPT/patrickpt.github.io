@@ -5,7 +5,34 @@
     <link>https://patrickpt.github.io/tags/</link>
     <description>Recent content in Tags on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Feb 2023 21:01:23 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2023 11:58:22 +0200</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fun</title>
+      <link>https://patrickpt.github.io/tags/fun/</link>
+      <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Q-Learning</title>
+      <link>https://patrickpt.github.io/tags/q-learning/</link>
+      <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/q-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>https://patrickpt.github.io/tags/reinforcement-learning/</link>
+      <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>GCP</title>
       <link>https://patrickpt.github.io/tags/gcp/</link>
