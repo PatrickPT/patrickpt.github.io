@@ -4,6 +4,7 @@ date: 2023-03-31T11:58:22+02:00
 draft: false
 showToc: true
 TocOpen: true
+math: true
 url: /posts/super_mario/
 tags: [Fun,Q-Learning,Reinforcement Learning]
 ---
@@ -68,9 +69,11 @@ Now you have everything you need and find all relevant commands in the [PyBoy Do
 
 # The Setup for your Reinforcement Learning Algorithm
 
-## Concepts
+## Concepts of RL
 
-The setup is following the typical [concepts of RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)
+Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by interacting with an environment. The goal of RL is to find an optimal policy that maximizes a long-term reward signal. The agent takes actions in the environment and receives feedback in the form of rewards or penalties. The agent then updates its policy based on the feedback received, in order to maximize the total reward it receives over time.
+
+Our setup is following the typical [concepts of RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)
 
 **Environment** The world that an agent interacts with and learns from.
 
@@ -91,6 +94,31 @@ return if you start in state $s$, take an arbitrary action
 $a$, and then for each future time step take the action that
 maximizes returns. $Q$ can be said to stand for the “quality” of
 the action in a state. We try to approximate this function.
+
+## Specification of Q Learning
+
+Q-Learning is a popular reinforcement learning algorithm that learns the optimal action-value function, also known as the Q-function, for a given environment. The Q-function represents the expected long-term reward for taking a particular action in a given state. The Q-learning algorithm updates the Q-function based on the rewards received and the estimated Q-values for the next state. The agent then uses the updated Q-function to select the next action.
+
+The Q-learning algorithm is based on the Bellman equation, which is a recursive equation that expresses the optimal Q-value in terms of the expected reward for the current action and the expected Q-value for the next state. The Q-learning algorithm uses a greedy approach to select actions, meaning that it always chooses the action with the highest estimated Q-value.
+
+Q-learning stores the results between iterations in a Q-table, which is essentially a lookup table that contains the expected reward values for every state-action pair in the environment. The Q-table is initialized with arbitrary values and is updated over time as the agent interacts with the environment.
+
+At each iteration, the agent observes the current state of the environment, selects an action based on the Q-values in the Q-table, performs the action, and observes the reward and the next state. The agent then updates the Q-value for the state-action pair based on the Bellman equation, which expresses the optimal Q-value for a state-action pair as the sum of the immediate reward and the discounted expected future reward.
+
+The Q-value update equation is as follows:
+
+Q(s,a) = Q(s,a) + alpha * (r + gamma * max(Q(s',a')) - Q(s,a))
+
+where:
+
+Q(s,a) is the current Q-value for the state-action pair (s,a)
+alpha is the learning rate, which determines how much the Q-value is updated based on the new information
+r is the immediate reward received for taking the action a in state s
+gamma is the discount factor, which determines how much weight is given to future rewards
+max(Q(s',a')) is the maximum Q-value for the next state s' and all possible actions a' that can be taken from s'
+After the Q-value update, the agent moves to the next state and repeats the process until it reaches the terminal state.
+
+As the agent continues to interact with the environment, the Q-table is gradually updated with more accurate estimates of the optimal Q-values. The agent uses the Q-table to select the optimal action in each state, based on the highest Q-value in the table for that state. By learning from experience and updating the Q-values over time, Q-learning allows the agent to make better decisions and maximize the cumulative reward it receives from the environment.
 
 ## It's a me Mario
 
