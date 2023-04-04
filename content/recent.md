@@ -13,8 +13,9 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 *I am not responsible for the linked content and it does not reflect my opinion*
 
 
-
+* [30.03.23 - BloombergGPT](https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/) [Website]
 * [20.03.23 - Stanford created a LLM for 600$](https://futurism.com/the-byte/stanford-gpt-clone-alpaca) [Article]
+* [18.03.23 - ChatGPT vs GPT4](https://towardsdatascience.com/gpt-4-vs-chatgpt-an-exploration-of-training-performance-capabilities-and-limitations-35c990c133c5) [Blogpost]
 * [17.03.23 - How Vodafone Uses TensorFlow Data Validation](https://blog.tensorflow.org/2023/03/how-vodafone-uses-tensorflow-data-validation-in-their-data-contracts-to-elevate-data-governance-at-scale.html) [Blogpost]
 * [16.03.23- MLOps Zoomcamp - Free Training](https://github.com/DataTalksClub/mlops-zoomcamp) [Repo]
 * [16.03.23- Data Engineering Zoomcamp - Free Training](https://github.com/DataTalksClub/data-engineering-zoomcamp) [Repo]
