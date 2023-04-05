@@ -22,6 +22,7 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 * [16.03.23- MLOps Zoomcamp - Free Training](https://github.com/DataTalksClub/mlops-zoomcamp) [Repo]
 * [16.03.23- Data Engineering Zoomcamp - Free Training](https://github.com/DataTalksClub/data-engineering-zoomcamp) [Repo]
 * [15.03.23 - Plot Neural Net in Latex](https://github.com/HarisIqbal88/PlotNeuralNet) [Repo]
+* [15.03.23 - GPT4 Developer Livestream](https://www.youtube.com/watch?v=outcGtbnMuQ) [Video]
 * [10.03.23 - LLM's explained for nontechnical people](https://bootcamp.uxdesign.cc/how-chatgpt-really-works-explained-for-non-technical-people-71efb078a5c9) [Blogpost]
 * [27.02.23 - Prompt Engineering Guide](https://github.com/dair-ai/Prompt-Engineering-Guide?utm_source=tldrai) [Repo]
 * [07.02.23 - Google Research, 2022 & beyond: ML & computer systems](https://ai.googleblog.com/2023/02/google-research-2022-beyond-ml-computer.html) [Blog]
