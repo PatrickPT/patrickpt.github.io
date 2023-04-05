@@ -13,6 +13,7 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 *I am not responsible for the linked content and it does not reflect my opinion*
 
 
+* [30.03.23 - Pope Francis the Rapper](https://www.chicagotribune.com/people/ct-chicago-artist-viral-ai-pope-francis-puffer-20230330-3uxq3nk6svgqpihoy46b2y7jwq-story.html) [Article]
 * [30.03.23 - BloombergGPT](https://www.bloomberg.com/company/press/bloomberggpt-50-billion-parameter-llm-tuned-finance/) [Website]
 * [29.03.23 - Open Letter for Pause for A.I.](https://www.nytimes.com/2023/03/29/technology/ai-artificial-intelligence-musk-risks.html) [Article]
 * [20.03.23 - Stanford created a LLM for 600$](https://futurism.com/the-byte/stanford-gpt-clone-alpaca) [Article]
