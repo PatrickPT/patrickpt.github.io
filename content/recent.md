@@ -12,6 +12,12 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my opinion*
 
+* [01.06.23 - Statement on AI risk backed by OpenAI, Deepmnind](https://www.safe.ai/statement-on-ai-risk) [Website]
+* [30.05.23 - The Diffusion Camera](https://paragraphica.bjoernkarmann.dk) [Website]
+* [27.05.23 - AI created Trailer for LOTR in Wes Anderson style](https://www.reddit.com/r/lordoftherings/comments/13d6dy2/hey_guys_we_created_a_new_wes_anderson_trailer/) [Blogpost]
+* [26.05.23 - Good performing LLM's without RHLF?](https://arxiv.org/abs/2305.11206v1) [Paper]
+* [26.05.23 - Don't get distracted by the hype around AI](https://sloanreview.mit.edu/article/dont-get-distracted-by-the-hype-around-generative-ai/) [Blogpost]
+* [19.05.23 - Get started with LangChain](https://medium.com/databutton/getting-started-with-langchain-a-powerful-tool-for-working-with-large-language-models-286419ba0842) [Blogpost]
 * [12.05.23 - Stable Animation](https://stability.ai/blog/stable-animation-sdk) [Website]
 * [14.04.23 - Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/pdf/2304.03442.pdf) [Paper] 
 * [01.04.23 - Pope Francis the Rapper](https://www.chicagotribune.com/people/ct-chicago-artist-viral-ai-pope-francis-puffer-20230330-3uxq3nk6svgqpihoy46b2y7jwq-story.html) [Article]
