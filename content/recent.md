@@ -15,7 +15,7 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 * [11.06.23 - Practical steps to reduce hallucination for LLM](https://newsletter.victordibia.com/p/practical-steps-to-reduce-hallucination) [Blogpost]
 * [07.06.23 - Direct Preference Optimization](https://arxiv.org/abs/2305.18290) [Paper]
 * [02.06.23 - Metas Segment anything Model(SAM)](https://github.com/facebookresearch/segment-anything) [Repo]
-* [01.06.23 - Statement on AI risk backed by OpenAI, Deepmnind](https://www.safe.ai/statement-on-ai-risk) [Website]
+* [01.06.23 - Statement on AI risk backed by OpenAI, Deepmind](https://www.safe.ai/statement-on-ai-risk) [Website]
 * [30.05.23 - The Diffusion Camera](https://paragraphica.bjoernkarmann.dk) [Website]
 * [27.05.23 - AI created Trailer for LOTR in Wes Anderson style](https://www.reddit.com/r/lordoftherings/comments/13d6dy2/hey_guys_we_created_a_new_wes_anderson_trailer/) [Blogpost]
 * [26.05.23 - Good performing LLM's without RHLF?](https://arxiv.org/abs/2305.11206v1) [Paper]
