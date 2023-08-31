@@ -1,24 +1,24 @@
 ---
 title: "An introduction to Transformers"
-date: 2023-01-09T11:50:57Z
-draft: True
+date: 2023-08-30T11:50:57Z
+draft: False
 ShowToc: true
-tags: [Transformers,introduction]
+tags: [Transformers,Foundations]
 math: true
-url: /posts/intro-transformers/
+url: /posts/transformers/
 ---
 
 # What are Transformers
 
-Transformer is a type of neural network architecture that was introduced in the paper "Attention is All You Need" by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification.
+Transformers are a type of neural network architecture that was introduced in the paper "Attention is All You Need" by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application. 
 
-One of the key innovations of the Transformer architecture is the use of attention mechanisms. In a traditional neural network, each input is processed independently, without any information about the relationships between the inputs. In contrast, the Transformer model uses attention mechanisms to weight the inputs based on their relevance to the output.
+The key innovation of the Transformer architecture is the use of attention mechanisms. In a traditional neural network, each input is processed independently, without any information about the relationships between the inputs. In contrast, the Transformer model uses attention mechanisms to weight the inputs based on their relevance to the output.
 
 For example, in a language translation task, the Transformer model might pay more attention to the words at the beginning and end of a sentence, as these are typically more important for determining the overall meaning of the sentence. On the other hand, it might pay less attention to words that are less important or less relevant to the translation.
 
 Another key advantage of the Transformer architecture is its ability to process input sequences in parallel. Traditional recurrent neural networks (RNNs), which are commonly used in NLP tasks, process input sequences one element at a time, making them slow and inefficient. In contrast, the Transformer model processes all elements of the input sequence at the same time, allowing it to run much faster and more efficiently.
 
-# What is the base for Transformers?
+# Attention
 
 
 At a high level, the Transformer model is based on the idea of self-attention, which allows the model to weight the input elements based on their relevance to the output. Mathematically, self-attention can be computed using the following formula
@@ -65,5 +65,3 @@ This code sets up a BertModel from the Transformers library, which is a type of 
 
 Finally, the code tokenizes the input text and passes it through the model to obtain the output. The output of the model will be a tensor containing the encoded representation of the input text.
 
-
-In summary, the Transformer architecture is a powerful and effective tool for a wide range of NLP tasks. Its ability to weight input elements using attention mechanisms and to process input sequences in parallel make it well-suited to tasks such as language translation, summarization, and text classification.
