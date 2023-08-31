@@ -10,8 +10,17 @@ This is a selected list of stuff i read and found interesting recently. It will 
 
 It could be a link to a paper, a repo or a blog post. The selection is highly subjective, reflects my interests and depends on my reading habit, time, people i follow and recommender algorithms from the platforms i visit. 
 
-*I am not responsible for the linked content and it does not reflect my opinion*
+*I am not responsible for the linked content and it does not reflect my personal opinion*
 
+* [11.08.23 - Generative Agent Simulation is open source](https://github.com/joonspk-research/generative_agents) [Repo]
+* [08.08.23 - AI mitigates the climate impact of contrails](https://blog.google/technology/ai/ai-airlines-contrails-climate-change/) [Blogpost]
+* [11.06.23 - The ChatGPT revolution is another tech fantasy](https://www.disconnect.blog/p/the-chatgpt-revolution-is-another?utm_campaign=post&utm_medium=web) [Blogpost]
+* [31.07.23 - Generative Agents for your help](https://github.com/a16z-infra/companion-app) [Repo]
+* [22.07.23 - E2E Preprocessing on GCP](https://medium.com/@j.berzborn/end-to-end-big-data-preprocessing-for-your-machine-learning-models-on-google-cloud-109984994108) [Blogpost]
+* [18.07.23 - Vodafone: A DevOps approach to AI/ML](https://cloud.google.com/blog/products/devops-sre/how-vodafone-uses-cicd-to-speed-up-ml-pipelines?hl=en) [Blogpost]
+* [07.07.23 - Stop autonomous cars with Traffic Cones](https://jalopnik.com/californians-stop-self-driving-cars-with-traffic-cones-1850612270) [Article]
+* [11.06.23 - Data Engineering with Dataflow and Vertex AI](https://medium.com/google-cloud/injecting-ml-in-dataflow-using-vertex-ai-c230e9cef6be) [Blogpost]
+* [23.06.23 - GPT4 is a mixture of smaller models](https://albertoromgar.medium.com/gpt-4s-secret-has-been-revealed-439db1568180) [Blogpost]
 * [11.06.23 - Practical steps to reduce hallucination for LLM](https://newsletter.victordibia.com/p/practical-steps-to-reduce-hallucination) [Blogpost]
 * [07.06.23 - Direct Preference Optimization](https://arxiv.org/abs/2305.18290) [Paper]
 * [02.06.23 - Metas Segment anything Model(SAM)](https://github.com/facebookresearch/segment-anything) [Repo]
