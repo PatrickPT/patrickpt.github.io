@@ -1,5 +1,5 @@
 ---
-title: "How to train a Reinforment Learning Agent to play Super Mario"
+title: "How to use a Reinforment Learning Agent to play Super Mario"
 date: 2023-03-31T11:58:22+02:00
 draft: false
 showToc: true
@@ -144,9 +144,7 @@ PyBoy is giving an [inspiration](https://github.com/Baekalfen/PyBoy/wiki/Scripts
 
 # Let the games begin
 
-I built my own simplified agent which is still work in progress and will be added later. For reference i highly suggest to use the the RL agent built [here](https://github.com/lixado/PyBoy-RL)
-
-*WORK IN PROGRESS*
+I built my own simplified agent on following example and had a ton of fun [here](https://github.com/lixado/PyBoy-RL)
 
 # Ressources
 

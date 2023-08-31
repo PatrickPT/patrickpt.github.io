@@ -1,16 +1,16 @@
 ---
-title: "What are (Large) Language Models?"
-date: 2023-04-02T13:42:28+02:00
-draft: false
+title: "Foundations on Generative AI: Transformers"
+date: 2023-08-31T12:02:28+02:00
+draft: true
 showToc: true
 TocOpen: true
-url: /posts/language_models/
-tags: [LLM]
+url: /posts/transformers/
+tags: [GenerativeAI,Foundations]
 ---
 
 
 # TL;DR
-A short summary on (Large) Language Models: What are the ideas and concepts behind Language Models?
+A short Hands On with (Large) Language Models: What are the ideas behind Language Models and how can you train your own with nanoGPT?
 
 # What are Language Models
 
@@ -54,7 +54,18 @@ Overall, RLHF has the potential to make RL agents more effective in real-world a
 
 # Hands On
 
-As said it is rather simple to set up your own Language Model and if you are eager to do it you can use the nanoGPT implementation of Andrej Karpathy on GitHub](https://github.com/karpathy/nanoGPT) to test out your own model.
+As said it is rather simple to set up your own Language Model and that is what we are going to do.
+
+We will use the nanoGPT implementation of Andrej Karpathy on GitHub](https://github.com/karpathy/nanoGPT) to test out our own model.
+
+## How to train your own Language Model
+*WORK IN PROGRESS*
+
+## Corpus
+
+## Training
+
+## Results
 
 # Ressources
 

@@ -2,12 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://patrickpt.github.io/tags/hands-on/</loc>
-    <lastmod>2023-04-02T13:42:28+02:00</lastmod>
-  </url><url>
-    <loc>https://patrickpt.github.io/posts/language_models/</loc>
-    <lastmod>2023-04-02T13:42:28+02:00</lastmod>
-  </url><url>
     <loc>https://patrickpt.github.io/tags/llm/</loc>
     <lastmod>2023-04-02T13:42:28+02:00</lastmod>
   </url><url>
@@ -15,6 +9,9 @@
     <lastmod>2023-04-02T13:42:28+02:00</lastmod>
   </url><url>
     <loc>https://patrickpt.github.io/tags/</loc>
+    <lastmod>2023-04-02T13:42:28+02:00</lastmod>
+  </url><url>
+    <loc>https://patrickpt.github.io/posts/language_models/</loc>
     <lastmod>2023-04-02T13:42:28+02:00</lastmod>
   </url><url>
     <loc>https://patrickpt.github.io/tags/fun/</loc>
