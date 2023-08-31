@@ -1,5 +1,5 @@
 ---
-title: "An introduction to Transformers"
+title: "What are Transformers"
 date: 2023-08-30T11:50:57Z
 draft: False
 ShowToc: true
@@ -39,7 +39,7 @@ Overall, the Transformer model can be described using the following pseudo-code:
 
     apply final self-attention and feed-forward layers to obtain output
 
-    
+*WORK IN PROGRESS*    
 
 # How to set up a Transformer Model?
 

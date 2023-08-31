@@ -5,7 +5,17 @@
     <link>https://patrickpt.github.io/</link>
     <description>Recent content on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Jul 2023 15:01:23 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 11:50:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What are Transformers</title>
+      <link>https://patrickpt.github.io/posts/transformers/</link>
+      <pubDate>Wed, 30 Aug 2023 11:50:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/transformers/</guid>
+      <description>What are Transformers Transformers are a type of neural network architecture that was introduced in the paper &amp;ldquo;Attention is All You Need&amp;rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.
+The key innovation of the Transformer architecture is the use of attention mechanisms.</description>
+    </item>
+    
     <item>
       <title>Road to GCP Professional Data Engineer</title>
       <link>https://patrickpt.github.io/posts/PDE/</link>
