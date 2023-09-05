@@ -1,7 +1,7 @@
 ---
 title: "Generalized Models vs Specialized Models"
 date: 2023-09-05T11:50:57Z
-draft: True
+draft: False
 ShowToc: true
 tags: [Model Architecture,ML Design]
 math: true
@@ -10,9 +10,9 @@ url: /posts/generalvsspecializedmodels/
 
 # TLDR;
 
-This blogpost focusses on ML Design and Architecture and tries to give some hints for deciding between one generalized and multiple specialized models for the same business requriement and dataset.
+This blogpost focusses on ML Design and Architecture and tries to give some hints for deciding between one generalized and multiple specialized models for the same business requriement and dataset. *Consider it a nudge to dive deeper into the topic*
 
-# What's the catch?
+# Why should i care?
 
 Transparency in machine learning is crucial for business stakeholders because it fosters trust and informed decision-making. Business Stakeholders need to understand not only the potential benefits but also the limitations and risks associated with machine learning models.
 
@@ -51,7 +51,7 @@ Using specialized models has obviously some practical disadvantages as you need 
 - higher effort on maintenance
 - almost redundant processes
 
-**So why should anyone favour specialized models?**
+**So why should anyone favour specialized models at any point in time?**
 
 The prejudice against general models is as following: Advocates for specialized models argue that a single, all-encompassing model might lack precision within a specific subset, as it would have learned the characteristics of various other subsets. 
 
@@ -61,9 +61,9 @@ Still it lacks accuracy if the dataset contains different behaviours.
 
 The intuition does not neccessarily hold true for the de facto standard algorithm for tabular data: Boosted Tree Models like XGBoost,LightGBM or CatBoost.
 
-## Adavntages of Boosted Tree Models vs Linear Models
+# The type of model counts
 
-Boosted tree algorithms, like Gradient Boosting and AdaBoost, outperform linear models like linear regression in modeling complexity due to their ability to:
+Boosted tree algorithms, outperform linear models like linear regression in modeling complexity. The main advantages above linear models which are relevant to defuse the intuition against general models is their ability to:
 
 - **Handle Non-Linearity:** Boosted trees capture non-linear relationships, unlike linear regression, which assumes linearity.
 
@@ -71,17 +71,44 @@ Boosted tree algorithms, like Gradient Boosting and AdaBoost, outperform linear 
 
 - **Feature Interactions:** Boosted trees automatically detect and model feature interactions, which linear regression struggles with.
 
-- **Robustness to Outliers:** They are more robust to outliers and noisy data, making them suitable for real-world scenarios.
-
 - **Model Flexibility:** Boosted trees adapt to data complexity by adding more trees to the ensemble.
 
-- **Handling Heterogeneous Data: They handle various data types, including categorical features, without extensive preprocessing.
+This is the main reason why there is no theoretical reason to prefer several specialized models over one general model.
+Other adavantages are:
 
-Fewer Assumptions: Unlike linear regression, they have fewer rigid assumptions, making them versatile in diverse datasets.
+- **Robustness to Outliers:** They are more robust to outliers and noisy data, making them suitable for real-world scenarios.
+
+- **Handling Heterogeneous Data:** They handle various data types, including categorical features, without extensive preprocessing.
+
+- **Fewer Assumptions:** Unlike linear regression, they have fewer rigid assumptions, making them versatile in diverse datasets.
+
+# And what about the data
+
+When looking at the data and keeping in mind the capabilities of non-linear models we should always prefer general model over specialized models when there is some similarity across the segments composing the dataset.
+
+As the segments diverge further from one another, the benefits of employing a universal model diminish progressively.
+If the segments are entirely dissimilar, the disparity between the two approaches should converge to zero. 
+
+But what would that mean when looking at our Real-Life UseCase? Will customer segments be completely different. Shall we assume that the behaviour of people based on age, product, sales channel, network experience is completely different?
+
+As you already can see this is a rhetoric question because you cannot assume completely different behaviour for a more or less homogenous group.
+
+# I want proof
+
+The former thoughts are based on two very nice blogposts by Samuele Mazzanti which are also referenced below.
+
+He did the math and calculated based on two experiments whether a general model outperforms specialized models.
+
+On average the general model outperforms the specialized models. He did a short stress test with completely diverged groups and fake data and even then the general model performed only 0.53% AUC worse than the specialized model.
+
+# Conclusion
+
+Start with a general model, check your data and use specialized models only in rare cases.
 
 # Ressources
 
-![](https://towardsdatascience.com/what-is-better-one-general-model-or-many-specialized-models-9500d9f8751d)
+![Samuele Mazzanti: What Is Better: One General Model or Many Specialized Models?](https://towardsdatascience.com/what-is-better-one-general-model-or-many-specialized-models-9500d9f8751d)
 
+![Samuele Mazzanti: The Unreasonable Effectiveness of General Models](https://towardsdatascience.com/the-unreasonable-effectiveness-of-general-models-b4e822eaeb27#:~:text=The%20mean%20difference%20between%20the,generally%20outperformed%20the%20general%20model.)
 
 
