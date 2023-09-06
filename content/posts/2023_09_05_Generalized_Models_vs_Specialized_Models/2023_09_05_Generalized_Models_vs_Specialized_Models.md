@@ -1,5 +1,5 @@
 ---
-title: "Generalized Models vs Specialized Models"
+title: "Intuiton on Generalized Models vs Specialized Models"
 date: 2023-09-05T11:50:57Z
 draft: False
 ShowToc: true
@@ -8,9 +8,11 @@ math: true
 url: /posts/generalvsspecializedmodels/
 ---
 
-# TLDR;
+# TL;DR
 
-This blogpost focusses on ML Design and Architecture and tries to give some hints for deciding between one generalized and multiple specialized models for the same business requriement and dataset. *Consider it a nudge to dive deeper into the topic*
+This blogpost focusses on ML Design and Architecture and tries to give some intuition and hints for deciding between one generalized and multiple specialized models for the same business requriement and dataset.
+
+*Consider it a nudge to dive deeper into the topic*
 
 # Why should i care?
 
@@ -44,7 +46,7 @@ So what are the two approaches we want to look into:
 >
 > The dataset is splitted into each segment and for each of these subsets a unique model is fitted. This means that we repeat training and testing for the number of *k* segments.
 
-## Intuition
+# Intuition
 
 Using specialized models has obviously some practical disadvantages as you need to do some tasks *k* times which leads to
 - higher complexity
@@ -140,8 +142,8 @@ The trade-offs between model complexity and performance are always to be taken i
 
 # Ressources
 
-![Samuele Mazzanti: What Is Better: One General Model or Many Specialized Models?](https://towardsdatascience.com/what-is-better-one-general-model-or-many-specialized-models-9500d9f8751d)
+[Samuele Mazzanti: What Is Better: One General Model or Many Specialized Models?](https://towardsdatascience.com/what-is-better-one-general-model-or-many-specialized-models-9500d9f8751d)
 
-![Samuele Mazzanti: The Unreasonable Effectiveness of General Models](https://towardsdatascience.com/the-unreasonable-effectiveness-of-general-models-b4e822eaeb27#:~:text=The%20mean%20difference%20between%20the,generally%20outperformed%20the%20general%20model.)
+[Samuele Mazzanti: The Unreasonable Effectiveness of General Models](https://towardsdatascience.com/the-unreasonable-effectiveness-of-general-models-b4e822eaeb27#:~:text=The%20mean%20difference%20between%20the,generally%20outperformed%20the%20general%20model.)
 
 
