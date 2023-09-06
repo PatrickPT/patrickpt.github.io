@@ -18,11 +18,11 @@ This blogpost focusses on ML Design and Architecture and tries to give some intu
 
 Transparency in machine learning is crucial for business stakeholders because it fosters trust and informed decision-making. Business Stakeholders need to understand not only the potential benefits but also the limitations and risks associated with machine learning models.
 
-As Data scientists we play an important role in this process, as they bridge the gap between complex algorithms and business objectives. Educating stakeholders about the inner workings of machine learning algorithms, their inputs, outputs, and potential biases, empowers them to make well-informed decisions, manage expectations, and mitigate risks effectively.
+As Data scientists we play an important role in this process, as we bridge the gap between complex algorithms and business objectives. Educating stakeholders about the inner workings of machine learning algorithms, their inputs, outputs, and potential biases, empowers them to make well-informed decisions, manage expectations, and mitigate risks effectively.
 
-> But this customer segment has way higher churn, shouldn't the model focus only on this segment only?
+> But this customer segment has way higher churn, shouldn't the model focus on this segment only?
 
-This is one of the examples when you as a ML Engineer need to shed some light on your choices and the "machine room" aka the used algorithm to make clear how the model works.
+This is one of the examples when you as a ML Engineer need to shed some light on your design decisions and explain why you decide on a specific algorithm for the source data.
 
 # UseCase
 
@@ -36,7 +36,7 @@ A binary classification model is a type of machine learning model used to classi
 
 Suppose we have a dataset which consist of a matrix of predictors (called *X*) and a target variable (called *y*). *X* contains *n* columns(features) that could be used to segment the dataset. E.g. a dataset can be segmented by age, product, sales channel, network experience...
 
-So what are the two approaches we want to look into:
+So what are the two approaches we can choose between?
 
 > **General Model**
 >
@@ -58,12 +58,13 @@ Using specialized models has obviously some practical disadvantages as you need 
 The prejudice against general models is as following: Advocates for specialized models argue that a single, all-encompassing model might lack precision within a specific subset, as it would have learned the characteristics of various other subsets. 
 
 This intuition was in my opinion built on top of the assumption that all Machine Learning Models work similary to simple models like e.g. linear regression.
+
+# The type of model counts
+
 Linear regression assumes that there is a linear relationship between the independent variable(s) *X* and the dependent variable *y*. This means that the relationship can be approximated by a straight line. While it assumes linearity, it can be extended to capture more complex relationships by introducing higher-order terms or using more advanced regression techniques like polynomial regression or multiple linear regression when dealing with multiple independent variables.
 Still it lacks accuracy if the dataset contains different behaviours.
 
 The intuition does not neccessarily hold true for the de facto standard algorithm for tabular data: Boosted Tree Models like XGBoost,LightGBM or CatBoost.
-
-# The type of model counts
 
 Boosted tree algorithms, outperform linear models like linear regression in modeling complexity. The main advantages above linear models which are relevant to defuse the intuition against general models is their ability to:
 
