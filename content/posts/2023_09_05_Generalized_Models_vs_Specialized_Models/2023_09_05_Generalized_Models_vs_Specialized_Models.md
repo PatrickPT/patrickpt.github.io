@@ -1,9 +1,9 @@
 ---
-title: "Intuiton on Generalized Models vs Specialized Models"
+title: "Generalized Models vs Specialized Models"
 date: 2023-09-05T11:50:57Z
 draft: False
 ShowToc: true
-tags: [Model Architecture,ML Design]
+tags: [Model Architecture,ML Design, Intuition]
 math: true
 url: /posts/generalvsspecializedmodels/
 ---
