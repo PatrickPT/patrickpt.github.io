@@ -99,11 +99,44 @@ The former thoughts are based on two very nice blogposts by Samuele Mazzanti whi
 
 He did the math and calculated based on two experiments whether a general model outperforms specialized models.
 
-On average the general model outperforms the specialized models. He did a short stress test with completely diverged groups and fake data and even then the general model performed only 0.53% AUC worse than the specialized model.
+On average the general model outperforms the specialized models. He did a short stress test with completely diverged groups which should be a really rare occurence in any Real-Life Business Case.  Even then the general model performed only 0.53% AUC worse than the specialized model.
 
 # Conclusion
 
-Start with a general model, check your data and use specialized models only in rare cases.
+Whether a generalized model or specialized models are better for the same dataset depends on various factors, including the nature of the data, the used algorithm, the specific problem you're trying to solve, and your objectives.
+
+**Generalized Model:**
+
+- Advantages:
+
+    - Simplicity: Generalized models are often simpler to implement and maintain.
+    - Resource Efficiency: Training and deploying a single model can be more resource-efficient than multiple specialized models.
+    - Applicability: Generalized models can be useful when the differences between subgroups in the data are relatively small, and a single model can provide satisfactory performance across all groups.
+
+- Use Cases:
+
+    - When the dataset is relatively homogenous, and there are no strong reasons to believe that different subgroups require significantly different modeling approaches.
+    - In scenarios where model interpretability and ease of deployment are critical.
+
+**Specialized Models:**
+
+- Advantages:
+
+    - Improved Performance: Specialized models can potentially provide better predictive performance for specific subgroups or behaviors within the data if the data subgroups are 
+    - Customization: They allow you to tailor the model to the unique characteristics of different segments, which can lead to more accurate predictions.
+    - Flexibility: Specialized models can handle cases where the relationships between features and the target variable vary significantly between subgroups.
+
+- Use Cases:
+
+    - When there are clear distinctions or significant variations in behavior or patterns among different subgroups within the dataset.
+    - In cases where the overall dataset is large, but specific subgroups have limited data, making it challenging for a generalized model to capture their nuances effectively.
+    - When optimizing performance for specific subgroups is critical, even if it requires more complex model development and maintenance.
+    
+In practice, it's all about the data: If the data doesn't exhibit significant subgroup differences in my view it is alway beneficial to use a generalized model. A specialized model may only be benefical due to a very heterogenous dataset or specific requirements. 
+
+As written above also the model plays a crucial part and the intuition is often a bit misleading. The results from the quoted experiments show clearly that using boosted tree models in one general model will be favourable.
+
+The trade-offs between model complexity and performance are always to be taken into account.
 
 # Ressources
 
