@@ -12,6 +12,7 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my personal opinion*
 
+* [08.09.23 - Times AI 100](https://time.com/collection/time100-ai/) [Article]
 * [07.09.23 - Summary on new Foundation Models LLaMA2 and CodeLLaMA](https://magazine.sebastianraschka.com/p/ahead-of-ai-11-new-foundation-models) [Blogpost]
 * [07.09.23 - GPT Pilot - An LLM driven dev tool to create Apps](https://github.com/Pythagora-io/gpt-pilot) [Repo]
 * [04.09.23 - Instruction Tuning for Large Language Models: A Survey](https://www.researchgate.net/publication/373263398_Instruction_Tuning_for_Large_Language_Models_A_Survey) [Paper]
