@@ -12,6 +12,10 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my personal opinion*
 
+* [07.09.23 - Summary on new Foundation Models LLaMA2 and CodeLLaMA](https://magazine.sebastianraschka.com/p/ahead-of-ai-11-new-foundation-models) [Blogpost]
+* [07.09.23 - GPT Pilot - An LLM driven dev tool to create Apps](https://github.com/Pythagora-io/gpt-pilot) [Repo]
+* [04.09.23 - Instruction Tuning for Large Language Models: A Survey](https://www.researchgate.net/publication/373263398_Instruction_Tuning_for_Large_Language_Models_A_Survey) [Paper]
+* [02.09.23 - SynthID for Watermarks in AI generated content](https://www.deepmind.com/blog/identifying-ai-generated-images-with-synthid) [Article]
 * [11.08.23 - Generative Agent Simulation is open source](https://github.com/joonspk-research/generative_agents) [Repo]
 * [08.08.23 - AI mitigates the climate impact of contrails](https://blog.google/technology/ai/ai-airlines-contrails-climate-change/) [Blogpost]
 * [11.06.23 - The ChatGPT revolution is another tech fantasy](https://www.disconnect.blog/p/the-chatgpt-revolution-is-another?utm_campaign=post&utm_medium=web) [Blogpost]
