@@ -12,6 +12,8 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my personal opinion*
 
++ [14.09.23 - RAG on GCP with PaLM and LangChain](https://cloud.google.com/blog/products/ai-machine-learning/generative-ai-applications-with-vertex-ai-palm-2-models-and-langchain?hl=en) [Blogpost]
+* [14.09.23 - RAG vs Finetuning](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7) [Blogpost]
 * [08.09.23 - Times AI 100](https://time.com/collection/time100-ai/) [Article]
 * [07.09.23 - Summary on new Foundation Models LLaMA2 and CodeLLaMA](https://magazine.sebastianraschka.com/p/ahead-of-ai-11-new-foundation-models) [Blogpost]
 * [07.09.23 - GPT Pilot - An LLM driven dev tool to create Apps](https://github.com/Pythagora-io/gpt-pilot) [Repo]
