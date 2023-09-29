@@ -36,34 +36,34 @@ Incorporating it into an LLM architecture enables the model to combine the best 
 
 This approach leads to more accurate and context-aware interactions with the language model.
 
-# Architecture of Retrieval Augmented Generation in LLMs
+# Architecture Components
 
 The architecture of an LLM incorporating retrieval augmented generation typically consists of three main components:
 
-## Retrieval Module: 
+## Retrieval Module
 The retrieval module is responsible for searching and retrieving relevant information from a large knowledge base. This knowledge base can be a collection of texts, documents, or even web pages. Techniques like BM25, TF-IDF, or neural retrieval models are often employed to perform this task efficiently.
 
-## Generation Module:
+## Generation Module
 The generation module is based on a generative language model like GPT-3. It takes as input the retrieved information and the user's query or context and generates a coherent response. This module benefits from the retrieved information, enhancing the quality and relevance of the generated text.
 
-## Fusion Mechanism: 
+## Fusion Mechanism
 To ensure a seamless integration of retrieval and generation, a fusion mechanism is used. This mechanism combines the retrieved information and the generative output in a way that maintains coherence and context. Techniques such as content selection, content planning, or attention mechanisms are used here.
 
-# Benefits of Retrieval Augmented Generation in LLMs
+# Benefits of using RAG
 
-## Contextual Awareness:
+## Contextual Awareness
 Retrieval augmented generation empowers LLMs with a deep understanding of context. It can provide answers and generate text that is not only accurate but also contextually relevant, which is crucial for tasks like question answering, chatbots, and content generation.
 
-## Handling Ambiguity: 
+## Handling Ambiguity
 When faced with ambiguous queries, an LLM with retrieval augmented generation can use the retrieved information to disambiguate and provide well-informed responses. This is especially valuable in scenarios where context plays a pivotal role.
 
-## Expansive Knowledge Access: 
+## Expansive Knowledge Access
 By connecting to a knowledge base, LLMs with retrieval augmented generation can tap into a vast reservoir of information, making them more versatile and adaptable to various domains and topics.
 
-## Improved Consistency:
+## Improved Consistency
 The fusion of retrieval and generation components helps maintain consistency in responses. This is particularly useful in multi-turn conversations, where the model can recall prior interactions and maintain a coherent dialogue.
 
-# Applications of Retrieval Augmented Generation in LLMs
+# Applications of RAG
 
 The applications of LLMs with retrieval augmented generation are numerous and extend across various domains:
 
