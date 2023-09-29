@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GenAI on Notes on AI</title>
+    <link>https://patrickpt.github.io/tags/genai/</link>
+    <description>Recent content in GenAI on Notes on AI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 29 Sep 2023 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/genai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Architecture: What is Retrieval Augmented Generation</title>
+      <link>https://patrickpt.github.io/posts/RAG/</link>
+      <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/RAG/</guid>
+      <description>TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augemnted Generation can be used to productionize LLM models for entreprise architecture easily.
+Why should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:</description>
+    </item>
+    
+  </channel>
+</rss>

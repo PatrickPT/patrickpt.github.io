@@ -5,20 +5,29 @@
     <link>https://patrickpt.github.io/tags/</link>
     <description>Recent content in Tags on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Sep 2023 11:50:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Sep 2023 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Intuition</title>
-      <link>https://patrickpt.github.io/tags/intuition/</link>
-      <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
+      <title>GenAI</title>
+      <link>https://patrickpt.github.io/tags/genai/</link>
+      <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/intuition/</guid>
+      <guid>https://patrickpt.github.io/tags/genai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LLM</title>
+      <link>https://patrickpt.github.io/tags/llm/</link>
+      <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/llm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ML Design</title>
       <link>https://patrickpt.github.io/tags/ml-design/</link>
-      <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
+      <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
       
       <guid>https://patrickpt.github.io/tags/ml-design/</guid>
       <description></description>
@@ -27,9 +36,18 @@
     <item>
       <title>Model Architecture</title>
       <link>https://patrickpt.github.io/tags/model-architecture/</link>
-      <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
+      <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
       
       <guid>https://patrickpt.github.io/tags/model-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intuition</title>
+      <link>https://patrickpt.github.io/tags/intuition/</link>
+      <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/intuition/</guid>
       <description></description>
     </item>
     
@@ -66,15 +84,6 @@
       <pubDate>Sun, 02 Jul 2023 15:01:23 +0100</pubDate>
       
       <guid>https://patrickpt.github.io/tags/gcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LLM</title>
-      <link>https://patrickpt.github.io/tags/llm/</link>
-      <pubDate>Tue, 02 May 2023 13:42:28 +0200</pubDate>
-      
-      <guid>https://patrickpt.github.io/tags/llm/</guid>
       <description></description>
     </item>
     

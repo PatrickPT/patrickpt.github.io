@@ -1,7 +1,7 @@
 ---
 title: "AI Architecture: What is Retrieval Augmented Generation"
 date: 2023-09-29T18:30:57Z
-draft: True
+draft: False
 ShowToc: true
 tags: [Model Architecture,ML Design, LLM, GenAI]
 math: true
@@ -77,7 +77,9 @@ The applications of LLMs with retrieval augmented generation are numerous and ex
 
 # Conclusion
 
-Retrieval augmented generation is a groundbreaking advancement in the world of large language models. It combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and versatile AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, these models have the potential to transform a wide range of applications, from customer support to content creation and education. As research in this field continues to evolve, we can expect even more powerful and capable language models that will shape the future of human-AI interactions.
+Retrieval augmented generation is an efficient alternative to fine-tuning large language models. 
+
+It combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and versatile AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, these models have the potential to transform a wide range of applications, from customer support to content creation and education.
 
 
 # Ressources
