@@ -5,15 +5,16 @@
     <link>https://patrickpt.github.io/tags/hands-on/</link>
     <description>Recent content in Hands On on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Apr 2023 13:42:28 +0200</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/hands-on/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Oct 2023 10:30:00 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/hands-on/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hands on with (Large) Language Models</title>
-      <link>https://patrickpt.github.io/posts/language_models/</link>
-      <pubDate>Sun, 02 Apr 2023 13:42:28 +0200</pubDate>
+      <title>Hands on with Retrieval Augmented Generation</title>
+      <link>https://patrickpt.github.io/posts/hands-on-rag/</link>
+      <pubDate>Sat, 07 Oct 2023 10:30:00 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/language_models/</guid>
-      <description>TL;DR A short Hands On with (Large) Language Models: What are the ideas behind Language Models and how can you train your own with nanoGPT?
-What are Language Models Large Language Models are rapidly transforming natural language processing tasks and have led to a huge hype around Artificial Intelligence and associated tasks. Especially with the introduction of GPT3.5(ChatGPT) in 2022 many people are interested in the capabilities of ML. But what is the foundation for the products that could impact our future world significantly?</description>
+      <guid>https://patrickpt.github.io/posts/hands-on-rag/</guid>
+      <description>TL;DR This blogpost shows an example for a Chatbot that uses Retrieval Augemnted Generation to retrieve domain specific knowledge before querying a Large Language Model
+Hands on with Retrieval Augmented Generation For a primer on Retrieval Augemnted Generation please read my other post What is Retrieval Augmented Generation?.
+Retrieval Augemnted Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent study) even outperform LLM&amp;rsquo;s with long context windows.</description>
     </item>
     
   </channel>

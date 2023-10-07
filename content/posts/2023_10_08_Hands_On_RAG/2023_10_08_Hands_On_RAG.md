@@ -1,6 +1,6 @@
 ---
 title: "Hands on with Retrieval Augmented Generation"
-date: 2023-10-09T10:30:00Z
+date: 2023-10-07T10:30:00Z
 draft: False
 ShowToc: true
 tags: [Hands On,AI Design, LLM, GenAI]

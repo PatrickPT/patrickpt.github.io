@@ -5,7 +5,18 @@
     <link>https://patrickpt.github.io/</link>
     <description>Recent content on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 29 Sep 2023 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Oct 2023 10:30:00 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hands on with Retrieval Augmented Generation</title>
+      <link>https://patrickpt.github.io/posts/hands-on-rag/</link>
+      <pubDate>Sat, 07 Oct 2023 10:30:00 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/hands-on-rag/</guid>
+      <description>TL;DR This blogpost shows an example for a Chatbot that uses Retrieval Augemnted Generation to retrieve domain specific knowledge before querying a Large Language Model
+Hands on with Retrieval Augmented Generation For a primer on Retrieval Augemnted Generation please read my other post What is Retrieval Augmented Generation?.
+Retrieval Augemnted Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent study) even outperform LLM&amp;rsquo;s with long context windows.</description>
+    </item>
+    
     <item>
       <title>AI Architecture: What is Retrieval Augmented Generation</title>
       <link>https://patrickpt.github.io/posts/rag/</link>
