@@ -18,15 +18,19 @@ Intuitive would be to train a Large Language Model with domain specific data, in
 - Acquiring the massive computational infrastructure required to train LLMs effectively demands significant financial investment. Even if you rely on Cloud Providers instead of on-premise the cost to train is a factor which cannot be neglected currently.
 - Assembling high-quality, domain-specific datasets for fine-tuning can be time-consuming and expensive, as it often involves labor-intensive data collection and annotation efforts. 
 
-In summary, fine-tuning is complex and costly and the used software may not scale well for other Use-Cases.
-But what ere the alternatives? Just use that for your most important UseCases, just using Prompt Engineering?
+Other downsides are:
+- *Hallucinations:* If you think about it consequently fine-tuning will not guarantee that the model behaves the way you would like it to behave. We are able to steer how the model is "learning" when fine-tuning but we cannot control the outcome. The probability that we receive hallucinations is way higher if we fine-tune in contrast to if we just directly provide additional context in the prompt which is matching to our question.
+- *Retraining and Knowledge Cut-offs:* It would require constant compute-intensive retraining for even small changes. As you would not do that every day every LLM has a training end date, post which it is unaware of events or information.
+- *Context Window:* Each Large Language Model (LLM) functions within a contextual window, which essentially defines the maximum volume of information it can simultaneously accommodate. When external data sources provides information surpassing this window's capacity, it needs to be segmented into smaller portions that align with the model's contextual limitations.
 
 # Use Retrieval Augmented Generation
 
 Research on NLP was there before the hype around GPT's and specifically on OpenAIs service ChatGPT(based on GPT3.5) started in 2022.
-In 2020 Lewis et al. published a first paper on [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401).
+In 2020 Lewis et al. from Meta AI published a paper on [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401).
 
 Retrieval-augmented generation (RAG) is an AI architecture for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge to supplement the LLMs internal representation of information.
+
+**“It’s the difference between an open-book and a closed-book exam,”** Lastras said. **“In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.”**
 
 It is a fusion of two powerful NLP techniques: retrieval-based models and generative models. Retrieval-based models excel at finding relevant information from a vast pool of knowledge, often in the form of pre-existing text or documents. On the other hand, generative models are proficient in generating human-like text based on the given input.
 
@@ -36,50 +40,56 @@ Incorporating it into an LLM architecture enables the model to combine the best 
 
 This approach leads to more accurate and context-aware interactions with the language model.
 
+![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg)
+**picture from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)**
+
 # Architecture Components
 
-The architecture of an LLM incorporating retrieval augmented generation typically consists of three main components:
+The architecture of an LLM incorporating retrieval augmented generation typically consists of two main components:
 
 ## Retrieval Module
-The retrieval module is responsible for searching and retrieving relevant information from a large knowledge base. This knowledge base can be a collection of texts, documents, or even web pages. Techniques like BM25, TF-IDF, or neural retrieval models are often employed to perform this task efficiently.
+The retrieval module is the heart of the architecture and responsible for searching and retrieving relevant information from a large knowledge base. This knowledge base can be a collection of texts, documents, or even web pages. Retrieval can be broken down into two stages:
+## Indexing: 
+You will index the knowledge base which you want to give as context to the model. To index your data you can simply use libraries like LangChain llama_index or transformers which do the work for you. The data is loaded, chunked and tokenized. Data will be fetched from your various sources, segmented into bite-sized chunks to optimize them for embedding and search and afterwards tokenized to create embeddings.
+The embeddings are stored as high dimensional vectors in vector databases and build the foundation for RAG.
+
+![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/indexing.jpg)
+**picture from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)**
+
+## Querying:
+The data from the vector databases can be used for Semantic Search. Meaning that when inputing a question into the retriever(which was also transformed into an embedding) we can search for the most appropriate matching data in the vector database and give it to generator as context. The retrieved data is combined with the original prompt, creating an enhanced or augmented prompt. This augmented prompt provides additional context. This is even more relevant for domain specific data which may not be part of the corpus used for training the model.
+
+![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/querying.jpg)
+**picture from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)**
+
+In summary: 
+We start by searching for relevant documents or excerpts within an extensive dataset. For this a dense retrieval mechanism that leverages embeddings to represent both the query and the documents is used. These embeddings are then utilized to calculate similarity scores, leading to the retrieval of the top-ranked documents.
 
 ## Generation Module
-The generation module is based on a generative language model like GPT-3. It takes as input the retrieved information and the user's query or context and generates a coherent response. This module benefits from the retrieved information, enhancing the quality and relevance of the generated text.
-
-## Fusion Mechanism
-To ensure a seamless integration of retrieval and generation, a fusion mechanism is used. This mechanism combines the retrieved information and the generative output in a way that maintains coherence and context. Techniques such as content selection, content planning, or attention mechanisms are used here.
+The generation module is based on a generative language model like GPT-3.5. It takes as input the retrieved information and the user's query or context and generates a coherent response.
 
 # Benefits of using RAG
 
-## Contextual Awareness
-Retrieval augmented generation empowers LLMs with a deep understanding of context. It can provide answers and generate text that is not only accurate but also contextually relevant, which is crucial for tasks like question answering, chatbots, and content generation.
+## Improved Precision:
+Through the utilization of external data sources, the RAG LLM can produce responses that are not solely derived from its training dataset but are also enriched by the most pertinent and current information accessible within the retrieval corpus.
 
-## Handling Ambiguity
-When faced with ambiguous queries, an LLM with retrieval augmented generation can use the retrieved information to disambiguate and provide well-informed responses. This is especially valuable in scenarios where context plays a pivotal role.
+## Addressing Knowledge Gaps:
+RAG effectively confronts the inherent knowledge limitations of LLM, whether stemming from the model's training cut-off or the absence of domain-specific data in its training corpus.
 
-## Expansive Knowledge Access
-By connecting to a knowledge base, LLMs with retrieval augmented generation can tap into a vast reservoir of information, making them more versatile and adaptable to various domains and topics.
+## Adaptability:
+RAG can seamlessly integrate with an array of external data sources, encompassing proprietary databases within organizations and publicly accessible internet data. This adaptability makes it suitable for a broad spectrum of applications and industries.
 
-## Improved Consistency
-The fusion of retrieval and generation components helps maintain consistency in responses. This is particularly useful in multi-turn conversations, where the model can recall prior interactions and maintain a coherent dialogue.
+## Mitigating Hallucinations:
+A challenge associated with LLMs is the potential occurrence of "hallucinations,". By incorporating real-time data context, RAG decreases the probability of such outputs.
 
-# Applications of RAG
-
-The applications of LLMs with retrieval augmented generation are numerous and extend across various domains:
-
-*Customer Support*: Chatbots equipped with this technology can offer more accurate and context-aware responses to customer inquiries, leading to improved customer satisfaction.
-
-*Content Creation*: Content generation tools can use retrieval augmented generation to research and incorporate relevant information from a vast range of sources, ensuring high-quality content.
-
-*Educational Tools*: LLMs can assist students by providing answers to questions, explanations, and supplementary information from educational resources.
-
-*Research Assistance*: Researchers can use LLMs with retrieval augmented generation to quickly access and summarize relevant research papers and documents.
+## Scalability:
+An advantage of RAG LLMs lies in its scalability. Through the separation of the retrieval and generation processes, the model can manage extensive datasets, making it well-suited for real-world scenarios characterized by abundant data.
 
 # Conclusion
 
-Retrieval augmented generation is an efficient alternative to fine-tuning large language models. 
+Retrieval augmented generation is a versatile Arhcitecture for LLM's. 
 
-It combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and versatile AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, these models have the potential to transform a wide range of applications, from customer support to content creation and education.
+It combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and flexible AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, this architecture has the potential to be used for enteprises and flexible solutions.
 
 
 # Ressources
@@ -87,3 +97,9 @@ It combines the strengths of retrieval-based models and generative models to cre
 [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
 
 [IBM: What is retrieval-augmented generation?](https://research.ibm.com/blog/retrieval-augmented-generation-RAG)
+
+[Retrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models](https://ai.meta.com/blog/retrieval-augmented-generation-streamlining-the-creation-of-intelligent-natural-language-processing-models/)
+
+[Retrieval meets Long Context Large Language Models](https://arxiv.org/abs/2310.03025)
+
+[A Deep Dive into Retrieval-Augmented Generation in LLM](https://www.unite.ai/a-deep-dive-into-retrieval-augmented-generation-in-llm/)
