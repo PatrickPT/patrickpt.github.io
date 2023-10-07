@@ -14,7 +14,7 @@ This blogpost shows an example for a Chatbot that uses Retrieval Augemnted Gener
 
 # Hands on with Retrieval Augmented Generation
 
-For a primer on Retrieval Augemnted Generation please read my other post [What is Retrieval Augmented Generation?](/posts/rag).
+For a primer on Retrieval Augemnted Generation please read my other post [What is Retrieval Augmented Generation?](/posts/rag_intro).
 
 Retrieval Augemnted Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent [study](https://arxiv.org/abs/2310.03025)) even outperform LLM's with long context windows.
 
