@@ -55,7 +55,7 @@ The Streamlit app's title, icon, layout, and sidebar state are configured.
         menu_items=None
     )
 
-OpenAI API key is set using a secret obtained from Streamlit secrets. The key is stored in `/.streamlit/secrets.toml``
+OpenAI API key is set using a secret obtained from Streamlit secrets. The key is stored in `/.streamlit/secrets.toml`
 
     # Set OpenAI API key
     openai.api_key = st.secrets.openai_key
