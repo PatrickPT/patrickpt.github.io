@@ -12,7 +12,13 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my personal opinion*
 
-+ [14.09.23 - RAG on GCP with PaLM and LangChain](https://cloud.google.com/blog/products/ai-machine-learning/generative-ai-applications-with-vertex-ai-palm-2-models-and-langchain?hl=en) [Blogpost]
+* [07.10.23 - Retrieval meets Long Context Large Language Models](https://arxiv.org/abs/2310.03025) [Paper]
+* [05.10.23 - Challenges in evaluating AI systems](https://www.anthropic.com/index/evaluating-ai-systems) [Blogpost]
+* [03.10.23 - Unmoderated european LLM Mistral AI](https://mistral.ai/news/announcing-mistral-7b/) [Website]
+* [02.10.23 - OpenAI Cookbook](https://cookbook.openai.com/) [Repo]
+* [25.09.23 - Nougat: Neural Optical Understanding](https://arxiv.org/abs/2308.13418) [Paper]
+* [19.09.23 - Stable Audio by Stability AI](https://www.stableaudio.com) [Website]
+* [14.09.23 - RAG on GCP with PaLM and LangChain](https://cloud.google.com/blog/products/ai-machine-learning/generative-ai-applications-with-vertex-ai-palm-2-models-and-langchain?hl=en) [Blogpost]
 * [14.09.23 - RAG vs Finetuning](https://towardsdatascience.com/rag-vs-finetuning-which-is-the-best-tool-to-boost-your-llm-application-94654b1eaba7) [Blogpost]
 * [08.09.23 - Times AI 100](https://time.com/collection/time100-ai/) [Article]
 * [07.09.23 - Summary on new Foundation Models LLaMA2 and CodeLLaMA](https://magazine.sebastianraschka.com/p/ahead-of-ai-11-new-foundation-models) [Blogpost]
