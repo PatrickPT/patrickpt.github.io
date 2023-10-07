@@ -6,11 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>AI Architecture: What is Retrieval Augmented Generation | Notes on AI</title>
-<meta name="keywords" content="Model Architecture, ML Design, LLM, GenAI">
-<meta name="description" content="TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augemnted Generation can be used to productionize LLM models for entreprise architecture easily.
+<meta name="keywords" content="Model Architecture, AI Design, LLM, GenAI">
+<meta name="description" content="TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augmented Generation can be used to productionize LLM models for enterprise architecture easily.
 Why should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:">
 <meta name="author" content="">
-<link rel="canonical" href="https://patrickpt.github.io/posts/RAG/">
+<link rel="canonical" href="https://patrickpt.github.io/posts/rag/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css" integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -96,16 +96,16 @@ if (!doNotTrack) {
 }
 </script>
 <meta property="og:title" content="AI Architecture: What is Retrieval Augmented Generation" />
-<meta property="og:description" content="TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augemnted Generation can be used to productionize LLM models for entreprise architecture easily.
+<meta property="og:description" content="TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augmented Generation can be used to productionize LLM models for enterprise architecture easily.
 Why should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://patrickpt.github.io/posts/RAG/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://patrickpt.github.io/posts/rag/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-09-29T18:30:57+00:00" />
 <meta property="article:modified_time" content="2023-09-29T18:30:57+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AI Architecture: What is Retrieval Augmented Generation"/>
-<meta name="twitter:description" content="TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augemnted Generation can be used to productionize LLM models for entreprise architecture easily.
+<meta name="twitter:description" content="TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augmented Generation can be used to productionize LLM models for enterprise architecture easily.
 Why should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:"/>
 
 
@@ -124,7 +124,7 @@ Why should i care? Intuitive would be to train a Large Language Model with domai
       "@type": "ListItem",
       "position":  2 ,
       "name": "AI Architecture: What is Retrieval Augmented Generation",
-      "item": "https://patrickpt.github.io/posts/RAG/"
+      "item": "https://patrickpt.github.io/posts/rag/"
     }
   ]
 }
@@ -135,18 +135,18 @@ Why should i care? Intuitive would be to train a Large Language Model with domai
   "@type": "BlogPosting",
   "headline": "AI Architecture: What is Retrieval Augmented Generation",
   "name": "AI Architecture: What is Retrieval Augmented Generation",
-  "description": "TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augemnted Generation can be used to productionize LLM models for entreprise architecture easily.\nWhy should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:",
+  "description": "TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augmented Generation can be used to productionize LLM models for enterprise architecture easily.\nWhy should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:",
   "keywords": [
-    "Model Architecture", "ML Design", "LLM", "GenAI"
+    "Model Architecture", "AI Design", "LLM", "GenAI"
   ],
-  "articleBody": "TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augemnted Generation can be used to productionize LLM models for entreprise architecture easily.\nWhy should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:\nAcquiring the massive computational infrastructure required to train LLMs effectively demands significant financial investment. Even if you rely on Cloud Providers instead of on-premise the cost to train is a factor which cannot be neglected currently. Assembling high-quality, domain-specific datasets for fine-tuning can be time-consuming and expensive, as it often involves labor-intensive data collection and annotation efforts. Other downsides are:\nHallucinations: If you think about it consequently fine-tuning will not guarantee that the model behaves the way you would like it to behave. We are able to steer how the model is “learning” when fine-tuning but we cannot control the outcome. The probability that we receive hallucinations is way higher if we fine-tune in contrast to if we just directly provide additional context in the prompt which is matching to our question. Retraining and Knowledge Cut-offs: It would require constant compute-intensive retraining for even small changes. As you would not do that every day every LLM has a training end date, post which it is unaware of events or information. Context Window: Each Large Language Model (LLM) functions within a contextual window, which essentially defines the maximum volume of information it can simultaneously accommodate. When external data sources provides information surpassing this window’s capacity, it needs to be segmented into smaller portions that align with the model’s contextual limitations. Use Retrieval Augmented Generation Research on NLP was there before the hype around GPT’s and specifically on OpenAIs service ChatGPT(based on GPT3.5) started in 2022. In 2020 Lewis et al. from Meta AI published a paper on Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.\nRetrieval-augmented generation (RAG) is an AI architecture for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge to supplement the LLMs internal representation of information.\n“It’s the difference between an open-book and a closed-book exam,” Lastras said. “In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.”\nIt is a fusion of two powerful NLP techniques: retrieval-based models and generative models. Retrieval-based models excel at finding relevant information from a vast pool of knowledge, often in the form of pre-existing text or documents. On the other hand, generative models are proficient in generating human-like text based on the given input.\nIncorporating it into an LLM architecture enables the model to combine the best of both worlds.\nIt can retrieve contextually relevant information from a vast knowledge base and use that information to generate coherent and contextually appropriate responses. This approach leads to more accurate and context-aware interactions with the language model.\npicture from llama_index\nArchitecture Components The architecture of an LLM incorporating retrieval augmented generation typically consists of two main components:\nRetrieval Module The retrieval module is the heart of the architecture and responsible for searching and retrieving relevant information from a large knowledge base. This knowledge base can be a collection of texts, documents, or even web pages. Retrieval can be broken down into two stages:\nIndexing: You will index the knowledge base which you want to give as context to the model. To index your data you can simply use libraries like LangChain llama_index or transformers which do the work for you. The data is loaded, chunked and tokenized. Data will be fetched from your various sources, segmented into bite-sized chunks to optimize them for embedding and search and afterwards tokenized to create embeddings. The embeddings are stored as high dimensional vectors in vector databases and build the foundation for RAG.\npicture from llama_index\nQuerying: The data from the vector databases can be used for Semantic Search. Meaning that when inputing a question into the retriever(which was also transformed into an embedding) we can search for the most appropriate matching data in the vector database and give it to generator as context. The retrieved data is combined with the original prompt, creating an enhanced or augmented prompt. This augmented prompt provides additional context. This is even more relevant for domain specific data which may not be part of the corpus used for training the model.\npicture from llama_index\nIn summary: We start by searching for relevant documents or excerpts within an extensive dataset. For this a dense retrieval mechanism that leverages embeddings to represent both the query and the documents is used. These embeddings are then utilized to calculate similarity scores, leading to the retrieval of the top-ranked documents.\nGeneration Module The generation module is based on a generative language model like GPT-3.5. It takes as input the retrieved information and the user’s query or context and generates a coherent response.\nBenefits of using RAG Improved Precision: Through the utilization of external data sources, the RAG LLM can produce responses that are not solely derived from its training dataset but are also enriched by the most pertinent and current information accessible within the retrieval corpus.\nAddressing Knowledge Gaps: RAG effectively confronts the inherent knowledge limitations of LLM, whether stemming from the model’s training cut-off or the absence of domain-specific data in its training corpus.\nAdaptability: RAG can seamlessly integrate with an array of external data sources, encompassing proprietary databases within organizations and publicly accessible internet data. This adaptability makes it suitable for a broad spectrum of applications and industries.\nMitigating Hallucinations: A challenge associated with LLMs is the potential occurrence of “hallucinations,”. By incorporating real-time data context, RAG decreases the probability of such outputs.\nScalability: An advantage of RAG LLMs lies in its scalability. Through the separation of the retrieval and generation processes, the model can manage extensive datasets, making it well-suited for real-world scenarios characterized by abundant data.\nConclusion Retrieval augmented generation is a versatile Arhcitecture for LLM’s.\nIt combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and flexible AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, this architecture has the potential to be used for enteprises and flexible solutions.\nRessources Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\nIBM: What is retrieval-augmented generation?\nRetrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models\nRetrieval meets Long Context Large Language Models\nA Deep Dive into Retrieval-Augmented Generation in LLM\n",
-  "wordCount" : "1106",
+  "articleBody": "TL;DR This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augmented Generation can be used to productionize LLM models for enterprise architecture easily.\nWhy should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:\nAcquiring the massive computational infrastructure required to train LLMs effectively demands significant financial investment. Even if you rely on Cloud Providers instead of on-premise the cost to train is a factor which cannot be neglected currently. Assembling high-quality, domain-specific datasets for fine-tuning can be time-consuming and expensive, as it often involves labor-intensive data collection and annotation efforts. Other downsides are:\nHallucinations: If you think about it consequently fine-tuning will not guarantee that the model behaves the way you would like it to behave. We are able to steer how the model is “learning” when fine-tuning but we cannot control the outcome. The probability that we receive hallucinations is way higher if we fine-tune in contrast to if we just directly provide additional context in the prompt which is matching to our question. Retraining and Knowledge Cut-offs: It would require constant compute-intensive retraining for even small changes. As you would not do that every day every LLM has a training end date, post which it is unaware of events or information. Context Window: Each Large Language Model (LLM) functions within a contextual window, which essentially defines the maximum volume of information it can simultaneously accommodate. When external data sources provides information surpassing this window’s capacity, it needs to be segmented into smaller portions that align with the model’s contextual limitations. Use Retrieval Augmented Generation Research on NLP was there before the hype around GPT’s and specifically on OpenAIs service ChatGPT(based on GPT3.5) started in 2022. In 2020 Lewis et al. from Meta AI published a paper on Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.\nRetrieval-augmented generation (RAG) is an AI architecture for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge to supplement the LLMs internal representation of information.\n“It’s the difference between an open-book and a closed-book exam,” Lastras said. “In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.”\nIt is a fusion of two powerful NLP techniques: retrieval-based models and generative models. Retrieval-based models excel at finding relevant information from a vast pool of knowledge, often in the form of pre-existing text or documents. On the other hand, generative models are proficient in generating human-like text based on the given input.\nIncorporating it into an LLM architecture enables the model to combine the best of both worlds.\nIt can retrieve contextually relevant information from a vast knowledge base and use that information to generate coherent and contextually appropriate responses. This approach leads to more accurate and context-aware interactions with the language model.\npicture from llama_index\nThe architecture of an LLM incorporating retrieval augmented generation typically consists of two main components:\nRetrieval Module The retrieval module is the heart of the architecture and responsible for searching and retrieving relevant information from a large knowledge base. This knowledge base can be a collection of texts, documents, or even web pages. Retrieval can be broken down into two stages:\nIndexing: You will index the knowledge base which you want to give as context to the model. To index your data you can simply use libraries like LangChain llama_index or transformers which do the work for you. The data is loaded, chunked and tokenized. Data will be fetched from your various sources, segmented into bite-sized chunks to optimize them for embedding and search and afterwards tokenized to create embeddings. The embeddings are stored as high dimensional vectors in vector databases and build the foundation for RAG.\npicture from llama_index\nQuerying: The data from the vector databases can be used for Semantic Search. Meaning that when inputing a question into the retriever(which was also transformed into an embedding) we can search for the most appropriate matching data in the vector database and give it to generator as context. The retrieved data is combined with the original prompt, creating an enhanced or augmented prompt. This augmented prompt provides additional context. This is even more relevant for domain specific data which may not be part of the corpus used for training the model.\npicture from llama_index\nIn summary: We start by searching for relevant documents or excerpts within an extensive dataset. For this a dense retrieval mechanism that leverages embeddings to represent both the query and the documents is used. These embeddings are then utilized to calculate similarity scores, leading to the retrieval of the top-ranked documents.\nGeneration Module The generation module is based on a generative language model like GPT-3.5. It takes as input the retrieved information and the user’s query or context and generates a coherent response.\nExample An example architecture using llama_index would look like the following:\nThe code for this example can be found on github. Also you can find a dedicated blogpost on my blog Hands on with Retrieval Augmented Generation?.\nBenefits of using RAG Improved Precision: Through the utilization of external data sources, the RAG LLM can produce responses that are not solely derived from its training dataset but are also enriched by the most pertinent and current information accessible within the retrieval corpus.\nAddressing Knowledge Gaps: RAG effectively confronts the inherent knowledge limitations of LLM, whether stemming from the model’s training cut-off or the absence of domain-specific data in its training corpus.\nAdaptability: RAG can seamlessly integrate with an array of external data sources, encompassing proprietary databases within organizations and publicly accessible internet data. This adaptability makes it suitable for a broad spectrum of applications and industries.\nMitigating Hallucinations: A challenge associated with LLMs is the potential occurrence of “hallucinations,”. By incorporating real-time data context, RAG decreases the probability of such outputs.\nScalability: An advantage of RAG LLMs lies in its scalability. Through the separation of the retrieval and generation processes, the model can manage extensive datasets, making it well-suited for real-world scenarios characterized by abundant data.\nConclusion Retrieval augmented generation is a versatile Arhcitecture for LLM’s.\nIt combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and flexible AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, this architecture has the potential to be used for enteprises and flexible solutions.\nRessources Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks\nIBM: What is retrieval-augmented generation?\nRetrieval Augmented Generation: Streamlining the creation of intelligent natural language processing models\nRetrieval meets Long Context Large Language Models\nA Deep Dive into Retrieval-Augmented Generation in LLM\n",
+  "wordCount" : "1141",
   "inLanguage": "en",
   "datePublished": "2023-09-29T18:30:57Z",
   "dateModified": "2023-09-29T18:30:57Z",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://patrickpt.github.io/posts/RAG/"
+    "@id": "https://patrickpt.github.io/posts/rag/"
   },
   "publisher": {
     "@type": "Organization",
@@ -258,31 +258,19 @@ Why should i care? Intuitive would be to train a Large Language Model with domai
                 <li>
                     <a href="#use-retrieval-augmented-generation" aria-label="Use Retrieval Augmented Generation">Use Retrieval Augmented Generation</a></li>
                 <li>
-                    <a href="#architecture-components" aria-label="Architecture Components">Architecture Components</a><ul>
+                    <a href="#retrieval-module" aria-label="Retrieval Module">Retrieval Module</a><ul>
                         
-                <li>
-                    <a href="#retrieval-module" aria-label="Retrieval Module">Retrieval Module</a></li>
                 <li>
                     <a href="#indexing" aria-label="Indexing:">Indexing:</a></li>
                 <li>
-                    <a href="#querying" aria-label="Querying:">Querying:</a></li>
-                <li>
-                    <a href="#generation-module" aria-label="Generation Module">Generation Module</a></li></ul>
+                    <a href="#querying" aria-label="Querying:">Querying:</a></li></ul>
                 </li>
                 <li>
-                    <a href="#benefits-of-using-rag" aria-label="Benefits of using RAG">Benefits of using RAG</a><ul>
-                        
+                    <a href="#generation-module" aria-label="Generation Module">Generation Module</a></li>
                 <li>
-                    <a href="#improved-precision" aria-label="Improved Precision:">Improved Precision:</a></li>
+                    <a href="#example" aria-label="Example">Example</a></li>
                 <li>
-                    <a href="#addressing-knowledge-gaps" aria-label="Addressing Knowledge Gaps:">Addressing Knowledge Gaps:</a></li>
-                <li>
-                    <a href="#adaptability" aria-label="Adaptability:">Adaptability:</a></li>
-                <li>
-                    <a href="#mitigating-hallucinations" aria-label="Mitigating Hallucinations:">Mitigating Hallucinations:</a></li>
-                <li>
-                    <a href="#scalability" aria-label="Scalability:">Scalability:</a></li></ul>
-                </li>
+                    <a href="#benefits-of-using-rag" aria-label="Benefits of using RAG">Benefits of using RAG</a></li>
                 <li>
                     <a href="#conclusion" aria-label="Conclusion">Conclusion</a></li>
                 <li>
@@ -294,7 +282,7 @@ Why should i care? Intuitive would be to train a Large Language Model with domai
 </div>
 
   <div class="post-content"><h1 id="tldr">TL;DR<a hidden class="anchor" aria-hidden="true" href="#tldr">#</a></h1>
-<p>This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augemnted Generation can be used to productionize LLM models for entreprise architecture easily.</p>
+<p>This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augmented Generation can be used to productionize LLM models for enterprise architecture easily.</p>
 <h1 id="why-should-i-care">Why should i care?<a hidden class="anchor" aria-hidden="true" href="#why-should-i-care">#</a></h1>
 <p>Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data. But fine-tuning large language models (LLMs) is a complex and resource-intensive process due to several key factors:</p>
 <ul>
@@ -303,15 +291,15 @@ Why should i care? Intuitive would be to train a Large Language Model with domai
 </ul>
 <p>Other downsides are:</p>
 <ul>
-<li><em>Hallucinations:</em> If you think about it consequently fine-tuning will not guarantee that the model behaves the way you would like it to behave. We are able to steer how the model is &ldquo;learning&rdquo; when fine-tuning but we cannot control the outcome. The probability that we receive hallucinations is way higher if we fine-tune in contrast to if we just directly provide additional context in the prompt which is matching to our question.</li>
-<li><em>Retraining and Knowledge Cut-offs:</em> It would require constant compute-intensive retraining for even small changes. As you would not do that every day every LLM has a training end date, post which it is unaware of events or information.</li>
-<li><em>Context Window:</em> Each Large Language Model (LLM) functions within a contextual window, which essentially defines the maximum volume of information it can simultaneously accommodate. When external data sources provides information surpassing this window&rsquo;s capacity, it needs to be segmented into smaller portions that align with the model&rsquo;s contextual limitations.</li>
+<li><strong>Hallucinations:</strong> If you think about it consequently fine-tuning will not guarantee that the model behaves the way you would like it to behave. We are able to steer how the model is &ldquo;learning&rdquo; when fine-tuning but we cannot control the outcome. The probability that we receive hallucinations is way higher if we fine-tune in contrast to if we just directly provide additional context in the prompt which is matching to our question.</li>
+<li><strong>Retraining and Knowledge Cut-offs:</strong> It would require constant compute-intensive retraining for even small changes. As you would not do that every day every LLM has a training end date, post which it is unaware of events or information.</li>
+<li><strong>Context Window:</strong> Each Large Language Model (LLM) functions within a contextual window, which essentially defines the maximum volume of information it can simultaneously accommodate. When external data sources provides information surpassing this window&rsquo;s capacity, it needs to be segmented into smaller portions that align with the model&rsquo;s contextual limitations.</li>
 </ul>
 <h1 id="use-retrieval-augmented-generation">Use Retrieval Augmented Generation<a hidden class="anchor" aria-hidden="true" href="#use-retrieval-augmented-generation">#</a></h1>
 <p>Research on NLP was there before the hype around GPT&rsquo;s and specifically on OpenAIs service ChatGPT(based on GPT3.5) started in 2022.
 In 2020 Lewis et al. from Meta AI published a paper on <a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>.</p>
 <p>Retrieval-augmented generation (RAG) is an AI architecture for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge to supplement the LLMs internal representation of information.</p>
-<p><strong>“It’s the difference between an open-book and a closed-book exam,”</strong> Lastras said. <strong>“In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.”</strong></p>
+<p><em>“It’s the difference between an open-book and a closed-book exam,”</em> Lastras said. <em>“In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.”</em></p>
 <p>It is a fusion of two powerful NLP techniques: retrieval-based models and generative models. Retrieval-based models excel at finding relevant information from a vast pool of knowledge, often in the form of pre-existing text or documents. On the other hand, generative models are proficient in generating human-like text based on the given input.</p>
 <p>Incorporating it into an LLM architecture enables the model to combine the best of both worlds.</p>
 <ul>
@@ -321,37 +309,42 @@ In 2020 Lewis et al. from Meta AI published a paper on <a href="https://arxiv.or
 <p>This approach leads to more accurate and context-aware interactions with the language model.</p>
 <p><img loading="lazy" src="/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg" alt=""  />
 
-<strong>picture from <a href="https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html">llama_index</a></strong></p>
-<h1 id="architecture-components">Architecture Components<a hidden class="anchor" aria-hidden="true" href="#architecture-components">#</a></h1>
+<em>picture from <a href="https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html">llama_index</a></em></p>
 <p>The architecture of an LLM incorporating retrieval augmented generation typically consists of two main components:</p>
-<h2 id="retrieval-module">Retrieval Module<a hidden class="anchor" aria-hidden="true" href="#retrieval-module">#</a></h2>
+<h1 id="retrieval-module">Retrieval Module<a hidden class="anchor" aria-hidden="true" href="#retrieval-module">#</a></h1>
 <p>The retrieval module is the heart of the architecture and responsible for searching and retrieving relevant information from a large knowledge base. This knowledge base can be a collection of texts, documents, or even web pages. Retrieval can be broken down into two stages:</p>
 <h2 id="indexing">Indexing:<a hidden class="anchor" aria-hidden="true" href="#indexing">#</a></h2>
 <p>You will index the knowledge base which you want to give as context to the model. To index your data you can simply use libraries like LangChain llama_index or transformers which do the work for you. The data is loaded, chunked and tokenized. Data will be fetched from your various sources, segmented into bite-sized chunks to optimize them for embedding and search and afterwards tokenized to create embeddings.
 The embeddings are stored as high dimensional vectors in vector databases and build the foundation for RAG.</p>
 <p><img loading="lazy" src="/posts/2023_09_29_Retrieval_Augmented_Generation/images/indexing.jpg" alt=""  />
 
-<strong>picture from <a href="https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html">llama_index</a></strong></p>
+<em>picture from <a href="https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html">llama_index</a></em></p>
 <h2 id="querying">Querying:<a hidden class="anchor" aria-hidden="true" href="#querying">#</a></h2>
 <p>The data from the vector databases can be used for Semantic Search. Meaning that when inputing a question into the retriever(which was also transformed into an embedding) we can search for the most appropriate matching data in the vector database and give it to generator as context. The retrieved data is combined with the original prompt, creating an enhanced or augmented prompt. This augmented prompt provides additional context. This is even more relevant for domain specific data which may not be part of the corpus used for training the model.</p>
 <p><img loading="lazy" src="/posts/2023_09_29_Retrieval_Augmented_Generation/images/querying.jpg" alt=""  />
 
-<strong>picture from <a href="https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html">llama_index</a></strong></p>
+<em>picture from <a href="https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html">llama_index</a></em></p>
 <p>In summary:
 We start by searching for relevant documents or excerpts within an extensive dataset. For this a dense retrieval mechanism that leverages embeddings to represent both the query and the documents is used. These embeddings are then utilized to calculate similarity scores, leading to the retrieval of the top-ranked documents.</p>
-<h2 id="generation-module">Generation Module<a hidden class="anchor" aria-hidden="true" href="#generation-module">#</a></h2>
+<h1 id="generation-module">Generation Module<a hidden class="anchor" aria-hidden="true" href="#generation-module">#</a></h1>
 <p>The generation module is based on a generative language model like GPT-3.5. It takes as input the retrieved information and the user&rsquo;s query or context and generates a coherent response.</p>
+<h1 id="example">Example<a hidden class="anchor" aria-hidden="true" href="#example">#</a></h1>
+<p>An example architecture using llama_index would look like the following:</p>
+<p><img loading="lazy" src="/posts/2023_09_29_Retrieval_Augmented_Generation/images/querying.jpg" alt=""  />
+</p>
+<p>The code for this example can be found on <a href="https://github.com/PatrickPT/RAG_LLM_example">github</a>.
+Also you can find a dedicated blogpost on my blog <a href="/posts/hands-on-rag">Hands on with Retrieval Augmented Generation?</a>.</p>
 <h1 id="benefits-of-using-rag">Benefits of using RAG<a hidden class="anchor" aria-hidden="true" href="#benefits-of-using-rag">#</a></h1>
-<h2 id="improved-precision">Improved Precision:<a hidden class="anchor" aria-hidden="true" href="#improved-precision">#</a></h2>
-<p>Through the utilization of external data sources, the RAG LLM can produce responses that are not solely derived from its training dataset but are also enriched by the most pertinent and current information accessible within the retrieval corpus.</p>
-<h2 id="addressing-knowledge-gaps">Addressing Knowledge Gaps:<a hidden class="anchor" aria-hidden="true" href="#addressing-knowledge-gaps">#</a></h2>
-<p>RAG effectively confronts the inherent knowledge limitations of LLM, whether stemming from the model&rsquo;s training cut-off or the absence of domain-specific data in its training corpus.</p>
-<h2 id="adaptability">Adaptability:<a hidden class="anchor" aria-hidden="true" href="#adaptability">#</a></h2>
-<p>RAG can seamlessly integrate with an array of external data sources, encompassing proprietary databases within organizations and publicly accessible internet data. This adaptability makes it suitable for a broad spectrum of applications and industries.</p>
-<h2 id="mitigating-hallucinations">Mitigating Hallucinations:<a hidden class="anchor" aria-hidden="true" href="#mitigating-hallucinations">#</a></h2>
-<p>A challenge associated with LLMs is the potential occurrence of &ldquo;hallucinations,&rdquo;. By incorporating real-time data context, RAG decreases the probability of such outputs.</p>
-<h2 id="scalability">Scalability:<a hidden class="anchor" aria-hidden="true" href="#scalability">#</a></h2>
-<p>An advantage of RAG LLMs lies in its scalability. Through the separation of the retrieval and generation processes, the model can manage extensive datasets, making it well-suited for real-world scenarios characterized by abundant data.</p>
+<p><strong>Improved Precision:</strong>
+Through the utilization of external data sources, the RAG LLM can produce responses that are not solely derived from its training dataset but are also enriched by the most pertinent and current information accessible within the retrieval corpus.</p>
+<p><strong>Addressing Knowledge Gaps:</strong>
+RAG effectively confronts the inherent knowledge limitations of LLM, whether stemming from the model&rsquo;s training cut-off or the absence of domain-specific data in its training corpus.</p>
+<p><strong>Adaptability:</strong>
+RAG can seamlessly integrate with an array of external data sources, encompassing proprietary databases within organizations and publicly accessible internet data. This adaptability makes it suitable for a broad spectrum of applications and industries.</p>
+<p><strong>Mitigating Hallucinations:</strong>
+A challenge associated with LLMs is the potential occurrence of &ldquo;hallucinations,&rdquo;. By incorporating real-time data context, RAG decreases the probability of such outputs.</p>
+<p><strong>Scalability:</strong>
+An advantage of RAG LLMs lies in its scalability. Through the separation of the retrieval and generation processes, the model can manage extensive datasets, making it well-suited for real-world scenarios characterized by abundant data.</p>
 <h1 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h1>
 <p>Retrieval augmented generation is a versatile Arhcitecture for LLM&rsquo;s.</p>
 <p>It combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and flexible AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, this architecture has the potential to be used for enteprises and flexible solutions.</p>
@@ -368,49 +361,49 @@ We start by searching for relevant documents or excerpts within an extensive dat
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://patrickpt.github.io/tags/model-architecture/">Model Architecture</a></li>
-      <li><a href="https://patrickpt.github.io/tags/ml-design/">ML Design</a></li>
+      <li><a href="https://patrickpt.github.io/tags/ai-design/">AI Design</a></li>
       <li><a href="https://patrickpt.github.io/tags/llm/">LLM</a></li>
       <li><a href="https://patrickpt.github.io/tags/genai/">GenAI</a></li>
     </ul>
 
 <div class="share-buttons">
     <a target="_blank" rel="noopener noreferrer" aria-label="share AI Architecture: What is Retrieval Augmented Generation on twitter"
-        href="https://twitter.com/intent/tweet/?text=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;url=https%3a%2f%2fpatrickpt.github.io%2fposts%2fRAG%2f&amp;hashtags=ModelArchitecture%2cMLDesign%2cLLM%2cGenAI">
+        href="https://twitter.com/intent/tweet/?text=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;url=https%3a%2f%2fpatrickpt.github.io%2fposts%2frag%2f&amp;hashtags=ModelArchitecture%2cAIDesign%2cLLM%2cGenAI">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
         </svg>
     </a>
     <a target="_blank" rel="noopener noreferrer" aria-label="share AI Architecture: What is Retrieval Augmented Generation on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fpatrickpt.github.io%2fposts%2fRAG%2f&amp;title=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;summary=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;source=https%3a%2f%2fpatrickpt.github.io%2fposts%2fRAG%2f">
+        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fpatrickpt.github.io%2fposts%2frag%2f&amp;title=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;summary=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;source=https%3a%2f%2fpatrickpt.github.io%2fposts%2frag%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
         </svg>
     </a>
     <a target="_blank" rel="noopener noreferrer" aria-label="share AI Architecture: What is Retrieval Augmented Generation on reddit"
-        href="https://reddit.com/submit?url=https%3a%2f%2fpatrickpt.github.io%2fposts%2fRAG%2f&title=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation">
+        href="https://reddit.com/submit?url=https%3a%2f%2fpatrickpt.github.io%2fposts%2frag%2f&title=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
         </svg>
     </a>
     <a target="_blank" rel="noopener noreferrer" aria-label="share AI Architecture: What is Retrieval Augmented Generation on facebook"
-        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fpatrickpt.github.io%2fposts%2fRAG%2f">
+        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fpatrickpt.github.io%2fposts%2frag%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
         </svg>
     </a>
     <a target="_blank" rel="noopener noreferrer" aria-label="share AI Architecture: What is Retrieval Augmented Generation on whatsapp"
-        href="https://api.whatsapp.com/send?text=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation%20-%20https%3a%2f%2fpatrickpt.github.io%2fposts%2fRAG%2f">
+        href="https://api.whatsapp.com/send?text=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation%20-%20https%3a%2f%2fpatrickpt.github.io%2fposts%2frag%2f">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
             <path
                 d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
         </svg>
     </a>
     <a target="_blank" rel="noopener noreferrer" aria-label="share AI Architecture: What is Retrieval Augmented Generation on telegram"
-        href="https://telegram.me/share/url?text=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;url=https%3a%2f%2fpatrickpt.github.io%2fposts%2fRAG%2f">
+        href="https://telegram.me/share/url?text=AI%20Architecture%3a%20What%20is%20Retrieval%20Augmented%20Generation&amp;url=https%3a%2f%2fpatrickpt.github.io%2fposts%2frag%2f">
         <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
             <path
                 d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
