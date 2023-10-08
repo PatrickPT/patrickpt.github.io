@@ -20,7 +20,7 @@ Retrieval Augemnted Generation can be a powerful architecture to easily built kn
 
 # Prerequisites
 
-All the code mentioned here can be found on [github](https://github.com/PatrickPT/RAG_LLM_example). The code can be run in a Docker container(even on a Raspberry Pi if you like). You need to add contextual data which you want to query and also use an API Key from OpenAI.
+All the code mentioned here can be found on [github](https://github.com/PatrickPT/RAG_LLM_example). The code can be run in a Docker container(even on a Raspberry Pi if you like). You need to add contextual data which you want to query and also use an API Key from OpenAI. See `README.md` for further instructions
 
 # Dependencies
 
@@ -43,12 +43,26 @@ Several libraries, including streamlit, llama_index, openai, and others are impo
     from llama_index.llms import OpenAI
     import openai
     from llama_index import SimpleDirectoryReader
+    import yaml
+
+The onfiguration is imported from `config.yaml`
+
+    with open("config.yaml", "r") as yamlfile:
+        config = yaml.load(yamlfile, Loader=yaml.FullLoader)
+
+    # import configuration from yaml
+    name = config[0]['config']['name']
+    info = config[0]['config']['info']
+    input_dir = config[0]['config']['input_dir']
+    system_prompt = config[0]['config']['system_prompt']
+    api = config[0]['config']['api']
+
 
 The Streamlit app's title, icon, layout, and sidebar state are configured.
 
     # Set Streamlit page configuration
     st.set_page_config(
-        page_title="Chatbot",
+        page_title=name,
         page_icon="🦙",
         layout="centered",
         initial_sidebar_state="auto",
@@ -64,8 +78,8 @@ Create the main interface:
 title and information message about the bot's capabilities is configured.
 
     # Create main interface
-    st.title("llama_index Knowledge Bot")
-    st.info("This bot knows everything about PromptEngineering which is mentioned in https://www.promptingguide.ai/", icon="📃")
+    st.title(name)
+    st.info(info, icon="📃")
 
 A list called messages is initialized in Streamlit session state, which will be used to store the chat history.
 
@@ -81,9 +95,9 @@ A function called load_data is built, that loads and indexes data from `/data`. 
     @st.cache_resource(show_spinner=False) # data is cached in memory so limit the knowledge base according to your machine
     def load_data():
         with st.spinner(text="Loading and indexing the provided data"):
-            reader = SimpleDirectoryReader(input_dir="./data", recursive=True) # read recursively all directories 
+            reader = SimpleDirectoryReader(input_dir=input_dir, recursive=True) # read recursively all directories 
             docs = reader.load_data() # load data and create docs
-            service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on Prompt Engineering and Retrieval Augmented Generation with Large Language Models. Assume that all questions are related to Prompt Engineering. Keep your answers technical and based on facts – do not hallucinate features.")) # add a permanent service prompt which is added
+            service_context = ServiceContext.from_defaults(llm=OpenAI(model=api, temperature=0.5, system_prompt=system_prompt)) # add a permanent service prompt which is added
             index = VectorStoreIndex.from_documents(docs, service_context=service_context) # create your vector database
             return index
 
