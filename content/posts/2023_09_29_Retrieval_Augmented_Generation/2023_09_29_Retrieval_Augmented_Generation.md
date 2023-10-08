@@ -75,7 +75,7 @@ An example architecture using llama_index would look like the following:
 ![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png)
 
 The code for this example can be found on [github](https://github.com/PatrickPT/RAG_LLM_example).
-Also you can find a dedicated blogpost on my blog [Hands on with Retrieval Augmented Generation?](/posts/hands-on-rag).
+Also you can find a dedicated blogpost on my blog [Hands on with Retrieval Augmented Generation](/posts/hands-on-rag).
 
 # Benefits of using RAG
 
