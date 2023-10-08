@@ -1,5 +1,5 @@
 ---
-title: "AI Architecture: What is Retrieval Augmented Generation"
+title: "What is Retrieval Augmented Generation?"
 date: 2023-09-29T18:30:57Z
 draft: False
 ShowToc: true
