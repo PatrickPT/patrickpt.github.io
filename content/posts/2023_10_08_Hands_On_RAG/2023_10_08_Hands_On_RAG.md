@@ -20,7 +20,7 @@ Retrieval Augemnted Generation can be a powerful architecture to easily built kn
 
 # Prerequisites
 
-All the code mentioned here can be found on [github](https://github.com/PatrickPT/RAG_LLM_example). The code can be run in a Docker container(even on a Raspberry Pi if you like). You need to add contextual data which you want to query and also use an API Key from OpenAI. See `README.md` for further instructions
+All the code mentioned here can be found on [github](https://github.com/PatrickPT/RAG_LLM_example). The code can be run in a Docker container(even on a Raspberry Pi if you like). You need to add contextual data which you want to query and also use an API Key from OpenAI.
 
 # Dependencies
 
@@ -31,6 +31,55 @@ It uses the following main dependencies:
 - [openai](https://github.com/openai/openai-python) provides access to the OpenAI API
 
 Other packages are used to convert the context data. All dependencies can be found in the [requirements.txt](https://github.com/PatrickPT/RAG_LLM_example/blob/main/requirements.txt)
+
+# Overview
+The **Knowledge Bot** is a web-based chatbot that provides information and answers questions related to any data which is given as context based on Retrieval Augmented Generation Architecture. It utilizes the `llama_index` library for data indexing and OpenAI's GPT-3.5-Turbo model for generating responses.
+
+The chatbot is designed to assist users in finding information by answering questions based on indexed documents.
+
+# Features
+
+- Ask questions related to your indexed documents.
+- Receive informative responses based on indexed data.
+- Convenient web-based interface powered by Streamlit.
+
+# Setup
+
+To run the Knowledge Bot locally with docker, follow these steps:
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/PatrickPT/RAG_LLM_example.git
+
+2. Create your OpenAI Key
+
+   ```bash
+   cd RAG_LLM_example
+   mkdir .streamlit
+   nano .streamlit/secrets.toml
+   # Insert your API Key as openai_key = "API Key" and save
+
+3. Create your documents or change the input_dir parameter in config.yaml to your folder(which needs to be accessible from the docker container)
+
+   ```bash
+   mkdir data
+   # Insert the contextual documents the LLM should use in that folder
+
+4. Change the config.yaml file accordingly to your prior changes
+
+        -config:
+            api: gpt-3.5-turbo
+            info: This bot knows everything about PromptEngineering which is mentioned in the guides in https://www.promptingguide.ai/
+            input_dir: ./data
+            name: Knowledge Bot
+            system_prompt: You are an expert on Prompt Engineering and Retrieval Augmented Generation with Large Language Models. Assume that all questions are related to Prompt Engineering. Keep your answers technical and based on facts. Do not
+                hallucinate features.
+
+5. Run docker compose
+
+   ```bash
+   docker compose up -d
 
 # Code
 
@@ -45,7 +94,7 @@ Several libraries, including streamlit, llama_index, openai, and others are impo
     from llama_index import SimpleDirectoryReader
     import yaml
 
-The onfiguration is imported from `config.yaml`
+The configuration is imported from `config.yaml`
 
     with open("config.yaml", "r") as yamlfile:
         config = yaml.load(yamlfile, Loader=yaml.FullLoader)
