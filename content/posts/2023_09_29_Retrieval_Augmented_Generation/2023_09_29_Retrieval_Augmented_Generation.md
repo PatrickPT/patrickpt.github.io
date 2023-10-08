@@ -10,7 +10,7 @@ url: /posts/rag_intro/
 
 # TL;DR
 
-This blogpost focusses on AI Architecture and specifically on Retrieval Augemnted Generation. Retrieval Augmented Generation can be used to productionize LLM models for enterprise architecture easily.
+This blogpost tries to explain Retrieval Augmented Generation. Retrieval Augmented Generation is an Architecture used for NLp tasks which can be used to productionize LLM models for enterprise architecture easily.
 
 # Why should i care?
 
