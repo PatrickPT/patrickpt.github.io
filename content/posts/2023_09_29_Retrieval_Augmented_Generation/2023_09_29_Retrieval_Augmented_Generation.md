@@ -94,6 +94,29 @@ A challenge associated with LLMs is the potential occurrence of "hallucinations,
 **Scalability:**
 An advantage of RAG LLMs lies in its scalability. Through the separation of the retrieval and generation processes, the model can manage extensive datasets, making it well-suited for real-world scenarios characterized by abundant data.
 
+# Pitfalls
+
+Of course there is a downside with retrieval systems. They rely on semantic search.
+Semantic Search has a simple assumption which leads to problems:
+
+*Question and answer have a high semantic similarity.*
+
+This assumption seems easy and straightforward but it is oversimplifying human language.
+Semantic Search only looks for explicit matches not for negation or implicit matches.
+
+## A simple example
+Think of following example:
+inital sentence:
+*"I like Bananas"*
+
+*"I don't like Bananas"*
+*"I like every fruit but bananas"*
+*"I love this divine yellow fruit. It is curved like a smile and I feel like a monkey when I eat it."*
+
+I think it is clear where i am pointing at. The statemtents are already ordered from highest to lowest similarity.
+
+Of course there ist potential to overcome this with additional heuristics but for sure we need to understand that every architecture we built is implicitly build on assumptions that influence the outcome.  
+
 # Conclusion
 
 Retrieval augmented generation is a versatile Arhcitecture for LLM's. 
@@ -112,3 +135,5 @@ It combines the strengths of retrieval-based models and generative models to cre
 [Retrieval meets Long Context Large Language Models](https://arxiv.org/abs/2310.03025)
 
 [A Deep Dive into Retrieval-Augmented Generation in LLM](https://www.unite.ai/a-deep-dive-into-retrieval-augmented-generation-in-llm/)
+
+[Pitfalls of Semantic Search](https://www.linkedin.com/pulse/pitfalls-semantic-search-reza-bonyadi%3FtrackingId=ktoarNI%252F3V2WaJyucfotvg%253D%253D/?trackingId=ktoarNI%2F3V2WaJyucfotvg%3D%3D)
