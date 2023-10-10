@@ -10,13 +10,13 @@ url: /posts/hands-on-rag/
 
 # TL;DR
 
-This blogpost shows an example for a Chatbot that uses Retrieval Augemnted Generation to retrieve domain specific knowledge before querying a Large Language Model
+This blogpost shows an example for a Chatbot that uses Retrieval Augmented Generation to retrieve domain specific knowledge before querying a Large Language Model
 
 # Hands on with Retrieval Augmented Generation
 
-For a primer on Retrieval Augemnted Generation please read my other post [What is Retrieval Augmented Generation?](/posts/rag_intro).
+For a primer on Retrieval Augmented Generation please read my other post [What is Retrieval Augmented Generation?](/posts/rag_intro).
 
-Retrieval Augemnted Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent [study](https://arxiv.org/abs/2310.03025)) even outperform LLM's with long context windows.
+Retrieval Augmented Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent [study](https://arxiv.org/abs/2310.03025)) even outperform LLM's with long context windows.
 
 # Prerequisites
 
@@ -180,7 +180,7 @@ Checks if the last message in the chat history is not from the assistant (bot). 
                 message = {"role": "assistant", "content": response.response}
                 st.session_state.messages.append(message)
 
-# Ressources
+# Resources
 
 [Build a chatbot with custom data sources, powered by LlamaIndex](https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/)
 

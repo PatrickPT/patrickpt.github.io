@@ -57,7 +57,7 @@ The embeddings are stored as high dimensional vectors in vector databases and bu
 *picture from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)*
 
 ## Querying:
-The data from the vector databases can be used for Semantic Search. Meaning that when inputing a question into the retriever(which was also transformed into an embedding) we can search for the most appropriate matching data in the vector database and give it to generator as context. The retrieved data is combined with the original prompt, creating an enhanced or augmented prompt. This augmented prompt provides additional context. This is even more relevant for domain specific data which may not be part of the corpus used for training the model.
+The data from the vector databases can be used for Semantic Search. Meaning that when a query is processed(into an embedding) the retriever can search for the most appropriate matching data in the vector database and give it to the generator as context. The retrieved data is combined with the original prompt, creating an enhanced or augmented prompt. This augmented prompt provides additional context. This is even more relevant for domain specific data which may not be part of the corpus used for training the model.
 
 ![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/querying.jpg)
 *picture from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)*
@@ -108,7 +108,7 @@ Semantic Search only looks for explicit matches not for negation or implicit mat
 ## A simple example
 Think of following example:
 
-inital sentence:
+initial sentence:
 > *"I like Bananas"*
 
 vs
@@ -119,7 +119,7 @@ vs
 
 >*"I love this divine yellow fruit. It is curved like a smile and I feel like a monkey when I eat it."*
 
-I think it is clear where i am pointing at. The statemtents are already ordered from highest to lowest similarity.
+I think it is clear where i am pointing at. The sentences are already ordered from highest to lowest similarity.
 
 Of course there is potential to overcome this with additional heuristics but for sure we need to understand that every architecture we built is implicitly build on assumptions that influence the outcome.  
 
@@ -132,7 +132,7 @@ In the early days of LLM adoption - where we are still at - it is a good techniq
 Due to the implicit assumptions and with it **bias** humans are bringing into the architecture in the future there will be better ways to deliver a good outcome. 
 But **for now it is highly relevant to consider Retrieval Augmented Generation for building LLM powered solutions**. 
 
-# Ressources
+# Resources
 
 [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
 
