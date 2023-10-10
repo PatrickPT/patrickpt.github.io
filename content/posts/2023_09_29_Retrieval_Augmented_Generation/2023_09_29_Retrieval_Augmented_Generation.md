@@ -120,14 +120,15 @@ vs
 
 I think it is clear where i am pointing at. The statemtents are already ordered from highest to lowest similarity.
 
-Of course there ist potential to overcome this with additional heuristics but for sure we need to understand that every architecture we built is implicitly build on assumptions that influence the outcome.  
+Of course there is potential to overcome this with additional heuristics but for sure we need to understand that every architecture we built is implicitly build on assumptions that influence the outcome.  
 
 # Conclusion
 
-Retrieval augmented generation is a versatile Arhcitecture for LLM's. 
+Retrieval augmented generation is a versatile hack for LLM's.
 
-It combines the strengths of retrieval-based models and generative models to create contextually aware, intelligent, and flexible AI systems. With the ability to retrieve information from vast knowledge bases and generate human-like text, this architecture has the potential to be used for enteprises and flexible solutions.
+In the early days of LLM adoption - where we are still at - it is a good technique to rapidly deliver production grade systems which are more efficient and less prone for hallucinations.
 
+Due to the implicit assumptions and with it bias we are bringing into the model there will be better ways to deliver a good outcome. But for now it is highly relevant to consider Retrieval Augmented Generation for building LLM powered solutions(especially in enterprise context). 
 
 # Ressources
 
