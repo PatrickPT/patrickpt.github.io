@@ -73,6 +73,7 @@ The generation module is based on a generative language model like GPT-3.5. It t
 An example architecture using llama_index would look like the following:
 
 ![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png)
+*picture from [streamlit]((https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/))*
 
 The code for this example can be found on [github](https://github.com/PatrickPT/RAG_LLM_example).
 Also you can find a dedicated blogpost on my blog [Hands on with Retrieval Augmented Generation](/posts/hands-on-rag).
