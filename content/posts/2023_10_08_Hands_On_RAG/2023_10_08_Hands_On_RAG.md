@@ -56,17 +56,17 @@ To run the Knowledge Bot locally with docker, follow these steps:
 
    ```bash
    cd RAG_LLM_example
-   mkdir .streamlit
+   cd .streamlit
    nano .streamlit/secrets.toml
    # Insert your API Key as openai_key = "API Key" and save
 
 3. Create your documents or change the input_dir parameter in config.yaml to your folder(which needs to be accessible from the docker container)
 
    ```bash
-   mkdir data
+   cd data
    # Insert the contextual documents the LLM should use in that folder
 
-4. Change the config.yaml file accordingly to your prior changes
+4. Change the `config.yaml` file accordingly to your prior changes
 
         -config:
             api: gpt-3.5-turbo
@@ -80,6 +80,8 @@ To run the Knowledge Bot locally with docker, follow these steps:
 
    ```bash
    docker compose up -d
+
+PS: content in `/.streamlit` and `/data` is ignored by git.
 
 # Code
 
