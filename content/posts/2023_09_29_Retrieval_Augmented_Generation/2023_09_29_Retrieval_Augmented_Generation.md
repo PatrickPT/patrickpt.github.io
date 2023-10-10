@@ -56,14 +56,14 @@ The architecture of an LLM incorporating retrieval augmented generation typicall
 # Retrieval Module
 The retrieval module is the heart of the architecture and responsible for searching and retrieving relevant information from a large knowledge base. This knowledge base can be a collection of texts, documents, or even web pages. Retrieval can be broken down into two stages:
 
-## Indexing: 
+## Indexing
 You will index the knowledge base which you want to give as context to the model. To index your data you can simply use libraries like LangChain llama_index or transformers which do the work for you. The data is loaded, chunked and tokenized. Data will be fetched from your various sources, segmented into bite-sized chunks to optimize them for embedding and search and afterwards tokenized to create embeddings.
 The embeddings are stored as high dimensional vectors in vector databases and build the foundation for RAG.
 
 Let's look into the implementation of RAG in [llama_index](https://github.com/run-llama/llama_index), a famous orchestration network to further understand the indexing stage: 
 
 ![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/indexing.jpg)
-*picture from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)*
+*picture and text from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)*
 
 >**Data Connectors:** A data connector (i.e. Reader) ingest data from different data sources and data formats into a simple Document representation (text and simple metadata).
 
@@ -71,7 +71,7 @@ Let's look into the implementation of RAG in [llama_index](https://github.com/ru
 
 >**Data Indexes:** Once you’ve ingested your data, LlamaIndex will help you index the data into a format that’s easy to retrieve. Under the hood, LlamaIndex parses the raw documents into intermediate representations, calculates vector embeddings, and infers metadata. The most commonly used index is the VectorStoreIndex
 
-## Querying:
+## Querying
 The data from the vector databases can be used for Semantic Search. Meaning that when a query is processed(into an embedding) the retriever can search for the most appropriate matching data in the vector database and give it to the generator as context. The retrieved data is combined with the original prompt, creating an enhanced or augmented prompt. This augmented prompt provides additional context. This is even more relevant for domain specific data which may not be part of the corpus used for training the model.
 
 Again let's look how this is implemented llama_index, to also understand the querying stage: 
