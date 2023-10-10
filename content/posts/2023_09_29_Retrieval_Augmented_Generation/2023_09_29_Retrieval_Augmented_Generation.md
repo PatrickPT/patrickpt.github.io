@@ -30,7 +30,7 @@ In 2020 Lewis et al. from Meta AI published a paper on [Retrieval-Augmented Gene
 
 Retrieval-augmented generation (RAG) is an AI architecture for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge to supplement the LLMs internal representation of information.
 
-*“It’s the difference between an open-book and a closed-book exam,”* Lastras said. *“In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.”*
+> *“It’s the difference between an open-book and a closed-book exam,”* Lastras said. *“In a RAG system, you are asking the model to respond to a question by browsing through the content in a book, as opposed to trying to remember facts from memory.”*
 
 It is a fusion of two powerful NLP techniques: retrieval-based models and generative models. Retrieval-based models excel at finding relevant information from a vast pool of knowledge, often in the form of pre-existing text or documents. On the other hand, generative models are proficient in generating human-like text based on the given input.
 
@@ -99,19 +99,24 @@ An advantage of RAG LLMs lies in its scalability. Through the separation of the 
 Of course there is a downside with retrieval systems. They rely on semantic search.
 Semantic Search has a simple assumption which leads to problems:
 
-*Question and answer have a high semantic similarity.*
+> *Question and answer have a high semantic similarity.*
 
 This assumption seems easy and straightforward but it is oversimplifying human language.
 Semantic Search only looks for explicit matches not for negation or implicit matches.
 
 ## A simple example
 Think of following example:
-inital sentence:
-*"I like Bananas"*
 
-*"I don't like Bananas"*
-*"I like every fruit but bananas"*
-*"I love this divine yellow fruit. It is curved like a smile and I feel like a monkey when I eat it."*
+inital sentence:
+> *"I like Bananas"*
+
+vs
+
+> *"I don't like Bananas"*
+
+>*"I like every fruit but bananas"*
+
+>*"I love this divine yellow fruit. It is curved like a smile and I feel like a monkey when I eat it."*
 
 I think it is clear where i am pointing at. The statemtents are already ordered from highest to lowest similarity.
 
