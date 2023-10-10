@@ -12,7 +12,7 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my personal opinion*
 
-* [10.10.23 - Transportation Energy Emission Reduction with AI](https://blog.google/outreach-initiatives/sustainability/google-transportation-energy-emissions-reduction/) [Article]
+* [10.10.23 - Transportation Energy Emission Reduction with AI](https://blog.google/outreach-initiatives/sustainability/google-transportation-energy-emissions-reduction/) [Blogpost]
 * [07.10.23 - Retrieval meets Long Context Large Language Models](https://arxiv.org/abs/2310.03025) [Paper]
 * [05.10.23 - Challenges in evaluating AI systems](https://www.anthropic.com/index/evaluating-ai-systems) [Blogpost]
 * [03.10.23 - Unmoderated european LLM Mistral AI](https://mistral.ai/news/announcing-mistral-7b/) [Website]
