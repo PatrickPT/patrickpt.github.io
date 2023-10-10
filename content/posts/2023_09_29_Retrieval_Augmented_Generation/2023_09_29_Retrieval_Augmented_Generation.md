@@ -124,11 +124,12 @@ Of course there is potential to overcome this with additional heuristics but for
 
 # Conclusion
 
-Retrieval augmented generation is a versatile hack for LLM's.
+Retrieval augmented generation is a versatile hack.
 
-In the early days of LLM adoption - where we are still at - it is a good technique to rapidly deliver production grade systems which are more efficient and less prone for hallucinations.
+In the early days of LLM adoption - where we are still at - it is a good technique to **rapidly deliver production grade systems** which are **more efficient** and **less prone for hallucinations**.
 
-Due to the implicit assumptions and with it bias we are bringing into the model there will be better ways to deliver a good outcome. But for now it is highly relevant to consider Retrieval Augmented Generation for building LLM powered solutions(especially in enterprise context). 
+Due to the implicit assumptions and with it **bias** humans are bringing into the architecture in the future there will be better ways to deliver a good outcome. 
+But **for now it is highly relevant to consider Retrieval Augmented Generation for building LLM powered solutions**. 
 
 # Ressources
 
