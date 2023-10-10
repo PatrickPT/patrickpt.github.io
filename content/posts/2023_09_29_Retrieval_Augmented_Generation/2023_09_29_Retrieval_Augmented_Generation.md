@@ -48,8 +48,8 @@ Incorporating it into an LLM architecture enables the model to combine the best 
 
 This approach leads to more accurate and context-aware interactions with the language model.
 
-![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg)
-*picture from [llama_index](https://gpt-index.readthedocs.io/en/latest/getting_started/concepts.html)*
+![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_lewis.png)
+*picture from [Lewis et al. (2021)](https://arxiv.org/pdf/2005.11401.pdf)*
 
 The architecture of an LLM incorporating retrieval augmented generation typically consists of two main components:
 
