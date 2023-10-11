@@ -7,8 +7,8 @@ tags: [Model Architecture,AI Design, LLM, GenAI]
 math: true
 url: /posts/rag_intro/
 images:
-    - posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg
-    - posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png
+    - /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg
+    - /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png
 #cover:
 #  image: "<posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg>"
 #  # can also paste direct link from external site
