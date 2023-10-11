@@ -6,6 +6,7 @@ ShowToc: true
 tags: [Model Architecture,AI Design, LLM, GenAI]
 math: true
 url: /posts/rag_intro/
+thumbnail: posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png
 ---
 
 # TL;DR
