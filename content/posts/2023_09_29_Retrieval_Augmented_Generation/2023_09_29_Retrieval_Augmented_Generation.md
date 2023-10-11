@@ -15,6 +15,7 @@ images:
 #  alt: "<alt text>"
 #  caption: "<text>"
 #  relative: false # To use relative path for cover image, used in hugo Page-bundles
+
 ---
 
 # TL;DR
