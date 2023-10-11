@@ -6,7 +6,16 @@ ShowToc: true
 tags: [Model Architecture,AI Design, LLM, GenAI]
 math: true
 url: /posts/rag_intro/
-thumbnail: posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png
+images:
+    - posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg
+    - posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png
+#cover:
+#  image: "<posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg>"
+#  # can also paste direct link from external site
+#  # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
+#  alt: "<alt text>"
+#  caption: "<text>"
+#  relative: false # To use relative path for cover image, used in hugo Page-bundles
 ---
 
 # TL;DR

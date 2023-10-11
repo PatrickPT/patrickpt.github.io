@@ -101,11 +101,13 @@ if (!doNotTrack) {
 Hands on with Retrieval Augmented Generation For a primer on Retrieval Augmented Generation please read my other post What is Retrieval Augmented Generation?.
 Retrieval Augmented Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent study) even outperform LLM&rsquo;s with long context windows." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://patrickpt.github.io/posts/hands-on-rag/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://patrickpt.github.io/posts/hands-on-rag/" /><meta property="og:image" content="https://patrickpt.github.io/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png" /><meta property="og:image" content="https://patrickpt.github.io/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-10-07T10:30:00+00:00" />
 <meta property="article:modified_time" content="2023-10-07T10:30:00+00:00" />
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://patrickpt.github.io/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png"/>
+
 <meta name="twitter:title" content="Hands on with Retrieval Augmented Generation"/>
 <meta name="twitter:description" content="TL;DR This blogpost shows an example for a Chatbot that uses Retrieval Augmented Generation to retrieve domain specific knowledge before querying a Large Language Model
 Hands on with Retrieval Augmented Generation For a primer on Retrieval Augmented Generation please read my other post What is Retrieval Augmented Generation?.
@@ -554,6 +556,53 @@ if st.session_state.messages[-1][&quot;role&quot;] != &quot;assistant&quot;:
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 
