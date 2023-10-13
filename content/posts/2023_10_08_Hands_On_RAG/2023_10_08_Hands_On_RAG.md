@@ -8,13 +8,13 @@ math: true
 url: /posts/hands-on-rag/
 ShowCodeCopyButtons: true
 images:
-    - /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png
+    - /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.jpeg
     - /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg
-#cover:
-#  image: "<posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png>"
-#  alt: "<alt text>"
-#  caption: "<text>"
-#  relative: false # To use relative path for cover image, used in hugo Page-bundles
+cover:
+  image: /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.jpeg
+  alt: "rag-with-llamaindex"
+  caption: "rag-with-llamaindex"
+  relative: false # To use relative path for cover image, used in hugo Page-bundles
 
 ---
 
