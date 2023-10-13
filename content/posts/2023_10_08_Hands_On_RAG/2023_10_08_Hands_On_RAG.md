@@ -42,6 +42,9 @@ The **Knowledge Bot** is a web-based chatbot that provides information and answe
 
 The chatbot is designed to assist users in finding information by answering questions based on indexed documents.
 
+![](/posts/2023_09_29_Retrieval_Augmented_Generation/images/rag-with-llamaindex.png)
+*picture from [streamlit]((https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/))*
+
 # Features
 
 - Ask questions related to your indexed documents.
