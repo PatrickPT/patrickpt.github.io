@@ -8,13 +8,6 @@ math: true
 url: /posts/rag_intro/
 images:
     - /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg
-cover:
-  image: /posts/2023_09_29_Retrieval_Augmented_Generation/images/rag_high_level.jpg
-  # can also paste direct link from external site
-  # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-  alt: "rag-with-llamaindex"
-  caption: "rag-with-llamaindex"
-  relative: false # To use relative path for cover image, used in hugo Page-bundles
 
 ---
 
