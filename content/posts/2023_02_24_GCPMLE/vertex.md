@@ -13,6 +13,8 @@ Today i passed the Google Professional Machine Learning Engineer Exam in a onsit
 Following article should summarize all sources which were helpful for me in preparation of the certification exam.
 If you are interested in how the exam is actually happening there are plenty of other articles on medium or at other places. I just try to condense it to the minimum here.
 
+![](/posts/2023_02_24_GCPMLE/images/gcpmle_certificate.jpg)
+
 # Ressources
 
 ## Official
