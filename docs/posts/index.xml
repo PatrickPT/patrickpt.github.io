@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Jun 2022 15:06:45 -0500</lastBuildDate><atom:link href="https://patrickpt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Parameter Efficient Finetuning</title>
+      <title>What is Parameter Efficient Finetuning</title>
       <link>https://patrickpt.github.io/posts/peft/</link>
       <pubDate>Wed, 01 Nov 2023 18:30:57 +0000</pubDate>
       
