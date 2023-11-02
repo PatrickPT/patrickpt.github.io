@@ -1,5 +1,5 @@
 ---
-title: "What is a quantized LLM"
+title: "What is a quantized LLM?"
 date: 2023-11-05T09:30:57Z
 draft: True
 ShowToc: true
