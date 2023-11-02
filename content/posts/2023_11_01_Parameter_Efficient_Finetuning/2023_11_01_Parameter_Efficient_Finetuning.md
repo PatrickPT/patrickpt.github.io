@@ -72,7 +72,7 @@ As discussed earlier, fine-tuning involves adjusting the hidden representation `
 
 By incorporating LoRA modules alongside the feed-forward layers and a classifier head atop the pre-trained model, task-specific parameters for each individual task are kept to a minimum.
 
-## QLoRA: Taking it One Step Further
+## QLoRA
 
 Compressing model parameters even more, QLoRA – or Quantized LoRA – takes the concepts of LoRA and applies a quantization technique. Instead of storing these new low-rank parameters in standard floating-point format, QLoRA stores them in a lower precision format, such as INT8 or INT4.
 
@@ -82,7 +82,6 @@ This method drastically reduces the number of bits required to store these param
 
 Prefix-tuning offers a lightweight and cost-effective alternative to the conventional fine-tuning of large pre-trained language models for natural language generation tasks. Traditional fine-tuning entails the comprehensive updating and storage of all model parameters for each specific task, an endeavor that can be financially burdensome given the expansive scale of contemporary models. In contrast, prefix-tuning maintains the pre-trained language model parameters unchanged and focuses on optimizing a small, continuous, task-specific vector known as the "prefix." In prefix-tuning, the prefix constitutes a set of independent parameters that undergo training alongside the language model. The primary aim of prefix-tuning is to discover a context that guides the language model to generate text that effectively addresses a particular task.
 
-The Prefixs Role
 The prefix can be perceived as a sequence of "virtual tokens" to which subsequent tokens can attend. Remarkably, by updating a mere 0.1% of the model's parameters, prefix-tuning manages to achieve performance comparable to traditional fine-tuning in full-data settings, outperforming it in scenarios with limited data, and exhibiting superior extrapolation to examples featuring topics not encountered during training.
 
 ![Prefix Tuning](/posts/2023_11_01_Parameter_Efficient_Finetuning/images/Prefix-tuning.jpg)
