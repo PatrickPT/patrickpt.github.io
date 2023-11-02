@@ -25,19 +25,18 @@ Parameter Efficient Fine-Tuning is a collection of techniques that aim to reduce
 
 The process of parameter-efficient fine-tuning (PEFT) may exhibit variations depending on the specific implementation and the pre-trained model in use. Nevertheless, below are summarized all steps involved in PEFT:
 
-**Pre-training:**
-Initially, a large-scale model undergoes pre-training on a substantial dataset, commonly for a generic task like image classification or language modeling. This phase equips the model with foundational knowledge and meaningful data representations.
+**Pre-training:** Initially, a large-scale model undergoes pre-training on a substantial dataset, commonly for a generic task like image classification or language modeling. This phase equips the model with foundational knowledge and meaningful data representations.
 Task-specific dataset: Assemble or generate a dataset tailored to the particular task for which you intend to fine-tune the pre-trained model. This dataset must be labeled and faithfully represent the target task.
-**Parameter identification:**
-Identify or estimate the significance and relevance of parameters within the pre-trained model for the target task. This step helps in discerning which parameters should be prioritized during the fine-tuning process. Techniques such as importance estimation, sensitivity analysis, or gradient-based methods can be employed for parameter assessment.
-**Subset selection:**
-Choose a subset of the pre-trained model's parameters based on their importance or applicability to the target task. The selection process can involve setting specific criteria, like a threshold on importance scores or selecting the top-k most relevant parameters.
-**Fine-tuning:**
-Initialize the chosen subset of parameters with values from the pre-trained model and lock the remaining parameters. Fine-tune the selected parameters by employing the task-specific dataset. This typically entails training the model on the target task data using optimization techniques like Stochastic Gradient Descent (SGD) or Adam.
-**Evaluation:**
-Assess the performance of the fine-tuned model on a validation set or by utilizing relevant evaluation metrics for the target task. This step serves to gauge the efficacy of PEFT in achieving the desired performance while reducing the number of parameters.
-**Iterative refinement (optional):**
-Depending on performance and specific requirements, you may opt to iterate and refine the PEFT process. This can involve adjusting the criteria for parameter selection, exploring different subsets, or conducting additional fine-tuning epochs to further optimize the model's performance.
+
+**Parameter identification:** Identify or estimate the significance and relevance of parameters within the pre-trained model for the target task. This step helps in discerning which parameters should be prioritized during the fine-tuning process. Techniques such as importance estimation, sensitivity analysis, or gradient-based methods can be employed for parameter assessment.
+
+**Subset selection:** Choose a subset of the pre-trained model's parameters based on their importance or applicability to the target task. The selection process can involve setting specific criteria, like a threshold on importance scores or selecting the top-k most relevant parameters.
+
+**Fine-tuning:** Initialize the chosen subset of parameters with values from the pre-trained model and lock the remaining parameters. Fine-tune the selected parameters by employing the task-specific dataset. This typically entails training the model on the target task data using optimization techniques like Stochastic Gradient Descent (SGD) or Adam.
+
+**Evaluation:** Assess the performance of the fine-tuned model on a validation set or by utilizing relevant evaluation metrics for the target task. This step serves to gauge the efficacy of PEFT in achieving the desired performance while reducing the number of parameters.
+
+**Iterative refinement (optional):** Depending on performance and specific requirements, you may opt to iterate and refine the PEFT process. This can involve adjusting the criteria for parameter selection, exploring different subsets, or conducting additional fine-tuning epochs to further optimize the model's performance.
 It's crucial to note that the specific implementation details and techniques employed in PEFT can differ across research papers and real-world applications.
 
 # PEFT Techniques
@@ -106,16 +105,15 @@ Prompt tuning offers numerous advantages compared to traditional fine-tuning app
 
 # Benefits
 
-**Cost Savings:**
-PEFT significantly reduces computational and storage costs by fine-tuning a small number of additional model parameters while keeping most of the pre-trained LLM parameters frozen.
-**Mitigating Knowledge Loss:**
-PEFT effectively addresses the issue of catastrophic forgetting that can occur during full fine-tuning of LLMs, as it updates only a limited set of parameters.
-**Enhanced Performance in Low-Data Scenarios:**
-PEFT methods have demonstrated superior performance in situations with limited data, and they exhibit better generalization to out-of-domain scenarios compared to full fine-tuning.
-**Portability Advantage:**
-PEFT approaches enable users to obtain compact checkpoints, typically a few megabytes in size, in contrast to the larger checkpoints produced by full fine-tuning. This makes it convenient to deploy and utilize the trained weights from PEFT for various tasks without the need to replace the entire model.
-**Comparable Performance to Full Fine-Tuning:**
-PEFT allows achieving performance on par with full fine-tuning while utilizing only a small number of trainable parameters.
+**Cost Savings:** PEFT significantly reduces computational and storage costs by fine-tuning a small number of additional model parameters while keeping most of the pre-trained LLM parameters frozen.
+
+**Mitigating Knowledge Loss:** PEFT effectively addresses the issue of catastrophic forgetting that can occur during full fine-tuning of LLMs, as it updates only a limited set of parameters.
+
+**Enhanced Performance in Low-Data Scenarios:** PEFT methods have demonstrated superior performance in situations with limited data, and they exhibit better generalization to out-of-domain scenarios compared to full fine-tuning.
+
+**Portability Advantage:** PEFT approaches enable users to obtain compact checkpoints, typically a few megabytes in size, in contrast to the larger checkpoints produced by full fine-tuning. This makes it convenient to deploy and utilize the trained weights from PEFT for various tasks without the need to replace the entire model.
+
+**Comparable Performance to Full Fine-Tuning:** PEFT allows achieving performance on par with full fine-tuning while utilizing only a small number of trainable parameters.
  
 # Conclusion
 
