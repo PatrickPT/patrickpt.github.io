@@ -5,7 +5,17 @@
     <link>https://patrickpt.github.io/tags/ai-design/</link>
     <description>Recent content in AI Design on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 07 Oct 2023 10:30:00 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/ai-design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Nov 2023 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/ai-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parameter Efficient Finetuning</title>
+      <link>https://patrickpt.github.io/posts/peft/</link>
+      <pubDate>Wed, 01 Nov 2023 18:30:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/peft/</guid>
+      <description>TL;DR Parameter Efficient Fine-Tuning is a technique that aims to reduce computational and storage resources during the fine-tuning of Large Language Models.
+Why should i care? Fine-tuning is a common technique used to enhance the performance of large language models. Essentially, fine-tuning involves training a pre-trained model on a new, similar task. It has become a crucial step in model optimization. However, when these models consist of billions of parameters, fine-tuning becomes computational and storage heavy, leading to the development of Parameter Efficient Fine-Tuning methods.</description>
+    </item>
+    
     <item>
       <title>Hands on with Retrieval Augmented Generation</title>
       <link>https://patrickpt.github.io/posts/hands-on-rag/</link>
