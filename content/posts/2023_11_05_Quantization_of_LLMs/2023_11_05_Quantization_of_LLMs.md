@@ -6,7 +6,6 @@ ShowToc: true
 tags: [LLM, GenAI]
 math: true
 url: /posts/quantllm/
-images:
 
 ---
 
