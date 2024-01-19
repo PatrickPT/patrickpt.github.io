@@ -12,6 +12,11 @@ It could be a link to a paper, a repo or a blog post. The selection is highly su
 
 *I am not responsible for the linked content and it does not reflect my personal opinion*
 
+* [15.01.2024 - Understanding and Coding Attention in LLMs](https://magazine.sebastianraschka.com/p/understanding-and-coding-self-attention) [Blogpost]
+* [25.12.2023 - Stop Resampling](https://www.reddit.com/r/datascience/comments/sxtppd/stop_resampling_data_in_classification_problems/?rdt=42935) [Blogpost]
+* [19.12.2023 - LLM Course](https://github.com/mlabonne/llm-course) [Repo]
+* [17.12.2023 - Advanced RAG Techniques: an Illustrated Overview](https://pub.towardsai.net/advanced-rag-techniques-an-illustrated-overview-04d193d8fec6) [Blogpost]
+* [19.11.23 - Practical Tips for Finetuning LLMs Using LoRA](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms) [Blogpost]
 * [10.10.23 - Transportation Energy Emission Reduction with AI](https://blog.google/outreach-initiatives/sustainability/google-transportation-energy-emissions-reduction/) [Blogpost]
 * [07.10.23 - Retrieval meets Long Context Large Language Models](https://arxiv.org/abs/2310.03025) [Paper]
 * [05.10.23 - Challenges in evaluating AI systems](https://www.anthropic.com/index/evaluating-ai-systems) [Blogpost]

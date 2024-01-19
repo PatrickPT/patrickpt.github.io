@@ -18,3 +18,5 @@ url: /posts/quantllm/
 # Conclusion
 
 # Resources
+
+https://www.tensorops.ai/post/what-are-quantized-llms
