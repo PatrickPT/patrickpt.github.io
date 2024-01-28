@@ -1,5 +1,5 @@
 ---
-title: "Summary: LLM Quantization with llama.cpp"
+title: "LLM Quantization in a nutshell"
 date: 2024-01-28T09:30:57Z
 draft: False
 ShowToc: true
@@ -8,6 +8,10 @@ math: true
 url: /posts/quantllm/
 
 ---
+
+# TL;DR
+
+This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.
 
 # Introduction to Quantization
 ## The Technical Foundation of LLM Quantization
