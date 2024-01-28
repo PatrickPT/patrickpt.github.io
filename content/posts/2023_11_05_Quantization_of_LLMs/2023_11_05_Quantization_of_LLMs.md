@@ -26,6 +26,10 @@ Quantization works by mapping the continuous range of floating-point values to a
  
 For large language models, post-training quantization is particularly relevant due to its simplicity and minimal training requirements. In this method, we take a pre-trained model and apply quantization algorithms to reduce the precision of its weights and activations.
 
+## Optimization Techniques in Quantization
+ 
+Once the quantization procedure is applied, the size of the model is significantly reduced. However, selecting the appropriate bit width is crucial—too few bits, and you may lose critical information; too many, and you compromise on efficiency gains. It’s also important to choose the right quantization technique. Techniques such as rounding or truncation can affect the performance of the quantized model.
+
 # A Technical Examination of llama.cpp
 ## Diving Deeper into llama.cpp
  
@@ -46,16 +50,13 @@ Using llama.cpp involves specific steps—starting with installation of the libr
     # Run the provided script to quantize and convert a pre-trained LLaMA model
     ./convert_model -m path_to_pretrained_LLaMA_model -f output_model_format -o path_to_output_quantized_model
 
-# Optimization Techniques in Quantization
- 
-Once the quantization procedure is applied, the size of the model is significantly reduced. However, selecting the appropriate bit width is crucial—too few bits, and you may lose critical information; too many, and you compromise on efficiency gains. It’s also important to choose the right quantization technique. Techniques such as rounding or truncation can affect the performance of the quantized model.
  
 # Conclusion
-## Advantages of Quantization: And Why It’s Necessary for LLMs
+## Advantages of Quantization
  
 Beyond the obvious benefits of reduced model size and computational resource requirements, there are other compelling reasons to quantize LLMs. For instance, lower memory bandwidth and power consumption are key factors for deployment on edge devices, and quantization can open up new possibilities for LLM applications in such constrained environments.
  
-## Challenges and Considerations: The Nuanced Landscape
+## Challenges and Considerations
  
 Despite the efficiencies introduced through quantization, one must be mindful of potential accuracy loss. This necessitates a robust evaluation pipeline to assess the performance impact on tasks relevant to the language model's intended use. Furthermore, leveraging the right tooling and techniques to achieve optimal balance between size, efficiency, and accuracy is fundamental.
  
