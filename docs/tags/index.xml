@@ -5,11 +5,20 @@
     <link>https://patrickpt.github.io/tags/</link>
     <description>Recent content in Tags on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 28 Jan 2024 09:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jan 2025 09:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architecture</title>
+      <link>https://patrickpt.github.io/tags/architecture/</link>
+      <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>GenAI</title>
       <link>https://patrickpt.github.io/tags/genai/</link>
-      <pubDate>Sun, 28 Jan 2024 09:30:57 +0000</pubDate>
+      <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
       
       <guid>https://patrickpt.github.io/tags/genai/</guid>
       <description></description>
@@ -18,7 +27,7 @@
     <item>
       <title>LLM</title>
       <link>https://patrickpt.github.io/tags/llm/</link>
-      <pubDate>Sun, 28 Jan 2024 09:30:57 +0000</pubDate>
+      <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
       
       <guid>https://patrickpt.github.io/tags/llm/</guid>
       <description></description>

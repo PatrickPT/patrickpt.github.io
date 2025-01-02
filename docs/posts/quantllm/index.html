@@ -7,9 +7,9 @@
 <meta name="robots" content="index, follow">
 <title>LLM Quantization in a nutshell | Notes on AI</title>
 <meta name="keywords" content="LLM, GenAI">
-<meta name="description" content="TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
-Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
-High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments.">
+<meta name="description" content="TL;DR This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.
+Introduction to Quantization The Technical Foundation of LLM Quantization Quantization, in the context of machine learning, refers to the process of reducing the precision of a model&rsquo;s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.
+Understanding Quantization Quantization works by mapping the continuous range of floating-point values to a discrete set of levels.">
 <meta name="author" content="">
 <link rel="canonical" href="https://patrickpt.github.io/posts/quantllm/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css" integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as="style">
@@ -97,9 +97,9 @@ if (!doNotTrack) {
 }
 </script>
 <meta property="og:title" content="LLM Quantization in a nutshell" />
-<meta property="og:description" content="TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
-Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
-High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments." />
+<meta property="og:description" content="TL;DR This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.
+Introduction to Quantization The Technical Foundation of LLM Quantization Quantization, in the context of machine learning, refers to the process of reducing the precision of a model&rsquo;s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.
+Understanding Quantization Quantization works by mapping the continuous range of floating-point values to a discrete set of levels." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://patrickpt.github.io/posts/quantllm/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-28T09:30:57+00:00" />
@@ -107,9 +107,9 @@ High Costs: Fine-tuning LLMs with domain-specific data demands extensive computa
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="LLM Quantization in a nutshell"/>
-<meta name="twitter:description" content="TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
-Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
-High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments."/>
+<meta name="twitter:description" content="TL;DR This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.
+Introduction to Quantization The Technical Foundation of LLM Quantization Quantization, in the context of machine learning, refers to the process of reducing the precision of a model&rsquo;s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.
+Understanding Quantization Quantization works by mapping the continuous range of floating-point values to a discrete set of levels."/>
 
 
 <script type="application/ld+json">
@@ -138,12 +138,12 @@ High Costs: Fine-tuning LLMs with domain-specific data demands extensive computa
   "@type": "BlogPosting",
   "headline": "LLM Quantization in a nutshell",
   "name": "LLM Quantization in a nutshell",
-  "description": "TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.\nWhy Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:\nHigh Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments.",
+  "description": "TL;DR This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.\nIntroduction to Quantization The Technical Foundation of LLM Quantization Quantization, in the context of machine learning, refers to the process of reducing the precision of a model\u0026rsquo;s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.\nUnderstanding Quantization Quantization works by mapping the continuous range of floating-point values to a discrete set of levels.",
   "keywords": [
     "LLM", "GenAI"
   ],
-  "articleBody": "TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.\nWhy Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:\nHigh Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments. Even cloud-based solutions incur high costs, making this approach inaccessible for many organizations. Limited Robustness: Tokenized models are sensitive to input noise, domain-specific jargon, and multilingual data, leading to degraded performance or hallucinated outputs when encountering unfamiliar structures or formats. Retraining Requirements: Token-based architectures require frequent retraining to incorporate new information, which is both time-consuming and computationally expensive. Additionally, retraining does not guarantee the model’s understanding aligns perfectly with evolving data. BLT addresses these limitations by eliminating tokenization and dynamically processing raw byte data. This enables:\nSimpler Pipelines: The removal of tokenization simplifies preprocessing and reduces dependencies on domain-specific tools. Improved Robustness: BLT’s byte-level approach inherently handles noise, rare words, and multilingual inputs more effectively. Efficient Scaling: By dynamically adjusting compute resources via entropy-based patching, BLT scales efficiently to meet diverse data demands. Understanding the Byte Latent Transformer What is BLT? BLT is a novel architecture that replaces tokenization with dynamic patching. Instead of relying on a predefined vocabulary, BLT processes raw bytes directly, grouping them into variable-sized patches based on data complexity. This approach allows the model to allocate computational resources where they are most needed.\nKey Features Dynamic Patching:\nBytes are segmented into patches based on entropy, which measures data complexity. High-entropy regions (e.g., complex sentences or rare words) are allocated finer patches, ensuring sufficient model focus. Conversely, low-entropy regions (e.g., repetitive sequences) are compressed into coarser patches to save resources. Three-Component Architecture:\nLocal Encoder: This lightweight module transforms raw byte sequences into patch-level embeddings. It uses a series of small transformer layers to maintain computational efficiency while extracting rich representations. Latent Transformer: Acting as the central processing unit, the latent transformer operates globally on patches, capturing long-range dependencies and contextual relationships. Local Decoder: The decoder reconstructs byte-level outputs from patch embeddings, ensuring accurate representation of the original data. Efficient Scaling:\nBLT models scale gracefully, achieving competitive performance with token-based models like LLaMA while requiring fewer computational resources. This scalability extends to both model size and training data volume. Efficiency Gains: Compute vs. Performance The Problem with Tokenization Tokenization imposes equal computational effort on all tokens, regardless of their complexity. For example, simple words or repetitive phrases consume the same resources as complex or ambiguous structures. This inefficiency results in wasted computational power and slower processing.\nThe BLT Advantage Better Scaling: BLT’s dynamic patching ensures that compute resources are concentrated on high-complexity regions. Experiments show that BLT outperforms tokenized models in bits-per-byte (BPB) performance, a key metric for language modeling efficiency. Improved Inference Efficiency: By grouping predictable data into larger patches, BLT reduces inference costs by up to 50%, making it highly attractive for real-world deployments. Robustness: BLT’s byte-level granularity enhances its ability to handle noisy or domain-specific inputs, outperforming traditional models in these scenarios. How Does BLT Work? 1. Patching Module Indexing: Bytes are segmented into patches using entropy thresholds. This step involves analyzing the predictability of each byte and dynamically determining patch boundaries. Dynamic Allocation: High-entropy regions result in smaller, finer-grained patches, allowing the model to dedicate more attention to complex parts of the input. Low-entropy regions are grouped into larger patches, optimizing computational efficiency. 2. Processing Module Local Encoder: Converts byte sequences into patch embeddings through lightweight transformer layers. It uses local attention mechanisms to capture relationships within each patch efficiently. Latent Transformer: Processes patch embeddings globally, leveraging its ability to focus on relevant parts of the data while ignoring redundant information. Local Decoder: Decodes patch representations back into bytes for output. This step ensures that the model’s predictions maintain high fidelity to the input. 3. Scaling and Flexibility BLT’s architecture supports simultaneous scaling of model and patch size. Larger patches save compute during inference, allowing resources to be reallocated to increase model capacity or process longer contexts. Practical Implications Simplified Implementation: By removing tokenization, BLT eliminates the need for domain-specific vocabularies and reduces preprocessing overhead. This simplification accelerates deployment and maintenance. Enhanced Robustness: BLT’s byte-level approach handles diverse data formats and noisy inputs more effectively, making it ideal for applications in multilingual and low-resource settings. Scalable Design: BLT’s dynamic patching mechanism ensures efficient handling of large datasets, whether in training or inference, making it well-suited for enterprise-level applications. Benefits of Using BLT Improved Precision: BLT generates outputs grounded in byte-level details, reducing reliance on pre-learned token structures. Addressing Knowledge Gaps: By bypassing tokenization, BLT can adapt seamlessly to domain-specific data and rare linguistic patterns. Scalability: Its dynamic architecture efficiently scales with data size and complexity, making it adaptable for varied use cases. Reduced Hallucinations: By dynamically allocating resources, BLT mitigates the risks of generating inaccurate or nonsensical outputs. Pitfalls Like all architectures, BLT has trade-offs:\nComplexity of Implementation: While tokenization is eliminated, the dynamic patching mechanism introduces additional layers of design and debugging complexity. Assumptions in Patching: BLT’s reliance on entropy-based segmentation assumes semantic similarity between high-entropy regions and important content, which may not always hold true. Conclusion The Byte Latent Transformer changes the way we look at tokenization for NLP modeling. The paper by Meta introduces the way to a robust alternative to traditional architectures.\nRessources 13.12.2024 - Byte Latent Transformer: Patches Scale Better Than Tokens\n",
-  "wordCount" : "927",
+  "articleBody": "TL;DR This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.\nIntroduction to Quantization The Technical Foundation of LLM Quantization Quantization, in the context of machine learning, refers to the process of reducing the precision of a model’s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.\nUnderstanding Quantization Quantization works by mapping the continuous range of floating-point values to a discrete set of levels. This is akin to reducing the bit depth in an audio file, where instead of infinite gradations, you have a limited number of steps. There are different strategies for quantization, such as post-training quantization, dynamic quantization, and quantization-aware training, each with its use cases and trade-offs.\nPost-Training Quantization This approach involves reducing the precision of the weights of a model that has already been fully trained, which can be quickly accomplished without further training. While this method is simple to execute, it may slightly reduce the model’s effectiveness due to a decrease in the precision of the weight values.\nQuantization-Aware Training Contrary to the post-training method, this technique incorporates the lower precision conversion of weights during the model’s training phase. This generally leads to better performance of the model but requires more computational resources. An example of a technique employed within this category is QLoRA.\nOptimization Techniques in Quantization Once the quantization procedure is applied, the size of the model is significantly reduced. However, selecting the appropriate bit width is crucial—too few bits, and you may lose critical information; too many, and you compromise on efficiency gains. It’s also important to choose the right quantization technique. Techniques such as rounding or truncation can affect the performance of the quantized model.\nA Technical Examination Diving Deeper into llama.cpp llama.cpp is a library written in C++ that allows users to perform inference on quantized LLaMA models. It provides tools to convert pre-trained models into a format suitable for inference on CPUs, particularly optimized for low-precision integer arithmetic, which dramatically reduces the computational load.\nQuantization in llama.cpp Using llama.cpp involves specific steps—starting with installation of the library, obtaining a compatible LLaMA model, and then running the provided conversion script to quantize the model. The script typically outputs a new model file, which can be loaded using llama.cpp APIs for inference.\nStore quantized models Quantized models are stored in the binary file format GGML or GGUF. “GG” refers to the initials of its originator (Georgi Gerganov). GGML is a C library created for machine learning, notable for its unique binary format that facilitated the easy distribution of LLMs. This binary format was distinctive to GGML and provided a way to execute LLMs on a CPU, enhancing accessibility and use. GGUF, represents an evolution from the original GGML format. It was developed to be more extensible and future-proof, while being lighter on RAM requirements. GGUF is compatible with the llama.cpp library.\nThe reduced memory footprint with GGML/GGUF and the ability to offload certain layers of computation onto a GPU with GGML/GGUF accelerates inference speeds while managing models that would otherwise be too large for standard VRAM.\nWhere to find models The Hugging Face Hub hosts a variety of pre-quantized models. You can find a collection of models employing diverse quantization techniques, offering choices that cater to specific requirements and scenarios.\nConclusion Advantages of Quantization Beyond the obvious benefits of reduced model size and computational resource requirements, there are other compelling reasons to quantize LLMs. For instance, lower memory bandwidth and power consumption are key factors for deployment on edge devices, and quantization can open up new possibilities for LLM applications in such constrained environments.\nChallenges and Considerations Despite the efficiencies introduced through quantization, one must be mindful of potential accuracy loss. This necessitates a robust evaluation pipeline to assess the performance impact on tasks relevant to the language model’s intended use. Furthermore, leveraging the right tooling and techniques to achieve optimal balance between size, efficiency, and accuracy is fundamental.\nPractical Expertise in Quantized LLMs Quantization of LLMs is a detailed and nuanced process, bringing together theoretical concepts of machine learning and practical aspects of software engineering. With advanced tools like llama.cpp, deployment of these efficient models is increasingly becoming more feasible across various hardware platforms. Mastery of quantization techniques is essential for anyone looking to efficiently deploy LLMs in real-world applications.\nThis synopsis provides an overview of a deeply technical discussion on the subject of LLM quantization, highlighting the principal components.\n",
+  "wordCount" : "746",
   "inLanguage": "en",
   "datePublished": "2024-01-28T09:30:57Z",
   "dateModified": "2024-01-28T09:30:57Z",
@@ -214,11 +214,6 @@ High Costs: Fine-tuning LLMs with domain-specific data demands extensive computa
                 </a>
             </li>
             <li>
-                <a href="https://patrickpt.github.io/recent/" title="Recent">
-                    <span>Recent</span>
-                </a>
-            </li>
-            <li>
                 <a href="https://patrickpt.github.io/archive/" title="Archive">
                     <span>Archive</span>
                 </a>
@@ -244,7 +239,7 @@ High Costs: Fine-tuning LLMs with domain-specific data demands extensive computa
     <h1 class="post-title">
       LLM Quantization in a nutshell
     </h1>
-    <div class="post-meta"><span title='2024-01-28 09:30:57 +0000 UTC'>January 28, 2024</span>&nbsp;·&nbsp;5 min
+    <div class="post-meta"><span title='2024-01-28 09:30:57 +0000 UTC'>January 28, 2024</span>&nbsp;·&nbsp;4 min
 
 </div>
   </header> <div class="toc">
@@ -257,146 +252,84 @@ High Costs: Fine-tuning LLMs with domain-specific data demands extensive computa
                 <li>
                     <a href="#tldr" aria-label="TL;DR">TL;DR</a></li>
                 <li>
-                    <a href="#why-should-i-care" aria-label="Why Should I Care?">Why Should I Care?</a></li>
-                <li>
-                    <a href="#understanding-the-byte-latent-transformer" aria-label="Understanding the Byte Latent Transformer">Understanding the Byte Latent Transformer</a><ul>
+                    <a href="#introduction-to-quantization" aria-label="Introduction to Quantization">Introduction to Quantization</a><ul>
                         
                 <li>
-                    <a href="#what-is-blt" aria-label="What is BLT?">What is BLT?</a></li>
+                    <a href="#the-technical-foundation-of-llm-quantization" aria-label="The Technical Foundation of LLM Quantization">The Technical Foundation of LLM Quantization</a></li>
                 <li>
-                    <a href="#key-features" aria-label="Key Features">Key Features</a></li></ul>
-                </li>
-                <li>
-                    <a href="#efficiency-gains-compute-vs-performance" aria-label="Efficiency Gains: Compute vs. Performance">Efficiency Gains: Compute vs. Performance</a><ul>
+                    <a href="#understanding-quantization" aria-label="Understanding Quantization">Understanding Quantization</a><ul>
                         
                 <li>
-                    <a href="#the-problem-with-tokenization" aria-label="The Problem with Tokenization">The Problem with Tokenization</a></li>
+                    <a href="#post-training-quantization" aria-label="Post-Training Quantization">Post-Training Quantization</a></li>
                 <li>
-                    <a href="#the-blt-advantage" aria-label="The BLT Advantage">The BLT Advantage</a></li></ul>
+                    <a href="#quantization-aware-training" aria-label="Quantization-Aware Training">Quantization-Aware Training</a></li></ul>
                 </li>
                 <li>
-                    <a href="#how-does-blt-work" aria-label="How Does BLT Work?">How Does BLT Work?</a><ul>
+                    <a href="#optimization-techniques-in-quantization" aria-label="Optimization Techniques in Quantization">Optimization Techniques in Quantization</a></li></ul>
+                </li>
+                <li>
+                    <a href="#a-technical-examination" aria-label="A Technical Examination">A Technical Examination</a><ul>
                         
                 <li>
-                    <a href="#1-patching-module" aria-label="1. Patching Module">1. Patching Module</a></li>
+                    <a href="#diving-deeper-into-llamacpp" aria-label="Diving Deeper into llama.cpp">Diving Deeper into llama.cpp</a></li>
                 <li>
-                    <a href="#2-processing-module" aria-label="2. Processing Module">2. Processing Module</a></li>
+                    <a href="#quantization-in-llamacpp" aria-label="Quantization in llama.cpp">Quantization in llama.cpp</a></li>
                 <li>
-                    <a href="#3-scaling-and-flexibility" aria-label="3. Scaling and Flexibility">3. Scaling and Flexibility</a></li></ul>
+                    <a href="#store-quantized-models" aria-label="Store quantized models">Store quantized models</a></li>
+                <li>
+                    <a href="#where-to-find-models" aria-label="Where to find models">Where to find models</a></li></ul>
                 </li>
                 <li>
-                    <a href="#practical-implications" aria-label="Practical Implications">Practical Implications</a></li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a><ul>
+                        
                 <li>
-                    <a href="#benefits-of-using-blt" aria-label="Benefits of Using BLT">Benefits of Using BLT</a></li>
+                    <a href="#advantages-of-quantization" aria-label="Advantages of Quantization">Advantages of Quantization</a></li>
                 <li>
-                    <a href="#pitfalls" aria-label="Pitfalls">Pitfalls</a></li>
+                    <a href="#challenges-and-considerations" aria-label="Challenges and Considerations">Challenges and Considerations</a></li>
                 <li>
-                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a></li>
-                <li>
-                    <a href="#ressources" aria-label="Ressources">Ressources</a>
+                    <a href="#practical-expertise-in-quantized-llms" aria-label="Practical Expertise in Quantized LLMs">Practical Expertise in Quantized LLMs</a>
                 </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
 </div>
 
   <div class="post-content"><h1 id="tldr">TL;DR<a hidden class="anchor" aria-hidden="true" href="#tldr">#</a></h1>
-<p>This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.</p>
-<hr>
-<h1 id="why-should-i-care">Why Should I Care?<a hidden class="anchor" aria-hidden="true" href="#why-should-i-care">#</a></h1>
-<p>Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:</p>
-<ul>
-<li><strong>High Costs</strong>: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments. Even cloud-based solutions incur high costs, making this approach inaccessible for many organizations.</li>
-<li><strong>Limited Robustness</strong>: Tokenized models are sensitive to input noise, domain-specific jargon, and multilingual data, leading to degraded performance or hallucinated outputs when encountering unfamiliar structures or formats.</li>
-<li><strong>Retraining Requirements</strong>: Token-based architectures require frequent retraining to incorporate new information, which is both time-consuming and computationally expensive. Additionally, retraining does not guarantee the model’s understanding aligns perfectly with evolving data.</li>
-</ul>
-<p>BLT addresses these limitations by eliminating tokenization and dynamically processing raw byte data. This enables:</p>
-<ul>
-<li><strong>Simpler Pipelines</strong>: The removal of tokenization simplifies preprocessing and reduces dependencies on domain-specific tools.</li>
-<li><strong>Improved Robustness</strong>: BLT’s byte-level approach inherently handles noise, rare words, and multilingual inputs more effectively.</li>
-<li><strong>Efficient Scaling</strong>: By dynamically adjusting compute resources via entropy-based patching, BLT scales efficiently to meet diverse data demands.</li>
-</ul>
-<hr>
-<h1 id="understanding-the-byte-latent-transformer">Understanding the Byte Latent Transformer<a hidden class="anchor" aria-hidden="true" href="#understanding-the-byte-latent-transformer">#</a></h1>
-<h2 id="what-is-blt">What is BLT?<a hidden class="anchor" aria-hidden="true" href="#what-is-blt">#</a></h2>
-<p>BLT is a novel architecture that replaces tokenization with <strong>dynamic patching</strong>. Instead of relying on a predefined vocabulary, BLT processes raw bytes directly, grouping them into variable-sized patches based on data complexity. This approach allows the model to allocate computational resources where they are most needed.</p>
-<h2 id="key-features">Key Features<a hidden class="anchor" aria-hidden="true" href="#key-features">#</a></h2>
-<ol>
-<li>
-<p><strong>Dynamic Patching</strong>:</p>
-<ul>
-<li>Bytes are segmented into patches based on entropy, which measures data complexity. High-entropy regions (e.g., complex sentences or rare words) are allocated finer patches, ensuring sufficient model focus. Conversely, low-entropy regions (e.g., repetitive sequences) are compressed into coarser patches to save resources.</li>
-</ul>
-</li>
-<li>
-<p><strong>Three-Component Architecture</strong>:</p>
-<ul>
-<li><strong>Local Encoder</strong>: This lightweight module transforms raw byte sequences into patch-level embeddings. It uses a series of small transformer layers to maintain computational efficiency while extracting rich representations.</li>
-<li><strong>Latent Transformer</strong>: Acting as the central processing unit, the latent transformer operates globally on patches, capturing long-range dependencies and contextual relationships.</li>
-<li><strong>Local Decoder</strong>: The decoder reconstructs byte-level outputs from patch embeddings, ensuring accurate representation of the original data.</li>
-</ul>
-</li>
-<li>
-<p><strong>Efficient Scaling</strong>:</p>
-<ul>
-<li>BLT models scale gracefully, achieving competitive performance with token-based models like LLaMA while requiring fewer computational resources. This scalability extends to both model size and training data volume.</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h1 id="efficiency-gains-compute-vs-performance">Efficiency Gains: Compute vs. Performance<a hidden class="anchor" aria-hidden="true" href="#efficiency-gains-compute-vs-performance">#</a></h1>
-<h2 id="the-problem-with-tokenization">The Problem with Tokenization<a hidden class="anchor" aria-hidden="true" href="#the-problem-with-tokenization">#</a></h2>
-<p>Tokenization imposes equal computational effort on all tokens, regardless of their complexity. For example, simple words or repetitive phrases consume the same resources as complex or ambiguous structures. This inefficiency results in wasted computational power and slower processing.</p>
-<h2 id="the-blt-advantage">The BLT Advantage<a hidden class="anchor" aria-hidden="true" href="#the-blt-advantage">#</a></h2>
-<ul>
-<li><strong>Better Scaling</strong>: BLT’s dynamic patching ensures that compute resources are concentrated on high-complexity regions. Experiments show that BLT outperforms tokenized models in bits-per-byte (BPB) performance, a key metric for language modeling efficiency.</li>
-<li><strong>Improved Inference Efficiency</strong>: By grouping predictable data into larger patches, BLT reduces inference costs by up to 50%, making it highly attractive for real-world deployments.</li>
-<li><strong>Robustness</strong>: BLT’s byte-level granularity enhances its ability to handle noisy or domain-specific inputs, outperforming traditional models in these scenarios.</li>
-</ul>
-<hr>
-<h1 id="how-does-blt-work">How Does BLT Work?<a hidden class="anchor" aria-hidden="true" href="#how-does-blt-work">#</a></h1>
-<h2 id="1-patching-module">1. Patching Module<a hidden class="anchor" aria-hidden="true" href="#1-patching-module">#</a></h2>
-<ul>
-<li><strong>Indexing</strong>: Bytes are segmented into patches using entropy thresholds. This step involves analyzing the predictability of each byte and dynamically determining patch boundaries.</li>
-<li><strong>Dynamic Allocation</strong>: High-entropy regions result in smaller, finer-grained patches, allowing the model to dedicate more attention to complex parts of the input. Low-entropy regions are grouped into larger patches, optimizing computational efficiency.</li>
-</ul>
-<h2 id="2-processing-module">2. Processing Module<a hidden class="anchor" aria-hidden="true" href="#2-processing-module">#</a></h2>
-<ul>
-<li><strong>Local Encoder</strong>: Converts byte sequences into patch embeddings through lightweight transformer layers. It uses local attention mechanisms to capture relationships within each patch efficiently.</li>
-<li><strong>Latent Transformer</strong>: Processes patch embeddings globally, leveraging its ability to focus on relevant parts of the data while ignoring redundant information.</li>
-<li><strong>Local Decoder</strong>: Decodes patch representations back into bytes for output. This step ensures that the model’s predictions maintain high fidelity to the input.</li>
-</ul>
-<h2 id="3-scaling-and-flexibility">3. Scaling and Flexibility<a hidden class="anchor" aria-hidden="true" href="#3-scaling-and-flexibility">#</a></h2>
-<ul>
-<li>BLT’s architecture supports simultaneous scaling of model and patch size. Larger patches save compute during inference, allowing resources to be reallocated to increase model capacity or process longer contexts.</li>
-</ul>
-<hr>
-<h1 id="practical-implications">Practical Implications<a hidden class="anchor" aria-hidden="true" href="#practical-implications">#</a></h1>
-<ol>
-<li><strong>Simplified Implementation</strong>: By removing tokenization, BLT eliminates the need for domain-specific vocabularies and reduces preprocessing overhead. This simplification accelerates deployment and maintenance.</li>
-<li><strong>Enhanced Robustness</strong>: BLT’s byte-level approach handles diverse data formats and noisy inputs more effectively, making it ideal for applications in multilingual and low-resource settings.</li>
-<li><strong>Scalable Design</strong>: BLT’s dynamic patching mechanism ensures efficient handling of large datasets, whether in training or inference, making it well-suited for enterprise-level applications.</li>
-</ol>
-<hr>
-<h1 id="benefits-of-using-blt">Benefits of Using BLT<a hidden class="anchor" aria-hidden="true" href="#benefits-of-using-blt">#</a></h1>
-<ul>
-<li><strong>Improved Precision</strong>: BLT generates outputs grounded in byte-level details, reducing reliance on pre-learned token structures.</li>
-<li><strong>Addressing Knowledge Gaps</strong>: By bypassing tokenization, BLT can adapt seamlessly to domain-specific data and rare linguistic patterns.</li>
-<li><strong>Scalability</strong>: Its dynamic architecture efficiently scales with data size and complexity, making it adaptable for varied use cases.</li>
-<li><strong>Reduced Hallucinations</strong>: By dynamically allocating resources, BLT mitigates the risks of generating inaccurate or nonsensical outputs.</li>
-</ul>
-<hr>
-<h1 id="pitfalls">Pitfalls<a hidden class="anchor" aria-hidden="true" href="#pitfalls">#</a></h1>
-<p>Like all architectures, BLT has trade-offs:</p>
-<ul>
-<li><strong>Complexity of Implementation</strong>: While tokenization is eliminated, the dynamic patching mechanism introduces additional layers of design and debugging complexity.</li>
-<li><strong>Assumptions in Patching</strong>: BLT’s reliance on entropy-based segmentation assumes semantic similarity between high-entropy regions and important content, which may not always hold true.</li>
-</ul>
-<hr>
+<p>This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.</p>
+<h1 id="introduction-to-quantization">Introduction to Quantization<a hidden class="anchor" aria-hidden="true" href="#introduction-to-quantization">#</a></h1>
+<h2 id="the-technical-foundation-of-llm-quantization">The Technical Foundation of LLM Quantization<a hidden class="anchor" aria-hidden="true" href="#the-technical-foundation-of-llm-quantization">#</a></h2>
+<p>Quantization, in the context of machine learning, refers to the process of reducing the precision of a model&rsquo;s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.</p>
+<h2 id="understanding-quantization">Understanding Quantization<a hidden class="anchor" aria-hidden="true" href="#understanding-quantization">#</a></h2>
+<p>Quantization works by mapping the continuous range of floating-point values to a discrete set of levels. This is akin to reducing the bit depth in an audio file, where instead of infinite gradations, you have a limited number of steps. There are different strategies for quantization, such as post-training quantization, dynamic quantization, and quantization-aware training, each with its use cases and trade-offs.</p>
+<h3 id="post-training-quantization">Post-Training Quantization<a hidden class="anchor" aria-hidden="true" href="#post-training-quantization">#</a></h3>
+<p>This approach involves reducing the precision of the weights of a model that has already been fully trained, which can be quickly accomplished without further training. While this method is simple to execute, it may slightly reduce the model&rsquo;s effectiveness due to a decrease in the precision of the weight values.</p>
+<h3 id="quantization-aware-training">Quantization-Aware Training<a hidden class="anchor" aria-hidden="true" href="#quantization-aware-training">#</a></h3>
+<p>Contrary to the post-training method, this technique incorporates the lower precision conversion of weights during the model&rsquo;s training phase. This generally leads to better performance of the model but requires more computational resources. An example of a technique employed within this category is QLoRA.</p>
+<h2 id="optimization-techniques-in-quantization">Optimization Techniques in Quantization<a hidden class="anchor" aria-hidden="true" href="#optimization-techniques-in-quantization">#</a></h2>
+<p>Once the quantization procedure is applied, the size of the model is significantly reduced. However, selecting the appropriate bit width is crucial—too few bits, and you may lose critical information; too many, and you compromise on efficiency gains. It’s also important to choose the right quantization technique. Techniques such as rounding or truncation can affect the performance of the quantized model.</p>
+<h1 id="a-technical-examination">A Technical Examination<a hidden class="anchor" aria-hidden="true" href="#a-technical-examination">#</a></h1>
+<h2 id="diving-deeper-into-llamacpp">Diving Deeper into llama.cpp<a hidden class="anchor" aria-hidden="true" href="#diving-deeper-into-llamacpp">#</a></h2>
+<p>llama.cpp is a library written in C++ that allows users to perform inference on quantized LLaMA models. It provides tools to convert pre-trained models into a format suitable for inference on CPUs, particularly optimized for low-precision integer arithmetic, which dramatically reduces the computational load.</p>
+<h2 id="quantization-in-llamacpp">Quantization in llama.cpp<a hidden class="anchor" aria-hidden="true" href="#quantization-in-llamacpp">#</a></h2>
+<p>Using llama.cpp involves specific steps—starting with installation of the library, obtaining a compatible LLaMA model, and then running the provided conversion script to quantize the model. The script typically outputs a new model file, which can be loaded using llama.cpp APIs for inference.</p>
+<h2 id="store-quantized-models">Store quantized models<a hidden class="anchor" aria-hidden="true" href="#store-quantized-models">#</a></h2>
+<p>Quantized models are stored in the binary file format GGML or GGUF. &ldquo;GG&rdquo; refers to the initials of its originator (Georgi Gerganov).
+GGML is a C library created for machine learning, notable for its unique binary format that facilitated the easy distribution of LLMs. This binary format was distinctive to GGML and provided a way to execute LLMs on a CPU, enhancing accessibility and use.
+GGUF, represents an evolution from the original GGML format. It was developed to be more extensible and future-proof, while being lighter on RAM requirements.
+GGUF is compatible with the llama.cpp library.</p>
+<p>The reduced memory footprint with GGML/GGUF and the ability to offload certain layers of computation onto a GPU with GGML/GGUF accelerates inference speeds while managing models that would otherwise be too large for standard VRAM.</p>
+<h2 id="where-to-find-models">Where to find models<a hidden class="anchor" aria-hidden="true" href="#where-to-find-models">#</a></h2>
+<p>The <a href="https://huggingface.co/models">Hugging Face Hub</a> hosts a variety of pre-quantized models. You can find a collection of models employing diverse quantization techniques, offering choices that cater to specific requirements and scenarios.</p>
 <h1 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h1>
-<p>The Byte Latent Transformer changes the way we look at tokenization for NLP modeling. The paper by Meta introduces the way to a robust alternative to traditional architectures.</p>
-<h1 id="ressources">Ressources<a hidden class="anchor" aria-hidden="true" href="#ressources">#</a></h1>
-<p><a href="https://arxiv.org/pdf/2412.09871">13.12.2024 - Byte Latent Transformer: Patches Scale Better Than Tokens</a></p>
+<h2 id="advantages-of-quantization">Advantages of Quantization<a hidden class="anchor" aria-hidden="true" href="#advantages-of-quantization">#</a></h2>
+<p>Beyond the obvious benefits of reduced model size and computational resource requirements, there are other compelling reasons to quantize LLMs. For instance, lower memory bandwidth and power consumption are key factors for deployment on edge devices, and quantization can open up new possibilities for LLM applications in such constrained environments.</p>
+<h2 id="challenges-and-considerations">Challenges and Considerations<a hidden class="anchor" aria-hidden="true" href="#challenges-and-considerations">#</a></h2>
+<p>Despite the efficiencies introduced through quantization, one must be mindful of potential accuracy loss. This necessitates a robust evaluation pipeline to assess the performance impact on tasks relevant to the language model&rsquo;s intended use. Furthermore, leveraging the right tooling and techniques to achieve optimal balance between size, efficiency, and accuracy is fundamental.</p>
+<h2 id="practical-expertise-in-quantized-llms">Practical Expertise in Quantized LLMs<a hidden class="anchor" aria-hidden="true" href="#practical-expertise-in-quantized-llms">#</a></h2>
+<p>Quantization of LLMs is a detailed and nuanced process, bringing together theoretical concepts of machine learning and practical aspects of software engineering. With advanced tools like llama.cpp, deployment of these efficient models is increasingly becoming more feasible across various hardware platforms. Mastery of quantization techniques is essential for anyone looking to efficiently deploy LLMs in real-world applications.</p>
+<p>This synopsis provides an overview of a deeply technical discussion on the subject of LLM quantization, highlighting the principal components.</p>
 
 
   </div>

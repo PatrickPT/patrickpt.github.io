@@ -66,10 +66,10 @@ menu:
       name: Posts
       url: /posts/
       weight: 10
-    - identifier: Recent
-      name: Recent
-      url: /recent/
-      weight: 30
+   # - identifier: Recent
+   #   name: Recent
+   #   url: /recent/
+   #   weight: 30
     - identifier: Archive
       name: Archive
       url: /archive/

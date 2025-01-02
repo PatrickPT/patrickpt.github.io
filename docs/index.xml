@@ -5,7 +5,18 @@
     <link>https://patrickpt.github.io/</link>
     <description>Recent content on Notes on AI</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 28 Jan 2024 09:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jan 2025 09:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A view on Byte Latent Transformers</title>
+      <link>https://patrickpt.github.io/posts/blt/</link>
+      <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/blt/</guid>
+      <description>TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
+Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
+High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments.</description>
+    </item>
+    
     <item>
       <title>LLM Quantization in a nutshell</title>
       <link>https://patrickpt.github.io/posts/quantllm/</link>
@@ -15,17 +26,6 @@
       <description>TL;DR This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.
 Introduction to Quantization The Technical Foundation of LLM Quantization Quantization, in the context of machine learning, refers to the process of reducing the precision of a model&amp;rsquo;s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.
 Understanding Quantization Quantization works by mapping the continuous range of floating-point values to a discrete set of levels.</description>
-    </item>
-    
-    <item>
-      <title>LLM Quantization in a nutshell</title>
-      <link>https://patrickpt.github.io/posts/quantllm/</link>
-      <pubDate>Sun, 28 Jan 2024 09:30:57 +0000</pubDate>
-      
-      <guid>https://patrickpt.github.io/posts/quantllm/</guid>
-      <description>TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
-Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
-High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments.</description>
     </item>
     
     <item>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Architecture on Notes on AI</title>
+    <link>https://patrickpt.github.io/tags/architecture/</link>
+    <description>Recent content in Architecture on Notes on AI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 02 Jan 2025 09:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A view on Byte Latent Transformers</title>
+      <link>https://patrickpt.github.io/posts/blt/</link>
+      <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/blt/</guid>
+      <description>TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
+Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
+High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments.</description>
+    </item>
+    
+  </channel>
+</rss>
