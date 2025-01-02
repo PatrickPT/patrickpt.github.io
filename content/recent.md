@@ -1,6 +1,6 @@
 ---
 title: "Recent stuff i found interesting"
-draft: False
+draft: True
 url: /recent/
 ShowReadingTime: false
 
