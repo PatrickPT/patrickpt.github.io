@@ -14,9 +14,7 @@ I'm living in Germany, am a proud father of two, work as a Data Scientist and lo
 
 On this blog i am documenting my learning notes, best practices and how-to's. 
 
-**My blog contains my personal opinions** and as i am human also errors so i am happy to receive your change requests via [Github](https://github.com/PatrickPT/patrickpt.github.io).
-
-Also i am happy to connect on [LinkedIN](https://www.linkedin.com/in/patrickschnass/).
+**My blog contains my personal opinions** and as i am human also errors. I am happy to receive feedback and corrections. Please feel free to contact me on [LinkedIN](https://www.linkedin.com/in/patrickschnass/).
 
 *[privacy policy and imprint](../gdpr)*
 

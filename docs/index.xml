@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Notes on AI</title>
+    <title>patrickpt.github.io</title>
     <link>https://patrickpt.github.io/</link>
-    <description>Recent content on Notes on AI</description>
+    <description>Recent content on patrickpt.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 02 Jan 2025 09:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -193,12 +193,12 @@ Maybe, but my purpose is not to attract as many readers as possible but to learn
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://patrickpt.github.io/gdpr/</guid>
-      <description>Due to german law i need to include a privacy policy and an imprint even for a personal blog without any commercial interest.
-Well, here you go:
-Datenschutzerklärung
+      <description>Datenschutzerklärung
 Stand: 21. Januar 2023
 Inhaltsübersicht
-Verantwortlicher Übersicht der Verarbeitungen Maßgebliche Rechtsgrundlagen Sicherheitsmaßnahmen Übermittlung von personenbezogenen Daten Datenverarbeitung in Drittländern Löschung von Daten Einsatz von Cookies Bereitstellung des Onlineangebotes und Webhosting Blogs und Publikationsmedien Kontakt- und Anfragenverwaltung Webanalyse, Monitoring und Optimierung Präsenzen in sozialen Netzwerken (Social Media) Plugins und eingebettete Funktionen sowie Inhalte Änderung und Aktualisierung der Datenschutzerklärung Rechte der betroffenen Personen Verantwortlicher</description>
+Verantwortlicher Übersicht der Verarbeitungen Maßgebliche Rechtsgrundlagen Sicherheitsmaßnahmen Übermittlung von personenbezogenen Daten Datenverarbeitung in Drittländern Löschung von Daten Einsatz von Cookies Bereitstellung des Onlineangebotes und Webhosting Blogs und Publikationsmedien Kontakt- und Anfragenverwaltung Webanalyse, Monitoring und Optimierung Präsenzen in sozialen Netzwerken (Social Media) Plugins und eingebettete Funktionen sowie Inhalte Änderung und Aktualisierung der Datenschutzerklärung Rechte der betroffenen Personen Verantwortlicher
+Übersicht der Verarbeitungen
+Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.</description>
     </item>
     
     <item>
@@ -210,7 +210,7 @@ Verantwortlicher Übersicht der Verarbeitungen Maßgebliche Rechtsgrundlagen Sic
       <description>Welcome to my blog. I am Patrick.
 I&amp;rsquo;m living in Germany, am a proud father of two, work as a Data Scientist and love to dig into AI, Data Science and ML.
 On this blog i am documenting my learning notes, best practices and how-to&amp;rsquo;s.
-My blog contains my personal opinions and as i am human also errors so i am happy to receive your change requests via Github.</description>
+My blog contains my personal opinions and as i am human also errors. I am happy to receive feedback and corrections. Please feel free to contact me on LinkedIN.</description>
     </item>
     
     

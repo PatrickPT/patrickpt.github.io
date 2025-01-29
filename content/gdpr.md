@@ -4,9 +4,6 @@ url: /gdpr/
 ShowReadingTime: false
 ---
 
-Due to german law i need to include a privacy policy and an imprint even for a personal blog without any commercial interest.
-
-Well, here you go:
 
 Datenschutzerklärung
 
