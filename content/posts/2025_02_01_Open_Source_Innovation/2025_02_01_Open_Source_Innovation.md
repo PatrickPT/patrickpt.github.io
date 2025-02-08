@@ -11,29 +11,21 @@ url: /posts/deepseek/
 
 # TL;DR
 
-This blog post explains how the recent archictectural innovations from DeepSeek may benefit the open source community and why they are considered a game changer for AI industry.
+This blog post explains how the recent release of DeepSeek may benefit the open source community and why it is considered a game changer for AI industry.
 
 ---
 
-# Why Should I Care?
+# Why all the rumors?
 
-1. It beats or matches the leading commercial LLMs. It's especially shocking that it beats OpenAI's o1, the model that "thinks" before answering.
+DeepSeek-R1 represents a significant innovation in the AI landscape, outperforming or rivaling top commercial models including reasoning capabilities. Previously, such sophisticated models were exclusive to tech giants like OpenAI and Google, but R1 now joins this category as the only open-weights model of its kind. Its Open Source approach including a MIT license further amplifies its disruptive potential, enabling unrestricted commercial use, even for direct competitors, without costly R&D.
 
-2. R1 is also a thinking model, which previously only OpenAI and Google could develop (and only OpenAI's model was good at it).
+Beyond accessibility, DeepSeek-R1 heats innovation by openly sharing its cost-effective training methodology, challenging the narrative that advanced AI requires exorbitant GPU investments. Operationally, it’s remarkably affordable: output tokens cost 30x less than OpenAI’s, and input tokens are 55x cheaper. 
 
-3. Given the above two points, R1 is the only such model with open weights.
-
-4. Not just open weights, but MIT licensed, so anyone can use it for any purpose, build a business directly competing with OpenAI and other big players without spending a dollar on R&D.
-
-5. DeepSeek released the secret sauce of how to train such a model from scratch, so OpenAI and Google don't have any competitive advantage going forward. And this secret sauce is very cheap to implement, compared to what big players made us believe through their hyped GPU spending.
-
-6. R1 is super cheap to run too. For example, OpenAI charges $60.00 per 1M output tokens for o1, while R1 only costs $2. For input tokens: OpenAI charges $15.00 per 1M tokens, while R1 will charge you $0.27.
-
-So, combining all these factors, it's a market disruption unseen before. Hence the sad smiles from Satya and Sam. They still have money and GPUs, but they don't know what to do with it anymore.   
+R1’s blend of performance, openness, innovation and affordability could signal that open-source can still play a pivotal role in the AI race.
 
 ---
+# Key Facts at a glance
 
-# Understanding what DeepSeek did
 
 ## **Key Training Process & Innovations in DeepSeek-R1**  
 
@@ -53,7 +45,6 @@ So, combining all these factors, it's a market disruption unseen before. Hence t
     3. **Rejection Sampling + SFT**: Generates high-quality data (600k reasoning + 200k non-reasoning samples) for retraining.  
     4. **Final RL Alignment**: Balances reasoning performance with human preferences (helpfulness/harmlessness).  
 
----
 
 ### **2. Key Innovations**  
 1. **RL-First Approach**:  
@@ -70,7 +61,6 @@ So, combining all these factors, it's a market disruption unseen before. Hence t
 4. **Rule-Based Rewards**:  
    - Avoids neural reward models, simplifying training and reducing hacking risks.  
 
----
 
 ### **3. Critical Challenges & Insights**  
 - **Failed Attempts**:  
@@ -78,7 +68,6 @@ So, combining all these factors, it's a market disruption unseen before. Hence t
   - **Monte Carlo Tree Search (MCTS)**: Token-generation complexity made iterative improvement impractical.  
 - **Key Insight**: Distillation is more cost-effective than RL for smaller models, but advancing SOTA requires large-scale RL on powerful base models.  
 
----
 
 ### **4. Performance Highlights**  
 - **DeepSeek-R1**: Matches **OpenAI-o1-1217** on reasoning (79.8% pass@1 on AIME) and outperforms GPT-4o/Claude-3.5 in math/coding.  
@@ -86,12 +75,27 @@ So, combining all these factors, it's a market disruption unseen before. Hence t
   - 7B model surpasses GPT-4o on MATH-500 (92.8% vs. 74.6%).  
   - 32B model outperforms QwQ-32B-Preview by 22.6% on AIME.  
 
---- 
 
 **Why It Stands Out**:  
 - First open-source work validating pure RL for reasoning.  
 - Combines scalability (GRPO), human-aligned cold-start data, and efficient distillation.  
 - Open-sources models/data, enabling community-driven advancements.
+
+
+# Understanding what DeepSeek did
+
+To gain a clearer insight into the core framework of DeepSeek-R1, let’s break down its foundational concepts:
+
+**Reinforcement Learning (RL):** This approach involves a model learning through a system of rewards and penalties tied to its actions, refining its performance over time via trial and error. In the realm of large language models (LLMs), RL can be implemented through techniques such as policy optimization (e.g., Proximal Policy Optimization or PPO), value-based methods (e.g., Q-learning), or combined approaches like actor-critic architectures. For instance, when presented with a prompt like “2 + 2 =”, the model might receive a reward of +1 for generating the correct answer “4” and a penalty of -1 for any incorrect response. In advanced LLMs, rewards are often derived from human feedback (RLHF) or automated evaluation systems like GRPO.
+
+**Supervised Fine-Tuning (SFT):** This process involves retraining a base model using a labeled dataset to enhance its performance on a specific task. For example, an LLM could be fine-tuned with a dataset of customer service queries and responses to improve its accuracy in addressing common support questions. This method is particularly effective when a substantial amount of labeled data is available.
+
+**Cold Start Data:** This refers to a small, minimally labeled dataset used to provide the model with a basic grasp of the task at hand. For instance, a chatbot might be fine-tuned using a simple dataset of frequently asked questions (FAQs) extracted from a website, helping it establish a foundational understanding. This approach is especially useful when labeled data is scarce.
+
+**Multi-Stage Training:** In this method, the model undergoes training in distinct phases, each targeting a specific improvement, such as accuracy or alignment with user expectations. For example, a model might first be trained on general text data and then further refined using reinforcement learning based on user feedback to enhance its conversational capabilities.
+
+**Rejection Sampling:** This technique involves generating multiple potential outputs from a model, but only retaining those that meet predefined criteria, such as quality or relevance. For example, after a reinforcement learning process, the model might produce several responses, but only the most useful ones are selected for retraining or further use. This ensures that only high-quality outputs contribute to the model’s ongoing improvement.
+
 
 ---
 
@@ -119,3 +123,6 @@ So, combining all these factors, it's a market disruption unseen before. Hence t
 
 https://thelmbook.com/articles/#!./DeepSeek-R1.md
 
+https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf
+
+https://www.vellum.ai/blog/the-training-of-deepseek-r1-and-ways-to-use-it
