@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Jun 2022 15:06:45 -0500</lastBuildDate><atom:link href="https://patrickpt.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Why DeepSeek-R1 was a significant step for Open Source AI</title>
+      <link>https://patrickpt.github.io/posts/deepseek/</link>
+      <pubDate>Sun, 02 Feb 2025 09:30:57 +0000</pubDate>
+      
+      <guid>https://patrickpt.github.io/posts/deepseek/</guid>
+      <description>TL;DR This blog post explains how the recent release of DeepSeek may benefit the open source community and why it is considered a game changer for AI industry.
+Why all the rumors? DeepSeek-R1 represents a significant innovation in the AI landscape, outperforming or rivaling top commercial models including reasoning capabilities. Previously, such sophisticated models were exclusive to tech giants like OpenAI and Google, but R1 now joins this category as the only open-weights model of its kind.</description>
+    </item>
+    
+    <item>
       <title>A view on Byte Latent Transformers</title>
       <link>https://patrickpt.github.io/posts/blt/</link>
       <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
@@ -23,9 +33,8 @@ High Costs: Fine-tuning LLMs with domain-specific data demands extensive computa
       <pubDate>Sun, 28 Jan 2024 09:30:57 +0000</pubDate>
       
       <guid>https://patrickpt.github.io/posts/quantllm/</guid>
-      <description>TL;DR This blogpost summarizes the buts and bolts of LLM quantization with llama.cpp.
-Introduction to Quantization The Technical Foundation of LLM Quantization Quantization, in the context of machine learning, refers to the process of reducing the precision of a model&amp;rsquo;s parameters, typically converting floating-point numbers to lower-bit representations. This has profound implications for model deployment, particularly in rendering sizable LLMs more accessible.
-Understanding Quantization Quantization works by mapping the continuous range of floating-point values to a discrete set of levels.</description>
+      <description>LLM Quantization in a Nutshell: A Detailed Exploration Quantization is a critical technique to reduce the precision of large language models (LLMs), making them lighter and more efficient without a significant loss in performance. This post delves into the nuts and bolts of quantization, explains the underlying math, and examines practical aspects using tools like llama.cpp.
+TL;DR LLM quantization reduces the numerical precision of model parameters to decrease memory usage and improve inference speed.</description>
     </item>
     
     <item>
@@ -78,8 +87,8 @@ Why should i care? Transparency in machine learning is crucial for business stak
       <pubDate>Wed, 30 Aug 2023 11:50:57 +0000</pubDate>
       
       <guid>https://patrickpt.github.io/posts/transformers/</guid>
-      <description>What are Transformers Transformers are a type of neural network architecture that was introduced in the paper &amp;ldquo;Attention is All You Need&amp;rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.
-The key innovation of the Transformer architecture is the use of attention mechanisms.</description>
+      <description>Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.
+Transformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision.</description>
     </item>
     
     <item>

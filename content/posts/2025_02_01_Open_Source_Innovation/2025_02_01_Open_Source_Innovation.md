@@ -1,7 +1,7 @@
 ---
-title: "Why Open Source will benefit from DeepSeek"
+title: "Why DeepSeek-R1 was a significant step for Open Source AI"
 date: 2025-02-02T09:30:57Z
-draft: true
+draft: false
 ShowToc: true
 tags: [LLM, GenAI, Architecture]
 math: true
@@ -99,25 +99,173 @@ To gain a clearer insight into the core framework of DeepSeek-R1, let’s break 
 
 ---
 
-# How Does DeepSeek work?
+Below is an expanded, more academic explanation of the “How Does DeepSeek work?” section. This version integrates detailed descriptions of the architecture, multi-stage training pipeline, and the underlying mathematical formulations—all derived from the DeepSeek technical documentation, the Vellum article, and the GRPO research paper.
+
+---
+
+## How Does DeepSeek Work?
+
+DeepSeek-R1 is built on a multi-stage training regime that combines a carefully engineered supervised fine-tuning (SFT) phase with pure reinforcement learning (RL) techniques—most notably, a novel Group Relative Policy Optimization (GRPO) framework. This section outlines the architecture, training pipeline, and mathematical formulation underpinning DeepSeek-R1.
+
+### 1. Architectural Overview
+
+At its core, DeepSeek-R1 is based on a powerful base model (DeepSeek-V3-Base) which is subsequently refined through several stages:
+
+- **Base Model Initialization:**  
+  The process begins with a pre-trained large language model. This base model, having been trained on vast internet-scale data, provides the foundational language understanding and generative capabilities.
+
+- **Chain-of-Thought (CoT) Representation:**  
+  A unique aspect of DeepSeek-R1 is its explicit generation of chain-of-thought reasoning. During inference, the model produces both the reasoning steps (CoT) and the final answer. This transparency is achieved by encouraging multi-step reasoning during training.
+
+### 2. Multi-Stage Training Pipeline
+
+DeepSeek-R1’s training is divided into several well-defined phases:
+
+#### a. Cold-Start Supervised Fine-Tuning (SFT)
+
+- **Objective:**  
+  To provide the model with an initial “readable” structure and coherent reasoning behavior.  
+- **Method:**  
+  A relatively small but high-quality dataset of thousands of chain-of-thought examples (referred to as *cold-start data*) is used to fine-tune the base model. Although the dataset is orders of magnitude smaller than typical supervised corpora, its curation for clarity and structured output is crucial for overcoming issues like language mixing and formatting inconsistencies.
+
+#### b. Pure Reinforcement Learning with GRPO
+
+- **Objective:**  
+  To enhance reasoning capabilities by learning directly from trial-and-error without any further labeled data.  
+- **GRPO Overview:**  
+  Traditional RL approaches in language modeling often employ a critic network or neural reward models. Instead, DeepSeek-R1 uses GRPO—a critic-free method where rewards are determined via rule-based measures (e.g., coherence, formatting, and logical consistency) and then compared relative to group-average scores.  
+- **Mathematical Formulation:**  
+
+  Let the policy of the model be denoted as \( \pi_\theta(y|x) \) (with parameters \(\theta\)), and assume a reference policy \( \pi_{\text{ref}}(y|x) \) derived from the cold-start SFT stage. For a given prompt \( x \) and two candidate responses \( y_w \) (winning) and \( y_l \) (losing), define the relative log-likelihood difference as:
+
+  \[
+  h_{\pi_\theta}(x, y_w, y_l) = \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)}
+  \]
+
+  The standard Direct Preference Optimization (DPO) loss (as used in earlier works) is given by:
+
+  \[
+  L_{\text{DPO}}(\pi_\theta; D) = -\mathbb{E}_{(x, y_w, y_l) \sim D} \left[ \log \sigma\left(\beta \cdot h_{\pi_\theta}(x, y_w, y_l)\right) \right]
+  \]
+
+  where \(\sigma(\cdot)\) is the sigmoid function and \(\beta\) is a scaling factor.  
+
+  In GRPO, to account for multiple groups \( g \in \{1, \ldots, K\} \) (which may correspond to different task domains or user preferences), the objective is reformulated as a worst-case (minimax) problem:
+
+  \[
+  L_{\text{GR}}(\pi_\theta) = \max_{g \in \{1,\ldots,K\}} \; L_{\text{DPO}}(\pi_\theta; D_g)
+  \]
+
+  Alternatively, using a weighted combination over groups with weights \(\alpha \in \Delta_K\) (the \(K\)-simplex), we have:
+
+  \[
+  \min_{\pi_\theta} \; \max_{\alpha \in \Delta_K} \; \sum_{g=1}^{K} \alpha_g \; \mathbb{E}_{(x_g, y_w, y_l) \sim D_g} \left[ -\log \sigma\left(\beta \cdot h_{\pi_\theta}(x_g, y_w, y_l)\right) \right]
+  \]
+
+  This formulation ensures that groups with poorer performance (i.e., higher loss) receive higher weights during training, guiding the model to improve in those areas.
+
+- **Gradient Update:**  
+  The gradient update for the parameters \(\theta\) is derived from the weighted loss. If we denote the loss on a sample as:
+
+  \[
+  l(\pi_\theta; (x_g, y_w, y_l)) = \log \sigma\left(\beta \cdot h_{\pi_\theta}(x_g, y_w, y_l)\right)
+  \]
+
+  then the gradient update (ignoring normalization factors) is:
+
+  \[
+  \nabla_\theta l(\pi_\theta; (x_g, y_w, y_l)) \propto \sigma\Big(r_\theta(x_g, y_l) - r_\theta(x_g, y_w)\Big) \left[ \nabla_\theta \log \pi_\theta(y_w|x_g) - \nabla_\theta \log \pi_\theta(y_l|x_g) \right]
+  \]
+
+  where \( r_\theta(x, y) = \beta \log \frac{\pi_\theta(y|x)}{\pi_{\text{ref}}(y|x)} \). This update explicitly increases the probability of the preferred response while decreasing that of the rejected one, with additional weighting from the group-specific factors \(\alpha_g\).
+
+#### c. Rejection Sampling and Synthetic Data Generation
+
+- **Objective:**  
+  To refine the model’s outputs by selecting only high-quality samples.
+- **Method:**  
+  Once the RL process has nearly converged, the model generates multiple outputs for a given prompt. A rejection sampling mechanism filters these outputs using the same rule-based criteria (coherence, formatting, etc.), creating a synthetic dataset of high-quality reasoning examples. This dataset typically contains on the order of 600k reasoning samples and 200k non-reasoning samples, which are then used to further fine-tune the model via supervised training.
+
+#### d. Final RL Alignment
+
+- **Objective:**  
+  To balance high-level reasoning with human-aligned attributes such as helpfulness and harmlessness.
+- **Method:**  
+  A final round of RL is applied over diverse prompts. This stage consolidates improvements from the previous stages while ensuring that the model’s behavior aligns with user expectations. The final objective remains similar to the GRPO loss, ensuring that no particular subgroup (or aspect of the task) is neglected.
+
+### 3. Inference: Chain-of-Thought Generation
+
+During inference, DeepSeek-R1 generates a two-part output:
+- **Reasoning Content:**  
+  The intermediate chain-of-thought (CoT) that details the step-by-step reasoning process.
+- **Final Answer:**  
+  The concise output generated after the reasoning steps.
+
+The dual output is a direct consequence of the multi-stage training pipeline. The training not only instills raw reasoning power but also structures the output to separate the thought process from the final answer—an innovation that facilitates transparency and error analysis.
+
+### 4. Distillation into Smaller Models
+
+An additional contribution of DeepSeek-R1 is the distillation of its reasoning capabilities into smaller models (ranging from 1.5B to 70B parameters). The distilled models inherit the chain-of-thought behavior and high reasoning performance, often outperforming models trained solely with RL. This distillation leverages the observation that reasoning patterns discovered by larger models can be effectively transferred to compact architectures without sacrificing performance.
+
+---
+
+## Summary
+
+DeepSeek-R1 works through a meticulously designed multi-stage training process:
+1. **Cold-Start SFT** to provide a solid, human-readable foundation.
+2. **Pure RL using GRPO** to boost reasoning capability by optimizing for worst-case group performance.
+3. **Rejection Sampling and SFT** to refine outputs by creating a high-quality synthetic dataset.
+4. **Final RL Alignment** to ensure the model adheres to human values and achieves a balanced performance.
+
+Mathematically, the model’s optimization is expressed via a robust version of the Direct Preference Optimization (DPO) loss, where group-specific losses are balanced through a minimax formulation.
 
 ---
 
 # Implications
 
+The release of DeepSeek-R1 was not just another model but it represents a shift in how advanced LLMs can be built and deployed:
 
----
+## Democratization of Advanced AI:
+Against the overwhelming trend of closed-source models, DeepSeek-R1 is open-sourced and still reaches on-par performance with commercial models. This openness invites collaborative improvements and accelerates innovation in AI.
 
+## Cost-Effective Scaling:
+DeepSeek-R1 dramatically reduces token costs (30× cheaper for outputs and 55× cheaper for inputs than comparable commercial models). This cost efficiency challenges the narrative that state-of-the-art reasoning demands vast GPU clusters and massive labeled datasets, initiating new innovation in AI training paradigms.
+
+## Validation of Pure RL for Reasoning:
+The success of DeepSeek-R1-Zero proves that advanced reasoning can emerge solely through reinforcement learning. This breakthrough inspires further research into RL-first training paradigms, potentially reshaping how future LLMs are developed.
+
+## Influence on Commercial Strategies:
+By openly publishing its training methods—including its efficient distillation and group-based optimization techniques—DeepSeek-R1 pressures commercial entities to adopt more transparent and community-friendly approaches. This could lead to a more competitive and innovative AI ecosystem.
 
 ---
 
 # Pitfalls
+While DeepSeek-R1 sets a new standard, several challenges remain:
 
+- **Readability and Formatting:**  
+  The initial R1-Zero model exhibited issues such as poor readability and language mixing. Although the multi-stage training process addresses these concerns, some residual inconsistencies may persist in complex scenarios.
+
+- **Inference Latency:**  
+  DeepSeek-R1’s chain-of-thought generation is computationally intensive. Inference times are slower compared to models optimized solely for speed, which may limit its use in latency-critical applications.
+
+- **Limited Inference Flexibility:**  
+  The current API version does not support many adjustable parameters (e.g., temperature, top_p, etc.), making it harder to fine-tune output behavior for production environments.
+
+- **Risk of Overfitting to Rule-Based Rewards:**  
+  Relying on fixed, rule-based rewards simplifies training but may also constrain the model’s adaptability. In cases where nuanced human judgment is required, this approach might not capture every subtlety.
+
+- **Scalability of Pure RL:**  
+  Although pure RL has proven effective here, it typically requires longer training times and can be sensitive to reward design. The balance between cost-effectiveness and training complexity remains a delicate one.
 
 ---
 
 # Conclusion
 
+In summary, DeepSeek-R1 shows that it’s possible to achieve advanced reasoning capabilities in large language models without the traditionally high costs. By using a modest yet carefully curated cold-start supervised phase combined with pure reinforcement learning via GRPO—and further refined with rejection sampling—the model delivers performance that can stand alongside commercial systems like those from OpenAI. Its open-source approach and transparent training process offer practical benefits for both researchers and practitioners.
+
+That said, DeepSeek-R1 is not without its challenges. There remain issues with output readability, inference speed, and some limitations in fine-tuning flexibility. These factors indicate that there is still room for improvement as we continue to explore and refine these methods.
+
+Overall, DeepSeek-R1 represents a thoughtful step forward in the development of cost-efficient, robust, and accessible AI. As the community builds on these ideas, we can expect further progress that will help broaden the range of available tools and techniques in the field.
 
 # Ressources
 
@@ -126,3 +274,5 @@ https://thelmbook.com/articles/#!./DeepSeek-R1.md
 https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf
 
 https://www.vellum.ai/blog/the-training-of-deepseek-r1-and-ways-to-use-it
+
+https://arxiv.org/pdf/2405.20304

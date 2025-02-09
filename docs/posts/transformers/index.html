@@ -7,8 +7,8 @@
 <meta name="robots" content="index, follow">
 <title>What are Transformers? | patrickpt.github.io</title>
 <meta name="keywords" content="Transformers, Foundations">
-<meta name="description" content="What are Transformers Transformers are a type of neural network architecture that was introduced in the paper &ldquo;Attention is All You Need&rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.
-The key innovation of the Transformer architecture is the use of attention mechanisms.">
+<meta name="description" content="Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.
+Transformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision.">
 <meta name="author" content="">
 <link rel="canonical" href="https://patrickpt.github.io/posts/transformers/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.bccfefac377bc340f06c260aed1bddf49a4354816d7c570d6aac75a997986c95.css" integrity="sha256-vM/vrDd7w0DwbCYK7Rvd9JpDVIFtfFcNaqx1qZeYbJU=" rel="preload stylesheet" as="style">
@@ -96,8 +96,8 @@ if (!doNotTrack) {
 }
 </script>
 <meta property="og:title" content="What are Transformers?" />
-<meta property="og:description" content="What are Transformers Transformers are a type of neural network architecture that was introduced in the paper &ldquo;Attention is All You Need&rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.
-The key innovation of the Transformer architecture is the use of attention mechanisms." />
+<meta property="og:description" content="Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.
+Transformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://patrickpt.github.io/posts/transformers/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-08-30T11:50:57+00:00" />
@@ -105,8 +105,8 @@ The key innovation of the Transformer architecture is the use of attention mecha
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="What are Transformers?"/>
-<meta name="twitter:description" content="What are Transformers Transformers are a type of neural network architecture that was introduced in the paper &ldquo;Attention is All You Need&rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.
-The key innovation of the Transformer architecture is the use of attention mechanisms."/>
+<meta name="twitter:description" content="Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.
+Transformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision."/>
 
 
 <script type="application/ld+json">
@@ -135,12 +135,12 @@ The key innovation of the Transformer architecture is the use of attention mecha
   "@type": "BlogPosting",
   "headline": "What are Transformers?",
   "name": "What are Transformers?",
-  "description": "What are Transformers Transformers are a type of neural network architecture that was introduced in the paper \u0026ldquo;Attention is All You Need\u0026rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.\nThe key innovation of the Transformer architecture is the use of attention mechanisms.",
+  "description": "Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.\nTransformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision.",
   "keywords": [
     "Transformers", "Foundations"
   ],
-  "articleBody": "What are Transformers Transformers are a type of neural network architecture that was introduced in the paper “Attention is All You Need” by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.\nThe key innovation of the Transformer architecture is the use of attention mechanisms. In a traditional neural network, each input is processed independently, without any information about the relationships between the inputs. In contrast, the Transformer model uses attention mechanisms to weight the inputs based on their relevance to the output.\nFor example, in a language translation task, the Transformer model might pay more attention to the words at the beginning and end of a sentence, as these are typically more important for determining the overall meaning of the sentence. On the other hand, it might pay less attention to words that are less important or less relevant to the translation.\nAnother key advantage of the Transformer architecture is its ability to process input sequences in parallel. Traditional recurrent neural networks (RNNs), which are commonly used in NLP tasks, process input sequences one element at a time, making them slow and inefficient. In contrast, the Transformer model processes all elements of the input sequence at the same time, allowing it to run much faster and more efficiently.\nAttention At a high level, the Transformer model is based on the idea of self-attention, which allows the model to weight the input elements based on their relevance to the output. Mathematically, self-attention can be computed using the following formula\n$$ Attention(Q, K, V) = softmax(\\frac{QK^T}{\\sqrt{d_k}})V$$\nHere, \\(Q\\), \\(K\\), and \\(V\\) are matrices of query, key, and value vectors, respectively. \\(d_k\\) is the dimensionality of the key vectors. The dot product of \\(Q\\) and \\(K^T\\) is divided by the square root of \\(d_k\\) to ensure that the dot products do not become too large and blow up the softmax function. The output of the self-attention layer is a weighted sum of the value vectors, with the weights determined by the dot products of the query and key vectors. In addition to self-attention, the Transformer model also includes feed-forward layers and residual connections. The feed-forward layers consist of a linear transformation followed by a non-linear activation function, such as ReLU. The output of the feed-forward layers is then added to the output of the self-attention layers using residual connections.\nOverall, the Transformer model can be described using the following pseudo-code:\nfor each input sequence: encode input sequence using self-attention and feed-forward layers add the output to the original input using residual connections apply layer normalization apply final self-attention and feed-forward layers to obtain output WORK IN PROGRESS\nHow to set up a Transformer Model? Here is an example of how you can set up a Transformer model in Python using the Transformers library:\nimport transformers # Set up the Transformer model and tokenizer model_name = 'bert-base-cased' # choose a pre-trained model model = transformers.BertModel.from_pretrained(model_name) tokenizer = transformers.BertTokenizer.from_pretrained(model_name) # Tokenize input text text = \"This is some input text that I want to feed into the Transformer model.\" input_ids = tokenizer.encode(text, return_tensors='pt') # convert text to numerical input # Run input through the model output = model(input_ids) This code sets up a BertModel from the Transformers library, which is a type of Transformer model developed by Google. It also sets up a BertTokenizer, which is used to convert the input text into a numerical representation that can be fed into the model.\nFinally, the code tokenizes the input text and passes it through the model to obtain the output. The output of the model will be a tensor containing the encoded representation of the input text.\n",
-  "wordCount" : "637",
+  "articleBody": "Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.\nTransformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision.\nAn illustrative diagram of the Transformer model architecture.\nIntroduction Before the advent of Transformers, sequence-to-sequence tasks were predominantly handled by Recurrent Neural Networks (RNNs) and their variants (LSTMs and GRUs). While effective in many scenarios, RNNs process input tokens sequentially and struggle with long-range dependencies. Transformers overcome these limitations through the use of attention mechanisms that allow for parallel processing and a more flexible handling of context.\nKey Components of the Transformer 1. Self-Attention Mechanism At the core of the Transformer architecture lies the self-attention mechanism. This mechanism allows each token in the input to dynamically focus on other tokens, thereby capturing contextual relationships regardless of their distance in the sequence.\nThe self-attention computation is defined as:\n[ \\text{Attention}(Q, K, V) = \\text{softmax}!\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right)V ]\n( Q ) (Query), ( K ) (Key), and ( V ) (Value): These matrices are derived from the input embeddings. ( d_k ): The dimension of the key vectors. Scaling Factor: The division by (\\sqrt{d_k}) prevents the dot products from growing too large, which would push the softmax function into regions with extremely small gradients. This formulation enables the model to compute a weighted sum of the values, where the weights are determined by the relevance of each token in the context of others.\n2. Multi-Head Attention Rather than applying a single attention operation, Transformers use multi-head attention. This technique involves splitting the embeddings into several subspaces, applying self-attention in parallel, and then concatenating the results. Each “head” can capture different aspects of the relationships between tokens.\nMulti-head attention enables the model to focus on various types of relationships concurrently.\n3. Positional Encoding Because Transformers process input sequences in parallel, they lack an inherent sense of token order. Positional encodings are added to the input embeddings to inject sequence information. A common method is to use sine and cosine functions at different frequencies:\n[ PE_{(pos, 2i)} = \\sin!\\left(\\frac{pos}{10000^{2i/d_{\\text{model}}}}\\right) ] [ PE_{(pos, 2i+1)} = \\cos!\\left(\\frac{pos}{10000^{2i/d_{\\text{model}}}}\\right) ]\nHere, ( pos ) indicates the token’s position and ( i ) is the dimension index. These encodings provide the necessary information about the order of tokens.\n4. Encoder-Decoder Structure The original Transformer architecture is divided into two main parts:\nEncoder: Processes the input sequence using layers that include multi-head self-attention and feed-forward networks, each augmented by residual connections and layer normalization.\nThe encoder stack processes the entire input simultaneously, capturing contextual relationships effectively.\nDecoder: Generates the output sequence. It employs masked self-attention (to prevent future tokens from influencing the current prediction) along with encoder-decoder attention, ensuring that the generated output aligns with the input context.\nMathematical Background and Implementation Details Mathematical Insights The mathematical formulations underpinning Transformers are central to their effectiveness:\nScaled Dot-Product: The division by (\\sqrt{d_k}) is essential. Without it, the dot product values could become excessively high for large ( d_k ), pushing the softmax into regions with very small gradients and thus hampering training. Linear Projections: The learned projections for ( Q ), ( K ), and ( V ) allow the model to extract diverse aspects of the input features. When these projections are split across multiple heads, the model learns to capture different patterns and dependencies simultaneously. Practical Implementation Building a Transformer involves several key steps:\nData Preparation:\nTokenization: Convert raw text into tokens. Embedding: Map tokens into continuous vector space. Positional Encoding: Add positional information to the embeddings. Constructing the Model Architecture:\nEncoder Layers: Stack layers that include multi-head self-attention and feed-forward networks, each wrapped with residual connections and layer normalization. Decoder Layers: Stack layers that perform masked self-attention, followed by encoder-decoder attention, and then feed-forward networks. Training the Model:\nLoss Function: Typically, a cross-entropy loss is used for tasks like language translation. Optimization: Modern frameworks like PyTorch and TensorFlow enable efficient training on GPUs/TPUs, capitalizing on the parallelizable nature of Transformers. Fine-Tuning:\nPre-trained Transformer models are often fine-tuned on specific downstream tasks, a process that has led to state-of-the-art performance in many NLP benchmarks. Conclusion Transformers have fundamentally transformed the landscape of machine learning by introducing a mechanism that can effectively capture long-range dependencies while enabling parallel computation. Their versatility and performance have not only pushed the boundaries in NLP but are also inspiring innovations in other fields like computer vision and reinforcement learning.\nAs research continues, the Transformer architecture is likely to be adapted for even broader applications.\nFor those interested in a deeper dive, the original paper Attention is All You Need provides comprehensive insights into the mathematical foundations and design choices that make Transformers so effective.\n",
+  "wordCount" : "844",
   "inLanguage": "en",
   "datePublished": "2023-08-30T11:50:57Z",
   "dateModified": "2023-08-30T11:50:57Z",
@@ -232,7 +232,7 @@ The key innovation of the Transformer architecture is the use of attention mecha
     <h1 class="post-title">
       What are Transformers?
     </h1>
-    <div class="post-meta"><span title='2023-08-30 11:50:57 +0000 UTC'>August 30, 2023</span>&nbsp;·&nbsp;3 min
+    <div class="post-meta"><span title='2023-08-30 11:50:57 +0000 UTC'>August 30, 2023</span>&nbsp;·&nbsp;4 min
 
 </div>
   </header> <div class="toc">
@@ -243,54 +243,141 @@ The key innovation of the Transformer architecture is the use of attention mecha
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#what-are-transformers" aria-label="What are Transformers">What are Transformers</a></li>
+                    <a href="#transformers-a-deep-dive-into-the-transformer-architecture" aria-label="Transformers: A Deep Dive into the Transformer Architecture">Transformers: A Deep Dive into the Transformer Architecture</a></li>
                 <li>
-                    <a href="#attention" aria-label="Attention">Attention</a></li>
+                    <a href="#transformers-a-deep-dive-into-the-transformer-architecture-1" aria-label="Transformers: A Deep Dive into the Transformer Architecture">Transformers: A Deep Dive into the Transformer Architecture</a><ul>
+                        
                 <li>
-                    <a href="#how-to-set-up-a-transformer-model" aria-label="How to set up a Transformer Model?">How to set up a Transformer Model?</a>
+                    <a href="#introduction" aria-label="Introduction">Introduction</a></li>
+                <li>
+                    <a href="#key-components-of-the-transformer" aria-label="Key Components of the Transformer">Key Components of the Transformer</a><ul>
+                        
+                <li>
+                    <a href="#1-self-attention-mechanism" aria-label="1. Self-Attention Mechanism">1. Self-Attention Mechanism</a></li>
+                <li>
+                    <a href="#2-multi-head-attention" aria-label="2. Multi-Head Attention">2. Multi-Head Attention</a></li>
+                <li>
+                    <a href="#3-positional-encoding" aria-label="3. Positional Encoding">3. Positional Encoding</a></li>
+                <li>
+                    <a href="#4-encoder-decoder-structure" aria-label="4. Encoder-Decoder Structure">4. Encoder-Decoder Structure</a></li></ul>
                 </li>
+                <li>
+                    <a href="#mathematical-background-and-implementation-details" aria-label="Mathematical Background and Implementation Details">Mathematical Background and Implementation Details</a><ul>
+                        
+                <li>
+                    <a href="#mathematical-insights" aria-label="Mathematical Insights">Mathematical Insights</a></li>
+                <li>
+                    <a href="#practical-implementation" aria-label="Practical Implementation">Practical Implementation</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+            </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><h1 id="what-are-transformers">What are Transformers<a hidden class="anchor" aria-hidden="true" href="#what-are-transformers">#</a></h1>
-<p>Transformers are a type of neural network architecture that was introduced in the paper &ldquo;Attention is All You Need&rdquo; by Vaswani et al. in 2017. Since then, it has become one of the most popular and successful models in natural language processing (NLP) tasks such as language translation, summarization, and text classification. Furthermore it is the foundation for Language Models and their application.</p>
-<p>The key innovation of the Transformer architecture is the use of attention mechanisms. In a traditional neural network, each input is processed independently, without any information about the relationships between the inputs. In contrast, the Transformer model uses attention mechanisms to weight the inputs based on their relevance to the output.</p>
-<p>For example, in a language translation task, the Transformer model might pay more attention to the words at the beginning and end of a sentence, as these are typically more important for determining the overall meaning of the sentence. On the other hand, it might pay less attention to words that are less important or less relevant to the translation.</p>
-<p>Another key advantage of the Transformer architecture is its ability to process input sequences in parallel. Traditional recurrent neural networks (RNNs), which are commonly used in NLP tasks, process input sequences one element at a time, making them slow and inefficient. In contrast, the Transformer model processes all elements of the input sequence at the same time, allowing it to run much faster and more efficiently.</p>
-<h1 id="attention">Attention<a hidden class="anchor" aria-hidden="true" href="#attention">#</a></h1>
-<p>At a high level, the Transformer model is based on the idea of self-attention, which allows the model to weight the input elements based on their relevance to the output. Mathematically, self-attention can be computed using the following formula</p>
-<p>$$ Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$$</p>
-<p>Here, \(Q\), \(K\), and \(V\) are matrices of query, key, and value vectors, respectively. \(d_k\) is the dimensionality of the key vectors. The dot product of \(Q\) and \(K^T\) is divided by the square root of \(d_k\) to ensure that the dot products do not become too large and blow up the softmax function. The output of the self-attention layer is a weighted sum of the value vectors, with the weights determined by the dot products of the query and key vectors.
-In addition to self-attention, the Transformer model also includes feed-forward layers and residual connections. The feed-forward layers consist of a linear transformation followed by a non-linear activation function, such as ReLU. The output of the feed-forward layers is then added to the output of the self-attention layers using residual connections.</p>
-<p>Overall, the Transformer model can be described using the following pseudo-code:</p>
-<pre><code>for each input sequence:
-encode input sequence using self-attention and feed-forward layers
-add the output to the original input using residual connections
-apply layer normalization
+  <div class="post-content"><h1 id="transformers-a-deep-dive-into-the-transformer-architecture">Transformers: A Deep Dive into the Transformer Architecture<a hidden class="anchor" aria-hidden="true" href="#transformers-a-deep-dive-into-the-transformer-architecture">#</a></h1>
+<p>Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.</p>
+<hr>
+<h1 id="transformers-a-deep-dive-into-the-transformer-architecture-1">Transformers: A Deep Dive into the Transformer Architecture<a hidden class="anchor" aria-hidden="true" href="#transformers-a-deep-dive-into-the-transformer-architecture-1">#</a></h1>
+<p>Transformers are a revolutionary type of neural network architecture introduced in the seminal paper <a href="https://arxiv.org/abs/1706.03762"><em>Attention is All You Need</em></a> by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision.</p>
+<p><img loading="lazy" src="https://tse3.mm.bing.net/th?id=OIP.qmoSnrlv-dCqCor8Vqr1DQHaKb&amp;pid=Api" alt="Overview of Transformer Architecture"  />
 
-apply final self-attention and feed-forward layers to obtain output
-</code></pre>
-<p><em>WORK IN PROGRESS</em></p>
-<h1 id="how-to-set-up-a-transformer-model">How to set up a Transformer Model?<a hidden class="anchor" aria-hidden="true" href="#how-to-set-up-a-transformer-model">#</a></h1>
-<p>Here is an example of how you can set up a Transformer model in Python using the <code>Transformers</code> library:</p>
-<pre><code>import transformers
+<em>An illustrative diagram of the Transformer model architecture.</em></p>
+<hr>
+<h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
+<p>Before the advent of Transformers, sequence-to-sequence tasks were predominantly handled by Recurrent Neural Networks (RNNs) and their variants (LSTMs and GRUs). While effective in many scenarios, RNNs process input tokens sequentially and struggle with long-range dependencies. Transformers overcome these limitations through the use of attention mechanisms that allow for parallel processing and a more flexible handling of context.</p>
+<hr>
+<h2 id="key-components-of-the-transformer">Key Components of the Transformer<a hidden class="anchor" aria-hidden="true" href="#key-components-of-the-transformer">#</a></h2>
+<h3 id="1-self-attention-mechanism">1. Self-Attention Mechanism<a hidden class="anchor" aria-hidden="true" href="#1-self-attention-mechanism">#</a></h3>
+<p>At the core of the Transformer architecture lies the <strong>self-attention mechanism</strong>. This mechanism allows each token in the input to dynamically focus on other tokens, thereby capturing contextual relationships regardless of their distance in the sequence.</p>
+<p>The self-attention computation is defined as:</p>
+<p>[
+\text{Attention}(Q, K, V) = \text{softmax}!\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+]</p>
+<ul>
+<li><strong>( Q ) (Query), ( K ) (Key), and ( V ) (Value):</strong> These matrices are derived from the input embeddings.</li>
+<li><strong>( d_k ):</strong> The dimension of the key vectors.</li>
+<li><strong>Scaling Factor:</strong> The division by (\sqrt{d_k}) prevents the dot products from growing too large, which would push the softmax function into regions with extremely small gradients.</li>
+</ul>
+<p>This formulation enables the model to compute a weighted sum of the values, where the weights are determined by the relevance of each token in the context of others.</p>
+<h3 id="2-multi-head-attention">2. Multi-Head Attention<a hidden class="anchor" aria-hidden="true" href="#2-multi-head-attention">#</a></h3>
+<p>Rather than applying a single attention operation, Transformers use <strong>multi-head attention</strong>. This technique involves splitting the embeddings into several subspaces, applying self-attention in parallel, and then concatenating the results. Each &ldquo;head&rdquo; can capture different aspects of the relationships between tokens.</p>
+<p><img loading="lazy" src="https://tse4.mm.bing.net/th?id=OIP.IEzUbtUeb93u6R7lBjerRwHaFa&amp;pid=Api" alt="Multi-Head Attention"  />
 
-# Set up the Transformer model and tokenizer
-model_name = 'bert-base-cased' # choose a pre-trained model
-model = transformers.BertModel.from_pretrained(model_name)
-tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
+<em>Multi-head attention enables the model to focus on various types of relationships concurrently.</em></p>
+<h3 id="3-positional-encoding">3. Positional Encoding<a hidden class="anchor" aria-hidden="true" href="#3-positional-encoding">#</a></h3>
+<p>Because Transformers process input sequences in parallel, they lack an inherent sense of token order. <strong>Positional encodings</strong> are added to the input embeddings to inject sequence information. A common method is to use sine and cosine functions at different frequencies:</p>
+<p>[
+PE_{(pos, 2i)} = \sin!\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
+]
+[
+PE_{(pos, 2i+1)} = \cos!\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
+]</p>
+<p>Here, ( pos ) indicates the token&rsquo;s position and ( i ) is the dimension index. These encodings provide the necessary information about the order of tokens.</p>
+<h3 id="4-encoder-decoder-structure">4. Encoder-Decoder Structure<a hidden class="anchor" aria-hidden="true" href="#4-encoder-decoder-structure">#</a></h3>
+<p>The original Transformer architecture is divided into two main parts:</p>
+<ul>
+<li>
+<p><strong>Encoder:</strong> Processes the input sequence using layers that include multi-head self-attention and feed-forward networks, each augmented by residual connections and layer normalization.</p>
+<p><img loading="lazy" src="https://tse3.mm.bing.net/th?id=OIP.qmoSnrlv-dCqCor8Vqr1DQHaKb&amp;pid=Api" alt="Encoder Architecture"  />
 
-# Tokenize input text
-text = &quot;This is some input text that I want to feed into the Transformer model.&quot;
-input_ids = tokenizer.encode(text, return_tensors='pt') # convert text to numerical input
+<em>The encoder stack processes the entire input simultaneously, capturing contextual relationships effectively.</em></p>
+</li>
+<li>
+<p><strong>Decoder:</strong> Generates the output sequence. It employs masked self-attention (to prevent future tokens from influencing the current prediction) along with encoder-decoder attention, ensuring that the generated output aligns with the input context.</p>
+</li>
+</ul>
+<hr>
+<h2 id="mathematical-background-and-implementation-details">Mathematical Background and Implementation Details<a hidden class="anchor" aria-hidden="true" href="#mathematical-background-and-implementation-details">#</a></h2>
+<h3 id="mathematical-insights">Mathematical Insights<a hidden class="anchor" aria-hidden="true" href="#mathematical-insights">#</a></h3>
+<p>The mathematical formulations underpinning Transformers are central to their effectiveness:</p>
+<ul>
+<li><strong>Scaled Dot-Product:</strong> The division by (\sqrt{d_k}) is essential. Without it, the dot product values could become excessively high for large ( d_k ), pushing the softmax into regions with very small gradients and thus hampering training.</li>
+<li><strong>Linear Projections:</strong> The learned projections for ( Q ), ( K ), and ( V ) allow the model to extract diverse aspects of the input features. When these projections are split across multiple heads, the model learns to capture different patterns and dependencies simultaneously.</li>
+</ul>
+<h3 id="practical-implementation">Practical Implementation<a hidden class="anchor" aria-hidden="true" href="#practical-implementation">#</a></h3>
+<p>Building a Transformer involves several key steps:</p>
+<ol>
+<li>
+<p><strong>Data Preparation:</strong></p>
+<ul>
+<li><strong>Tokenization:</strong> Convert raw text into tokens.</li>
+<li><strong>Embedding:</strong> Map tokens into continuous vector space.</li>
+<li><strong>Positional Encoding:</strong> Add positional information to the embeddings.</li>
+</ul>
+</li>
+<li>
+<p><strong>Constructing the Model Architecture:</strong></p>
+<ul>
+<li><strong>Encoder Layers:</strong> Stack layers that include multi-head self-attention and feed-forward networks, each wrapped with residual connections and layer normalization.</li>
+<li><strong>Decoder Layers:</strong> Stack layers that perform masked self-attention, followed by encoder-decoder attention, and then feed-forward networks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Training the Model:</strong></p>
+<ul>
+<li><strong>Loss Function:</strong> Typically, a cross-entropy loss is used for tasks like language translation.</li>
+<li><strong>Optimization:</strong> Modern frameworks like PyTorch and TensorFlow enable efficient training on GPUs/TPUs, capitalizing on the parallelizable nature of Transformers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fine-Tuning:</strong></p>
+<ul>
+<li>Pre-trained Transformer models are often fine-tuned on specific downstream tasks, a process that has led to state-of-the-art performance in many NLP benchmarks.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Transformers have fundamentally transformed the landscape of machine learning by introducing a mechanism that can effectively capture long-range dependencies while enabling parallel computation. Their versatility and performance have not only pushed the boundaries in NLP but are also inspiring innovations in other fields like computer vision and reinforcement learning.</p>
+<p><img loading="lazy" src="https://tse2.mm.bing.net/th?id=OIP.BcYJmgtncDsVjtH_IVL6cgHaEy&amp;pid=Api" alt="Future Directions for Transformers"  />
 
-# Run input through the model
-output = model(input_ids)
-</code></pre>
-<p>This code sets up a BertModel from the Transformers library, which is a type of Transformer model developed by Google. It also sets up a BertTokenizer, which is used to convert the input text into a numerical representation that can be fed into the model.</p>
-<p>Finally, the code tokenizes the input text and passes it through the model to obtain the output. The output of the model will be a tensor containing the encoded representation of the input text.</p>
+<em>As research continues, the Transformer architecture is likely to be adapted for even broader applications.</em></p>
+<p>For those interested in a deeper dive, the original paper <a href="https://arxiv.org/abs/1706.03762"><em>Attention is All You Need</em></a> provides comprehensive insights into the mathematical foundations and design choices that make Transformers so effective.</p>
 
 
   </div>
