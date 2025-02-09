@@ -1,6 +1,6 @@
 ---
 title: "Why DeepSeek-R1 was a significant step for Open Source AI"
-date: 2025-02-02T09:30:57Z
+date: 2025-02-09T18:30:57Z
 draft: false
 ShowToc: true
 tags: [LLM, GenAI, Architecture]
