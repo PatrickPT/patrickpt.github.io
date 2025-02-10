@@ -24,7 +24,7 @@ Beyond accessibility, DeepSeek-R1 heats innovation by openly sharing its cost-ef
 R1’s blend of performance, openness, innovation and affordability could signal that open-source can still play a pivotal role in the AI race.
 
 ---
-# Key Facts at a glance
+# In s Nutshell
 
 
 ## **Key Training Process & Innovations in DeepSeek-R1**  
@@ -81,8 +81,9 @@ R1’s blend of performance, openness, innovation and affordability could signal
 - Combines scalability (GRPO), human-aligned cold-start data, and efficient distillation.  
 - Open-sources models/data, enabling community-driven advancements.
 
+---
 
-# Understanding what DeepSeek did
+# Understanding what DeepSeek did in more detail
 
 To gain a clearer insight into the core framework of DeepSeek-R1, let’s break down its foundational concepts:
 
@@ -95,11 +96,6 @@ To gain a clearer insight into the core framework of DeepSeek-R1, let’s break 
 **Multi-Stage Training:** In this method, the model undergoes training in distinct phases, each targeting a specific improvement, such as accuracy or alignment with user expectations. For example, a model might first be trained on general text data and then further refined using reinforcement learning based on user feedback to enhance its conversational capabilities.
 
 **Rejection Sampling:** This technique involves generating multiple potential outputs from a model, but only retaining those that meet predefined criteria, such as quality or relevance. For example, after a reinforcement learning process, the model might produce several responses, but only the most useful ones are selected for retraining or further use. This ensures that only high-quality outputs contribute to the model’s ongoing improvement.
-
-
----
-
-Below is an expanded, more academic explanation of the “How Does DeepSeek work?” section. This version integrates detailed descriptions of the architecture, multi-stage training pipeline, and the underlying mathematical formulations—all derived from the DeepSeek technical documentation, the Vellum article, and the GRPO research paper.
 
 ---
 
@@ -266,6 +262,8 @@ In summary, DeepSeek-R1 shows that it’s possible to achieve advanced reasoning
 That said, DeepSeek-R1 is not without its challenges. There remain issues with output readability, inference speed, and some limitations in fine-tuning flexibility. These factors indicate that there is still room for improvement as we continue to explore and refine these methods.
 
 Overall, DeepSeek-R1 represents a thoughtful step forward in the development of cost-efficient, robust, and accessible AI. As the community builds on these ideas, we can expect further progress that will help broaden the range of available tools and techniques in the field.
+
+---
 
 # Ressources
 
