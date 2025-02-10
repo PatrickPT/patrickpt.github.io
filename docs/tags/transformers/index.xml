@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Transformers on patrickschnass.de</title>
-    <link>https://patrickpt.github.io/tags/transformers/</link>
+    <link>https://patrickschnass.de/tags/transformers/</link>
     <description>Recent content in Transformers on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 30 Aug 2023 11:50:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 11:50:57 +0000</lastBuildDate><atom:link href="https://patrickschnass.de/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What are Transformers?</title>
-      <link>https://patrickpt.github.io/posts/transformers/</link>
+      <link>https://patrickschnass.de/posts/transformers/</link>
       <pubDate>Wed, 30 Aug 2023 11:50:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/transformers/</guid>
+      <guid>https://patrickschnass.de/posts/transformers/</guid>
       <description>Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.
 Transformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision.</description>
     </item>

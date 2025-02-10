@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>ChatGPT on patrickschnass.de</title>
-    <link>https://patrickpt.github.io/tags/chatgpt/</link>
+    <link>https://patrickschnass.de/tags/chatgpt/</link>
     <description>Recent content in ChatGPT on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 12 Jan 2023 22:34:01 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Jan 2023 22:34:01 +0100</lastBuildDate><atom:link href="https://patrickschnass.de/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A short summary on ChatGPT</title>
-      <link>https://patrickpt.github.io/posts/summary-chatgpt/</link>
+      <link>https://patrickschnass.de/posts/summary-chatgpt/</link>
       <pubDate>Thu, 12 Jan 2023 22:34:01 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/summary-chatgpt/</guid>
+      <guid>https://patrickschnass.de/posts/summary-chatgpt/</guid>
       <description>This summary is based on another post: An introduction to ChatGPT written by ChatGPT
 While testing out ChatGPT for some weeks now, i found that texts created by it are often repetitive and monotonous. In this post i tried to condense the meaningful information from the other post.
 2022 was the year of generative AI. Generative AI refers to machine learning algorithms that can create new meaning from text, images, code, and other forms of content.</description>
@@ -19,10 +19,10 @@ While testing out ChatGPT for some weeks now, i found that texts created by it a
     
     <item>
       <title>An introduction to ChatGPT written by ChatGPT</title>
-      <link>https://patrickpt.github.io/posts/chatgpt-on-chatgpt/</link>
+      <link>https://patrickschnass.de/posts/chatgpt-on-chatgpt/</link>
       <pubDate>Sat, 07 Jan 2023 00:55:07 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/chatgpt-on-chatgpt/</guid>
+      <guid>https://patrickschnass.de/posts/chatgpt-on-chatgpt/</guid>
       <description>ChatGPT: Optimizing Language Models for Dialogue
 What to do if you have 15Min time to spare? Feed ChatGPT with prompts to write an introductory article about ChatGPT. And I promise, this is the only part which is not based on a Large Language Model. Everything else was written by ChatGPT. For better readability I replaced the prompts with simple headers.
 What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a conversation or understand your needs?</description>

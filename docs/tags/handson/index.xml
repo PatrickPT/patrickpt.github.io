@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>HandsOn on patrickschnass.de</title>
-    <link>https://patrickpt.github.io/tags/handson/</link>
+    <link>https://patrickschnass.de/tags/handson/</link>
     <description>Recent content in HandsOn on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 Jan 2023 09:28:09 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/handson/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Jan 2023 09:28:09 +0000</lastBuildDate><atom:link href="https://patrickschnass.de/tags/handson/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hands on with Latent Diffusion Models</title>
-      <link>https://patrickpt.github.io/posts/hands-on-latent-diffusion-models/</link>
+      <link>https://patrickschnass.de/posts/hands-on-latent-diffusion-models/</link>
       <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/hands-on-latent-diffusion-models/</guid>
+      <guid>https://patrickschnass.de/posts/hands-on-latent-diffusion-models/</guid>
       <description>Prerequitises
 To test the models here you need to have an account with HuggingFace - for loading the checkpoint or using the endpoints. Hugging Face is a community and data science platform that provides:
 Tools that enable users to build, train and deploy ML models based on open source (OS) code and technologies. A place where a broad community of data scientists, researchers, and ML engineers can come together and share ideas, get support and contribute to open source projects.</description>

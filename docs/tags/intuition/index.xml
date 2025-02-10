@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Intuition on patrickschnass.de</title>
-    <link>https://patrickpt.github.io/tags/intuition/</link>
+    <link>https://patrickschnass.de/tags/intuition/</link>
     <description>Recent content in Intuition on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 Sep 2023 11:50:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/intuition/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 11:50:57 +0000</lastBuildDate><atom:link href="https://patrickschnass.de/tags/intuition/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Generalized Models vs Specialized Models</title>
-      <link>https://patrickpt.github.io/posts/generalvsspecializedmodels/</link>
+      <link>https://patrickschnass.de/posts/generalvsspecializedmodels/</link>
       <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/generalvsspecializedmodels/</guid>
+      <guid>https://patrickschnass.de/posts/generalvsspecializedmodels/</guid>
       <description>TL;DR This blogpost focusses on ML Design and Architecture and tries to give some intuition and hints for deciding between one generalized and multiple specialized models for the same business requriement and dataset.
 Consider it a nudge to dive deeper into the topic
 Why should i care? Transparency in machine learning is crucial for business stakeholders because it fosters trust and informed decision-making. Business Stakeholders need to understand not only the potential benefits but also the limitations and risks associated with machine learning models.</description>

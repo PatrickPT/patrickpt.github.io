@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>AI Design on patrickschnass.de</title>
-    <link>https://patrickpt.github.io/tags/ai-design/</link>
+    <link>https://patrickschnass.de/tags/ai-design/</link>
     <description>Recent content in AI Design on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 07 Oct 2023 10:30:00 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/ai-design/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 Oct 2023 10:30:00 +0000</lastBuildDate><atom:link href="https://patrickschnass.de/tags/ai-design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hands on with Retrieval Augmented Generation</title>
-      <link>https://patrickpt.github.io/posts/hands-on-rag/</link>
+      <link>https://patrickschnass.de/posts/hands-on-rag/</link>
       <pubDate>Sat, 07 Oct 2023 10:30:00 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/hands-on-rag/</guid>
+      <guid>https://patrickschnass.de/posts/hands-on-rag/</guid>
       <description>TL;DR This blogpost shows an example for a Chatbot that uses Retrieval Augmented Generation to retrieve domain specific knowledge before querying a Large Language Model
 Hands on with Retrieval Augmented Generation For a primer on Retrieval Augmented Generation please read my other post What is Retrieval Augmented Generation?.
 Retrieval Augmented Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent study) even outperform LLM&amp;rsquo;s with long context windows.</description>
@@ -19,10 +19,10 @@ Retrieval Augmented Generation can be a powerful architecture to easily built kn
     
     <item>
       <title>What is Retrieval Augmented Generation?</title>
-      <link>https://patrickpt.github.io/posts/rag_intro/</link>
+      <link>https://patrickschnass.de/posts/rag_intro/</link>
       <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/rag_intro/</guid>
+      <guid>https://patrickschnass.de/posts/rag_intro/</guid>
       <description>TL;DR This blogpost tries to explain Retrieval Augmented Generation. Retrieval Augmented Generation is an Architecture used for NLP tasks which can be used to productionize LLM models for enterprise architecture easily.
 Why should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data.
 picture from Neo4J

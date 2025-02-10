@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Data Engineer on patrickschnass.de</title>
-    <link>https://patrickpt.github.io/tags/data-engineer/</link>
+    <link>https://patrickschnass.de/tags/data-engineer/</link>
     <description>Recent content in Data Engineer on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Jul 2023 15:01:23 +0100</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/data-engineer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 15:01:23 +0100</lastBuildDate><atom:link href="https://patrickschnass.de/tags/data-engineer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Road to GCP Professional Data Engineer</title>
-      <link>https://patrickpt.github.io/posts/PDE/</link>
+      <link>https://patrickschnass.de/posts/PDE/</link>
       <pubDate>Sun, 02 Jul 2023 15:01:23 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/posts/PDE/</guid>
+      <guid>https://patrickschnass.de/posts/PDE/</guid>
       <description>I enlisted for the free Get Certified Program from Google in June 2023 which offers a 10 week curated curriculum to prepare for the Data Engineer exam. Unfortunately the content is restricted and cannot be shared. Following article should summarize all additional sources which were helpful for me in preparation of the certification exam. If you are interested in how the exam is actually happening there are plenty of other articles on medium or at other places.</description>
     </item>
     

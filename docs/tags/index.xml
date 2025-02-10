@@ -2,286 +2,286 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on patrickschnass.de</title>
-    <link>https://patrickpt.github.io/tags/</link>
+    <link>https://patrickschnass.de/tags/</link>
     <description>Recent content in Tags on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Feb 2025 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickpt.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickschnass.de/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Architecture</title>
-      <link>https://patrickpt.github.io/tags/architecture/</link>
+      <link>https://patrickschnass.de/tags/architecture/</link>
       <pubDate>Sun, 09 Feb 2025 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/architecture/</guid>
+      <guid>https://patrickschnass.de/tags/architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GenAI</title>
-      <link>https://patrickpt.github.io/tags/genai/</link>
+      <link>https://patrickschnass.de/tags/genai/</link>
       <pubDate>Sun, 09 Feb 2025 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/genai/</guid>
+      <guid>https://patrickschnass.de/tags/genai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LLM</title>
-      <link>https://patrickpt.github.io/tags/llm/</link>
+      <link>https://patrickschnass.de/tags/llm/</link>
       <pubDate>Sun, 09 Feb 2025 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/llm/</guid>
+      <guid>https://patrickschnass.de/tags/llm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AI Design</title>
-      <link>https://patrickpt.github.io/tags/ai-design/</link>
+      <link>https://patrickschnass.de/tags/ai-design/</link>
       <pubDate>Sat, 07 Oct 2023 10:30:00 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/ai-design/</guid>
+      <guid>https://patrickschnass.de/tags/ai-design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hands On</title>
-      <link>https://patrickpt.github.io/tags/hands-on/</link>
+      <link>https://patrickschnass.de/tags/hands-on/</link>
       <pubDate>Sat, 07 Oct 2023 10:30:00 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/hands-on/</guid>
+      <guid>https://patrickschnass.de/tags/hands-on/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Model Architecture</title>
-      <link>https://patrickpt.github.io/tags/model-architecture/</link>
+      <link>https://patrickschnass.de/tags/model-architecture/</link>
       <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/model-architecture/</guid>
+      <guid>https://patrickschnass.de/tags/model-architecture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Intuition</title>
-      <link>https://patrickpt.github.io/tags/intuition/</link>
+      <link>https://patrickschnass.de/tags/intuition/</link>
       <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/intuition/</guid>
+      <guid>https://patrickschnass.de/tags/intuition/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ML Design</title>
-      <link>https://patrickpt.github.io/tags/ml-design/</link>
+      <link>https://patrickschnass.de/tags/ml-design/</link>
       <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/ml-design/</guid>
+      <guid>https://patrickschnass.de/tags/ml-design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Foundations</title>
-      <link>https://patrickpt.github.io/tags/foundations/</link>
+      <link>https://patrickschnass.de/tags/foundations/</link>
       <pubDate>Wed, 30 Aug 2023 11:50:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/foundations/</guid>
+      <guid>https://patrickschnass.de/tags/foundations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Transformers</title>
-      <link>https://patrickpt.github.io/tags/transformers/</link>
+      <link>https://patrickschnass.de/tags/transformers/</link>
       <pubDate>Wed, 30 Aug 2023 11:50:57 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/transformers/</guid>
+      <guid>https://patrickschnass.de/tags/transformers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Engineer</title>
-      <link>https://patrickpt.github.io/tags/data-engineer/</link>
+      <link>https://patrickschnass.de/tags/data-engineer/</link>
       <pubDate>Sun, 02 Jul 2023 15:01:23 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/data-engineer/</guid>
+      <guid>https://patrickschnass.de/tags/data-engineer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GCP</title>
-      <link>https://patrickpt.github.io/tags/gcp/</link>
+      <link>https://patrickschnass.de/tags/gcp/</link>
       <pubDate>Sun, 02 Jul 2023 15:01:23 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/gcp/</guid>
+      <guid>https://patrickschnass.de/tags/gcp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fun</title>
-      <link>https://patrickpt.github.io/tags/fun/</link>
+      <link>https://patrickschnass.de/tags/fun/</link>
       <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/fun/</guid>
+      <guid>https://patrickschnass.de/tags/fun/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Q-Learning</title>
-      <link>https://patrickpt.github.io/tags/q-learning/</link>
+      <link>https://patrickschnass.de/tags/q-learning/</link>
       <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/q-learning/</guid>
+      <guid>https://patrickschnass.de/tags/q-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reinforcement Learning</title>
-      <link>https://patrickpt.github.io/tags/reinforcement-learning/</link>
+      <link>https://patrickschnass.de/tags/reinforcement-learning/</link>
       <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/reinforcement-learning/</guid>
+      <guid>https://patrickschnass.de/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ML Engineer</title>
-      <link>https://patrickpt.github.io/tags/ml-engineer/</link>
+      <link>https://patrickschnass.de/tags/ml-engineer/</link>
       <pubDate>Fri, 24 Feb 2023 21:01:23 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/ml-engineer/</guid>
+      <guid>https://patrickschnass.de/tags/ml-engineer/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MLOPS</title>
-      <link>https://patrickpt.github.io/tags/mlops/</link>
+      <link>https://patrickschnass.de/tags/mlops/</link>
       <pubDate>Fri, 24 Feb 2023 21:01:23 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/mlops/</guid>
+      <guid>https://patrickschnass.de/tags/mlops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>latent-diffusion-models</title>
-      <link>https://patrickpt.github.io/tags/latent-diffusion-models/</link>
+      <link>https://patrickschnass.de/tags/latent-diffusion-models/</link>
       <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/latent-diffusion-models/</guid>
+      <guid>https://patrickschnass.de/tags/latent-diffusion-models/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Math</title>
-      <link>https://patrickpt.github.io/tags/math/</link>
+      <link>https://patrickschnass.de/tags/math/</link>
       <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/math/</guid>
+      <guid>https://patrickschnass.de/tags/math/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Notes</title>
-      <link>https://patrickpt.github.io/tags/notes/</link>
+      <link>https://patrickschnass.de/tags/notes/</link>
       <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/notes/</guid>
+      <guid>https://patrickschnass.de/tags/notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>stable-diffusion</title>
-      <link>https://patrickpt.github.io/tags/stable-diffusion/</link>
+      <link>https://patrickschnass.de/tags/stable-diffusion/</link>
       <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/stable-diffusion/</guid>
+      <guid>https://patrickschnass.de/tags/stable-diffusion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DallE</title>
-      <link>https://patrickpt.github.io/tags/dalle/</link>
+      <link>https://patrickschnass.de/tags/dalle/</link>
       <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/dalle/</guid>
+      <guid>https://patrickschnass.de/tags/dalle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HandsOn</title>
-      <link>https://patrickpt.github.io/tags/handson/</link>
+      <link>https://patrickschnass.de/tags/handson/</link>
       <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/handson/</guid>
+      <guid>https://patrickschnass.de/tags/handson/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HuggingFace</title>
-      <link>https://patrickpt.github.io/tags/huggingface/</link>
+      <link>https://patrickschnass.de/tags/huggingface/</link>
       <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/huggingface/</guid>
+      <guid>https://patrickschnass.de/tags/huggingface/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NoCode</title>
-      <link>https://patrickpt.github.io/tags/nocode/</link>
+      <link>https://patrickschnass.de/tags/nocode/</link>
       <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/nocode/</guid>
+      <guid>https://patrickschnass.de/tags/nocode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ChatGPT</title>
-      <link>https://patrickpt.github.io/tags/chatgpt/</link>
+      <link>https://patrickschnass.de/tags/chatgpt/</link>
       <pubDate>Thu, 12 Jan 2023 22:34:01 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/chatgpt/</guid>
+      <guid>https://patrickschnass.de/tags/chatgpt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>summary</title>
-      <link>https://patrickpt.github.io/tags/summary/</link>
+      <link>https://patrickschnass.de/tags/summary/</link>
       <pubDate>Thu, 12 Jan 2023 22:34:01 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/summary/</guid>
+      <guid>https://patrickschnass.de/tags/summary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://patrickpt.github.io/tags/blog/</link>
+      <link>https://patrickschnass.de/tags/blog/</link>
       <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/blog/</guid>
+      <guid>https://patrickschnass.de/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>https://patrickpt.github.io/tags/github/</link>
+      <link>https://patrickschnass.de/tags/github/</link>
       <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/github/</guid>
+      <guid>https://patrickschnass.de/tags/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://patrickpt.github.io/tags/hugo/</link>
+      <link>https://patrickschnass.de/tags/hugo/</link>
       <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/hugo/</guid>
+      <guid>https://patrickschnass.de/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Medium</title>
-      <link>https://patrickpt.github.io/tags/medium/</link>
+      <link>https://patrickschnass.de/tags/medium/</link>
       <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
       
-      <guid>https://patrickpt.github.io/tags/medium/</guid>
+      <guid>https://patrickschnass.de/tags/medium/</guid>
       <description></description>
     </item>
     
