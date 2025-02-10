@@ -129,52 +129,55 @@ DeepSeek-R1’s training is divided into several well-defined phases:
 
 - **Objective:**  
   To enhance reasoning capabilities by learning directly from trial-and-error without any further labeled data.  
+
 - **GRPO Overview:**  
   Traditional RL approaches in language modeling often employ a critic network or neural reward models. Instead, DeepSeek-R1 uses GRPO—a critic-free method where rewards are determined via rule-based measures (e.g., coherence, formatting, and logical consistency) and then compared relative to group-average scores.  
+
 - **Mathematical Formulation:**  
 
-  Let the policy of the model be denoted as \( \pi_\theta(y|x) \) (with parameters \(\theta\)), and assume a reference policy \( \pi_{\text{ref}}(y|x) \) derived from the cold-start SFT stage. For a given prompt \( x \) and two candidate responses \( y_w \) (winning) and \( y_l \) (losing), define the relative log-likelihood difference as:
-
-  \[
+  Let the policy of the model be denoted as $\pi_\theta(y|x)$ (with parameters $\theta$), and assume a reference policy $\pi_{\text{ref}}(y|x)$ derived from the cold-start SFT stage. For a given prompt $x$ and two candidate responses $y_w$ (winning) and $y_l$ (losing), define the relative log-likelihood difference as:
+  
+  $$
   h_{\pi_\theta}(x, y_w, y_l) = \log \frac{\pi_\theta(y_w|x)}{\pi_{\text{ref}}(y_w|x)} - \log \frac{\pi_\theta(y_l|x)}{\pi_{\text{ref}}(y_l|x)}
-  \]
-
+  $$
+  
   The standard Direct Preference Optimization (DPO) loss (as used in earlier works) is given by:
-
-  \[
+  
+  $$
   L_{\text{DPO}}(\pi_\theta; D) = -\mathbb{E}_{(x, y_w, y_l) \sim D} \left[ \log \sigma\left(\beta \cdot h_{\pi_\theta}(x, y_w, y_l)\right) \right]
-  \]
+  $$
+  
+  where $\sigma(\cdot)$ is the sigmoid function and $\beta$ is a scaling factor.  
 
-  where \(\sigma(\cdot)\) is the sigmoid function and \(\beta\) is a scaling factor.  
-
-  In GRPO, to account for multiple groups \( g \in \{1, \ldots, K\} \) (which may correspond to different task domains or user preferences), the objective is reformulated as a worst-case (minimax) problem:
-
-  \[
+  In GRPO, to account for multiple groups $g \in \{1, \ldots, K\}$ (which may correspond to different task domains or user preferences), the objective is reformulated as a worst-case (minimax) problem:
+  
+  $$
   L_{\text{GR}}(\pi_\theta) = \max_{g \in \{1,\ldots,K\}} \; L_{\text{DPO}}(\pi_\theta; D_g)
-  \]
-
-  Alternatively, using a weighted combination over groups with weights \(\alpha \in \Delta_K\) (the \(K\)-simplex), we have:
-
-  \[
+  $$
+  
+  Alternatively, using a weighted combination over groups with weights $\alpha \in \Delta_K$ (the $K$-simplex), we have:
+  
+  $$
   \min_{\pi_\theta} \; \max_{\alpha \in \Delta_K} \; \sum_{g=1}^{K} \alpha_g \; \mathbb{E}_{(x_g, y_w, y_l) \sim D_g} \left[ -\log \sigma\left(\beta \cdot h_{\pi_\theta}(x_g, y_w, y_l)\right) \right]
-  \]
-
+  $$
+  
   This formulation ensures that groups with poorer performance (i.e., higher loss) receive higher weights during training, guiding the model to improve in those areas.
 
 - **Gradient Update:**  
-  The gradient update for the parameters \(\theta\) is derived from the weighted loss. If we denote the loss on a sample as:
-
-  \[
+  The gradient update for the parameters $\theta$ is derived from the weighted loss. If we denote the loss on a sample as:
+  
+  $$
   l(\pi_\theta; (x_g, y_w, y_l)) = \log \sigma\left(\beta \cdot h_{\pi_\theta}(x_g, y_w, y_l)\right)
-  \]
-
+  $$
+  
   then the gradient update (ignoring normalization factors) is:
-
-  \[
+  
+  $$
   \nabla_\theta l(\pi_\theta; (x_g, y_w, y_l)) \propto \sigma\Big(r_\theta(x_g, y_l) - r_\theta(x_g, y_w)\Big) \left[ \nabla_\theta \log \pi_\theta(y_w|x_g) - \nabla_\theta \log \pi_\theta(y_l|x_g) \right]
-  \]
+  $$
+  
+  where $r_\theta(x, y) = \beta \log \frac{\pi_\theta(y|x)}{\pi_{\text{ref}}(y|x)}$. This update explicitly increases the probability of the preferred response while decreasing that of the rejected one, with additional weighting from the group-specific factors $\alpha_g$.
 
-  where \( r_\theta(x, y) = \beta \log \frac{\pi_\theta(y|x)}{\pi_{\text{ref}}(y|x)} \). This update explicitly increases the probability of the preferred response while decreasing that of the rejected one, with additional weighting from the group-specific factors \(\alpha_g\).
 
 #### c. Rejection Sampling and Synthetic Data Generation
 
