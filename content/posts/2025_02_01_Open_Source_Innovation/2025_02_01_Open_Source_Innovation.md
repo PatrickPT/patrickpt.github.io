@@ -142,10 +142,9 @@ DeepSeek-R1’s training is divided into several well-defined phases:
   $$
   
   The standard Direct Preference Optimization (DPO) loss (as used in earlier works) is given by:
-  
-  $$
-  L_{\text{DPO}}(\pi_\theta; D) = -\mathbb{E}_{(x, y_w, y_l) \sim D} \left[ \log \sigma\left(\beta \cdot h_{\pi_\theta}(x, y_w, y_l)\right) \right]
-  $$
+   
+   The DPO loss is computed as the expected value (over the data distribution $\(D\))$ of the negative log-sigmoid of a scaled difference $\(h_{\pi_\theta}\)$ between a winning and a losing candidate.
+   This means we are averaging the penalized log probability over the sample pairs.
   
   where $\sigma(\cdot)$ is the sigmoid function and $\beta$ is a scaling factor.  
 
@@ -157,9 +156,7 @@ DeepSeek-R1’s training is divided into several well-defined phases:
   
   Alternatively, using a weighted combination over groups with weights $\alpha \in \Delta_K$ (the $K$-simplex), we have:
   
-  $$
-  \min_{\pi_\theta} \; \max_{\alpha \in \Delta_K} \; \sum_{g=1}^{K} \alpha_g \; \mathbb{E}_{(x_g, y_w, y_l) \sim D_g} \left[ -\log \sigma\left(\beta \cdot h_{\pi_\theta}(x_g, y_w, y_l)\right) \right]
-  $$
+ We are optimizing the model by minimizing over the policy \( \pi_\theta \) while considering the worst-case (or maximum over groups) loss. For each group \( g \), the loss is computed as the expected negative log-sigmoid of the scaled difference \( h_{\pi_\theta} \) between winning and losing responses. In other words, the model focuses on improving the worst-performing group by weighting the loss accordingly.
   
   This formulation ensures that groups with poorer performance (i.e., higher loss) receive higher weights during training, guiding the model to improve in those areas.
 
