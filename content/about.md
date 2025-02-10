@@ -6,8 +6,6 @@ ShowReadingTime: false
 
 ---
 
-{{< figure src="/images/me.jpg" alt="me" width="100px" >}}
-
 Welcome to my blog. I am Patrick.
 
 I'm living in Germany, am a proud father of two, work as a Data Scientist and love to dig into AI, Data Science and ML.

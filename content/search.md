@@ -4,5 +4,5 @@ layout: "search" # is necessary
 url: /search/
 # description: "Description for Search"
 summary: "search"
-placeholder: "Cool AI Stuff i want to learn about"
+placeholder: "AI Stuff i want to learn about"
 ---

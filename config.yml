@@ -1,5 +1,6 @@
 baseURL: "https://patrickpt.github.io/"
-title: patrickpt.github.io
+title: " "
+description: "My personal learnings and best practices on AI."
 paginate: 5
 theme: PaperMod
 
@@ -20,23 +21,23 @@ params:
   ShowReadingTime: true
   
   # home-info mode
-  homeInfoParams:
-    Title: "Welcome"
-    Content: Hi, i'm Patrick, a Data Scientist. This blog contains my personal learnings and best practices on AI. Enjoy reading!
+  #homeInfoParams:
+  #  Title: "Welcome"
+  #  Content: I'm Patrick, a Data Scientist. This blog contains my personal learnings on AI. Enjoy reading!
   
-  # profileMode:
-  #       enabled: true
-  #       #title: "<Title>" # optional default will be site title
-  #       #subtitle: "Hi, i am Patrick. I’m documenting my learning notes, best practices and how-to's on this blog."
-  #       imageUrl: "me.jpg" # optional
-  #       #imageTitle: "<title of image as alt>" # optional
-  #       imageWidth: 180 # custom size
-  #       imageHeight: 180 # custom size
-  #       buttons:
-  #         - name: Posts
-  #           url: "/posts"
-  #         - name: Tags
-  #           url: "/tags"
+  profileMode:
+        enabled: true
+        title: "Welcome" # optional default will be site title
+        subtitle: "I'm Patrick, a Data Scientist. This blog contains my personal learnings on AI. Enjoy reading!"
+        imageUrl: "me2.jpg" # optional
+        #imageTitle: "<title of image as alt>" # optional
+        imageWidth: 180 # custom size
+        imageHeight: 240 # custom size
+        buttons:
+          - name: Posts
+            url: "/posts"
+          - name: Search
+            url: "/search"
 
   assets:
     favicon: "/favicon/favicon.ico"
@@ -46,10 +47,10 @@ params:
     #safari_pinned_tab:  "/favicon/safari-pinned-tab.svg"
 
   socialIcons:
-    - name: github
-      url: "https://github.com/PatrickPT"
     - name: linkedin
       url: "https://www.linkedin.com/in/patrickschnass/"
+    - name: github
+      url: "https://github.com/PatrickPT"
    # - name: medium
    #   url: "https://medium.com/@patrickschnass"
     - name: instagram
@@ -73,14 +74,14 @@ menu:
    #   name: Recent
    #   url: /recent/
    #   weight: 30
-    - identifier: Archive
-      name: Archive
-      url: /archive/
-      weight: 20
+   # - identifier: Archive
+   #   name: Archive
+   #   url: /archive/
+   #   weight: 20
     - identifier: Search
       name: Search
       url: /search/
-      weight: 50
+      weight: 20
    # - identifier: tags
    #   name: Tags
    #   url: /tags/
