@@ -3,6 +3,7 @@ title: "Hands on with Retrieval Augmented Generation"
 date: 2023-10-07T10:30:00Z
 draft: False
 ShowToc: true
+summary: Build a Chatbot that uses Retrieval Augmented Generation to retrieve domain specific knowledge.
 tags: [Hands On,AI Design, LLM, GenAI]
 math: true
 url: /posts/hands-on-rag/

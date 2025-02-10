@@ -2,6 +2,7 @@
 title: "Hands on with Latent Diffusion Models"
 date: 2023-01-13T09:28:09Z
 draft: False
+summary: Learn how to use Latent Diffusion Models to generate images.
 showToc: true
 TocOpen: true
 tags: [DallE,stable-diffusion,latent-diffusion-models,NoCode,HuggingFace,HandsOn]

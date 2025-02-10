@@ -1,7 +1,8 @@
 ---
-title: "An introduction to ChatGPT written by ChatGPT"
+title: "What is ChatGPT?"
 date: 2023-01-07T00:55:07+01:00
 draft: False
+summary: "An introduction to ChatGPT written by ChatGPT"
 ShowToc: true
 tags: [ChatGPT,LLM]
 url: /posts/chatgpt-on-chatgpt/

@@ -1,7 +1,8 @@
 ---
-title: "How to use a Reinforment Learning Agent to play Super Mario"
+title: "Play Super Mario with RL"
 date: 2023-03-31T11:58:22+02:00
 draft: false
+summary: Learn how to train a Reinforcement Learning Agent to play GameBoy games in a Python written Emulator. With PyBoy, Q-Learning and Super Mario.
 showToc: true
 TocOpen: true
 math: true

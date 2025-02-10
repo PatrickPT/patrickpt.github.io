@@ -1,6 +1,7 @@
 ---
-title: "What is Retrieval Augmented Generation?"
+title: "What is RAG?"
 date: 2023-09-29T18:30:57Z
+summary: Retrieval Augmented Generation is an Architecture used for NLP tasks.
 draft: False
 ShowToc: true
 tags: [Model Architecture,AI Design, LLM, GenAI]

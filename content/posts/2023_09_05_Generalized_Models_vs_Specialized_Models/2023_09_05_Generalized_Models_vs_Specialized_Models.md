@@ -1,6 +1,7 @@
 ---
 title: "Generalized Models vs Specialized Models"
 date: 2023-09-05T11:50:57Z
+summary: Intuition and hints for deciding between one generalized and multiple specialized models.
 draft: False
 ShowToc: true
 tags: [Model Architecture,ML Design, Intuition]

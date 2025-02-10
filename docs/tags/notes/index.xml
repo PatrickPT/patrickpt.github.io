@@ -12,10 +12,7 @@
       <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
       
       <guid>https://www.patrickschnass.de/posts/latent-diffusion-models/</guid>
-      <description>TL;DR The following learning notes try to give some intuition on how Stable Diffusion works, some mathematical intuition on Diffusion Models and an introduction to Latent Diffusion Models.
-The following sources were extensively used during creation of this learning notes. Passages may be reutilized to create a reasonable overview of the topic. Credit goes to the authors of the following papers and posts.
-Illustrations by Jay Alammar
-Sohl-Dickstein et al., 2015</description>
+      <description>Learn how Latent Diffusion Models work and the mathematical intuition behind them.</description>
     </item>
     
   </channel>

@@ -2,6 +2,7 @@
 title: "Road to GCP Professional Machine Learning Engineer"
 date: 2023-02-24T21:01:23+01:00
 draft: false
+summary: My learning journey to get certified
 showToc: true
 TocOpen: false
 math: true

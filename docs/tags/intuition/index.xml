@@ -12,9 +12,7 @@
       <pubDate>Tue, 05 Sep 2023 11:50:57 +0000</pubDate>
       
       <guid>https://www.patrickschnass.de/posts/generalvsspecializedmodels/</guid>
-      <description>TL;DR This blogpost focusses on ML Design and Architecture and tries to give some intuition and hints for deciding between one generalized and multiple specialized models for the same business requriement and dataset.
-Consider it a nudge to dive deeper into the topic
-Why should i care? Transparency in machine learning is crucial for business stakeholders because it fosters trust and informed decision-making. Business Stakeholders need to understand not only the potential benefits but also the limitations and risks associated with machine learning models.</description>
+      <description>Intuition and hints for deciding between one generalized and multiple specialized models.</description>
     </item>
     
   </channel>

@@ -1,15 +1,13 @@
 ---
-title: "What are Transformers?"
+title: "Attention is all you need?"
 date: 2023-08-30T11:50:57Z
 draft: False
 ShowToc: true
+summary: Explore the Transformer Architecture.
 tags: [Transformers,Foundations]
 math: true
 url: /posts/transformers/
----
 
-# Transformers: A Deep Dive into the Transformer Architecture
-Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.
 
 ---
 

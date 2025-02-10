@@ -3,6 +3,7 @@ title: "A short summary on ChatGPT"
 date: 2023-01-12T22:34:01+01:00
 draft: false
 ShowToc: true
+summary: " "
 tags: [ChatGPT,LLM,summary]
 url: /posts/summary-chatgpt/
 ---

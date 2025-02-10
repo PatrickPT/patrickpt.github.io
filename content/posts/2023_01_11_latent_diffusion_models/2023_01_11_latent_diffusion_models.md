@@ -2,6 +2,7 @@
 title: "Latent Diffusion Models: What is all the fuzz about?"
 date: 2023-01-20T14:50:18+01:00
 draft: false
+summary: Learn how Latent Diffusion Models work and the mathematical intuition behind them.
 showToc: true
 TocOpen: true
 math: true

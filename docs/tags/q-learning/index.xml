@@ -7,13 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 31 Mar 2023 11:58:22 +0200</lastBuildDate><atom:link href="https://www.patrickschnass.de/tags/q-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to use a Reinforment Learning Agent to play Super Mario</title>
+      <title>Play Super Mario with RL</title>
       <link>https://www.patrickschnass.de/posts/super_mario/</link>
       <pubDate>Fri, 31 Mar 2023 11:58:22 +0200</pubDate>
       
       <guid>https://www.patrickschnass.de/posts/super_mario/</guid>
-      <description>TL;DR Learn how to train a Reinforcement Learning Agent to play GameBoy games in a Python written Emulator. With PyBoy, Q-Learning and Super Mario.
-Train your own RL Agent to play Super Mario Recently i stumbled upon my old GameBoy an immediately started it and tried to start where i left off 20 years ago. Unfortunately my hand eye coordination is not what it used to be so i died a few fast deaths.</description>
+      <description>Learn how to train a Reinforcement Learning Agent to play GameBoy games in a Python written Emulator. With PyBoy, Q-Learning and Super Mario.</description>
     </item>
     
   </channel>

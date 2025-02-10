@@ -7,13 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 30 Aug 2023 11:50:57 +0000</lastBuildDate><atom:link href="https://www.patrickschnass.de/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What are Transformers?</title>
+      <title>Attention is all you need?</title>
       <link>https://www.patrickschnass.de/posts/transformers/</link>
       <pubDate>Wed, 30 Aug 2023 11:50:57 +0000</pubDate>
       
       <guid>https://www.patrickschnass.de/posts/transformers/</guid>
-      <description>Transformers: A Deep Dive into the Transformer Architecture Below is a revised, more detailed version of the article that removes the BERT code snippet, expands on both the mathematical background and implementation details, and includes additional illustrative images.
-Transformers: A Deep Dive into the Transformer Architecture Transformers are a revolutionary type of neural network architecture introduced in the seminal paper Attention is All You Need by Vaswani et al. (2017). They have dramatically advanced the field of Natural Language Processing (NLP) and beyond, powering tasks like language translation, text summarization, and even applications in computer vision.</description>
+      <description>Explore the Transformer Architecture.</description>
     </item>
     
   </channel>

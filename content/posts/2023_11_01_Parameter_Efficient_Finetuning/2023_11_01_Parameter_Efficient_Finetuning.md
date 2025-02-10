@@ -1,7 +1,8 @@
 ---
-title: "What is Parameter Efficient Finetuning?"
+title: "What is PEFT?"
 date: 2023-11-01T18:30:57Z
 draft: False
+summary: Fine-tuning of Large Language Models with Parameter Efficient.
 ShowToc: true
 tags: [LLM, GenAI]
 math: true

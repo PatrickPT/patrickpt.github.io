@@ -1,7 +1,8 @@
 ---
-title: "What are (Large) Language Models?"
+title: "What are Large Language Models?"
 date: 2023-05-02T13:42:28+02:00
 draft: false
+summary: What are the ideas and concepts behind GPT Language Models?
 showToc: true
 TocOpen: true
 url: /posts/language_models/

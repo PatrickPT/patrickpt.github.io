@@ -3,6 +3,7 @@ title: "LLM Quantization in a nutshell"
 date: 2024-01-28T09:30:57Z
 draft: False
 ShowToc: true
+summary: An exploration of LLM quantization methods.
 tags: [LLM, GenAI]
 math: true
 url: /posts/quantllm/
