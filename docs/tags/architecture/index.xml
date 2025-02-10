@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Architecture on patrickschnass.de</title>
-    <link>https://patrickschnass.de/tags/architecture/</link>
+    <link>https://www.patrickschnass.de/tags/architecture/</link>
     <description>Recent content in Architecture on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Feb 2025 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickschnass.de/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 18:30:57 +0000</lastBuildDate><atom:link href="https://www.patrickschnass.de/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why DeepSeek-R1 was a significant step for Open Source AI</title>
-      <link>https://patrickschnass.de/posts/deepseek/</link>
+      <link>https://www.patrickschnass.de/posts/deepseek/</link>
       <pubDate>Sun, 09 Feb 2025 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/deepseek/</guid>
+      <guid>https://www.patrickschnass.de/posts/deepseek/</guid>
       <description>TL;DR This blog post explains how the recent release of DeepSeek may benefit the open source community and why it is considered a game changer for AI industry.
 Why all the rumors? DeepSeek-R1 represents a significant innovation in the AI landscape, outperforming or rivaling top commercial models including reasoning capabilities. Previously, such sophisticated models were exclusive to tech giants like OpenAI and Google, but R1 now joins this category as the only open-weights model of its kind.</description>
     </item>
     
     <item>
       <title>A view on Byte Latent Transformers</title>
-      <link>https://patrickschnass.de/posts/blt/</link>
+      <link>https://www.patrickschnass.de/posts/blt/</link>
       <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/blt/</guid>
+      <guid>https://www.patrickschnass.de/posts/blt/</guid>
       <description>TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
 Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
 High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments.</description>

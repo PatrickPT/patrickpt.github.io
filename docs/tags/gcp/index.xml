@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>GCP on patrickschnass.de</title>
-    <link>https://patrickschnass.de/tags/gcp/</link>
+    <link>https://www.patrickschnass.de/tags/gcp/</link>
     <description>Recent content in GCP on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 02 Jul 2023 15:01:23 +0100</lastBuildDate><atom:link href="https://patrickschnass.de/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jul 2023 15:01:23 +0100</lastBuildDate><atom:link href="https://www.patrickschnass.de/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Road to GCP Professional Data Engineer</title>
-      <link>https://patrickschnass.de/posts/PDE/</link>
+      <link>https://www.patrickschnass.de/posts/PDE/</link>
       <pubDate>Sun, 02 Jul 2023 15:01:23 +0100</pubDate>
       
-      <guid>https://patrickschnass.de/posts/PDE/</guid>
+      <guid>https://www.patrickschnass.de/posts/PDE/</guid>
       <description>I enlisted for the free Get Certified Program from Google in June 2023 which offers a 10 week curated curriculum to prepare for the Data Engineer exam. Unfortunately the content is restricted and cannot be shared. Following article should summarize all additional sources which were helpful for me in preparation of the certification exam. If you are interested in how the exam is actually happening there are plenty of other articles on medium or at other places.</description>
     </item>
     
     <item>
       <title>Road to GCP Professional Machine Learning Engineer</title>
-      <link>https://patrickschnass.de/posts/GCPMLE/</link>
+      <link>https://www.patrickschnass.de/posts/GCPMLE/</link>
       <pubDate>Fri, 24 Feb 2023 21:01:23 +0100</pubDate>
       
-      <guid>https://patrickschnass.de/posts/GCPMLE/</guid>
+      <guid>https://www.patrickschnass.de/posts/GCPMLE/</guid>
       <description>Today i passed the Google Professional Machine Learning Engineer Exam in a onsite test center in Duesseldorf. I prepared for it 4 weeks with different ressources. I have multiple years experience on Data Science and ML and about one year experience with ML on GCP. Following article should summarize all sources which were helpful for me in preparation of the certification exam. If you are interested in how the exam is actually happening there are plenty of other articles on medium or at other places.</description>
     </item>
     

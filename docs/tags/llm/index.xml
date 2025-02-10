@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>LLM on patrickschnass.de</title>
-    <link>https://patrickschnass.de/tags/llm/</link>
+    <link>https://www.patrickschnass.de/tags/llm/</link>
     <description>Recent content in LLM on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 09 Feb 2025 18:30:57 +0000</lastBuildDate><atom:link href="https://patrickschnass.de/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Feb 2025 18:30:57 +0000</lastBuildDate><atom:link href="https://www.patrickschnass.de/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why DeepSeek-R1 was a significant step for Open Source AI</title>
-      <link>https://patrickschnass.de/posts/deepseek/</link>
+      <link>https://www.patrickschnass.de/posts/deepseek/</link>
       <pubDate>Sun, 09 Feb 2025 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/deepseek/</guid>
+      <guid>https://www.patrickschnass.de/posts/deepseek/</guid>
       <description>TL;DR This blog post explains how the recent release of DeepSeek may benefit the open source community and why it is considered a game changer for AI industry.
 Why all the rumors? DeepSeek-R1 represents a significant innovation in the AI landscape, outperforming or rivaling top commercial models including reasoning capabilities. Previously, such sophisticated models were exclusive to tech giants like OpenAI and Google, but R1 now joins this category as the only open-weights model of its kind.</description>
     </item>
     
     <item>
       <title>A view on Byte Latent Transformers</title>
-      <link>https://patrickschnass.de/posts/blt/</link>
+      <link>https://www.patrickschnass.de/posts/blt/</link>
       <pubDate>Thu, 02 Jan 2025 09:30:57 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/blt/</guid>
+      <guid>https://www.patrickschnass.de/posts/blt/</guid>
       <description>TL;DR This blog post explains the Byte Latent Transformer (BLT), a tokenizer-free architecture for NLP tasks. BLT processes raw byte data dynamically, making it a scalable, efficient, and robust alternative to traditional token-based models.
 Why Should I Care? Traditional LLMs rely on tokenization—a preprocessing step that compresses text into a fixed vocabulary. While effective, tokenization introduces several challenges:
 High Costs: Fine-tuning LLMs with domain-specific data demands extensive computational resources, often requiring significant financial investments.</description>
@@ -29,30 +29,30 @@ High Costs: Fine-tuning LLMs with domain-specific data demands extensive computa
     
     <item>
       <title>LLM Quantization in a nutshell</title>
-      <link>https://patrickschnass.de/posts/quantllm/</link>
+      <link>https://www.patrickschnass.de/posts/quantllm/</link>
       <pubDate>Sun, 28 Jan 2024 09:30:57 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/quantllm/</guid>
+      <guid>https://www.patrickschnass.de/posts/quantllm/</guid>
       <description>LLM Quantization in a Nutshell: A Detailed Exploration Quantization is a critical technique to reduce the precision of large language models (LLMs), making them lighter and more efficient without a significant loss in performance. This post delves into the nuts and bolts of quantization, explains the underlying math, and examines practical aspects using tools like llama.cpp.
 TL;DR LLM quantization reduces the numerical precision of model parameters to decrease memory usage and improve inference speed.</description>
     </item>
     
     <item>
       <title>What is Parameter Efficient Finetuning?</title>
-      <link>https://patrickschnass.de/posts/peft/</link>
+      <link>https://www.patrickschnass.de/posts/peft/</link>
       <pubDate>Wed, 01 Nov 2023 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/peft/</guid>
+      <guid>https://www.patrickschnass.de/posts/peft/</guid>
       <description>TL;DR Parameter Efficient Fine-Tuning is a technique that aims to reduce computational and storage resources during the fine-tuning of Large Language Models.
 Why should i care? Fine-tuning is a common technique used to enhance the performance of large language models. Essentially, fine-tuning involves training a pre-trained model on a new, similar task. It has become a crucial step in model optimization. However, when these models consist of billions of parameters, fine-tuning becomes computational and storage heavy, leading to the development of Parameter Efficient Fine-Tuning methods.</description>
     </item>
     
     <item>
       <title>Hands on with Retrieval Augmented Generation</title>
-      <link>https://patrickschnass.de/posts/hands-on-rag/</link>
+      <link>https://www.patrickschnass.de/posts/hands-on-rag/</link>
       <pubDate>Sat, 07 Oct 2023 10:30:00 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/hands-on-rag/</guid>
+      <guid>https://www.patrickschnass.de/posts/hands-on-rag/</guid>
       <description>TL;DR This blogpost shows an example for a Chatbot that uses Retrieval Augmented Generation to retrieve domain specific knowledge before querying a Large Language Model
 Hands on with Retrieval Augmented Generation For a primer on Retrieval Augmented Generation please read my other post What is Retrieval Augmented Generation?.
 Retrieval Augmented Generation can be a powerful architecture to easily built knowledge retrieval applications which (based on a recent study) even outperform LLM&amp;rsquo;s with long context windows.</description>
@@ -60,10 +60,10 @@ Retrieval Augmented Generation can be a powerful architecture to easily built kn
     
     <item>
       <title>What is Retrieval Augmented Generation?</title>
-      <link>https://patrickschnass.de/posts/rag_intro/</link>
+      <link>https://www.patrickschnass.de/posts/rag_intro/</link>
       <pubDate>Fri, 29 Sep 2023 18:30:57 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/rag_intro/</guid>
+      <guid>https://www.patrickschnass.de/posts/rag_intro/</guid>
       <description>TL;DR This blogpost tries to explain Retrieval Augmented Generation. Retrieval Augmented Generation is an Architecture used for NLP tasks which can be used to productionize LLM models for enterprise architecture easily.
 Why should i care? Intuitive would be to train a Large Language Model with domain specific data, in other words, to fine-tune the model-weights with custom data.
 picture from Neo4J
@@ -72,20 +72,20 @@ But fine-tuning large language models (LLMs) is a complex and resource-intensive
     
     <item>
       <title>What are (Large) Language Models?</title>
-      <link>https://patrickschnass.de/posts/language_models/</link>
+      <link>https://www.patrickschnass.de/posts/language_models/</link>
       <pubDate>Tue, 02 May 2023 13:42:28 +0200</pubDate>
       
-      <guid>https://patrickschnass.de/posts/language_models/</guid>
+      <guid>https://www.patrickschnass.de/posts/language_models/</guid>
       <description>TL;DR A short summary on (Large) Language Models: What are the ideas and concepts behind Language Models?
 What are Language Models Large Language Models are rapidly transforming natural language processing tasks and have led to a huge hype around Artificial Intelligence and associated tasks. Especially with the introduction of GPT3.5(ChatGPT) in 2022 many people are interested in the capabilities of ML. But what is the foundation for the products that could impact our future world significantly?</description>
     </item>
     
     <item>
       <title>A short summary on ChatGPT</title>
-      <link>https://patrickschnass.de/posts/summary-chatgpt/</link>
+      <link>https://www.patrickschnass.de/posts/summary-chatgpt/</link>
       <pubDate>Thu, 12 Jan 2023 22:34:01 +0100</pubDate>
       
-      <guid>https://patrickschnass.de/posts/summary-chatgpt/</guid>
+      <guid>https://www.patrickschnass.de/posts/summary-chatgpt/</guid>
       <description>This summary is based on another post: An introduction to ChatGPT written by ChatGPT
 While testing out ChatGPT for some weeks now, i found that texts created by it are often repetitive and monotonous. In this post i tried to condense the meaningful information from the other post.
 2022 was the year of generative AI. Generative AI refers to machine learning algorithms that can create new meaning from text, images, code, and other forms of content.</description>
@@ -93,10 +93,10 @@ While testing out ChatGPT for some weeks now, i found that texts created by it a
     
     <item>
       <title>An introduction to ChatGPT written by ChatGPT</title>
-      <link>https://patrickschnass.de/posts/chatgpt-on-chatgpt/</link>
+      <link>https://www.patrickschnass.de/posts/chatgpt-on-chatgpt/</link>
       <pubDate>Sat, 07 Jan 2023 00:55:07 +0100</pubDate>
       
-      <guid>https://patrickschnass.de/posts/chatgpt-on-chatgpt/</guid>
+      <guid>https://www.patrickschnass.de/posts/chatgpt-on-chatgpt/</guid>
       <description>ChatGPT: Optimizing Language Models for Dialogue
 What to do if you have 15Min time to spare? Feed ChatGPT with prompts to write an introductory article about ChatGPT. And I promise, this is the only part which is not based on a Large Language Model. Everything else was written by ChatGPT. For better readability I replaced the prompts with simple headers.
 What is ChatGPT? Are you tired of boring, robotic chatbots that can’t hold a conversation or understand your needs?</description>

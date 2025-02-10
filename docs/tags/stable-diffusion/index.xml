@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>stable-diffusion on patrickschnass.de</title>
-    <link>https://patrickschnass.de/tags/stable-diffusion/</link>
+    <link>https://www.patrickschnass.de/tags/stable-diffusion/</link>
     <description>Recent content in stable-diffusion on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 20 Jan 2023 14:50:18 +0100</lastBuildDate><atom:link href="https://patrickschnass.de/tags/stable-diffusion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jan 2023 14:50:18 +0100</lastBuildDate><atom:link href="https://www.patrickschnass.de/tags/stable-diffusion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Latent Diffusion Models: What is all the fuzz about?</title>
-      <link>https://patrickschnass.de/posts/latent-diffusion-models/</link>
+      <link>https://www.patrickschnass.de/posts/latent-diffusion-models/</link>
       <pubDate>Fri, 20 Jan 2023 14:50:18 +0100</pubDate>
       
-      <guid>https://patrickschnass.de/posts/latent-diffusion-models/</guid>
+      <guid>https://www.patrickschnass.de/posts/latent-diffusion-models/</guid>
       <description>TL;DR The following learning notes try to give some intuition on how Stable Diffusion works, some mathematical intuition on Diffusion Models and an introduction to Latent Diffusion Models.
 The following sources were extensively used during creation of this learning notes. Passages may be reutilized to create a reasonable overview of the topic. Credit goes to the authors of the following papers and posts.
 Illustrations by Jay Alammar
@@ -20,10 +20,10 @@ Sohl-Dickstein et al., 2015</description>
     
     <item>
       <title>Hands on with Latent Diffusion Models</title>
-      <link>https://patrickschnass.de/posts/hands-on-latent-diffusion-models/</link>
+      <link>https://www.patrickschnass.de/posts/hands-on-latent-diffusion-models/</link>
       <pubDate>Fri, 13 Jan 2023 09:28:09 +0000</pubDate>
       
-      <guid>https://patrickschnass.de/posts/hands-on-latent-diffusion-models/</guid>
+      <guid>https://www.patrickschnass.de/posts/hands-on-latent-diffusion-models/</guid>
       <description>Prerequitises
 To test the models here you need to have an account with HuggingFace - for loading the checkpoint or using the endpoints. Hugging Face is a community and data science platform that provides:
 Tools that enable users to build, train and deploy ML models based on open source (OS) code and technologies. A place where a broad community of data scientists, researchers, and ML engineers can come together and share ideas, get support and contribute to open source projects.</description>

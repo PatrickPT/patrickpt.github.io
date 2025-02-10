@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Medium on patrickschnass.de</title>
-    <link>https://patrickschnass.de/tags/medium/</link>
+    <link>https://www.patrickschnass.de/tags/medium/</link>
     <description>Recent content in Medium on patrickschnass.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 01 Jan 2023 09:00:00 +0100</lastBuildDate><atom:link href="https://patrickschnass.de/tags/medium/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2023 09:00:00 +0100</lastBuildDate><atom:link href="https://www.patrickschnass.de/tags/medium/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why and how do you create your own AI blog?</title>
-      <link>https://patrickschnass.de/posts/how-to-blog/</link>
+      <link>https://www.patrickschnass.de/posts/how-to-blog/</link>
       <pubDate>Sun, 01 Jan 2023 09:00:00 +0100</pubDate>
       
-      <guid>https://patrickschnass.de/posts/how-to-blog/</guid>
+      <guid>https://www.patrickschnass.de/posts/how-to-blog/</guid>
       <description>Welcome to my blog.
 Why not Medium? It is 2023 and there are plenty of easy ways to create content about ML, Data Science and AI on the internet. In fact with the accessability of platforms like Medium it is super easy.
 Isn&amp;rsquo;t it actually dumb to create your own blog instead of using these possibilities?
