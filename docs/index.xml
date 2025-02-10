@@ -183,12 +183,12 @@ Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwec
     </item>
     
     <item>
-      <title>About</title>
+      <title>About Me</title>
       <link>https://www.patrickschnass.de/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.patrickschnass.de/about/</guid>
-      <description>Hi, I’m Patrick, a technologist at heart with a passion for artificial intelligence, data science, and lifelong learning. I thrive on working with great people to build innovative AI-driven products that make a real impact.
+      <description>Hi, I’m Patrick, a technologist at heart with a passion for artificial intelligence, data science, and lifelong learning.
 Currently, I lead the Data Science department at Vodafone, where my team and I apply machine learning and AI to create solutions that drive business value and enhance customer experiences. My role allows me to bridge the gap between AI research and real-world applications, ensuring that our models don’t just live in Jupyter notebooks but actively contribute to decision-making, automation, and optimization.</description>
     </item>
     

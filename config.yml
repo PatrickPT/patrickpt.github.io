@@ -28,7 +28,7 @@ params:
   profileMode:
         enabled: true
         title: "Hi, I'm Patrick" # optional default will be site title
-        subtitle: "This blog contains my personal learnings on AI. Enjoy reading!"
+        subtitle: "This blog contains my learnings on AI. Enjoy reading!"
         imageUrl: "me6.jpg" # optional
         #imageTitle: "<title of image as alt>" # optional
         imageWidth: 180 # custom size
@@ -87,7 +87,7 @@ menu:
    #   url: /tags/
    #   weight: 60
     - identifier: About
-      name: About
+      name: About Me
       url: /about/
       weight: 30
     #- identifier: Contact
