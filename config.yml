@@ -27,7 +27,7 @@ params:
   
   profileMode:
         enabled: true
-        title: "Welcome" # optional default will be site title
+        #title: "Welcome" # optional default will be site title
         subtitle: "I'm Patrick, a Data Scientist. This blog contains my personal learnings on AI. Enjoy reading!"
         imageUrl: "me6.jpg" # optional
         #imageTitle: "<title of image as alt>" # optional
