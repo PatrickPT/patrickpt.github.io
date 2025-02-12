@@ -29,7 +29,7 @@ params:
         enabled: true
         title: "Hi, I'm Patrick" # optional default will be site title
         subtitle: "This blog contains my learnings on AI. Enjoy reading!"
-        imageUrl: "me6.jpg" # optional
+        imageUrl: "me7.jpeg" # optional
         #imageTitle: "<title of image as alt>" # optional
         imageWidth: 180 # custom size
         imageHeight: 180 # custom size
