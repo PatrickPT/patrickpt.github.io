@@ -24,6 +24,10 @@ Beyond accessibility, DeepSeek-R1 heats innovation by openly sharing its cost-ef
 
 R1’s blend of performance, openness, innovation and affordability could signal that open-source can still play a pivotal role in the AI race.
 
+![Intro](/posts/2025_02_01_Open_Source_Innovation/images/Intro_picture.jpg)
+
+And yes, it's a widely discussed topic in the AI community. and still i found it very interesting and entertaining.
+
 ---
 # DeepSeek Technical Paper in a Nutshell
 
@@ -165,6 +169,9 @@ DeepSeek’s reward system is another breakthrough. Rather than using a convolut
   The model is also rewarded for writing its reasoning clearly between designated tags (like `<think>` and `</think>`). This ensures that its chain of thought is not only correct but also readable and well-structured.
 
 What’s impressive is that this whole system doesn’t rely on human feedback. It scales up quickly because the model can evaluate millions of responses automatically, reducing bias and opening the door to discovering new problem-solving approaches.
+
+![Intro](/posts/2025_02_01_Open_Source_Innovation/images/GRPO.jpeg)
+
 
 ---
 
