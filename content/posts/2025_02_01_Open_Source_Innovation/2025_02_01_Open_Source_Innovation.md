@@ -32,9 +32,9 @@ And yes, it's a widely discussed topic in the AI community. and still i found it
 # DeepSeek Technical Paper in a Nutshell
 
 
-## **Key Training Process & Innovations in DeepSeek-R1**  
+## Key Training Process & Innovations in DeepSeek-R1  
 
-### **1. Two Core Models**  
+### 1. Two Core Models  
 - **DeepSeek-R1-Zero**:  
   - **Pure RL Training**: Trained *directly* on the base model (DeepSeek-V3-Base) **without supervised fine-tuning (SFT)**.  
   - **Algorithm**: Uses **GRPO** (Group Relative Policy Optimization), a critic-free RL method that estimates baselines from group scores.  
@@ -51,7 +51,7 @@ And yes, it's a widely discussed topic in the AI community. and still i found it
     4. **Final RL Alignment**: Balances reasoning performance with human preferences (helpfulness/harmlessness).  
 
 
-### **2. Key Innovations**  
+### 2. Key Innovations  
 1. **RL-First Approach**:  
    - Proves reasoning capabilities can be **incentivized purely through RL** without SFT (novel for open research).  
    - Achieves OpenAI-o1-0912-level performance (e.g., 71% → 86.7% on AIME with majority voting).  
@@ -67,14 +67,14 @@ And yes, it's a widely discussed topic in the AI community. and still i found it
    - Avoids neural reward models, simplifying training and reducing hacking risks.  
 
 
-### **3. Critical Challenges & Insights**  
+### 3. Critical Challenges & Insights  
 - **Failed Attempts**:  
   - **Process Reward Models (PRMs)**: Struggled with fine-grained step validation and scalability.  
   - **Monte Carlo Tree Search (MCTS)**: Token-generation complexity made iterative improvement impractical.  
 - **Key Insight**: Distillation is more cost-effective than RL for smaller models, but advancing SOTA requires large-scale RL on powerful base models.  
 
 
-### **4. Performance Highlights**  
+### 4. Performance Highlights  
 - **DeepSeek-R1**: Matches **OpenAI-o1-1217** on reasoning (79.8% pass@1 on AIME) and outperforms GPT-4o/Claude-3.5 in math/coding.  
 - **Distilled Models**:  
   - 7B model surpasses GPT-4o on MATH-500 (92.8% vs. 74.6%).  
