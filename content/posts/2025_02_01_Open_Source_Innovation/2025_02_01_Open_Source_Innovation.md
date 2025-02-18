@@ -74,18 +74,6 @@ And yes, it's a widely discussed topic in the AI community. and still i found it
 - **Key Insight**: Distillation is more cost-effective than RL for smaller models, but advancing SOTA requires large-scale RL on powerful base models.  
 
 
-### 4. Performance Highlights  
-- **DeepSeek-R1**: Matches **OpenAI-o1-1217** on reasoning (79.8% pass@1 on AIME) and outperforms GPT-4o/Claude-3.5 in math/coding.  
-- **Distilled Models**:  
-  - 7B model surpasses GPT-4o on MATH-500 (92.8% vs. 74.6%).  
-  - 32B model outperforms QwQ-32B-Preview by 22.6% on AIME.  
-
-
-**Why It Stands Out**:  
-- First open-source work validating pure RL for reasoning.  
-- Combines scalability (GRPO), human-aligned cold-start data, and efficient distillation.  
-- Open-sources models/data, enabling community-driven advancements.
-
 ---
 
 # Foundational concepts used in DeepSeek-R1
